@@ -1,0 +1,12 @@
+# UTRR - Uncertain Transfer time Road-Rail intermodal routing
+# 不确定转运时间与运到时限下危险货物公铁联运路径优化
+# Conda 环境配置
+name: utrr
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - ruff # 代码格式化与静态检查

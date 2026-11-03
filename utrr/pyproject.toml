@@ -1,0 +1,16 @@
+[tool.ruff]
+# 目标 Python 版本
+target-version = "py311"
+# 每行最大长度
+line-length = 100
+exclude = [".git", ".venv", "build", "dist", "results", "data", "__pycache__"]
+
+[tool.ruff.lint]
+# 开启 I (isort 排序) 与 F (Pyflakes 核心检查)
+select = ["I", "F"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"
+docstring-code-format = true

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# 虚拟环境
+.venv
+venv/
+.conda
+.ipynb_checkpoints
+
+# IDE
+.idea/
+*.swp
+
+# 项目产物
+results/
+**/*.png
+**/*.pdf
+**/*.svg
+.DS_Store
+
+# utrr local-only
+.audit/
+.tmp*
+paper_revision/
+.vscode/
