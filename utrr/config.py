@@ -36,7 +36,7 @@ DATA_SOURCE_SYNTHETIC = "synthetic"  # 合成算例（src/core/instance_generato
 REAL_CASE_PATH = os.path.join(DATA_DIR, "real_case_xj_yrd", "network.json")
 
 
-# 置信水平模式下正态不确定变量的可靠性价格系数 λ_α
+# 置信水平模式下正态不确定变量的可靠度分位系数 λ_α
 CONFIDENCE_MODE_NORMAL = "normal"  # λ_α = (√3/π)·ln(α/(1−α))
 
 # 铁路服务类型的选择粒度
@@ -186,7 +186,7 @@ class UTRRConfig:
 	transfer_acc_prob: float = 422.61e-6  # 单位中转事故概率（1/次）
 	pop_transport: float = 1.64e5  # 道路、铁路运输事故后果 POP（人）
 	pop_transfer: float = 6.25e4  # 中转/暂存事故后果 POP（人）
-	# 节点风险耦合系数（算例设定值，正文不列）：(1+θμ+ρσ)
+	# 节点风险耦合系数（算例设定值）：(1+θμ+ρσ)，敏感性按 θ、ρ 双参数切片覆盖（4.5）
 	node_risk_theta: float = 0.005
 	node_risk_rho: float = 0.005
 
@@ -217,8 +217,11 @@ class UTRRConfig:
 	# ============================================================
 	alpha_grid: tuple = (0.50, 0.70, 0.80, 0.85, 0.90, 0.95, 0.99)  # 4.3 置信水平
 	alpha_sweep: tuple = (0.50, 0.995, 25)  # 4.3 图 7 的扫描（下限、上限、点数）
-	period_grid: tuple = (2.0, 4.0, 6.0, 8.0)  # 4.4 转运时间波动 σ（h，案例设定档位）
-	node_risk_scale_grid: tuple = (0.0, 1.0, 2.0)  # 4.5 θ、ρ 耦合系数档位（相对基准）
+	period_grid: tuple = (0.0, 2.0, 4.0, 6.0, 8.0)  # 4.4 转运时间波动 σ（h，案例设定档位，σ=0 为确定性情形）
+	node_risk_theta_grid: tuple = (0.0, 0.005, 0.01)  # 4.5 θ 切片取值（0、基准、2 倍，h⁻¹）
+	node_risk_rho_grid: tuple = (0.0, 0.005, 0.01)  # 4.5 ρ 切片取值（0、基准、2 倍，h⁻¹）
+	demand_grid: tuple = (5.0, 8.0, 10.0, 12.0, 18.0, 20.0, 22.0, 30.0, 38.0, 40.0)  # 4.7 运量（箱，覆盖 10/20/40 箱分档边界）
+	demand_override: float | None = None  # 运量显式覆盖（4.7 用，非 None 时取代 OD 定义的需求）
 	deadline_scale_grid: tuple = (1.0, 1.2, 1.5)  # 4.6 时限严格度（相对基准 D）
 	deadline_sweep: tuple = (0.80, 1.60, 17)  # 4.6 图 10 的时限扫描（下限、上限、点数）
 	scalability_sizes: tuple = (  # 4.7 规模算例：(铁路层数, 行数, 发送端货场数)
@@ -229,7 +232,10 @@ class UTRRConfig:
 	)
 	# 4.7 完整枚举校验的节点数上限：≤ 该值时额外跑"关闭支配+剪枝"的完整枚举，
 	# 验证本文算法前沿一致；52 节点约 2.0×10^6 标号/30 s，82 节点组合爆炸故不跑。
-	scalability_full_enum_max_nodes: int = 52
+	# Full enumeration is retained only for genuinely small networks.  The
+	# 52-node case is already large enough to generate millions of labels and
+	# adds no correctness evidence beyond the 24- and 38-node checks.
+	scalability_full_enum_max_nodes: int = 38
 	sweep_weights: tuple = (0.0, 0.05, 0.1, 0.2, 0.35, 0.5, 0.65, 0.8, 0.9, 0.95, 1.0)
 	# 4.7 加权和启发式基线使用的权重网格（权重作用于风险项）
 
@@ -247,7 +253,7 @@ class UTRRConfig:
 	instance_file: str = ""  # 非空则直接读取该算例 JSON（绕过 data_source）
 	real_case_path: str = REAL_CASE_PATH  # 真实路网 JSON
 	real_case_od: int = 3  # 采用 od_pairs 中的第几条 OD（从 0 计）；基准算例为 OD4（短里程 vs 少转运权衡）
-	# "calibrated" 用 deadline_factor × 最小可能等价时间；"window" 用 OD 自带时限；
+	# "calibrated" 用 deadline_factor × 最小可能时间；"window" 用 OD 自带时限；
 	# "ratio" 用 OD 需求品类与里程推算的参照时限
 	real_case_deadline_mode: str = "calibrated"
 	real_case_min_deadline_hours: float = 12.0  # 时限下限，避免小时级算例出现负缓冲
@@ -257,7 +263,7 @@ class UTRRConfig:
 	# 派生量
 	# ============================================================
 	def lambda_alpha(self, alpha: float | None = None) -> float:
-		"""返回可靠性价格系数 λ_α。
+		"""返回可靠度分位系数 λ_α。
 
 		正态不确定变量 N(e, σ) 的 α 分位数为 e + (√3/π)·σ·ln(α/(1−α))。
 		"""
@@ -402,9 +408,9 @@ def get_color_by_key(config_list: List[Dict[str, str]], key: str) -> str:
 class PlotProperties:
 	"""统一的绘图参数与样式常量（按《交通运输工程学报》单栏 7.0 cm 图宽设计）。"""
 
-	# 字体：中文宋体、西文 Times New Roman
+	# 字体：中文仿宋、西文/数字/数学 Times New Roman（paper-figures）
 	FONT_FAMILY_EN = "Times New Roman"
-	FONT_FAMILY_CN = "SimSun"
+	FONT_FAMILY_CN = "FangSong"
 	FONT_SIZE_TITLE = 9.0
 	FONT_SIZE_AXIS_LABEL = 8.5
 	FONT_SIZE_TICK = 7.5
@@ -418,7 +424,7 @@ class PlotProperties:
 	FIG_WIDTH_CM_FULL = 16.59  # 通栏（双栏排版占双栏）文字宽度：9404 twips
 	CM_PER_INCH = 2.54
 	FIG_ASPECT = 0.78
-	DPI = 700
+	DPI = 1000  # paper-figures：TIFF/PNG 均 1000 dpi、透明底
 	PAD_INCHES = 0.04
 
 	# 线型与标记

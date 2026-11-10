@@ -65,6 +65,7 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 				"/".join(proposed.yards_used(truth.network)),
 				f"{proposed.cost:.2f}",
 				f"{proposed.risk:.6f}",
+				f"{proposed.equivalent_time():.2f}",
 				f"{proposed_reliability:.4f}",
 				"—" if deterministic is None else deterministic.service_label(cfg),
 				"—" if deterministic is None else "/".join(deterministic.yards_used(truth.network)),
@@ -78,6 +79,7 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 				"sigma_h": float(sigma),
 				"proposed_cost": proposed.cost,
 				"proposed_risk": proposed.risk,
+				"equivalent_time": proposed.equivalent_time(),
 				"reliability": proposed_reliability,
 				"proposed_service": proposed.service,
 				"proposed_yards": proposed.yards_used(truth.network),
@@ -93,10 +95,10 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 
 	write_table(
 		os.path.join(output_dir, "表7_波动敏感性.csv"),
-		["σ/h", "本文服务类型", "本文货场", "本文成本/元", "本文风险", "本文实际可靠度",
-		 "确定性服务类型", "确定性货场", "确定性成本/元", "确定性实际可靠度", "本文路径"],
+		["σ/h", "本文服务类型", "本文货场", "本文成本/元", "本文风险", "本文时间/h", "本文实际M",
+		 "确定性服务类型", "确定性货场", "确定性成本/元", "确定性实际M", "本文路径"],
 		rows,
-		title="表 7  转运时间波动对路径与可靠度的影响",
+		title="表 7  转运时间波动对路径与M的影响",
 	)
 
 	visualizer = Visualizer(config)

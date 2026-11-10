@@ -9,7 +9,7 @@
 
 据此，机会约束 M{T̃ ≤ D} ≥ α 与确定性线性约束
 	T0 + Σμ_i·y_i + (√3/π)ln(α/(1−α))·Σσ_i·y_i ≤ D
-严格等价：路径的等价时间 T_α ≤ D 当且仅当其不确定测度达到 α。
+严格等价：路径的时间 T_α ≤ D 当且仅当其不确定测度达到 α。
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ def normal_uncertain_distribution(x: float, e: float, sigma: float) -> float:
 
 
 def reliability_price(alpha: float, mode: str) -> float:
-	"""返回可靠性价格系数 λ_α。
+	"""返回可靠度分位系数 λ_α。
 
 	正态不确定变量 N(e, σ) 的 α 分位数为 e + (√3/π)·σ·ln(α/(1−α))，
 	故 λ_α = (√3/π)·ln(α/(1−α))，随 α 提高而严格增大。
@@ -46,7 +46,7 @@ def reliability_price(alpha: float, mode: str) -> float:
 
 
 def equivalent_time(t0: float, mu: float, sigma: float, lam: float) -> float:
-	"""机会约束等价时间 T_α = T0 + μ + λ_α·σ。"""
+	"""机会约束时间 T_α = T0 + μ + λ_α·σ。"""
 	return t0 + mu + lam * sigma
 
 

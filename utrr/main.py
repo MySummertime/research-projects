@@ -21,7 +21,7 @@ import sys
 
 from config import DATA_SOURCE_REAL, DATA_SOURCE_SYNTHETIC, RESULTS_ROOT, UTRRConfig
 from src.core.uncertainty import equivalent_time
-from src.solvers.baselines import SCHEME_LABELS, solve_all_schemes
+from src.solvers.baselines import SCHEME_LABELS, knee_point, solve_all_schemes
 from src.solvers.label_correcting import ParetoLabelSolver
 from src.utils.experiment import finish_run, make_run_dir, start_run
 from src.utils.paper_tables import write_table
@@ -108,7 +108,7 @@ def run_main(config: UTRRConfig, instance, output_dir: str, logger) -> dict:
 	logger.info("\n" + "=" * 78)
 	logger.info("4.2 基准算例求解与四类方案对比")
 	logger.info("=" * 78)
-	schemes = solve_all_schemes(config, instance, logger)
+	schemes = solve_all_schemes(config, instance, logger, include_deterministic=False)
 	logger.info("\n" + format_pareto_report(schemes["proposed"], instance, config))
 	logger.info("\n" + format_scheme_report(schemes, instance, config))
 
@@ -126,6 +126,7 @@ def run_main(config: UTRRConfig, instance, output_dir: str, logger) -> dict:
 		"lambda_alpha": config.lambda_alpha(),
 		"pareto_size": len(pareto),
 		"full_front_size": len(full),
+		"full_front": [s.to_dict(instance.network, config, instance.deadline) for s in full],
 		"pareto": [s.to_dict(instance.network, config, instance.deadline) for s in pareto],
 		"schemes": {
 			key: {
@@ -143,17 +144,16 @@ def run_main(config: UTRRConfig, instance, output_dir: str, logger) -> dict:
 	with open(os.path.join(output_dir, "main.json"), "w", encoding="utf-8") as handle:
 		json.dump(payload, handle, indent=2, ensure_ascii=False)
 
-	write_scheme_table(pareto, instance, config, os.path.join(output_dir, "表3_前沿三方案对比.csv"))
+	write_scheme_table(full, pareto, instance, config, os.path.join(output_dir, "表3_六类方案对比.csv"))
 	write_dissection_table(schemes, instance, config, os.path.join(output_dir, "表3b_代表路径解剖.csv"))
 	write_pareto_table(pareto, instance, config, os.path.join(output_dir, "附表_帕累托解集.csv"))
 	write_pareto_table(full, instance, config, os.path.join(output_dir, "附表_完全前沿.csv"))
 
 	visualizer = Visualizer(config)
-	ordered = sorted(pareto, key=lambda s: s.risk)
 	tri = {
 		"cost_min": {"representative": min(pareto, key=lambda s: (s.cost, s.risk))},
-		"risk_min": {"representative": ordered[0]},
-		"compromise": {"representative": ordered[len(ordered) // 2]},
+		"risk_min": {"representative": min(pareto, key=lambda s: (s.risk, s.cost))},
+		"compromise": {"representative": knee_point(pareto)},
 	}
 	representative = tri["compromise"]["representative"]
 	visualizer.plot_network(instance, os.path.join(output_dir, "figS1_real_network.png"), solution=representative)
@@ -191,9 +191,9 @@ def run_multi_od(config: UTRRConfig, output_dir: str, logger) -> dict:
 	logger.info("多 OD 横向比较")
 	logger.info("=" * 78)
 	header = [
-		"OD", "任务", "品类", "需求/箱", "等价时间/h",
-		"成本最小/元", "其可靠度", "确定性时间/元", "其可靠度",
-		"折中解成本/元", "折中解风险", "折中解可靠度", "折中解服务类型", "前沿解数",
+		"OD", "品类", "需求/箱", "时间/h",
+		"无时限成本最小/元", "其M",
+		"折中解成本/元", "折中解风险", "折中解M", "折中解服务类型", "前沿解数",
 	]
 	rows = []
 	records = []
@@ -202,23 +202,18 @@ def run_multi_od(config: UTRRConfig, output_dir: str, logger) -> dict:
 	for item in od_list:
 		cfg = config.with_overrides(real_case_od=item["index"], deadline_hours=config.deadline_hours)
 		inst = build_instance(cfg)
-		schemes = solve_all_schemes(cfg, inst)
+		schemes = solve_all_schemes(cfg, inst, include_deterministic=False)
 		front = schemes["proposed"]["solutions"]
 		cost_min = schemes["cost_min"]["representative"]
-		det = schemes["deterministic"]["representative"]
-		ordered = sorted(front, key=lambda s: s.risk)
-		prop = ordered[len(ordered) // 2] if ordered else None
+		prop = knee_point(front)
 		rows.append(
 			[
 				item["id"],
-				item["task"],
 				cfg.hazmat_name,
 				f"{cfg.q:.0f}",
 				f"{equivalent_time(prop.t0, prop.mu, prop.sigma, cfg.lambda_alpha()):.2f}" if prop else "",
 				f"{cost_min.cost:.2f}" if cost_min else "",
 				f"{cost_min.reliability(inst.deadline):.4f}" if cost_min else "",
-				f"{det.cost:.2f}" if det else "",
-				f"{det.reliability(inst.deadline):.4f}" if det else "",
 				f"{prop.cost:.2f}" if prop else "",
 				f"{prop.risk:.6f}" if prop else "",
 				f"{prop.reliability(inst.deadline):.4f}" if prop else "",
@@ -229,7 +224,6 @@ def run_multi_od(config: UTRRConfig, output_dir: str, logger) -> dict:
 		records.append(
 			{
 				"od": item["id"],
-				"task": item["task"],
 				"hazmat": cfg.hazmat_name,
 				"demand_boxes": cfg.q,
 				"deadline": inst.deadline,
@@ -264,7 +258,7 @@ def run_multi_od(config: UTRRConfig, output_dir: str, logger) -> dict:
 			]
 		)
 		logger.info(
-			f"{item['id']}（{cfg.hazmat_name}，{cfg.q:.0f} TEU，D={inst.deadline:.2f} h）："
+			f"{item['id']}（{cfg.hazmat_name}，{cfg.q:.0f}箱，D={inst.deadline:.2f} h）："
 			f"前沿 {len(front)} 条；折中解 ¥{prop.cost:,.0f}、R={prop.reliability(inst.deadline):.4f}"
 			if prop is not None
 			else f"{item['id']}：无可行解"
@@ -286,16 +280,17 @@ def run_multi_od(config: UTRRConfig, output_dir: str, logger) -> dict:
 	return {"records": records}
 
 
-def write_scheme_table(front: list, instance, config, path: str) -> None:
-	"""表 3：可行 Pareto 前沿三方案（成本最小、风险最小、折中解）对比。"""
-	ordered = sorted(front, key=lambda s: s.risk)
-	entries = [
-		("成本最小", min(front, key=lambda s: (s.cost, s.risk))),
-		("风险最小", ordered[0]),
-		("折中解", ordered[len(ordered) // 2]),
-	]
+def write_scheme_table(full_front: list, chance_front: list, instance, config, path: str) -> None:
+	"""表 3：无时限与机会约束下的成本最小、折中和风险最小方案。"""
+	entries = []
+	for prefix, front in (("无时限", full_front), ("机会约束", chance_front)):
+		entries.extend([
+			(f"{prefix}成本最小", min(front, key=lambda s: (s.cost, s.risk))),
+			(f"{prefix}折中", knee_point(front)),
+			(f"{prefix}风险最小", min(front, key=lambda s: (s.risk, s.cost))),
+		])
 	header = [
-		"方案", "服务类型", "成本/元", "总风险", "等价时间/h", "可靠度",
+		"方案", "服务类型", "成本/元", "总风险", "时间/h", "M",
 		"货场", "转运次数", "径路构成",
 	]
 	rows = []
@@ -313,7 +308,7 @@ def write_scheme_table(front: list, instance, config, path: str) -> None:
 				route_text(solution, instance, config),
 			]
 		)
-	write_table(path, header, rows, title="表 3  Pareto 前沿三方案对比")
+	write_table(path, header, rows, title="表 3  无时限与机会约束下六类方案对比")
 
 
 def write_dissection_table(schemes: dict, instance, config, path: str) -> None:
@@ -351,7 +346,7 @@ def write_pareto_table(pareto: list, instance, config, path: str) -> None:
 	"""附表：风险-成本 Pareto 最优路径集。"""
 	header = [
 		"序号", "服务类型", "总成本/元", "总风险", "弧段风险", "节点风险",
-		"铁路运距/km", "T0/h", "μ/h", "σ/h", "等价时间/h", "可靠度", "货场", "径路构成",
+		"铁路运距/km", "T0/h", "μ/h", "σ/h", "时间/h", "M", "货场", "径路构成",
 	]
 	rows = []
 	for index, solution in enumerate(pareto, start=1):
@@ -450,21 +445,7 @@ def run_generate(config: UTRRConfig, instance, output_dir: str, logger) -> dict:
 
 
 # ----------------------------------------------------------------------
-# 模式：all —— 主实验 + 全部敏感性实验
-# ----------------------------------------------------------------------
-def run_all(config: UTRRConfig, instance, output_dir: str, logger) -> None:
-	from sensitivity.runner import EXPERIMENTS, run_named_experiment
-
-	main_dir = os.path.join(output_dir, "main")
-	os.makedirs(main_dir, exist_ok=True)
-	run_main(config, instance, main_dir, logger)
-	for name in EXPERIMENTS:
-		logger.info("\n" + "#" * 78)
-		logger.info(f"# 敏感性实验：{name}")
-		logger.info("#" * 78)
-		run_named_experiment(name, config, output_dir, logger)
-
-
+# 模式：all —— 主实验 + 全部敏感性实验（平铺命名：每实验一个 results/<实验名>_<时间戳>）
 # ----------------------------------------------------------------------
 # 入口
 # ----------------------------------------------------------------------
@@ -473,11 +454,17 @@ def main(argv=None) -> int:
 	config = build_config(args)
 
 	if args.mode == "all":
-		context = start_run("all", config, log_level=args.log_level, root=args.output)
-		try:
-			run_all(context.config, context.instance, context.output_dir, context.logger)
-		finally:
-			finish_run(context)
+		from sensitivity.runner import EXPERIMENTS, run_named_experiment
+
+		for name in ["main", *EXPERIMENTS]:
+			context = start_run(name, config, log_level=args.log_level, root=args.output)
+			try:
+				if name == "main":
+					run_main(context.config, context.instance, context.output_dir, context.logger)
+				else:
+					run_named_experiment(name, context.config, context.output_dir, context.logger)
+			finally:
+				finish_run(context)
 		return 0
 
 	context = start_run(args.mode, config, log_level=args.log_level, root=args.output)

@@ -1,7 +1,8 @@
 """出版级绘图：四层网络、Pareto 前沿、敏感性曲线与算法性能图。
 
-规格按《交通运输工程学报》单栏图宽 7.0 cm、650 dpi。图内不写标题与图名（图题由
-Word 排版层在图下给出），每幅图都必须带完整图例，坐标轴刻度一律朝内。
+规格按 paper-figures：《交通运输工程学报》单栏图宽 7.0 cm、1000 dpi、透明底
+TIFF+PNG；图内不写标题与图名；需区分系列时给完整无框图例；刻度朝内；
+中文仿宋、数字/拉丁/数学 Times New Roman（mathtext）。图内数据点注释可用 $M$ 表示运到时限可靠度，坐标轴与图例使用“可靠度”全称。
 """
 
 from __future__ import annotations
@@ -14,7 +15,9 @@ matplotlib.use("Agg")
 import matplotlib.patheffects as path_effects  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib.lines import Line2D  # noqa: E402
+from matplotlib.colors import LinearSegmentedColormap  # noqa: E402
 from matplotlib.patches import Patch  # noqa: E402
+from matplotlib.legend_handler import HandlerTuple  # noqa: E402
 from matplotlib.ticker import MultipleLocator  # noqa: E402
 from matplotlib.transforms import Bbox  # noqa: E402
 
@@ -38,8 +41,16 @@ class Visualizer:
 	def _apply_style(self) -> None:
 		plt.rcParams.update(
 			{
-				# 单字体族：混排（中文+mathtext）时双族回退会丢中文字形
-				"font.family": [PlotProperties.FONT_FAMILY_CN],
+				# 中文用仿宋；数字、英文字母与数学符号统一走 mathtext（Times New Roman）。
+				# 混排（中文+mathtext）时双字体族回退会丢中文字形，文本族只留 FangSong。
+				"font.family": ["FangSong"],
+				"mathtext.fontset": "custom",
+				"mathtext.rm": "Times New Roman",
+				"mathtext.it": "Times New Roman:italic",
+				"mathtext.bf": "Times New Roman:bold",
+				"mathtext.sf": "Times New Roman",
+				"mathtext.tt": "Times New Roman",
+				"mathtext.cal": "Times New Roman",
 				"font.size": PlotProperties.FONT_SIZE_BASE,
 				"axes.labelsize": PlotProperties.FONT_SIZE_AXIS_LABEL,
 				"axes.titlesize": PlotProperties.FONT_SIZE_TITLE,
@@ -76,7 +87,43 @@ class Visualizer:
 			length=PlotProperties.TICK_LENGTH,
 			width=PlotProperties.TICK_WIDTH,
 			pad=2,
+			labelsize=PlotProperties.FONT_SIZE_TICK,
 		)
+		# 数字刻度走 mathtext（Times New Roman）；已手工设定标签的轴不覆盖
+		from matplotlib.ticker import FixedFormatter, FuncFormatter
+		formatter = FuncFormatter(lambda v, _: f"${v:g}$")
+		if not isinstance(ax.xaxis.get_major_formatter(), FixedFormatter):
+			ax.xaxis.set_major_formatter(formatter)
+		if not isinstance(ax.yaxis.get_major_formatter(), FixedFormatter):
+			ax.yaxis.set_major_formatter(formatter)
+
+	@staticmethod
+	def _times_tick_font():
+		from matplotlib import font_manager
+
+		# 右轴刻度只用数字/小数点，直接绑 Times New Roman，避开 twinx+FangSong 回退无衬线
+		path = font_manager.findfont("Times New Roman")
+		return font_manager.FontProperties(fname=path, size=PlotProperties.FONT_SIZE_TICK)
+
+	@classmethod
+	def _style_twin_y(cls, ax2) -> None:
+		"""右轴：刻度朝内；数字强制 Times New Roman，与左轴 mathtext 观感一致。"""
+		ax2.spines["top"].set_visible(False)
+		ax2.spines["right"].set_linewidth(PlotProperties.SPINE_LINE_WIDTH)
+		ax2.tick_params(
+			direction="in",
+			length=PlotProperties.TICK_LENGTH,
+			width=PlotProperties.TICK_WIDTH,
+			pad=2,
+			labelsize=PlotProperties.FONT_SIZE_TICK,
+		)
+		ax2.grid(False)
+		ylim = ax2.get_ylim()
+		yticks = [t for t in ax2.get_yticks() if ylim[0] <= t <= ylim[1]]
+		ax2.set_yticks(yticks)
+		# 用 $...$ 走 mathtext；再显式设 TNR，防止 secondary axis 掉字体
+		fp = cls._times_tick_font()
+		ax2.set_yticklabels([f"${t:g}$" for t in yticks], fontproperties=fp)
 
 	def _save(self, fig, path: str) -> list:
 		"""保存图片并返回生成的文件列表。
@@ -456,7 +503,6 @@ class Visualizer:
 		legend_items = [
 			Line2D([0], [0], color=ColorPalette.DEFAULT_GRAY, lw=1.0, label="公路弧"),
 			Line2D([0], [0], color=ColorPalette.DEFAULT_BLACK, lw=1.0, label="铁路弧"),
-			Line2D([0], [0], color=ColorPalette.TERRACOTTA, lw=1.7, label="选中路径"),
 			Line2D([0], [0], marker="s", color="none", markerfacecolor=ColorPalette.DEFAULT_BLACK,
 				   markeredgecolor=ColorPalette.DEFAULT_BLACK, markersize=5, label="客户点"),
 			Line2D([0], [0], marker="s", color="none", markerfacecolor=ColorPalette.WARM_SAND,
@@ -464,6 +510,10 @@ class Visualizer:
 			Line2D([0], [0], marker="o", color="none", markerfacecolor=ColorPalette.DEFAULT_WHITE,
 				   markeredgecolor=ColorPalette.DEFAULT_BLACK, markersize=4, label="铁路车站"),
 		]
+		if solution is not None:
+			legend_items.insert(2, Line2D(
+				[0], [0], color=ColorPalette.TERRACOTTA, lw=1.7, label="选中路径"
+			))
 		ax.legend(
 			handles=legend_items,
 			loc="lower center",
@@ -497,7 +547,7 @@ class Visualizer:
 		if full_front:
 			sorted_full = sorted(full_front, key=lambda s: s.risk)
 			fx = [s.risk for s in sorted_full]
-			fy = [s.cost / 1000.0 for s in sorted_full]
+			fy = [s.cost / 10000.0 for s in sorted_full]
 			ax.plot(
 				fx,
 				fy,
@@ -512,17 +562,17 @@ class Visualizer:
 		if front:
 			sorted_front = sorted(front, key=lambda s: s.risk)
 			points_x += [s.risk for s in sorted_front]
-			points_y += [s.cost / 1000.0 for s in sorted_front]
+			points_y += [s.cost / 10000.0 for s in sorted_front]
 			ax.plot(
 				[s.risk for s in sorted_front],
-				[s.cost / 1000.0 for s in sorted_front],
+				[s.cost / 10000.0 for s in sorted_front],
 				color=ColorPalette.DEFAULT_BLACK,
 				lw=PlotProperties.LINE_WIDTH,
 				zorder=3,
 			)
 			ax.scatter(
 				[s.risk for s in sorted_front],
-				[s.cost / 1000.0 for s in sorted_front],
+				[s.cost / 10000.0 for s in sorted_front],
 				s=PlotProperties.MARKER_SIZE**2 * 0.9,
 				facecolor=ColorPalette.DEFAULT_WHITE,
 				edgecolor=ColorPalette.DEFAULT_BLACK,
@@ -535,6 +585,7 @@ class Visualizer:
 		scheme_handles = {}
 		if schemes:
 			marked = [
+				("无时限成本最小", "no_deadline", "x", (8, 8), "left", "bottom"),
 				("成本最小解", "cost_min", "s", (-6, -10), "right", "top"),
 				("风险最小解", "risk_min", "^", (5, 8), "left", "bottom"),
 				("折中解", "compromise", "*", (10, 9), "left", "bottom"),
@@ -543,7 +594,7 @@ class Visualizer:
 				solution = schemes.get(key, {}).get("representative")
 				if solution is None:
 					continue
-				x, y = solution.risk, solution.cost / 1000.0
+				x, y = solution.risk, solution.cost / 10000.0
 				points_x.append(x)
 				points_y.append(y)
 				ax.scatter(
@@ -573,8 +624,8 @@ class Visualizer:
 					markersize=7.0 if marker == "*" else 4.4,
 					label=label,
 				)
-				# 方案名称进图例，点旁只标可靠度，避免图例与注记重复
-				text = f"$R={solution.reliability(instance.deadline):.3f}$"
+				# 方案名称进图例，点旁只标 M，避免图例与注记重复
+				text = f"$M={solution.reliability(instance.deadline):.3f}$"
 				annotations.append((text, x, y, offset, ha, va))
 
 		pad_x = (max(points_x) - min(points_x)) * 0.26 if points_x else 1.0
@@ -604,24 +655,26 @@ class Visualizer:
 				),
 			)
 
-		ax.set_xlabel("综合运输风险 / 人")
-		ax.set_ylabel("综合运输成本 / 千元")
+		ax.set_xlabel("运输风险 / 人")
+		ax.set_ylabel("运输成本 / 万元")
 		ax.xaxis.set_major_locator(MultipleLocator(100.0))
 		handles = [
 			Line2D([0], [0], color=ColorPalette.DEFAULT_GRAY, lw=PlotProperties.LINE_WIDTH_AUX,
-				   ls=(0, (4, 2)), label="完全前沿（不计时限）"),
+				   ls=(0, (4, 2)), label="完整前沿（不计时限）"),
 			Line2D([0], [0], color=ColorPalette.DEFAULT_BLACK, lw=PlotProperties.LINE_WIDTH,
 				   marker="o", markerfacecolor=ColorPalette.DEFAULT_WHITE,
 				   markeredgecolor=ColorPalette.DEFAULT_BLACK, markersize=3.4,
-				   label=f"Pareto 最优前沿（$R \\geq {alpha:.2f}$）"),
+				   label="机会约束前沿（可靠度不低于0.90）"),
 		]
-		# 图例按列填充：左列为前沿、右列为三方案
+		# 图例 3 行 2 列、从左到右从上到下：完全前沿、Pareto 最优前沿、风险最小解、成本最小解、折中解
+		# （matplotlib 按列填充，故按 列1 三行、列2 两行 的顺序给句柄）
 		ordered = [
 			handles[0],
-			scheme_handles.get("cost_min"),
-			handles[1],
-			scheme_handles.get("risk_min"),
+			scheme_handles.get("no_deadline"),
 			scheme_handles.get("compromise"),
+			handles[1],
+			scheme_handles.get("cost_min"),
+			scheme_handles.get("risk_min"),
 		]
 		ax.legend(
 			handles=[handle for handle in ordered if handle is not None],
@@ -640,45 +693,181 @@ class Visualizer:
 		return self._save(fig, path)
 
 	def plot_algorithm_scaling(self, bench_records: list, ablation_records: list, path: str) -> list:
-		"""图 11：各算法求解时间随网络规模的可扩展性曲线（对数纵轴）。"""
-		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.82)
+		"""图 12：BMLC 与外部算法对比。x 轴网络节点数，左轴求解时间，右轴工作量。"""
+		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.90)
 		ax = fig.add_subplot(111)
 		name_to_nodes = {r["instance"]: r["num_nodes"] for r in bench_records}
+		work_label = {
+			"BMLC": "生成标号数",
+			"WST": "扩展标号数",
+			"Gurobi-MIP": "求解次数",
+		}
 		series = {
-			"本文算法（BMLC）": ("o", ColorPalette.DEFAULT_BLACK, []),
-			"加权和法WST": ("s", ColorPalette.TERRACOTTA, []),
-			"Gurobi-MIP": ("D", ColorPalette.DEFAULT_GRAY, []),
+			"BMLC": ("o", ColorPalette.DEFAULT_BLACK, [], []),
+			"WST": ("s", ColorPalette.TERRACOTTA, [], []),
+			"Gurobi-MIP": ("D", ColorPalette.DEFAULT_GRAY, [], []),
 		}
 		for row in ablation_records:
 			if row["variant"].startswith("完整算法"):
-				series["本文算法（BMLC）"][2].append((name_to_nodes.get(row["instance"], 0), row["wall_time"]))
+				series["BMLC"][2].append((name_to_nodes.get(row["instance"], 0), row["wall_time"]))
+				series["BMLC"][3].append((name_to_nodes.get(row["instance"], 0), row["labels"]))
 		for row in bench_records:
-			series["加权和法WST"][2].append((row["num_nodes"], row["wst"]["wall_time"]))
+			series["WST"][2].append((row["num_nodes"], row["wst"]["wall_time"]))
+			series["WST"][3].append((row["num_nodes"], row["wst"]["labels"]))
 			if row.get("gurobi"):
 				series["Gurobi-MIP"][2].append((row["num_nodes"], row["gurobi"]["wall_time"]))
-		for label, (marker, color, data) in series.items():
-			if not data:
+				series["Gurobi-MIP"][3].append((row["num_nodes"], row["gurobi"]["num_solves"]))
+		ax2 = ax.twinx()
+		ax2.spines["top"].set_visible(False)
+		ax2.grid(False)
+		# 节点数跨度大（24–94），若用物理坐标作柱宽会缩成细线；改为类别坐标
+		nodes = sorted({r["num_nodes"] for r in bench_records})
+		xpos = {n: i for i, n in enumerate(nodes)}
+		n_series = max(1, sum(1 for _, (_, _, tdata, _) in series.items() if tdata))
+		width = 0.72 / n_series
+		# 柱：无彩色填充，仅黑边+底纹区分；twin 轴默认盖住折线，需把左轴抬到上层
+		plt.rcParams["hatch.color"] = ColorPalette.DEFAULT_BLACK
+		plt.rcParams["hatch.linewidth"] = 0.55
+		# BMLC：空白填充（无底纹）；其余算法用底纹区分
+		hatches = {"BMLC": "", "WST": "////", "Gurobi-MIP": "xxxx"}
+		bar_face = ColorPalette.DEFAULT_WHITE
+		for i, (label, (marker, color, tdata, wdata)) in enumerate(series.items()):
+			if not tdata:
 				continue
-			data = sorted(d for d in data if d[0] > 0 and d[1] > 0)
-			ax.plot([d[0] for d in data], [d[1] for d in data],
-					marker=marker, color=color, lw=PlotProperties.LINE_WIDTH,
-					ms=PlotProperties.MARKER_SIZE, label=label)
-		ax.set_yscale("log")
-		ax.yaxis.set_major_formatter(
-			__import__("matplotlib.ticker", fromlist=["FuncFormatter"]).FuncFormatter(
-				lambda v, _: f"{v:g}"
+			work_by_node = {d[0]: d[1] for d in wdata if d[0] > 0 and d[1] > 0}
+			ax2.bar(
+				[xpos[n] - 0.36 + (i + 0.5) * width for n in nodes],
+				[work_by_node.get(n, 0.0) for n in nodes],
+				width=width * 0.88, facecolor=bar_face, edgecolor=ColorPalette.DEFAULT_BLACK,
+				linewidth=0.55, hatch=hatches[label], zorder=1,
 			)
-		)
+		for i, (label, (marker, color, tdata, wdata)) in enumerate(series.items()):
+			if not tdata:
+				continue
+			td = sorted(d for d in tdata if d[0] > 0 and d[1] > 0)
+			tex = "$\\mathrm{Gurobi}$" if label == "Gurobi-MIP" else f"$\\mathrm{{{label}}}$"
+			ax.plot([xpos[d[0]] for d in td], [d[1] for d in td],
+					marker=marker, color=color, lw=PlotProperties.LINE_WIDTH,
+					ms=PlotProperties.MARKER_SIZE, label=tex, zorder=5)
+		ax.set_zorder(ax2.get_zorder() + 1)
+		ax.patch.set_visible(False)
+		ax.set_yscale("log")
+		ax2.set_yscale("log")
+		ax.set_xticks(list(range(len(nodes))))
+		ax.set_xticklabels([f"${v:g}$" for v in nodes])
+		ax.set_xlim(-0.6, len(nodes) - 0.4)
 		ax.set_xlabel("网络节点数")
-		ax.set_ylabel("求解时间 / s")
-		ax.legend(frameon=False, loc="upper left", fontsize=PlotProperties.FONT_SIZE_ANNOTATION,
-				  handlelength=1.6)
+		ax.set_ylabel("求解时间 / $\\mathrm{s}$")
+		ax2.set_ylabel("工作量 / 次")
+		# 图例两行：第一行为左轴折线指标，第二行为右轴柱状指标（列主序交错排布）
+		handles = []
+		labels = []
+		for label, (marker, color, tdata, wdata) in series.items():
+			if not tdata:
+				continue
+			tex = "$\\mathrm{Gurobi}$" if label == "Gurobi-MIP" else f"$\\mathrm{{{label}}}$"
+			handles.append((
+				Line2D([0], [0], color=color, lw=PlotProperties.LINE_WIDTH,
+						 marker=marker, ms=PlotProperties.MARKER_SIZE),
+				Patch(facecolor=bar_face, edgecolor=ColorPalette.DEFAULT_BLACK,
+					  linewidth=0.55, hatch=hatches[label]),
+			))
+			labels.append(tex)
+		ax.legend(handles=handles, labels=labels, frameon=False, loc="lower center",
+				  bbox_to_anchor=(0.5, 1.0), ncol=3, handler_map={tuple: HandlerTuple(ndivide=None)},
+				  fontsize=PlotProperties.FONT_SIZE_ANNOTATION,
+				  handletextpad=0.5, handlelength=2.2, columnspacing=1.0,
+				  borderaxespad=0.1)
 		self._style_axes(ax)
+		self._style_twin_y(ax2)
 		return self._save(fig, path)
 
-	# ------------------------------------------------------------------
-	# 图 5b：其余 OD 对的风险-成本 Pareto 前沿（多面板）
-	# ------------------------------------------------------------------
+	def plot_ablation_scaling(self, ablation_records: list, path: str) -> list:
+		"""图 11：BMLC 与消融变体对比。x 轴网络节点数，左轴求解时间，右轴剪枝率。"""
+		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.90)
+		ax = fig.add_subplot(111)
+		code_of = {
+			"完整算法（4策略）": "BMLC",
+			"去除双向汇合（3策略）": "BMLC-B",
+			"再去除下界剪枝（2策略）": "BMLC-BL",
+			"仅保留Pareto支配（1策略）": "BMLC-BLC",
+		}
+		styles = {
+			"BMLC": ("o", ColorPalette.DEFAULT_BLACK),
+			"BMLC-B": ("s", ColorPalette.TERRACOTTA),
+			"BMLC-BL": ("^", ColorPalette.SLATE),
+			"BMLC-BLC": ("D", ColorPalette.DEFAULT_GRAY),
+		}
+		name_to_nodes = {"OD4真实算例": 94, "合成24节点": 24, "合成38节点": 38,
+						 "合成52节点": 52, "合成82节点": 82}
+		data = {code: [] for code in styles}
+		for row in ablation_records:
+			code = code_of.get(row["variant"])
+			if code:
+				data[code].append((name_to_nodes.get(row["instance"], 0),
+								   row["wall_time"], row["prune_rate"] * 100.0))
+		ax2 = ax.twinx()
+		ax2.spines["top"].set_visible(False)
+		ax2.grid(False)
+		# 节点数跨度大（24–94），若用物理坐标作柱宽会缩成细线；改为类别坐标
+		nodes = sorted({p[0] for code in styles for p in data[code]})
+		xpos = {n: i for i, n in enumerate(nodes)}
+		n_series = max(1, sum(1 for code in styles if data[code]))
+		width = 0.72 / n_series
+		# 柱：无彩色填充，仅黑边+底纹区分；twin 轴默认盖住折线，需把左轴抬到上层
+		plt.rcParams["hatch.color"] = ColorPalette.DEFAULT_BLACK
+		plt.rcParams["hatch.linewidth"] = 0.55
+		# BMLC：空白填充（无底纹）；消融变体用底纹区分
+		hatches = {"BMLC": "", "BMLC-B": "////", "BMLC-BL": "\\\\\\\\", "BMLC-BLC": "xxxx"}
+		bar_face = ColorPalette.DEFAULT_WHITE
+		for i, (code, (marker, color)) in enumerate(styles.items()):
+			if not data[code]:
+				continue
+			pts = sorted(data[code])
+			prune_by_node = {p[0]: p[2] for p in pts}
+			ax2.bar(
+				[xpos[n] - 0.36 + (i + 0.5) * width for n in nodes],
+				[prune_by_node.get(n, 0.0) for n in nodes],
+				width=width * 0.88, facecolor=bar_face, edgecolor=ColorPalette.DEFAULT_BLACK,
+				linewidth=0.55, hatch=hatches[code], zorder=1,
+			)
+		for i, (code, (marker, color)) in enumerate(styles.items()):
+			if not data[code]:
+				continue
+			pts = sorted(data[code])
+			ax.plot([xpos[p[0]] for p in pts], [p[1] for p in pts], marker=marker, color=color,
+					lw=PlotProperties.LINE_WIDTH, ms=PlotProperties.MARKER_SIZE,
+					label=f"$\\mathrm{{{code}}}$", zorder=5)
+		ax.set_zorder(ax2.get_zorder() + 1)
+		ax.patch.set_visible(False)
+		ax.set_yscale("log")
+		ax.set_xticks(list(range(len(nodes))))
+		ax.set_xticklabels([f"${v:g}$" for v in nodes])
+		ax.set_xlim(-0.6, len(nodes) - 0.4)
+		ax.set_xlabel("网络节点数")
+		ax.set_ylabel("求解时间 / $\\mathrm{s}$")
+		ax2.set_ylabel("剪枝率 / $\\%$")
+		# 图例两行：第一行为左轴折线指标，第二行为右轴柱状指标（列主序交错排布）
+		handles = []
+		labels = []
+		for code, (marker, color) in styles.items():
+			if not data[code]:
+				continue
+			handles.append((
+				Line2D([0], [0], color=color, lw=PlotProperties.LINE_WIDTH,
+						 marker=marker, ms=PlotProperties.MARKER_SIZE),
+				Patch(facecolor=bar_face, edgecolor=ColorPalette.DEFAULT_BLACK,
+					  linewidth=0.55, hatch=hatches[code]),
+			))
+			labels.append(f"$\\mathrm{{{code}}}$")
+		ax.legend(handles=handles, labels=labels, frameon=False, loc="lower center",
+				  bbox_to_anchor=(0.5, 1.0), ncol=2, handler_map={tuple: HandlerTuple(ndivide=None)},
+				  fontsize=PlotProperties.FONT_SIZE_ANNOTATION,
+				  handletextpad=0.5, handlelength=2.2, columnspacing=1.0, labelspacing=0.25,
+				  borderaxespad=0.1)
+		self._style_axes(ax)
+		self._style_twin_y(ax2)
+		return self._save(fig, path)
 	def plot_multi_od_fronts(self, od_fronts: list, path: str) -> list:
 		"""多面板绘制各 OD 对的可行 Pareto 前沿。
 
@@ -691,7 +880,7 @@ class Visualizer:
 		front_handle = Line2D(
 			[0], [0], color=ColorPalette.DEFAULT_BLACK, lw=PlotProperties.LINE_WIDTH,
 			marker="o", markerfacecolor=ColorPalette.DEFAULT_WHITE,
-			markeredgecolor=ColorPalette.DEFAULT_BLACK, markersize=3.4, label="Pareto 最优前沿",
+			markeredgecolor=ColorPalette.DEFAULT_BLACK, markersize=3.4, label="$\\mathrm{Pareto}$ 最优前沿",
 		)
 		knee_handle = Line2D(
 			[0], [0], marker="*", color="none",
@@ -704,7 +893,7 @@ class Visualizer:
 			if front:
 				ordered = sorted(front, key=lambda s: s.risk)
 				xs = [s.risk for s in ordered]
-				ys = [s.cost / 1000.0 for s in ordered]
+				ys = [s.cost / 10000.0 for s in ordered]
 				ax.plot(xs, ys, color=ColorPalette.DEFAULT_BLACK,
 						lw=PlotProperties.LINE_WIDTH, zorder=3)
 				ax.scatter(xs, ys, s=PlotProperties.MARKER_SIZE**2 * 0.7,
@@ -712,13 +901,13 @@ class Visualizer:
 						   edgecolor=ColorPalette.DEFAULT_BLACK, linewidth=0.7, zorder=4)
 			knee = item.get("knee")
 			if knee is not None:
-				ax.scatter(knee.risk, knee.cost / 1000.0, marker="*",
+				ax.scatter(knee.risk, knee.cost / 10000.0, marker="*",
 						   s=(PlotProperties.MARKER_SIZE * 1.5) ** 2,
 						   facecolor=ColorPalette.TERRACOTTA,
 						   edgecolor=ColorPalette.DEFAULT_BLACK, linewidth=0.7, zorder=5)
-			ax.set_title(item["label"], fontsize=PlotProperties.FONT_SIZE_ANNOTATION)
-			ax.set_xlabel("综合运输风险 / 人", fontsize=PlotProperties.FONT_SIZE_ANNOTATION)
-			ax.set_ylabel("综合运输成本 / 千元", fontsize=PlotProperties.FONT_SIZE_ANNOTATION)
+			ax.set_title(f"$\\mathrm{{{item['label']}}}$", fontsize=PlotProperties.FONT_SIZE_ANNOTATION)
+			ax.set_xlabel("运输风险 / 人", fontsize=PlotProperties.FONT_SIZE_ANNOTATION)
+			ax.set_ylabel("运输成本 / 万元", fontsize=PlotProperties.FONT_SIZE_ANNOTATION)
 			self._style_axes(ax)
 		# 图例置于图片最上方、水平单行
 		fig.legend(
@@ -739,14 +928,15 @@ class Visualizer:
 	# 图 6：置信水平敏感性
 	# ------------------------------------------------------------------
 	def plot_alpha(self, rows: list, path: str, critical: float = None, sweep: list = None) -> list:
-		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.82)
+		"""图 7：置信水平影响。x 轴取表 7 的 α 网格参数；临界点以标记绘于 α=0.80 与 0.99。"""
+		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.88)
 		ax = fig.add_subplot(111)
-		series = [item for item in (sweep or []) if item.get("cost") is not None] or rows
+		series = rows
 		alpha = [item["alpha"] for item in series]
-		cost = [item["cost"] / 1000.0 for item in series]
+		cost = [item["cost"] / 10000.0 for item in series]
 		risk = [item["risk"] for item in series]
 
-		line_cost, = ax.plot(
+		ax.plot(
 			alpha, cost, color=ColorPalette.DEFAULT_BLACK, drawstyle="steps-post",
 			lw=PlotProperties.LINE_WIDTH, label="最小成本",
 		)
@@ -756,61 +946,55 @@ class Visualizer:
 			linewidth=0.6, zorder=4,
 		)
 		ax.set_xlabel("置信水平 $\\alpha$")
-		ax.set_ylabel("综合运输成本 / 千元")
+		ax.set_ylabel("运输成本 / 万元")
 		self._style_axes(ax)
 
 		ax2 = ax.twinx()
-		ax2.spines["top"].set_visible(False)
-		line_risk, = ax2.plot(
+		ax2.plot(
 			alpha, risk, marker="s", color=ColorPalette.TERRACOTTA, ls="--",
 			lw=PlotProperties.LINE_WIDTH_AUX, ms=PlotProperties.MARKER_SIZE * 0.62,
 			label="综合风险",
 		)
-		ax2.set_ylabel("综合运输风险 / 人")
-		ax2.tick_params(direction="in", length=PlotProperties.TICK_LENGTH, width=PlotProperties.TICK_WIDTH)
-		ax2.grid(False)
+		ax2.set_ylabel("运输风险 / 人")
 
 		ax.set_xlim(min(alpha) - 0.012, max(alpha) + 0.012)
-		ax.xaxis.set_major_locator(MultipleLocator(0.05))
+		ax.set_xticks(alpha)
+		ax.set_xticklabels([f"${v:.2f}$" for v in alpha])
 		span_cost = max(cost) - min(cost)
 		span_risk = max(risk) - min(risk)
 		ax.set_ylim(min(cost) - span_cost * 0.16, max(cost) + span_cost * 0.16)
 		ax2.set_ylim(min(risk) - span_risk * 0.16, max(risk) + span_risk * 0.16)
+		# ylim 定稿后再锁右轴 mathtext 刻度，避免 twinx 默认无衬线数字
+		self._style_twin_y(ax2)
 
-		# 临界置信水平：最小成本方案的切换点，用竖虚线标出并单独进图例
+		# 置信水平换档点：α=0.80 与 0.99 处灰色竖虚线（与时限严格度同款），线左侧标 M 值
+		cost_at = {round(item["alpha"], 2): item["cost"] / 10000.0 for item in series}
+		for a, mlabel in ((0.85, "0.85"), (0.99, "0.99")):
+			if round(a, 2) in cost_at:
+				ax.axvline(a, color=ColorPalette.SLATE, lw=0.8, ls=(0, (3, 2)), zorder=1)
+				ax.annotate(
+					f"$M={mlabel}$",
+					(a, max(cost) + span_cost * 0.10),
+					textcoords="offset points",
+					xytext=(-3, 0),
+					ha="right",
+					va="bottom",
+					fontsize=PlotProperties.FONT_SIZE_ANNOTATION - 1.0,
+					color=ColorPalette.SLATE,
+					zorder=6,
+				)
 		handles = [
 			Line2D([0], [0], color=ColorPalette.DEFAULT_BLACK, lw=PlotProperties.LINE_WIDTH,
 				   marker="o", markerfacecolor=ColorPalette.DEFAULT_WHITE,
 				   markeredgecolor=ColorPalette.DEFAULT_BLACK, markersize=3.6,
-				   label="最小成本"),
+				   label="成本"),
 			Line2D([0], [0], color=ColorPalette.TERRACOTTA, lw=PlotProperties.LINE_WIDTH_AUX,
 				   ls="--", marker="s", markerfacecolor=ColorPalette.TERRACOTTA,
 				   markeredgecolor=ColorPalette.TERRACOTTA, markersize=3.4,
-				   label="综合风险"),
+				   label="风险"),
+			Line2D([0], [0], color=ColorPalette.SLATE, lw=0.8, ls=(0, (3, 2)),
+				   label="置信水平换档点"),
 		]
-		if critical is not None:
-			ax.axvline(
-				critical,
-				color=ColorPalette.SLATE,
-				lw=0.9,
-				ls=(0, (4, 2)),
-				zorder=1,
-			)
-			ax.annotate(
-				f"$\\alpha^* = {critical:.3f}$",
-				(critical, max(cost) + span_cost * 0.10),
-				textcoords="offset points",
-				xytext=(3, 0),
-				ha="left",
-				va="bottom",
-				fontsize=PlotProperties.FONT_SIZE_ANNOTATION,
-				color=ColorPalette.SLATE,
-				zorder=6,
-			)
-			handles.append(
-				Line2D([0], [0], color=ColorPalette.SLATE, lw=0.9, ls=(0, (4, 2)),
-					   label="临界置信水平")
-			)
 		ax.legend(
 			handles=handles,
 			frameon=False,
@@ -827,45 +1011,33 @@ class Visualizer:
 	# 图 7：测试周期敏感性
 	# ------------------------------------------------------------------
 	def plot_sigma(self, rows: list, path: str) -> list:
+		"""图 8：四指标相对变化曲线（以 σ=0 确定性情形为基准），呈现表 8 行式数据之外的联动。"""
 		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.82)
 		ax = fig.add_subplot(111)
 		scale = [row["sigma_h"] for row in rows]
-		ax.plot(
-			scale,
-			[row["reliability"] for row in rows],
-			marker="o",
-			color=ColorPalette.DEFAULT_BLACK,
-			lw=PlotProperties.LINE_WIDTH,
-			ms=PlotProperties.MARKER_SIZE,
-			label="本文不确定模型",
-		)
-		ax.plot(
-			scale,
-			[row["det_reliability"] for row in rows],
-			marker="s",
-			ls="--",
-			color=ColorPalette.TERRACOTTA,
-			lw=PlotProperties.LINE_WIDTH,
-			ms=PlotProperties.MARKER_SIZE,
-			label="确定性时间模型",
-		)
-		ax.axhline(
-			self.config.alpha,
-			color=ColorPalette.DEFAULT_GRAY,
-			ls=":",
-			lw=0.9,
-			label=f"置信水平 $\\alpha$ = {self.config.alpha:.2f}",
-		)
-		ax.set_xlabel("$\\sigma$ / h")
-		ax.set_ylabel("实际运到时限可靠度")
-		ax.set_ylim(0.55, 1.06)
-		ax.set_xlim(min(scale) - 0.15, max(scale) + 0.15)
+		series = [
+			("成本", [row["proposed_cost"] for row in rows], "o", ColorPalette.DEFAULT_BLACK),
+			("风险", [row["proposed_risk"] for row in rows], "s", ColorPalette.TERRACOTTA),
+			("可靠度", [row["reliability"] for row in rows], "^", ColorPalette.SLATE),
+			("时间", [row["equivalent_time"] for row in rows], "D", ColorPalette.DEFAULT_GRAY),
+		]
+		for label, vals, marker, color in series:
+			rel = [(v / vals[0] - 1.0) * 100.0 for v in vals]
+			ax.plot(scale, rel, marker=marker, color=color, lw=PlotProperties.LINE_WIDTH,
+					ms=PlotProperties.MARKER_SIZE, label=label)
+		ax.axhline(0.0, color=ColorPalette.DEFAULT_GRAY, ls=":", lw=0.8)
+		ax.set_xlabel("波动参数 / $\\mathrm{h}$")
+		ax.set_ylabel("相对变化 / $\\%$")
+		ax.set_xticks(scale)
+		ax.set_xticklabels([f"${v:g}$" for v in scale])
+		ax.set_xlim(min(scale) - 0.3, max(scale) + 0.3)
 		ax.legend(
 			frameon=False,
 			loc="lower center",
 			bbox_to_anchor=(0.5, 1.0),
-			ncol=2,
-			handlelength=1.9,
+			ncol=4,
+			handletextpad=0.5,
+			handlelength=1.7,
 			columnspacing=0.9,
 			borderaxespad=0.1,
 		)
@@ -873,103 +1045,85 @@ class Visualizer:
 		return self._save(fig, path)
 
 	# ------------------------------------------------------------------
-	# 图 8：风险构成分解
+	# 图 9：节点风险 θ–ρ 联合响应热力图
 	# ------------------------------------------------------------------
-	def plot_node_risk(self, rows: list, path: str) -> list:
-		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.80)
+	def plot_demand(self, rows: list, path: str) -> list:
+		"""运量与成本最小可行方案的总成本和单位箱成本。"""
+		if not rows:
+			raise ValueError("运量敏感性结果为空")
+		ordered = sorted(rows, key=lambda row: row["q"])
+		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.82)
 		ax = fig.add_subplot(111)
-		labels = [row["label"] for row in rows]
-		arc_risk = [row["arc_risk"] for row in rows]
-		node_risk = [row["node_risk_model"] for row in rows]
-		omitted = [row["node_risk_omitted"] for row in rows]
-		positions = list(range(len(rows)))
-
-		ax.bar(
-			positions,
-			arc_risk,
-			width=0.52,
-			color=ColorPalette.DEFAULT_GRAY,
-			edgecolor=ColorPalette.DEFAULT_BLACK,
-			linewidth=0.6,
-			label="弧段运输风险",
-		)
-		ax.bar(
-			positions,
-			node_risk,
-			width=0.52,
-			bottom=arc_risk,
-			color=ColorPalette.RISK_NODE,
-			edgecolor=ColorPalette.DEFAULT_BLACK,
-			linewidth=0.6,
-			label="计入的节点风险",
-		)
-		if any(value > 0 for value in omitted):
-			ax.bar(
-				positions,
-				omitted,
-				width=0.52,
-				bottom=[a + b for a, b in zip(arc_risk, node_risk)],
-				facecolor=ColorPalette.DEFAULT_WHITE,
-				edgecolor=ColorPalette.RISK_NODE,
-				linewidth=0.6,
-				hatch="///",
-				label="被忽略的节点风险",
-			)
-
-		top = max(a + b + c for a, b, c in zip(arc_risk, node_risk, omitted))
-		ax.set_ylim(0.0, top * 1.16)
-		# 柱顶标总量，柱内标节点风险占比：直接说明"忽略节点风险会低估多少"
-		for position, arc, node, missing in zip(positions, arc_risk, node_risk, omitted):
-			total = arc + node + missing
-			ax.annotate(
-				f"{total:.2f}",
-				(position, total),
-				textcoords="offset points",
-				xytext=(0, 2),
-				ha="center",
-				va="bottom",
-				fontsize=PlotProperties.FONT_SIZE_ANNOTATION - 0.5,
-				zorder=6,
-			)
-			segment = node if node > 0 else missing
-			if segment > 0:
-				ax.annotate(
-					f"{segment / total:.1%}",
-					(position, arc + segment * 0.5),
-					ha="center",
-					va="center",
-					fontsize=PlotProperties.FONT_SIZE_ANNOTATION - 0.5,
-					color=ColorPalette.DEFAULT_BLACK,
-					zorder=6,
-				)
-		ax.set_xticks(positions)
-		ax.set_xticklabels(
-			[lab.replace("θ,ρ", "$\\theta,\\rho$") for lab in labels], rotation=0
-		)
-		ax.set_ylabel("综合运输风险 / 人")
-		ax.legend(
-			frameon=False,
-			loc="lower center",
-			bbox_to_anchor=(0.5, 1.0),
-			ncol=3,
-			handlelength=1.5,
-			columnspacing=0.9,
-			handletextpad=0.45,
-			borderpad=0.1,
-		)
+		quantities = [row["q"] for row in ordered]
+		costs = [row["cost_min"]["cost"] / 10000.0 for row in ordered]
+		ax.plot(quantities, costs, color=ColorPalette.DEFAULT_BLACK, marker="o",
+				lw=PlotProperties.LINE_WIDTH, ms=PlotProperties.MARKER_SIZE, label="总成本")
+		ax.set_xlabel("运量 / 箱")
+		ax.set_ylabel("总成本 / 万元")
 		self._style_axes(ax)
+		ax2 = ax.twinx()
+		ax2.plot(quantities, [cost / q for cost, q in zip(costs, quantities)],
+				 color=ColorPalette.TERRACOTTA, marker="s", ls="--",
+				 lw=PlotProperties.LINE_WIDTH_AUX, ms=PlotProperties.MARKER_SIZE, label="单位箱成本")
+		ax2.set_ylabel("单位箱成本 / 万元")
+		self._style_twin_y(ax2)
+		handles = ax.get_lines() + ax2.get_lines()
+		ax.legend(handles=handles, labels=[line.get_label() for line in handles],
+				  frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2)
 		return self._save(fig, path)
 
-	# ------------------------------------------------------------------
-	# 图 9：时限严格度与服务类型选择
-	# ------------------------------------------------------------------
+	def plot_node_risk(self, rows: list, path: str) -> list:
+		"""图 9：节点风险的 θ–ρ 联合响应热力图。"""
+		data = [r for r in rows if r.get("theta") is not None]
+		thetas = sorted({r["theta"] for r in data})
+		rhos = sorted({r["rho"] for r in data})
+		base = path[:-4] if path.endswith(".png") else path
+		grid = [[0.0] * len(rhos) for _ in thetas]
+		for r in data:
+			ti = thetas.index(r["theta"])
+			rj = rhos.index(r["rho"])
+			# 两类代表解的节点风险相同，取成本最优解口径绘制唯一的联合响应。
+			grid[ti][rj] = r["cost_total"] * r["cost_share"]
+
+		cmap = LinearSegmentedColormap.from_list(
+			"terracotta_seq",
+			["#FFF8F3", ColorPalette.WARM_SAND, ColorPalette.TERRACOTTA, "#7A3E2A"],
+			N=256,
+		)
+		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.86)
+		ax = fig.add_subplot(111)
+		im = ax.imshow(grid, cmap=cmap, aspect="auto")
+		vmin, vmax = min(map(min, grid)), max(map(max, grid))
+		for ti in range(len(thetas)):
+			for rj in range(len(rhos)):
+				value = grid[ti][rj]
+				color = "white" if value >= vmin + 0.68 * (vmax - vmin) else ColorPalette.DEFAULT_BLACK
+				ax.annotate(
+					f"{value:.1f}", (rj, ti), ha="center", va="center", color=color,
+					fontsize=PlotProperties.FONT_SIZE_ANNOTATION - 0.2,
+				)
+		ax.set_xticks(range(len(rhos)))
+		ax.set_xticklabels([f"${v:g}$" for v in rhos])
+		ax.set_yticks(range(len(thetas)))
+		ax.set_yticklabels([f"${v:g}$" for v in thetas])
+		ax.set_xlabel("$\\rho$ / $\\mathrm{h}^{-1}$")
+		ax.set_ylabel("$\\theta$ / $\\mathrm{h}^{-1}$")
+		cb = fig.colorbar(im, ax=ax, shrink=0.92, pad=0.04)
+		cb.set_label("节点风险 / 人")
+		cb.ax.tick_params(direction="in", labelsize=PlotProperties.FONT_SIZE_TICK)
+		self._style_axes(ax)
+		out_a = f"{base}_a.png"
+		self._save(fig, out_a)
+
+		return [out_a]
+
 	def plot_deadline_service(self, rows: list, points: list, path: str, sweep: list = None) -> list:
 		"""运到时限严格度与服务类型选择。
 
 		横轴为运到时限、纵轴为最小可行总成本：时限放宽到某个临界值之前，只能用
 		快速班列；越过临界值后成本阶跃下降（改用集装箱班列）。竖虚线给出三档时限。
 		"""
-		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.82)
+		fig = self._figure(PlotProperties.FIG_WIDTH_CM_SINGLE, aspect=0.88)
 		ax = fig.add_subplot(111)
 
 		valid = [item for item in (sweep or []) if item.get("cost") is not None]
@@ -977,7 +1131,7 @@ class Visualizer:
 			self._save(fig, path)
 			return [f"{path}"]
 		xs = [item["deadline"] for item in valid]
-		ys = [item["cost"] / 1000.0 for item in valid]
+		ys = [item["cost"] / 10000.0 for item in valid]
 		ax.plot(
 			xs,
 			ys,
@@ -1012,7 +1166,7 @@ class Visualizer:
 			middle = items[len(items) // 2]
 			ax.annotate(
 				key,
-				(middle["deadline"], middle["cost"] / 1000.0),
+				(middle["deadline"], middle["cost"] / 10000.0),
 				textcoords="offset points",
 				xytext=(0, 10),
 				ha="center",
@@ -1022,11 +1176,13 @@ class Visualizer:
 			)
 
 		span = max(xs) - min(xs)
-		ax.set_xlim(min(xs) - span * 0.06, max(xs) + span * 0.05)
+		d_max = max(max(xs), max(row["deadline"] for row in rows))
+		# 右侧预留标注宽度，避免最右档（宽松）被裁切后看起来压到左侧文字
+		ax.set_xlim(min(xs) - span * 0.06, d_max + max(span * 0.16, 22.0))
 		width = max(ys) - min(ys)
 		ax.set_ylim(min(ys) - width * 0.22, max(ys) + width * 0.30)
 		top = max(ys) + width * 0.28
-		middle_x = (min(xs) + max(xs)) / 2.0
+		rightmost_d = max(row["deadline"] for row in rows)
 		for row in rows:
 			ax.axvline(
 				row["deadline"],
@@ -1035,17 +1191,20 @@ class Visualizer:
 				ls=(0, (3, 2)),
 				zorder=1,
 			)
+			# 一律标在虚线右侧；最右档加大水平偏移，避免与中等档抢位
+			x_off = 8 if abs(row["deadline"] - rightmost_d) < 1e-9 else 3
 			ax.annotate(
-				f"{row['label']}\nD={row['deadline']:.1f}",
+				f"{row['label']}\n$D={row['deadline']:.1f}$",
 				(row["deadline"], top),
 				textcoords="offset points",
-				xytext=(-2 if row["deadline"] > middle_x else 2, -2),
-				ha="right" if row["deadline"] > middle_x else "left",
+				xytext=(x_off, -2),
+				ha="left",
 				va="top",
 				fontsize=PlotProperties.FONT_SIZE_ANNOTATION - 0.4,
 				color=ColorPalette.SLATE,
 				linespacing=1.1,
 				zorder=6,
+				clip_on=False,
 			)
 
 		# 时限过紧导致无可行解的区间：淡灰底提示
@@ -1054,18 +1213,20 @@ class Visualizer:
 			ax.axvspan(min(item["deadline"] for item in sweep), first,
 					   color=ColorPalette.DEFAULT_GRAY, alpha=0.10, zorder=0)
 
-		ax.set_xlabel("运到时限 D / h")
-		ax.set_ylabel("最小可行总成本 / 千元")
+		ax.set_xlabel("运到时限 $D$ / $\\mathrm{h}$")
+		ax.set_ylabel("运输成本 / 万元")
 		legend_items = [
 			Line2D([0], [0], color=ColorPalette.DEFAULT_BLACK, lw=PlotProperties.LINE_WIDTH_AUX,
 				   marker="o", markerfacecolor=ColorPalette.DEFAULT_WHITE,
 				   markeredgecolor=ColorPalette.DEFAULT_BLACK, markersize=4.2,
-				   label="最小可行成本"),
+				   label="可行解"),
 			Line2D([0], [0], color=ColorPalette.SLATE, lw=0.8, ls=(0, (3, 2)),
-				   label="时限档位"),
+				   label="时限严格度"),
 		]
-		ax.legend(handles=legend_items, frameon=False, loc="lower left",
-				  handlelength=1.9, handletextpad=0.5, labelspacing=0.3, borderpad=0.1)
+		# 图例置于主图正上方、水平单行
+		ax.legend(handles=legend_items, frameon=False, loc="lower center",
+				  bbox_to_anchor=(0.5, 1.0), ncol=2,
+				  handlelength=1.9, handletextpad=0.5, columnspacing=1.2, borderaxespad=0.1)
 		self._style_axes(ax)
 		return self._save(fig, path)
 

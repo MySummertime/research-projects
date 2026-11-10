@@ -257,10 +257,12 @@ class FourLayerNetwork:
 	def _bound_rate(self, service: int) -> float:
 		"""成本下界所用的单位铁路费率：混编时取各服务类型边际费率的最小值。"""
 		if service >= 0:
-			return self.tariff.min_rate(self.config.service_type(service).eta)
-		return min(
+			rate = self.tariff.min_rate(self.config.service_type(service).eta)
+		else:
+			rate = min(
 			self.tariff.min_rate(spec.eta) for spec in self.config.service_types
 		)
+		return rate * self.config.q * self.config.hazmat_cost_factor
 
 	def bounds(self, service: int) -> Bounds:
 		"""返回给定服务类型下各节点到终点的可采纳下界。
@@ -328,9 +330,9 @@ class FourLayerNetwork:
 	# 运到时限标定
 	# ------------------------------------------------------------------
 	def min_equivalent_time(self, lam: float) -> float:
-		"""以 t_ij（公路/铁路）与 μ_i + λ_α·σ_i（转运虚拟弧）为权的最短等价时间。
+		"""以 t_ij（公路/铁路）与 μ_i + λ_α·σ_i（转运虚拟弧）为权的最短时间。
 
-		取 λ_α 后即为"置信水平 α 下最快可达"的等价时间，用于标定运到时限 D。
+		取 λ_α 后即为"置信水平 α 下最快可达"的时间，用于标定运到时限 D。
 		"""
 		dist = {node: INF for node in self.nodes}
 		dist[self.origin] = 0.0

@@ -27,5 +27,3 @@ results/
 # utrr local-only
 .audit/
 .tmp*
-paper_revision/
-.vscode/

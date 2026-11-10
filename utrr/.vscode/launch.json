@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "UTRR: 生成基准算例",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "console": "integratedTerminal",
+      "args": ["--mode", "generate"],
+      "justMyCode": true
+    },
+    {
+      "name": "UTRR: 求解基准算例",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "console": "integratedTerminal",
+      "args": ["--mode", "solve"],
+      "justMyCode": true
+    },
+    {
+      "name": "UTRR: 精确性校验",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "console": "integratedTerminal",
+      "args": ["--mode", "verify"],
+      "justMyCode": true
+    },
+    {
+      "name": "UTRR: 全部实验",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "console": "integratedTerminal",
+      "args": ["--mode", "experiment", "--name", "all"],
+      "justMyCode": true
+    }
+  ]
+}

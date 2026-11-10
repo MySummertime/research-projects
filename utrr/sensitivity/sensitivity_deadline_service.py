@@ -1,7 +1,7 @@
 """4.6 运到时限严格度与铁路服务类型分析。
 
 三档时限（相对基准 D）：严格 1.0×、中等 1.2×、宽松 1.5×。对每档求 Pareto 前沿，
-统计服务类型构成、铁路运距、递远递减成本，并与"按短途平均费率线性外推"的成本对比。
+统计服务类型构成、铁路运距、分档线性费率成本和可靠度。
 
 用法：
 	python sensitivity/sensitivity_deadline_service.py
@@ -60,12 +60,10 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 			f"{config.service_name(code)}{share:.0%}" for code, share in sorted(mix.items())
 		)
 		rail_cost = cost_best.cost_breakdown(derived.network, config)["rail_cost"]
-		linear_cost = linear_tariff_cost(cost_best, config)
 		logger.info(
 			f"时限 {DEADLINE_LABELS.get(scale, scale)}（D={deadline:.2f} h，{scale}×）："
 			f"前沿 {len(front)} 条，最小成本解 {cost_best.service_label(config)}，"
-			f"铁路运距 {cost_best.dist:.1f} km，铁路成本 ¥{rail_cost:,.0f}"
-			f"（线性费率假设 ¥{linear_cost:,.0f}）；构成 {mix_text}"
+			f"铁路运距 {cost_best.dist:.1f} km，铁路成本 ¥{rail_cost:,.0f}；构成 {mix_text}"
 		)
 		rows.append(
 			[
@@ -74,8 +72,6 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 				cost_best.service_label(config),
 				f"{cost_best.dist:.1f}",
 				f"{rail_cost:.2f}",
-				f"{linear_cost:.2f}",
-				f"{(linear_cost - rail_cost) / linear_cost:.4f}" if linear_cost > 0 else "0",
 				f"{cost_best.t0:.2f}",
 				f"{cost_best.reliability(deadline):.4f}",
 				f"{cost_best.cost:.2f}",
@@ -93,16 +89,14 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 				"front_size": len(front),
 				"rail_distance": cost_best.dist,
 				"rail_cost": rail_cost,
-				"linear_cost": linear_cost,
 				"cost": cost_best.cost,
 			}
 		)
 
 	write_table(
 		os.path.join(output_dir, "表9_时限与服务类型.csv"),
-		["时限档位", "运到时限/h", "服务类型", "铁路运距/km", "递远递减铁路成本/元",
-		 "线性费率成本/元", "成本高估比例", "确定性时间/h", "可靠度", "总成本/元",
-		 "前沿解数", "前沿成本区间/千元", "路径"],
+		["时限档位", "运到时限/h", "服务类型", "铁路运距/km", "铁路成本/元",
+		 "确定性时间/h", "M", "总成本/元", "前沿解数", "前沿成本区间/千元", "路径"],
 		rows,
 		title="表 9  运到时限严格度的影响",
 	)

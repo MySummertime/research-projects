@@ -59,7 +59,21 @@ LADDER = [
 	}),
 ]
 
-GUROBI_JSON = os.path.join("results", "gurobi_benchmark.json")
+def _find_gurobi_json() -> str | None:
+	"""Gurobi 基准文件：优先取最新的 results/gurobi_<时间戳>/gurobi_benchmark.json。"""
+	candidates = []
+	if os.path.isdir("results"):
+		for name in os.listdir("results"):
+			if name.startswith("gurobi"):
+				path = os.path.join("results", name, "gurobi_benchmark.json")
+				if os.path.isfile(path):
+					candidates.append(path)
+		legacy = os.path.join("results", "gurobi_benchmark.json")
+		if os.path.isfile(legacy):
+			candidates.append(legacy)
+	if not candidates:
+		return None
+	return max(candidates, key=os.path.getmtime)
 
 
 def _objective_set(points) -> set:
@@ -157,11 +171,12 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 
 	# ---------------- 外部对比 ----------------
 	gurobi_payload = {}
-	if os.path.exists(GUROBI_JSON):
-		with open(GUROBI_JSON, encoding="utf-8") as handle:
+	gurobi_json = _find_gurobi_json()
+	if gurobi_json:
+		with open(gurobi_json, encoding="utf-8") as handle:
 			gurobi_payload = json.load(handle).get("instances", {})
 	else:
-		logger.warning(f"未找到 {GUROBI_JSON}，Gurobi 行以'待运行'占位（python sensitivity/run_gurobi.py）")
+		logger.warning("未找到 results/gurobi_*/gurobi_benchmark.json，Gurobi 行以'待运行'占位（python sensitivity/run_gurobi.py）")
 
 	bench_rows = []
 	bench_records = []
@@ -185,7 +200,7 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 			("本文算法", own_points, hv_own, "是",
 			 f"标号 {_label_count(own_payloads[name])}", own_wall),
 			("加权和法WST", wst_points, _hv(wst_points, ref_risk, ref_cost),
-			 "是" if _objective_set(wst_points) <= _objective_set(own_points) else "否",
+			 "是" if _objective_set(wst_points) == _objective_set(own_points) else "否",
 			 f"扩展 {wst['labels_expanded']} 次", wst["wall_time"]),
 			("Gurobi-MIP", gur_points,
 			 None if gur_points is None else _hv(gur_points, ref_risk, ref_cost),
@@ -215,19 +230,23 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 
 	# ---------------- 表与图 ----------------
 	write_table(
-		os.path.join(output_dir, "表10_消融实验.csv"),
+		os.path.join(output_dir, "表11_消融实验.csv"),
 		["算例", "变体", "前沿解数", "与完整算法一致", "生成标号数", "剪枝率/%", "时间/s"],
 		ablation_rows,
 		title="表 10  算法消融实验",
 	)
 	write_table(
-		os.path.join(output_dir, "表11_外部对比.csv"),
+		os.path.join(output_dir, "表12_外部对比.csv"),
 		["算例", "算法", "前沿解数", "超体积HV", "与本文前沿一致", "工作量", "时间/s"],
 		bench_rows,
 		title="表 11  外部对比实验",
 	)
-	Visualizer(config).plot_algorithm_scaling(
-		bench_records, ablation_records, os.path.join(output_dir, "fig11_scalability.png")
+	viz = Visualizer(config)
+	viz.plot_ablation_scaling(
+		ablation_records, os.path.join(output_dir, "fig11_ablation_scaling.png")
+	)
+	viz.plot_algorithm_scaling(
+		bench_records, ablation_records, os.path.join(output_dir, "fig12_algorithm_scaling.png")
 	)
 	with open(os.path.join(output_dir, "algorithm.json"), "w", encoding="utf-8") as handle:
 		json.dump({"ablation": ablation_records, "benchmarks": bench_records,

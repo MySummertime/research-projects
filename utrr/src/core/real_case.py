@@ -102,7 +102,7 @@ class RealCaseBuilder:
 		od = od_pairs[cfg.real_case_od]
 
 		# 运量与品类由 OD 决定：写回配置，使弧成本、风险与求解口径保持一致
-		cfg.q = float(od["demand_boxes"])
+		cfg.q = float(cfg.demand_override if cfg.demand_override is not None else od["demand_boxes"])
 		cfg.hazmat_class = int(od["hazmat"])
 
 		self.rail_nodes = {node["id"]: node for node in payload["rail_nodes"]}

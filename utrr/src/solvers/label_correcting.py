@@ -5,7 +5,7 @@
 	μ/σ 累计转运时间期望值与波动参数，d 累计铁路运距，
 	S/P 由标号链隐式承担（逐弧记录，回溯得到）。
 
-机会约束等价时间 T_α = T0 + μ + λ_α·σ，作为支配维度与剪枝依据。
+机会约束时间 T_α = T0 + μ + λ_α·σ，作为支配维度与剪枝依据。
 """
 
 from __future__ import annotations
@@ -343,7 +343,7 @@ class ParetoLabelSolver:
 		"""求解单目标方案。
 
 		objective : "cost" 或 "risk"
-		lam : 非空表示施加机会约束 M{T̃ ≤ D} ≥ α（等价时间 T_α ≤ D）；
+		lam : 非空表示施加机会约束 M{T̃ ≤ D} ≥ α（时间 T_α ≤ D）；
 			  为 None 表示不施加运到时限约束。
 		"""
 		start = time.perf_counter()
@@ -481,6 +481,7 @@ class ParetoLabelSolver:
 		backward: dict[str, list[Label]] = {node: [] for node in self.network.nodes}
 		tail = Label(self.network.destination, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, service, None, None, 0)
 		backward[self.network.destination].append(tail)
+		solutions: list[Solution] = []
 		queue = [tail]
 		while queue:
 			label = queue.pop()
@@ -498,9 +499,17 @@ class ParetoLabelSolver:
 					continue
 				backward[child.node].append(child)
 				queue.append(child)
+				# 增量汇合产生已知完整解，使后续标号可使用风险-成本向量下界剪枝。
+				# _merge 会校验服务连续性、简单路径和机会约束，不合格配对不会进入前沿。
+				if self.network.is_rail_node(child.node):
+					for label_f in forward.get(child.node, []):
+						solution = self._merge(label_f, child, service, lam, use_deadline)
+						if solution is None:
+							continue
+						solutions.append(solution)
+						self.front.add(solution.risk, solution.cost)
 
 		# ---- 汇合：仅在铁路层节点拼接，避免转运资源重复计数 ----
-		solutions: list[Solution] = []
 		for node in self.network.layer_nodes("rail"):
 			front_labels = forward.get(node, [])
 			back_labels = backward.get(node, [])

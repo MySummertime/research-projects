@@ -50,15 +50,22 @@ def solve_proposed(config: UTRRConfig, instance: CaseInstance, logger=None) -> d
 	return solver.solve_pareto()
 
 
-def solve_all_schemes(config: UTRRConfig, instance: CaseInstance, logger=None) -> dict:
-	"""依次求解 4 类方案，返回每类方案的代表解与统计。"""
+def solve_all_schemes(
+	config: UTRRConfig,
+	instance: CaseInstance,
+	logger=None,
+	include_deterministic: bool = True,
+) -> dict:
+	"""求解主方案。波动对照仅在需要时计算。"""
 	results = {}
-	for scheme, runner in (
+	runners = [
 		(SCHEME_COST_MIN, solve_cost_min),
 		(SCHEME_RISK_MIN, solve_risk_min),
-		(SCHEME_DETERMINISTIC, solve_deterministic),
 		(SCHEME_PROPOSED, solve_proposed),
-	):
+	]
+	if include_deterministic:
+		runners.insert(2, (SCHEME_DETERMINISTIC, solve_deterministic))
+	for scheme, runner in runners:
 		if logger is not None:
 			logger.info(f"\n>>> 求解方案：{SCHEME_LABELS[scheme][0]}")
 		payload = runner(config, instance, logger)
@@ -74,7 +81,7 @@ def solve_all_schemes(config: UTRRConfig, instance: CaseInstance, logger=None) -
 				logger.info(
 					f"  代表解：服务类型 {best.service_label(config)}，"
 					f"成本 ¥{best.cost:,.2f}，风险 {best.risk:.6f}，"
-					f"等价时间 {best.equivalent_time():.2f} h，"
+					f"时间 {best.equivalent_time():.2f} h，"
 					f"可靠度 {best.reliability(instance.deadline):.4f}"
 				)
 	return results

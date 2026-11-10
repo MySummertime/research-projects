@@ -113,18 +113,18 @@ EXPERIMENTS = {
 	"sigma": "sensitivity.sensitivity_sigma",
 	"node_risk": "sensitivity.sensitivity_node_risk",
 	"deadline_service": "sensitivity.sensitivity_deadline_service",
+    "demand": "sensitivity.sensitivity_demand",
 	"scalability": "sensitivity.sensitivity_scalability",
 }
 
 
 def run_named_experiment(name: str, config: UTRRConfig, output_dir: str, logger) -> dict:
-	"""按名称在指定的输出子目录中运行单个敏感性实验（供 main.py --mode all 批量调度）。"""
+	"""按名称运行单个敏感性实验，结果直接写入 output_dir（results/<实验名>_<时间戳>，平铺不嵌套）。"""
 	import importlib
 	import os
 
 	if name not in EXPERIMENTS:
 		raise KeyError(f"未知实验：{name}，可选 {sorted(EXPERIMENTS)}")
 	module = importlib.import_module(EXPERIMENTS[name])
-	exp_dir = os.path.join(output_dir, name)
-	os.makedirs(exp_dir, exist_ok=True)
-	return module.run(config, exp_dir, logger, instance=build_instance(config))
+	os.makedirs(output_dir, exist_ok=True)
+	return module.run(config, output_dir, logger, instance=build_instance(config))

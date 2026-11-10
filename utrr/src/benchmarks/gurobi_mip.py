@@ -10,10 +10,10 @@
 	     Σ_a z_a = 1, z_a ≤ x_a（首条铁路弧承担固定费率 b，式（5））
 	     x_a ∈ {0,1}, z_a ∈ {0,1}
 
-其中 tα_a 为弧 a 的等价时间贡献（转运弧为货场 μ+λ_α·σ，其余为旅行时间）；
+其中 tα_a 为弧 a 的时间贡献（转运弧为货场 μ+λ_α·σ，其余为旅行时间）；
 c_a 为铁路变动费率部分 q·η_k·a·l_ij 与公路/转运弧成本；铁路弧按服务类型各
-一条，混编路径自然可行。对 ε 在 [最小风险, 无风险约束最优解的风险] 内扫描
-即得整条 Pareto 前沿（含非凸段）。
+一条，混编路径自然可行。每次获得当前成本最优解后，把风险上限收紧到其风险
+值以下并继续求解，直至到达风险最小端点，从而逐点枚举非支配目标向量。
 
 本模块依赖 gurobipy（需本机许可证）。由用户单独运行：
 
@@ -49,7 +49,7 @@ def _arc_records(net, config, lam: float) -> list:
 
 
 def solve_gurobi_sweep(instance, config, num_eps: int = 30, verbose: bool = False) -> dict:
-    """ε-约束扫描求整条前沿；返回与 WST 相同结构的统计。"""
+    """逐点收紧 ε 约束枚举整条前沿；num_eps 仅保留为兼容参数。"""
     import gurobipy as gp
     from gurobipy import GRB
 
@@ -80,22 +80,30 @@ def solve_gurobi_sweep(instance, config, num_eps: int = 30, verbose: bool = Fals
         gp.quicksum(talpha * x[id(arc)] for arc, _, _, talpha, _ in records) <= deadline,
         name="deadline",
     )
-    model.addConstr(gp.quicksum(z.values()) == 1, name="one_first_rail")
-    # 首条铁路弧 = 尾点不经铁路弧即可自起点到达的铁路弧（静态可达性刻画，
-    # 与式（5）中 covered=0 的首段口径严格一致，无需顺序变量）
-    reach_no_rail = {net.origin}
-    frontier = [net.origin]
-    while frontier:
-        node = frontier.pop()
-        for arc in net.out_arcs.get(node, []):
-            if not arc.is_rail and arc.j not in reach_no_rail:
-                reach_no_rail.add(arc.j)
-                frontier.append(arc.j)
+    model.addConstr(gp.quicksum(z.values()) <= 1, name="one_first_rail")
+    # ---- 固定费率 b 的归属：严格按流序落在全程首条铁路弧上 ----
+    # 式(5) 的 covered 为全程累计铁路运距、中途不清零，故 b 只计一次。仅以
+    # "尾点非铁路可达"判资格不够：多段铁路（货场换装后二段首弧）的尾点同样
+    # 可不经铁路到达，会抢走固定费并改用 η 更小的服务计 b，低估成本。这里用
+    # 铁路模式传播变量 m（0=到达该点时尚未乘过铁路）精确刻画"首条铁路弧"。
+    m = {
+        node: model.addVar(lb=0.0, ub=1.0, vtype=GRB.CONTINUOUS, name=f"m_{node}")
+        for node in net.nodes
+    }
+    model.update()
+    model.addConstr(m[net.origin] == 0, name="m_origin")
+    zsum = gp.quicksum(z.values())
     for arc, *_ in records:
+        # 流传播：使用该弧则目的地的模式不低于出发地
+        model.addConstr(m[arc.j] >= m[arc.i] + x[id(arc)] - 1, name=f"mprop_{id(arc)}")
         if arc.is_rail:
+            # 一旦乘上铁路即进入铁路模式
+            model.addConstr(m[arc.j] >= x[id(arc)], name=f"mrail_{id(arc)}")
             model.addConstr(z[id(arc)] <= x[id(arc)], name=f"zle_{id(arc)}")
-            if arc.i not in reach_no_rail:
-                model.addConstr(z[id(arc)] == 0, name=f"znotfirst_{id(arc)}")
+            # 固定费只能落在尾点尚未进入铁路模式的铁路弧（即全程首条铁路弧）
+            model.addConstr(z[id(arc)] <= 1.0 - m[arc.i], name=f"zfirst_{id(arc)}")
+            # 用到铁路弧则恰好一笔固定费（纯公路路径不计固定费）
+            model.addConstr(x[id(arc)] <= zsum, name=f"zexist_{id(arc)}")
     # 服务连续性：未经货场转运不得中途改乘其它等级列车（与式（5）口径一致）。
     # 用节点-服务选择变量 y(u,k)：铁路弧的两端须同为该弧的服务；站点拆分
     # 接驳弧（铁路节点间的公路弧）保持服务不变；货场转运后可自由重选服务
@@ -178,12 +186,23 @@ def solve_gurobi_sweep(instance, config, num_eps: int = 30, verbose: bool = Fals
     _keep(point_risk)
     model.setObjective(_cost_expr(), GRB.MINIMIZE)
     if point_cost is not None and point_risk is not None:
-        lo, hi = point_risk["risk"], point_cost["risk"]
-        if hi > lo:
-            step = (hi - lo) / max(1, num_eps - 1)
-            for i in range(num_eps):
-                _keep(_solve_with_eps(lo + step * i))
-                num_solves += 1
+        current = point_cost
+        seen_risks = {round(point_cost["risk"], 8)}
+        while current["risk"] > point_risk["risk"] + 1e-6:
+            # The risk budget must be tightened beyond Gurobi's absolute
+            # feasibility tolerance.  A near-machine-precision decrement can
+            # return the same incumbent and prematurely stop the enumeration.
+            delta = max(1e-2, abs(current["risk"]) * 1e-6)
+            nxt = _solve_with_eps(current["risk"] - delta)
+            num_solves += 1
+            if nxt is None:
+                break
+            key = round(nxt["risk"], 8)
+            if key in seen_risks:
+                break
+            seen_risks.add(key)
+            _keep(nxt)
+            current = nxt
     wall_time = time.perf_counter() - started
     ordered = sorted(points.values(), key=lambda p: p["risk"])
     return {

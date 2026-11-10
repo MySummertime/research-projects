@@ -80,7 +80,7 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 			logger.info(
 				f"  折中解：{knee.service_label(config)} "
 				f"¥{knee.cost:,.0f}，风险 {knee.risk:.6f}，"
-				f"可靠度 {knee.reliability(instance.deadline):.4f}"
+				f"M {knee.reliability(instance.deadline):.4f}"
 			)
 		rows.append(
 			[
@@ -119,8 +119,8 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 
 	write_table(
 		os.path.join(output_dir, "表6_置信水平敏感性.csv"),
-		["α", "可靠性价格系数", "服务类型", "总成本/元", "总风险", "可靠度",
-		 "选中货场", "等价时间/h", "前沿解数", "前沿成本区间/千元", "路径"],
+		["α", "可靠度分位系数", "服务类型", "总成本/元", "总风险", "M",
+		 "选中货场", "时间/h", "前沿解数", "前沿成本区间/千元", "路径"],
 		rows,
 		title="表 6  不同置信水平下的最小成本可行解",
 	)

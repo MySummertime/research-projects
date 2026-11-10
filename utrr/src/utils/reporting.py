@@ -140,7 +140,7 @@ def solution_line(solution: Solution, instance: CaseInstance, config: UTRRConfig
 		f"¥{solution.cost:>12,.2f} | R={solution.risk:.6f} | "
 		f"T0={solution.t0:.2f} μ={solution.mu:.2f} σ={solution.sigma:.2f} | "
 		f"Tα={solution.equivalent_time():.2f} h | "
-		f"可靠度={format_reliability(solution.reliability(instance.deadline))} | "
+		f"M={format_reliability(solution.reliability(instance.deadline))} | "
 		f"{path_text(solution, instance)}"
 	)
 
@@ -160,7 +160,7 @@ def format_pareto_report(payload: dict, instance: CaseInstance, config: UTRRConf
 	lines.append("")
 	lines.append(
 		f"{'#':>3} {'服务类型':<8} {'成本/元':>13} {'风险':>11} {'T0/h':>7} "
-		f"{'μ/h':>6} {'σ/h':>5} {'Tα/h':>7} {'可靠度':>7} {'铁路/km':>8}  路径"
+		f"{'μ/h':>6} {'σ/h':>5} {'Tα/h':>7} {'M':>7} {'铁路/km':>8}  路径"
 	)
 	lines.append("-" * 78)
 	for index, solution in enumerate(front, start=1):
@@ -201,7 +201,7 @@ def format_scheme_report(schemes: dict, instance: CaseInstance, config: UTRRConf
 	lines.append("=" * 78)
 	header = (
 		f"{'方案':<12} {'服务类型':<8} {'总成本/元':>13} {'总风险':>11} "
-		f"{'弧段风险':>10} {'节点风险':>10} {'可靠度':>7} {'是否满足D':>9}"
+		f"{'弧段风险':>10} {'节点风险':>10} {'M':>7} {'是否满足D':>9}"
 	)
 	lines.append(header)
 	lines.append("-" * 78)
@@ -246,7 +246,7 @@ def format_instance_report(instance: CaseInstance) -> str:
 		f"弧总数 {counts['num_arcs']}（公路 {counts['num_road_arcs']}，铁路 "
 		f"{counts['num_rail_arcs']}，转运 {counts['num_transfer_arcs']}）",
 		f"货场 {counts['num_yards']} 个，运到时限 D = {instance.deadline:.3f} h，"
-		f"最小可能等价时间 = {instance.metadata.get('min_equivalent_time_hours', 0):.3f} h",
+		f"最小可能时间 = {instance.metadata.get('min_equivalent_time_hours', 0):.3f} h",
 		"",
 		"货场转运参数：",
 		f"{'货场':<6}{'资质':<6}{'μ/h':>7}{'σ/h':>7}{'转运成本/元':>13}{'节点风险':>12}",

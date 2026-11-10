@@ -37,7 +37,8 @@ def build_benchmark_instances(config: UTRRConfig) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Gurobi MIP 基准（ε-约束扫描）")
     parser.add_argument("--num-eps", type=int, default=30)
-    parser.add_argument("--output", default=os.path.join("results", "gurobi_benchmark.json"))
+    parser.add_argument("--output", default=None,
+                        help="结果文件路径（默认 results/gurobi_<时间戳>/gurobi_benchmark.json）")
     args = parser.parse_args()
 
     config = UTRRConfig()
@@ -54,10 +55,15 @@ def main() -> None:
               f"耗时 {result['wall_time']:.2f} s")
         for point in result["points"]:
             print(f"   cost={point['cost']:.2f} risk={point['risk']:.6f} T={point['equivalent_time']:.2f}")
-    os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
-    with open(args.output, "w", encoding="utf-8") as handle:
+    output = args.output
+    if not output:
+        from datetime import datetime
+        stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output = os.path.join("results", f"gurobi_{stamp}", "gurobi_benchmark.json")
+    os.makedirs(os.path.dirname(output) or ".", exist_ok=True)
+    with open(output, "w", encoding="utf-8") as handle:
         json.dump(payload, handle, indent=2, ensure_ascii=False)
-    print("已写入", args.output)
+    print("已写入", output)
 
 
 if __name__ == "__main__":

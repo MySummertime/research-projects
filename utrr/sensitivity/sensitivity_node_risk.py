@@ -1,9 +1,12 @@
-"""4.5 节点风险耦合敏感性：风险构成分解与耦合系数 θ、ρ 的影响。
+# -*- coding: utf-8 -*-
+"""4.5 节点风险耦合敏感性：θ、ρ 双参数切片设计。
 
-包含两组设置：
-	① 风险口径对比：仅弧段风险 vs 弧段 + 节点风险；
-	② 耦合系数档位：θ、ρ 取 {0, 1×, 2×} 基准值。
-所有设置均以"基准算例的货场参数"事后核算节点风险，使不同口径可比。
+θ 与 ρ 均无文献取值依据（形式可溯源至 Cozzani 等的编组站风险框架，数值为算例
+设定），故以双参数切片覆盖取值不确定性：
+	① 固定 θ 取若干值，逐一扫描 ρ 的若干取值；
+	② 固定 ρ 取若干值，逐一扫描 θ 的若干取值。
+两方向共用 θ×ρ 全格（各取 0、基准 0.005、2 倍 0.01 h⁻¹），每组合独立重解，
+对成本最优与风险最优两类解各核算一次。另设"仅弧段风险"口径行为参照。
 
 用法：
 	python sensitivity/sensitivity_node_risk.py
@@ -17,116 +20,91 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from sensitivity.runner import base_instance, front_extremes, scaled_instance
+from sensitivity.runner import base_instance, front_extremes
+from src.core.instance_builder import build_instance
 from src.solvers.label_correcting import ParetoLabelSolver
 from src.utils.paper_tables import write_table
 from src.utils.plotting import Visualizer
 from src.utils.reporting import path_text
 
 
-def ex_post_node_risk(solution, base, theta: float, rho: float) -> float:
-	"""按基准货场参数事后核算路径的节点转运风险。
-
-	与模型式（2）同口径：必须乘品类风险系数 ζ_s。旧版漏乘 ζ_s，导致表 6 的
-	节点风险占比（11.9%/16.0%）与表 2/附表的模型风险口径（14.0%/18.6%）不一致。
-	"""
+def ex_post_node_risk(solution, inst, theta: float, rho: float) -> float:
+	"""按实例货场参数事后核算路径的节点转运风险（与式（2）同口径，含 ζ_s）。"""
 	total = 0.0
 	for arc in solution.arcs:
 		if arc.is_transfer:
-			yard = base.network.yards[base.network.nodes[arc.i].yard]
+			yard = inst.network.yards[inst.network.nodes[arc.i].yard]
 			total += yard.node_risk(
-				base.network.config.q,
+				inst.network.config.q,
 				theta,
 				rho,
-				base.network.config.hazmat_risk_factor,
+				inst.network.config.hazmat_risk_factor,
 			)
 	return total
 
 
 def run(config, output_dir: str, logger, instance=None) -> dict:
 	base = instance or base_instance(config)
-	deadline = base.deadline
-	theta0, rho0 = config.node_risk_theta, config.node_risk_rho
-
-	settings = [("仅弧段风险", False, 1.0)]
-	for scale in config.node_risk_scale_grid:
-		settings.append((f"θ,ρ={scale:g}×基准", True, scale))
-	short_labels = {"仅弧段风险": "仅弧段"}
-	for scale in config.node_risk_scale_grid:
-		short_labels[f"θ,ρ={scale:g}×基准"] = f"θ,ρ×{scale:g}"
+	theta_grid = list(config.node_risk_theta_grid)
+	rho_grid = list(config.node_risk_rho_grid)
 
 	rows = []
 	records = []
-	for label, include, scale in settings:
-		local = config.with_overrides(include_node_risk=include)
-		derived = scaled_instance(
-			base, local, deadline=deadline, node_risk_scale=scale, include_node_risk=include
-		)
-		solver = ParetoLabelSolver(local, derived, logger)
-		payload = solver.solve_pareto()
-		front = payload["solutions"]
-		extremes = front_extremes(front)
-		if extremes["cost_optimal"] is None:
-			logger.warning(f"{label}：无可行解")
-			continue
 
-		for tag, solution in (("成本最优", extremes["cost_optimal"]), ("风险最优", extremes["risk_optimal"])):
-			arc_risk = solution.risk_breakdown()["arc_risk"]
-			node_risk = ex_post_node_risk(solution, base, theta0, rho0)
-			total = arc_risk + node_risk
-			rows.append(
-				[
-					label,
-					tag,
-					solution.service_label(config),
-					"/".join(solution.yards_used(derived.network)),
-					f"{solution.cost:.2f}",
-					f"{solution.risk:.6f}",
-					f"{total:.6f}",
-					f"{node_risk / total:.4f}" if total > 0 else "0",
-					sum(1 for a in solution.arcs if a.is_transfer),
-					path_text(solution, derived),
-				]
-			)
+	# ---------- 参照：仅弧段风险口径 ----------
+	local = config.with_overrides(include_node_risk=False)
+	arc_inst = build_instance(local)
+	front = ParetoLabelSolver(local, arc_inst, logger).solve_pareto()["solutions"]
+	extremes = front_extremes(front)
+	for tag, solution in (("成本最优", extremes["cost_optimal"]), ("风险最优", extremes["risk_optimal"])):
+		logger.info(f"仅弧段风险 / {tag}：总风险 {solution.risk:.6f}")
+	records.append({
+		"theta": None, "rho": None,
+		"cost_total": extremes["cost_optimal"].risk, "cost_share": 0.0,
+		"risk_total": extremes["risk_optimal"].risk, "risk_share": 0.0,
+		"service": extremes["cost_optimal"].service_label(config),
+		"transfers": sum(1 for a in extremes["cost_optimal"].arcs if a.is_transfer),
+	})
+	rows.append(["仅弧段风险", "—",
+				 f"{extremes['cost_optimal'].risk:.1f}", "0.0",
+				 f"{extremes['risk_optimal'].risk:.1f}", "0.0",
+				 extremes["cost_optimal"].service_label(config), path_text(extremes["cost_optimal"], arc_inst)])
+
+	# ---------- θ×ρ 全格 ----------
+	for theta in theta_grid:
+		for rho in rho_grid:
+			cfg2 = config.with_overrides(node_risk_theta=theta, node_risk_rho=rho)
+			inst2 = build_instance(cfg2)
+			front = ParetoLabelSolver(cfg2, inst2, logger).solve_pareto()["solutions"]
+			extremes = front_extremes(front)
+			cost_opt, risk_opt = extremes["cost_optimal"], extremes["risk_optimal"]
+			cost_node = ex_post_node_risk(cost_opt, inst2, theta, rho)
+			risk_node = ex_post_node_risk(risk_opt, inst2, theta, rho)
+			cost_total, risk_total = cost_opt.risk, risk_opt.risk
 			logger.info(
-				f"{label} / {tag}：成本 ¥{solution.cost:,.0f}，模型风险 {solution.risk:.6f}，"
-				f"基准口径总风险 {total:.6f}（节点占 {node_risk / total:.1%}），"
-				f"货场 {'/'.join(solution.yards_used(derived.network))}"
+				f"θ={theta:g} ρ={rho:g}：成本最优总风险 {cost_total:.1f}（节点占 {cost_node / cost_total:.1%}），"
+				f"风险最优总风险 {risk_total:.1f}（节点占 {risk_node / risk_total:.1%}）"
 			)
-
-		cost_best = extremes["cost_optimal"]
-		node_risk_model = 0.0
-		if include:
-			for arc in cost_best.arcs:
-				if arc.is_transfer:
-					yard = derived.network.yards[derived.network.nodes[arc.i].yard]
-					node_risk_model += yard.node_risk(
-						derived.network.config.q,
-						theta0 * scale,
-						rho0 * scale,
-						derived.network.config.hazmat_risk_factor,
-					)
-		node_risk_true = ex_post_node_risk(cost_best, base, theta0, rho0)
-		records.append(
-			{
-				"label": short_labels.get(label, label),
-				"arc_risk": cost_best.risk_breakdown()["arc_risk"],
-				"node_risk_model": node_risk_model,
-				"node_risk_omitted": 0.0 if include else node_risk_true,
-				"node_risk_true": node_risk_true,
-				"cost": cost_best.cost,
-				"transfers": sum(1 for a in cost_best.arcs if a.is_transfer),
-				"yards": cost_best.yards_used(derived.network),
-				"front_size": len(front),
-			}
-		)
+			records.append({
+				"theta": theta, "rho": rho,
+				"cost_total": cost_total, "cost_share": cost_node / cost_total if cost_total else 0.0,
+				"risk_total": risk_total, "risk_share": risk_node / risk_total if risk_total else 0.0,
+				"service": cost_opt.service_label(config),
+				"transfers": sum(1 for a in cost_opt.arcs if a.is_transfer),
+			})
+			rows.append([
+				f"{theta:g}", f"{rho:g}",
+				f"{cost_total:.1f}", f"{cost_node / cost_total * 100:.1f}",
+				f"{risk_total:.1f}", f"{risk_node / risk_total * 100:.1f}",
+				cost_opt.service_label(config), path_text(cost_opt, inst2),
+			])
 
 	write_table(
 		os.path.join(output_dir, "表8_节点风险敏感性.csv"),
-		["风险口径", "解类型", "服务类型", "货场", "总成本/元", "模型总风险",
-		 "基准口径总风险", "节点风险占比", "转运次数", "路径"],
+		["θ/(h⁻¹)", "ρ/(h⁻¹)", "成本最优总风险/人", "其节点占比/%",
+		 "风险最优总风险/人", "其节点占比/%", "服务类型", "路径"],
 		rows,
-		title="表 8  节点风险敏感性",
+		title="表 9  节点风险敏感性",
 	)
 
 	visualizer = Visualizer(config)
@@ -140,4 +118,4 @@ def run(config, output_dir: str, logger, instance=None) -> dict:
 if __name__ == "__main__":
 	from sensitivity._cli import run_as_script
 
-	run_as_script("node_risk", run, "4.5 节点风险耦合敏感性")
+	run_as_script("node_risk", run, "节点风险耦合敏感性（θ、ρ 双参数切片）")
