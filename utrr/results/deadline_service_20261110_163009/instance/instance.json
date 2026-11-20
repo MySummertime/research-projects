@@ -1,0 +1,5738 @@
+{
+  "name": "xj-yrd-OD4",
+  "version": "utrr-case-v2",
+  "origin": "o",
+  "destination": "d",
+  "deadline_hours": 98.0,
+  "alpha": 0.9,
+  "quantity_t": 10.0,
+  "metadata": {
+    "description": "新疆至长三角危险货物公铁联运路网（OD4）",
+    "data_source": "real",
+    "source_file": "C:\\Users\\franc\\Codelab\\research-diary\\projects\\utrr\\data\\real_case_xj_yrd\\network.json",
+    "od_id": "OD4",
+    "od_task": "宁西线与阜淮线形成\"短里程 vs 少转运\"权衡",
+    "od_quantity_teu": 10.0,
+    "boxes": 10.0,
+    "volume_tier": [
+      1.0,
+      1.0
+    ],
+    "hazmat_code": 8,
+    "hazmat_name": "第8类 腐蚀性物质",
+    "hazmat_cost_factor": 1.5,
+    "hazmat_risk_factor": 1.2,
+    "origin": "独山子石化园区",
+    "destination": "合肥循环经济示范园",
+    "candidate_yards": {
+      "Y3": "奎屯",
+      "Y2": "石河子",
+      "Y1": "乌鲁木齐西"
+    },
+    "transit_yards": {
+      "Y8": "兰州北",
+      "Y9": "西安",
+      "Y11": "商丘",
+      "Y12": "阜阳",
+      "Y14": "芜湖"
+    },
+    "arrival_yard": "合肥东",
+    "yard_cities": {
+      "Y3": "奎屯",
+      "Y2": "石河子",
+      "Y1": "乌鲁木齐西",
+      "Y8": "兰州北",
+      "Y9": "西安",
+      "Y11": "商丘",
+      "Y12": "阜阳",
+      "Y14": "芜湖",
+      "Y13": "合肥东"
+    },
+    "yard_tiers": {
+      "Y3": "A",
+      "Y2": "B",
+      "Y1": "A",
+      "Y8": "A",
+      "Y9": "A",
+      "Y11": "B",
+      "Y12": "B",
+      "Y14": "A",
+      "Y13": "A"
+    },
+    "min_equivalent_time_hours": 73.1286,
+    "deadline_mode": "manual",
+    "transfer_sigma": 4.0,
+    "lambda_alpha": 1.211393,
+    "confidence_mode": "normal",
+    "coordinate_system": "lonlat",
+    "warnings": [],
+    "counts": {
+      "num_nodes": 94,
+      "num_arcs": 448,
+      "num_yards": 9,
+      "num_client_nodes": 2,
+      "num_road_nodes": 0,
+      "num_yard_nodes": 18,
+      "num_rail_nodes": 74,
+      "num_road_arcs": 31,
+      "num_rail_arcs": 408,
+      "num_transfer_arcs": 9,
+      "total_rail_length_km": 3119.4
+    },
+    "line_summary": {
+      "兰新线": {
+        "km": 1892.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "北疆线": {
+        "km": 241.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "乌鲁木齐枢纽联络线": {
+        "km": 10.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "商丘枢纽联络线": {
+        "km": 6.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "南疆线": {
+        "km": 334.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "陇海线": {
+        "km": 1759.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "宁西线": {
+        "km": 1075.69,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "京沪线": {
+        "km": 649.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "沪杭线": {
+        "km": 190.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "萧甬线": {
+        "km": 148.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "淮南线": {
+        "km": 214.7,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "阜淮线": {
+        "km": 127.3,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "京九线": {
+        "km": 294.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "皖赣线": {
+        "km": 73.32,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      },
+      "宣杭线": {
+        "km": 224.0,
+        "speed_factor": 1.0,
+        "exposure": 1.0
+      }
+    }
+  },
+  "network": {
+    "nodes": [
+      {
+        "id": "o",
+        "layer": "client",
+        "x": 84.85,
+        "y": 44.32,
+        "name": "独山子石化园区",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "d",
+        "layer": "client",
+        "x": 117.4,
+        "y": 31.72,
+        "name": "合肥循环经济示范园",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LLZ_a",
+        "layer": "rail",
+        "x": 103.79,
+        "y": 36.06,
+        "name": "兰州",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LLZ_b",
+        "layer": "rail",
+        "x": 103.79,
+        "y": 36.06,
+        "name": "兰州",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LYD",
+        "layer": "rail",
+        "x": 103.26,
+        "y": 36.74,
+        "name": "永登",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LGL",
+        "layer": "rail",
+        "x": 102.89,
+        "y": 37.47,
+        "name": "古浪",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LWWN",
+        "layer": "rail",
+        "x": 102.68,
+        "y": 37.9,
+        "name": "武威南",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LJC",
+        "layer": "rail",
+        "x": 102.19,
+        "y": 38.5,
+        "name": "金昌",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSD",
+        "layer": "rail",
+        "x": 101.09,
+        "y": 38.79,
+        "name": "山丹",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LZY",
+        "layer": "rail",
+        "x": 100.45,
+        "y": 38.93,
+        "name": "张掖",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LQS",
+        "layer": "rail",
+        "x": 98.87,
+        "y": 39.42,
+        "name": "清水",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LJQ",
+        "layer": "rail",
+        "x": 98.49,
+        "y": 39.73,
+        "name": "酒泉",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LJYG",
+        "layer": "rail",
+        "x": 98.22,
+        "y": 39.8,
+        "name": "嘉峪关",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LYM",
+        "layer": "rail",
+        "x": 97.05,
+        "y": 40.29,
+        "name": "玉门",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LLY",
+        "layer": "rail",
+        "x": 95.51,
+        "y": 41.09,
+        "name": "柳园",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LHM",
+        "layer": "rail",
+        "x": 93.51,
+        "y": 42.82,
+        "name": "哈密",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSS",
+        "layer": "rail",
+        "x": 90.21,
+        "y": 42.87,
+        "name": "鄯善",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LTLF",
+        "layer": "rail",
+        "x": 89.19,
+        "y": 42.95,
+        "name": "吐鲁番",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LWLMQN",
+        "layer": "rail",
+        "x": 87.6,
+        "y": 43.75,
+        "name": "乌鲁木齐南",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LWLMQ",
+        "layer": "rail",
+        "x": 87.62,
+        "y": 43.79,
+        "name": "乌鲁木齐",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LWLMQX_a",
+        "layer": "rail",
+        "x": 87.45,
+        "y": 43.8,
+        "name": "乌鲁木齐西",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LWLMQX_b",
+        "layer": "rail",
+        "x": 87.45,
+        "y": 43.8,
+        "name": "乌鲁木齐西",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LCJ",
+        "layer": "rail",
+        "x": 87.3,
+        "y": 44.01,
+        "name": "昌吉",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LHTB",
+        "layer": "rail",
+        "x": 86.9,
+        "y": 44.19,
+        "name": "呼图壁",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSHZ_a",
+        "layer": "rail",
+        "x": 86.08,
+        "y": 44.31,
+        "name": "石河子",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSHZ_b",
+        "layer": "rail",
+        "x": 86.08,
+        "y": 44.31,
+        "name": "石河子",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSW",
+        "layer": "rail",
+        "x": 85.62,
+        "y": 44.33,
+        "name": "沙湾",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LKT_a",
+        "layer": "rail",
+        "x": 84.9,
+        "y": 44.43,
+        "name": "奎屯",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LKT_b",
+        "layer": "rail",
+        "x": 84.9,
+        "y": 44.43,
+        "name": "奎屯",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSQ_a",
+        "layer": "rail",
+        "x": 115.65,
+        "y": 34.41,
+        "name": "商丘",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSQ_b",
+        "layer": "rail",
+        "x": 115.65,
+        "y": 34.41,
+        "name": "商丘",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSQN",
+        "layer": "rail",
+        "x": 115.7,
+        "y": 34.41,
+        "name": "商丘南",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LKEL",
+        "layer": "rail",
+        "x": 86.15,
+        "y": 41.76,
+        "name": "库尔勒",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LDX",
+        "layer": "rail",
+        "x": 104.62,
+        "y": 35.58,
+        "name": "定西",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LLX",
+        "layer": "rail",
+        "x": 104.63,
+        "y": 35.0,
+        "name": "陇西",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LTS",
+        "layer": "rail",
+        "x": 105.72,
+        "y": 34.58,
+        "name": "天水",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LBJ",
+        "layer": "rail",
+        "x": 107.14,
+        "y": 34.36,
+        "name": "宝鸡",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSFZ_a",
+        "layer": "rail",
+        "x": 108.95,
+        "y": 34.27,
+        "name": "西安",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSFZ_b",
+        "layer": "rail",
+        "x": 108.95,
+        "y": 34.27,
+        "name": "西安",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSMX",
+        "layer": "rail",
+        "x": 111.19,
+        "y": 34.78,
+        "name": "三门峡",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LLYY",
+        "layer": "rail",
+        "x": 112.45,
+        "y": 34.62,
+        "name": "洛阳",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LZZ",
+        "layer": "rail",
+        "x": 113.65,
+        "y": 34.76,
+        "name": "郑州",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LKF",
+        "layer": "rail",
+        "x": 114.31,
+        "y": 34.8,
+        "name": "开封",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LXZ",
+        "layer": "rail",
+        "x": 117.18,
+        "y": 34.26,
+        "name": "徐州",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LLYG",
+        "layer": "rail",
+        "x": 119.36,
+        "y": 34.73,
+        "name": "连云港东",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSL",
+        "layer": "rail",
+        "x": 109.94,
+        "y": 33.87,
+        "name": "商洛",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSN",
+        "layer": "rail",
+        "x": 110.88,
+        "y": 33.53,
+        "name": "商南",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LXX",
+        "layer": "rail",
+        "x": 111.47,
+        "y": 33.3,
+        "name": "西峡",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LNY",
+        "layer": "rail",
+        "x": 112.53,
+        "y": 33.0,
+        "name": "南阳",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LXY",
+        "layer": "rail",
+        "x": 114.09,
+        "y": 32.13,
+        "name": "信阳",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LHC",
+        "layer": "rail",
+        "x": 115.05,
+        "y": 32.13,
+        "name": "潢川",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LYJ",
+        "layer": "rail",
+        "x": 115.93,
+        "y": 31.86,
+        "name": "叶集",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LLA",
+        "layer": "rail",
+        "x": 116.51,
+        "y": 31.75,
+        "name": "六安",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LHF_a",
+        "layer": "rail",
+        "x": 117.2,
+        "y": 31.78,
+        "name": "合肥",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LHF_b",
+        "layer": "rail",
+        "x": 117.2,
+        "y": 31.78,
+        "name": "合肥",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LQJ",
+        "layer": "rail",
+        "x": 118.27,
+        "y": 32.09,
+        "name": "全椒",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LNJ",
+        "layer": "rail",
+        "x": 118.8,
+        "y": 32.06,
+        "name": "南京",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LBB",
+        "layer": "rail",
+        "x": 117.36,
+        "y": 32.92,
+        "name": "蚌埠",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LZJ",
+        "layer": "rail",
+        "x": 119.45,
+        "y": 32.2,
+        "name": "镇江",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LCZ",
+        "layer": "rail",
+        "x": 119.97,
+        "y": 31.81,
+        "name": "常州",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LWX",
+        "layer": "rail",
+        "x": 120.3,
+        "y": 31.57,
+        "name": "无锡",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSZ",
+        "layer": "rail",
+        "x": 120.62,
+        "y": 31.3,
+        "name": "苏州",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSH",
+        "layer": "rail",
+        "x": 121.45,
+        "y": 31.24,
+        "name": "上海",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LJX",
+        "layer": "rail",
+        "x": 120.75,
+        "y": 30.76,
+        "name": "嘉兴",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LHZ",
+        "layer": "rail",
+        "x": 120.17,
+        "y": 30.27,
+        "name": "杭州",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LSX",
+        "layer": "rail",
+        "x": 120.58,
+        "y": 30.0,
+        "name": "绍兴",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LYY",
+        "layer": "rail",
+        "x": 121.15,
+        "y": 30.04,
+        "name": "余姚",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LNB",
+        "layer": "rail",
+        "x": 121.55,
+        "y": 29.87,
+        "name": "宁波",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LHN",
+        "layer": "rail",
+        "x": 117.0,
+        "y": 32.63,
+        "name": "淮南",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LWH_a",
+        "layer": "rail",
+        "x": 118.38,
+        "y": 31.33,
+        "name": "芜湖",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LWH_b",
+        "layer": "rail",
+        "x": 118.38,
+        "y": 31.33,
+        "name": "芜湖",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LFY_a",
+        "layer": "rail",
+        "x": 115.81,
+        "y": 32.89,
+        "name": "阜阳",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LFY_b",
+        "layer": "rail",
+        "x": 115.81,
+        "y": 32.89,
+        "name": "阜阳",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LBZ",
+        "layer": "rail",
+        "x": 115.78,
+        "y": 33.87,
+        "name": "亳州",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LXC",
+        "layer": "rail",
+        "x": 118.76,
+        "y": 30.94,
+        "name": "宣城",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "LCX",
+        "layer": "rail",
+        "x": 119.91,
+        "y": 31.0,
+        "name": "长兴",
+        "side": "origin",
+        "yard": null,
+        "port": null
+      },
+      {
+        "id": "Y3_in",
+        "layer": "yard",
+        "x": 84.9,
+        "y": 44.43,
+        "name": "奎屯货场入口",
+        "side": "origin",
+        "yard": "Y3",
+        "port": "in"
+      },
+      {
+        "id": "Y3_out",
+        "layer": "yard",
+        "x": 84.9,
+        "y": 44.43,
+        "name": "奎屯货场出口",
+        "side": "origin",
+        "yard": "Y3",
+        "port": "out"
+      },
+      {
+        "id": "Y2_in",
+        "layer": "yard",
+        "x": 86.08,
+        "y": 44.31,
+        "name": "石河子货场入口",
+        "side": "origin",
+        "yard": "Y2",
+        "port": "in"
+      },
+      {
+        "id": "Y2_out",
+        "layer": "yard",
+        "x": 86.08,
+        "y": 44.31,
+        "name": "石河子货场出口",
+        "side": "origin",
+        "yard": "Y2",
+        "port": "out"
+      },
+      {
+        "id": "Y1_in",
+        "layer": "yard",
+        "x": 87.45,
+        "y": 43.8,
+        "name": "乌鲁木齐西货场入口",
+        "side": "origin",
+        "yard": "Y1",
+        "port": "in"
+      },
+      {
+        "id": "Y1_out",
+        "layer": "yard",
+        "x": 87.45,
+        "y": 43.8,
+        "name": "乌鲁木齐西货场出口",
+        "side": "origin",
+        "yard": "Y1",
+        "port": "out"
+      },
+      {
+        "id": "Y8_in",
+        "layer": "yard",
+        "x": 103.79,
+        "y": 36.06,
+        "name": "兰州北货场入口",
+        "side": "transit",
+        "yard": "Y8",
+        "port": "in"
+      },
+      {
+        "id": "Y8_out",
+        "layer": "yard",
+        "x": 103.79,
+        "y": 36.06,
+        "name": "兰州北货场出口",
+        "side": "transit",
+        "yard": "Y8",
+        "port": "out"
+      },
+      {
+        "id": "Y9_in",
+        "layer": "yard",
+        "x": 108.95,
+        "y": 34.27,
+        "name": "西安货场入口",
+        "side": "transit",
+        "yard": "Y9",
+        "port": "in"
+      },
+      {
+        "id": "Y9_out",
+        "layer": "yard",
+        "x": 108.95,
+        "y": 34.27,
+        "name": "西安货场出口",
+        "side": "transit",
+        "yard": "Y9",
+        "port": "out"
+      },
+      {
+        "id": "Y11_in",
+        "layer": "yard",
+        "x": 115.65,
+        "y": 34.41,
+        "name": "商丘货场入口",
+        "side": "transit",
+        "yard": "Y11",
+        "port": "in"
+      },
+      {
+        "id": "Y11_out",
+        "layer": "yard",
+        "x": 115.65,
+        "y": 34.41,
+        "name": "商丘货场出口",
+        "side": "transit",
+        "yard": "Y11",
+        "port": "out"
+      },
+      {
+        "id": "Y12_in",
+        "layer": "yard",
+        "x": 115.81,
+        "y": 32.89,
+        "name": "阜阳货场入口",
+        "side": "transit",
+        "yard": "Y12",
+        "port": "in"
+      },
+      {
+        "id": "Y12_out",
+        "layer": "yard",
+        "x": 115.81,
+        "y": 32.89,
+        "name": "阜阳货场出口",
+        "side": "transit",
+        "yard": "Y12",
+        "port": "out"
+      },
+      {
+        "id": "Y14_in",
+        "layer": "yard",
+        "x": 118.38,
+        "y": 31.33,
+        "name": "芜湖货场入口",
+        "side": "transit",
+        "yard": "Y14",
+        "port": "in"
+      },
+      {
+        "id": "Y14_out",
+        "layer": "yard",
+        "x": 118.38,
+        "y": 31.33,
+        "name": "芜湖货场出口",
+        "side": "transit",
+        "yard": "Y14",
+        "port": "out"
+      },
+      {
+        "id": "Y13_in",
+        "layer": "yard",
+        "x": 117.2,
+        "y": 31.78,
+        "name": "合肥东货场入口",
+        "side": "destination",
+        "yard": "Y13",
+        "port": "in"
+      },
+      {
+        "id": "Y13_out",
+        "layer": "yard",
+        "x": 117.2,
+        "y": 31.78,
+        "name": "合肥东货场出口",
+        "side": "destination",
+        "yard": "Y13",
+        "port": "out"
+      }
+    ],
+    "arcs": [
+      {
+        "i": "o",
+        "j": "Y3_in",
+        "kind": "road",
+        "distance": 45.0,
+        "travel_time": 0.5625,
+        "risk": 22.139999999999997,
+        "cost": 34425.0,
+        "service": null
+      },
+      {
+        "i": "o",
+        "j": "Y2_in",
+        "kind": "road",
+        "distance": 190.0,
+        "travel_time": 2.375,
+        "risk": 93.48,
+        "cost": 112725.0,
+        "service": null
+      },
+      {
+        "i": "o",
+        "j": "Y1_in",
+        "kind": "road",
+        "distance": 265.0,
+        "travel_time": 3.3125,
+        "risk": 130.38,
+        "cost": 153225.0,
+        "service": null
+      },
+      {
+        "i": "Y13_out",
+        "j": "d",
+        "kind": "road",
+        "distance": 20.0,
+        "travel_time": 0.25,
+        "risk": 9.839999999999998,
+        "cost": 20925.0,
+        "service": null
+      },
+      {
+        "i": "LKT_a",
+        "j": "LKT_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LKT_a",
+        "j": "Y3_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y3_out",
+        "j": "LKT_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y3_in",
+        "j": "Y3_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 335.97495,
+        "cost": 5000.0,
+        "service": null
+      },
+      {
+        "i": "LSHZ_a",
+        "j": "LSHZ_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LSHZ_a",
+        "j": "Y2_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y2_out",
+        "j": "LSHZ_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y2_in",
+        "j": "Y2_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 335.97495,
+        "cost": 5000.0,
+        "service": null
+      },
+      {
+        "i": "LWLMQX_a",
+        "j": "LWLMQX_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LWLMQX_a",
+        "j": "Y1_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y1_out",
+        "j": "LWLMQX_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y1_in",
+        "j": "Y1_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 335.97495,
+        "cost": 5000.0,
+        "service": null
+      },
+      {
+        "i": "LLZ_a",
+        "j": "LLZ_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LLZ_a",
+        "j": "Y8_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y8_out",
+        "j": "LLZ_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y8_in",
+        "j": "Y8_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 164.8179,
+        "cost": 2000.0,
+        "service": null
+      },
+      {
+        "i": "LSFZ_a",
+        "j": "LSFZ_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LSFZ_a",
+        "j": "Y9_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y9_out",
+        "j": "LSFZ_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y9_in",
+        "j": "Y9_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 164.8179,
+        "cost": 2000.0,
+        "service": null
+      },
+      {
+        "i": "LSQ_a",
+        "j": "LSQ_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LSQ_a",
+        "j": "Y11_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y11_out",
+        "j": "LSQ_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y11_in",
+        "j": "Y11_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 164.8179,
+        "cost": 2000.0,
+        "service": null
+      },
+      {
+        "i": "LFY_a",
+        "j": "LFY_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LFY_a",
+        "j": "Y12_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y12_out",
+        "j": "LFY_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y12_in",
+        "j": "Y12_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 164.8179,
+        "cost": 2000.0,
+        "service": null
+      },
+      {
+        "i": "LWH_a",
+        "j": "LWH_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LWH_a",
+        "j": "Y14_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y14_out",
+        "j": "LWH_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y14_in",
+        "j": "Y14_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 164.8179,
+        "cost": 2000.0,
+        "service": null
+      },
+      {
+        "i": "LHF_a",
+        "j": "LHF_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "LHF_a",
+        "j": "Y13_in",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y13_out",
+        "j": "LHF_b",
+        "kind": "road",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 0.0,
+        "cost": 0.0,
+        "service": null
+      },
+      {
+        "i": "Y13_in",
+        "j": "Y13_out",
+        "kind": "transfer",
+        "distance": 0.0,
+        "travel_time": 0.0,
+        "risk": 335.97495,
+        "cost": 5000.0,
+        "service": null
+      },
+      {
+        "i": "LLZ_b",
+        "j": "LYD",
+        "kind": "rail",
+        "distance": 111.0,
+        "travel_time": 1.85,
+        "risk": 31.95894240000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLZ_b",
+        "j": "LYD",
+        "kind": "rail",
+        "distance": 111.0,
+        "travel_time": 2.22,
+        "risk": 38.44684800000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLZ_b",
+        "j": "LYD",
+        "kind": "rail",
+        "distance": 111.0,
+        "travel_time": 1.3875,
+        "risk": 24.029280000000004,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LYD",
+        "j": "LLZ_a",
+        "kind": "rail",
+        "distance": 111.0,
+        "travel_time": 1.85,
+        "risk": 31.95894240000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LYD",
+        "j": "LLZ_a",
+        "kind": "rail",
+        "distance": 111.0,
+        "travel_time": 2.22,
+        "risk": 38.44684800000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LYD",
+        "j": "LLZ_a",
+        "kind": "rail",
+        "distance": 111.0,
+        "travel_time": 1.3875,
+        "risk": 24.029280000000004,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LYD",
+        "j": "LGL",
+        "kind": "rail",
+        "distance": 133.0,
+        "travel_time": 2.2167,
+        "risk": 38.2931472,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LYD",
+        "j": "LGL",
+        "kind": "rail",
+        "distance": 133.0,
+        "travel_time": 2.66,
+        "risk": 46.06694400000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LYD",
+        "j": "LGL",
+        "kind": "rail",
+        "distance": 133.0,
+        "travel_time": 1.6625,
+        "risk": 28.79184,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LGL",
+        "j": "LYD",
+        "kind": "rail",
+        "distance": 133.0,
+        "travel_time": 2.2167,
+        "risk": 38.2931472,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LGL",
+        "j": "LYD",
+        "kind": "rail",
+        "distance": 133.0,
+        "travel_time": 2.66,
+        "risk": 46.06694400000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LGL",
+        "j": "LYD",
+        "kind": "rail",
+        "distance": 133.0,
+        "travel_time": 1.6625,
+        "risk": 28.79184,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LGL",
+        "j": "LWWN",
+        "kind": "rail",
+        "distance": 46.0,
+        "travel_time": 0.7667,
+        "risk": 13.244246400000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LGL",
+        "j": "LWWN",
+        "kind": "rail",
+        "distance": 46.0,
+        "travel_time": 0.92,
+        "risk": 15.932928000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LGL",
+        "j": "LWWN",
+        "kind": "rail",
+        "distance": 46.0,
+        "travel_time": 0.575,
+        "risk": 9.95808,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWWN",
+        "j": "LGL",
+        "kind": "rail",
+        "distance": 46.0,
+        "travel_time": 0.7667,
+        "risk": 13.244246400000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWWN",
+        "j": "LGL",
+        "kind": "rail",
+        "distance": 46.0,
+        "travel_time": 0.92,
+        "risk": 15.932928000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWWN",
+        "j": "LGL",
+        "kind": "rail",
+        "distance": 46.0,
+        "travel_time": 0.575,
+        "risk": 9.95808,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWWN",
+        "j": "LJC",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.45,
+        "risk": 25.048900800000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWWN",
+        "j": "LJC",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.74,
+        "risk": 30.134016000000003,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWWN",
+        "j": "LJC",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.0875,
+        "risk": 18.83376,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LJC",
+        "j": "LWWN",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.45,
+        "risk": 25.048900800000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LJC",
+        "j": "LWWN",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.74,
+        "risk": 30.134016000000003,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LJC",
+        "j": "LWWN",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.0875,
+        "risk": 18.83376,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LJC",
+        "j": "LSD",
+        "kind": "rail",
+        "distance": 117.0,
+        "travel_time": 1.95,
+        "risk": 33.686452800000005,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LJC",
+        "j": "LSD",
+        "kind": "rail",
+        "distance": 117.0,
+        "travel_time": 2.34,
+        "risk": 40.525056000000006,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LJC",
+        "j": "LSD",
+        "kind": "rail",
+        "distance": 117.0,
+        "travel_time": 1.4625,
+        "risk": 25.328160000000004,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSD",
+        "j": "LJC",
+        "kind": "rail",
+        "distance": 117.0,
+        "travel_time": 1.95,
+        "risk": 33.686452800000005,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSD",
+        "j": "LJC",
+        "kind": "rail",
+        "distance": 117.0,
+        "travel_time": 2.34,
+        "risk": 40.525056000000006,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSD",
+        "j": "LJC",
+        "kind": "rail",
+        "distance": 117.0,
+        "travel_time": 1.4625,
+        "risk": 25.328160000000004,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSD",
+        "j": "LZY",
+        "kind": "rail",
+        "distance": 53.0,
+        "travel_time": 0.8833,
+        "risk": 15.259675199999998,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSD",
+        "j": "LZY",
+        "kind": "rail",
+        "distance": 53.0,
+        "travel_time": 1.06,
+        "risk": 18.357504,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSD",
+        "j": "LZY",
+        "kind": "rail",
+        "distance": 53.0,
+        "travel_time": 0.6625,
+        "risk": 11.473439999999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LZY",
+        "j": "LSD",
+        "kind": "rail",
+        "distance": 53.0,
+        "travel_time": 0.8833,
+        "risk": 15.259675199999998,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LZY",
+        "j": "LSD",
+        "kind": "rail",
+        "distance": 53.0,
+        "travel_time": 1.06,
+        "risk": 18.357504,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LZY",
+        "j": "LSD",
+        "kind": "rail",
+        "distance": 53.0,
+        "travel_time": 0.6625,
+        "risk": 11.473439999999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LZY",
+        "j": "LQS",
+        "kind": "rail",
+        "distance": 137.0,
+        "travel_time": 2.2833,
+        "risk": 39.4448208,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LZY",
+        "j": "LQS",
+        "kind": "rail",
+        "distance": 137.0,
+        "travel_time": 2.74,
+        "risk": 47.452416,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LZY",
+        "j": "LQS",
+        "kind": "rail",
+        "distance": 137.0,
+        "travel_time": 1.7125,
+        "risk": 29.65776,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LQS",
+        "j": "LZY",
+        "kind": "rail",
+        "distance": 137.0,
+        "travel_time": 2.2833,
+        "risk": 39.4448208,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LQS",
+        "j": "LZY",
+        "kind": "rail",
+        "distance": 137.0,
+        "travel_time": 2.74,
+        "risk": 47.452416,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LQS",
+        "j": "LZY",
+        "kind": "rail",
+        "distance": 137.0,
+        "travel_time": 1.7125,
+        "risk": 29.65776,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LQS",
+        "j": "LJQ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 1.0667,
+        "risk": 18.4267776,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LQS",
+        "j": "LJQ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 1.28,
+        "risk": 22.167552,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LQS",
+        "j": "LJQ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 0.8,
+        "risk": 13.85472,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LJQ",
+        "j": "LQS",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 1.0667,
+        "risk": 18.4267776,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LJQ",
+        "j": "LQS",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 1.28,
+        "risk": 22.167552,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LJQ",
+        "j": "LQS",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 0.8,
+        "risk": 13.85472,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LJQ",
+        "j": "LJYG",
+        "kind": "rail",
+        "distance": 22.0,
+        "travel_time": 0.3667,
+        "risk": 6.334204800000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LJQ",
+        "j": "LJYG",
+        "kind": "rail",
+        "distance": 22.0,
+        "travel_time": 0.44,
+        "risk": 7.620096000000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LJQ",
+        "j": "LJYG",
+        "kind": "rail",
+        "distance": 22.0,
+        "travel_time": 0.275,
+        "risk": 4.762560000000001,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LJYG",
+        "j": "LJQ",
+        "kind": "rail",
+        "distance": 22.0,
+        "travel_time": 0.3667,
+        "risk": 6.334204800000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LJYG",
+        "j": "LJQ",
+        "kind": "rail",
+        "distance": 22.0,
+        "travel_time": 0.44,
+        "risk": 7.620096000000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LJYG",
+        "j": "LJQ",
+        "kind": "rail",
+        "distance": 22.0,
+        "travel_time": 0.275,
+        "risk": 4.762560000000001,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LJYG",
+        "j": "LYM",
+        "kind": "rail",
+        "distance": 132.0,
+        "travel_time": 2.2,
+        "risk": 38.0052288,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LJYG",
+        "j": "LYM",
+        "kind": "rail",
+        "distance": 132.0,
+        "travel_time": 2.64,
+        "risk": 45.720575999999994,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LJYG",
+        "j": "LYM",
+        "kind": "rail",
+        "distance": 132.0,
+        "travel_time": 1.65,
+        "risk": 28.57536,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LYM",
+        "j": "LJYG",
+        "kind": "rail",
+        "distance": 132.0,
+        "travel_time": 2.2,
+        "risk": 38.0052288,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LYM",
+        "j": "LJYG",
+        "kind": "rail",
+        "distance": 132.0,
+        "travel_time": 2.64,
+        "risk": 45.720575999999994,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LYM",
+        "j": "LJYG",
+        "kind": "rail",
+        "distance": 132.0,
+        "travel_time": 1.65,
+        "risk": 28.57536,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LYM",
+        "j": "LLY",
+        "kind": "rail",
+        "distance": 165.0,
+        "travel_time": 2.75,
+        "risk": 47.506536000000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LYM",
+        "j": "LLY",
+        "kind": "rail",
+        "distance": 165.0,
+        "travel_time": 3.3,
+        "risk": 57.15072000000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LYM",
+        "j": "LLY",
+        "kind": "rail",
+        "distance": 165.0,
+        "travel_time": 2.0625,
+        "risk": 35.7192,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLY",
+        "j": "LYM",
+        "kind": "rail",
+        "distance": 165.0,
+        "travel_time": 2.75,
+        "risk": 47.506536000000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLY",
+        "j": "LYM",
+        "kind": "rail",
+        "distance": 165.0,
+        "travel_time": 3.3,
+        "risk": 57.15072000000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLY",
+        "j": "LYM",
+        "kind": "rail",
+        "distance": 165.0,
+        "travel_time": 2.0625,
+        "risk": 35.7192,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLY",
+        "j": "LHM",
+        "kind": "rail",
+        "distance": 272.0,
+        "travel_time": 4.5333,
+        "risk": 78.3138048,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLY",
+        "j": "LHM",
+        "kind": "rail",
+        "distance": 272.0,
+        "travel_time": 5.44,
+        "risk": 94.21209600000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLY",
+        "j": "LHM",
+        "kind": "rail",
+        "distance": 272.0,
+        "travel_time": 3.4,
+        "risk": 58.88256,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHM",
+        "j": "LLY",
+        "kind": "rail",
+        "distance": 272.0,
+        "travel_time": 4.5333,
+        "risk": 78.3138048,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHM",
+        "j": "LLY",
+        "kind": "rail",
+        "distance": 272.0,
+        "travel_time": 5.44,
+        "risk": 94.21209600000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHM",
+        "j": "LLY",
+        "kind": "rail",
+        "distance": 272.0,
+        "travel_time": 3.4,
+        "risk": 58.88256,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHM",
+        "j": "LSS",
+        "kind": "rail",
+        "distance": 270.0,
+        "travel_time": 4.5,
+        "risk": 77.737968,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHM",
+        "j": "LSS",
+        "kind": "rail",
+        "distance": 270.0,
+        "travel_time": 5.4,
+        "risk": 93.51935999999999,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHM",
+        "j": "LSS",
+        "kind": "rail",
+        "distance": 270.0,
+        "travel_time": 3.375,
+        "risk": 58.4496,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSS",
+        "j": "LHM",
+        "kind": "rail",
+        "distance": 270.0,
+        "travel_time": 4.5,
+        "risk": 77.737968,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSS",
+        "j": "LHM",
+        "kind": "rail",
+        "distance": 270.0,
+        "travel_time": 5.4,
+        "risk": 93.51935999999999,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSS",
+        "j": "LHM",
+        "kind": "rail",
+        "distance": 270.0,
+        "travel_time": 3.375,
+        "risk": 58.4496,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSS",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 2.3333,
+        "risk": 40.308575999999995,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSS",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 2.8,
+        "risk": 48.49152,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSS",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 1.75,
+        "risk": 30.307199999999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LTLF",
+        "j": "LSS",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 2.3333,
+        "risk": 40.308575999999995,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LTLF",
+        "j": "LSS",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 2.8,
+        "risk": 48.49152,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LTLF",
+        "j": "LSS",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 1.75,
+        "risk": 30.307199999999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LTLF",
+        "j": "LWLMQN",
+        "kind": "rail",
+        "distance": 143.0,
+        "travel_time": 2.3833,
+        "risk": 41.1723312,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LTLF",
+        "j": "LWLMQN",
+        "kind": "rail",
+        "distance": 143.0,
+        "travel_time": 2.86,
+        "risk": 49.530623999999996,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LTLF",
+        "j": "LWLMQN",
+        "kind": "rail",
+        "distance": 143.0,
+        "travel_time": 1.7875,
+        "risk": 30.95664,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWLMQN",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 143.0,
+        "travel_time": 2.3833,
+        "risk": 41.1723312,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWLMQN",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 143.0,
+        "travel_time": 2.86,
+        "risk": 49.530623999999996,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWLMQN",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 143.0,
+        "travel_time": 1.7875,
+        "risk": 30.95664,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWLMQ",
+        "j": "LWLMQX_a",
+        "kind": "rail",
+        "distance": 12.0,
+        "travel_time": 0.2,
+        "risk": 3.4550208000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWLMQ",
+        "j": "LWLMQX_a",
+        "kind": "rail",
+        "distance": 12.0,
+        "travel_time": 0.24,
+        "risk": 4.156416,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWLMQ",
+        "j": "LWLMQX_a",
+        "kind": "rail",
+        "distance": 12.0,
+        "travel_time": 0.15,
+        "risk": 2.59776,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWLMQX_b",
+        "j": "LWLMQ",
+        "kind": "rail",
+        "distance": 12.0,
+        "travel_time": 0.2,
+        "risk": 3.4550208000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWLMQX_b",
+        "j": "LWLMQ",
+        "kind": "rail",
+        "distance": 12.0,
+        "travel_time": 0.24,
+        "risk": 4.156416,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWLMQX_b",
+        "j": "LWLMQ",
+        "kind": "rail",
+        "distance": 12.0,
+        "travel_time": 0.15,
+        "risk": 2.59776,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWLMQX_b",
+        "j": "LCJ",
+        "kind": "rail",
+        "distance": 23.0,
+        "travel_time": 0.3833,
+        "risk": 6.622123200000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWLMQX_b",
+        "j": "LCJ",
+        "kind": "rail",
+        "distance": 23.0,
+        "travel_time": 0.46,
+        "risk": 7.966464000000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWLMQX_b",
+        "j": "LCJ",
+        "kind": "rail",
+        "distance": 23.0,
+        "travel_time": 0.2875,
+        "risk": 4.97904,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LCJ",
+        "j": "LWLMQX_a",
+        "kind": "rail",
+        "distance": 23.0,
+        "travel_time": 0.3833,
+        "risk": 6.622123200000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LCJ",
+        "j": "LWLMQX_a",
+        "kind": "rail",
+        "distance": 23.0,
+        "travel_time": 0.46,
+        "risk": 7.966464000000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LCJ",
+        "j": "LWLMQX_a",
+        "kind": "rail",
+        "distance": 23.0,
+        "travel_time": 0.2875,
+        "risk": 4.97904,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LCJ",
+        "j": "LHTB",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.7167,
+        "risk": 12.380491200000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LCJ",
+        "j": "LHTB",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.86,
+        "risk": 14.893824000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LCJ",
+        "j": "LHTB",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.5375,
+        "risk": 9.30864,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHTB",
+        "j": "LCJ",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.7167,
+        "risk": 12.380491200000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHTB",
+        "j": "LCJ",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.86,
+        "risk": 14.893824000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHTB",
+        "j": "LCJ",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.5375,
+        "risk": 9.30864,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHTB",
+        "j": "LSHZ_a",
+        "kind": "rail",
+        "distance": 67.0,
+        "travel_time": 1.1167,
+        "risk": 19.2905328,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHTB",
+        "j": "LSHZ_a",
+        "kind": "rail",
+        "distance": 67.0,
+        "travel_time": 1.34,
+        "risk": 23.206656000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHTB",
+        "j": "LSHZ_a",
+        "kind": "rail",
+        "distance": 67.0,
+        "travel_time": 0.8375,
+        "risk": 14.504159999999999,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSHZ_b",
+        "j": "LHTB",
+        "kind": "rail",
+        "distance": 67.0,
+        "travel_time": 1.1167,
+        "risk": 19.2905328,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSHZ_b",
+        "j": "LHTB",
+        "kind": "rail",
+        "distance": 67.0,
+        "travel_time": 1.34,
+        "risk": 23.206656000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSHZ_b",
+        "j": "LHTB",
+        "kind": "rail",
+        "distance": 67.0,
+        "travel_time": 0.8375,
+        "risk": 14.504159999999999,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSHZ_b",
+        "j": "LSW",
+        "kind": "rail",
+        "distance": 34.0,
+        "travel_time": 0.5667,
+        "risk": 9.7892256,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSHZ_b",
+        "j": "LSW",
+        "kind": "rail",
+        "distance": 34.0,
+        "travel_time": 0.68,
+        "risk": 11.776512000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSHZ_b",
+        "j": "LSW",
+        "kind": "rail",
+        "distance": 34.0,
+        "travel_time": 0.425,
+        "risk": 7.36032,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSW",
+        "j": "LSHZ_a",
+        "kind": "rail",
+        "distance": 34.0,
+        "travel_time": 0.5667,
+        "risk": 9.7892256,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSW",
+        "j": "LSHZ_a",
+        "kind": "rail",
+        "distance": 34.0,
+        "travel_time": 0.68,
+        "risk": 11.776512000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSW",
+        "j": "LSHZ_a",
+        "kind": "rail",
+        "distance": 34.0,
+        "travel_time": 0.425,
+        "risk": 7.36032,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSW",
+        "j": "LKT_a",
+        "kind": "rail",
+        "distance": 62.0,
+        "travel_time": 1.0333,
+        "risk": 17.8509408,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSW",
+        "j": "LKT_a",
+        "kind": "rail",
+        "distance": 62.0,
+        "travel_time": 1.24,
+        "risk": 21.474816,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSW",
+        "j": "LKT_a",
+        "kind": "rail",
+        "distance": 62.0,
+        "travel_time": 0.775,
+        "risk": 13.42176,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LKT_b",
+        "j": "LSW",
+        "kind": "rail",
+        "distance": 62.0,
+        "travel_time": 1.0333,
+        "risk": 17.8509408,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LKT_b",
+        "j": "LSW",
+        "kind": "rail",
+        "distance": 62.0,
+        "travel_time": 1.24,
+        "risk": 21.474816,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LKT_b",
+        "j": "LSW",
+        "kind": "rail",
+        "distance": 62.0,
+        "travel_time": 0.775,
+        "risk": 13.42176,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWLMQN",
+        "j": "LWLMQ",
+        "kind": "rail",
+        "distance": 10.0,
+        "travel_time": 0.1667,
+        "risk": 2.8791840000000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWLMQN",
+        "j": "LWLMQ",
+        "kind": "rail",
+        "distance": 10.0,
+        "travel_time": 0.2,
+        "risk": 3.46368,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWLMQN",
+        "j": "LWLMQ",
+        "kind": "rail",
+        "distance": 10.0,
+        "travel_time": 0.125,
+        "risk": 2.1648,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWLMQ",
+        "j": "LWLMQN",
+        "kind": "rail",
+        "distance": 10.0,
+        "travel_time": 0.1667,
+        "risk": 2.8791840000000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWLMQ",
+        "j": "LWLMQN",
+        "kind": "rail",
+        "distance": 10.0,
+        "travel_time": 0.2,
+        "risk": 3.46368,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWLMQ",
+        "j": "LWLMQN",
+        "kind": "rail",
+        "distance": 10.0,
+        "travel_time": 0.125,
+        "risk": 2.1648,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LSQN",
+        "kind": "rail",
+        "distance": 6.0,
+        "travel_time": 0.1,
+        "risk": 1.7275104000000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LSQN",
+        "kind": "rail",
+        "distance": 6.0,
+        "travel_time": 0.12,
+        "risk": 2.078208,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LSQN",
+        "kind": "rail",
+        "distance": 6.0,
+        "travel_time": 0.075,
+        "risk": 1.29888,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSQN",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 6.0,
+        "travel_time": 0.1,
+        "risk": 1.7275104000000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSQN",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 6.0,
+        "travel_time": 0.12,
+        "risk": 2.078208,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSQN",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 6.0,
+        "travel_time": 0.075,
+        "risk": 1.29888,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LTLF",
+        "j": "LKEL",
+        "kind": "rail",
+        "distance": 334.0,
+        "travel_time": 5.5667,
+        "risk": 96.16474560000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LTLF",
+        "j": "LKEL",
+        "kind": "rail",
+        "distance": 334.0,
+        "travel_time": 6.68,
+        "risk": 115.686912,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LTLF",
+        "j": "LKEL",
+        "kind": "rail",
+        "distance": 334.0,
+        "travel_time": 4.175,
+        "risk": 72.30432,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LKEL",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 334.0,
+        "travel_time": 5.5667,
+        "risk": 96.16474560000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LKEL",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 334.0,
+        "travel_time": 6.68,
+        "risk": 115.686912,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LKEL",
+        "j": "LTLF",
+        "kind": "rail",
+        "distance": 334.0,
+        "travel_time": 4.175,
+        "risk": 72.30432,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLZ_b",
+        "j": "LDX",
+        "kind": "rail",
+        "distance": 118.0,
+        "travel_time": 1.9667,
+        "risk": 33.97437120000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLZ_b",
+        "j": "LDX",
+        "kind": "rail",
+        "distance": 118.0,
+        "travel_time": 2.36,
+        "risk": 40.871424000000005,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLZ_b",
+        "j": "LDX",
+        "kind": "rail",
+        "distance": 118.0,
+        "travel_time": 1.475,
+        "risk": 25.54464,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LDX",
+        "j": "LLZ_a",
+        "kind": "rail",
+        "distance": 118.0,
+        "travel_time": 1.9667,
+        "risk": 33.97437120000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LDX",
+        "j": "LLZ_a",
+        "kind": "rail",
+        "distance": 118.0,
+        "travel_time": 2.36,
+        "risk": 40.871424000000005,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LDX",
+        "j": "LLZ_a",
+        "kind": "rail",
+        "distance": 118.0,
+        "travel_time": 1.475,
+        "risk": 25.54464,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LDX",
+        "j": "LLX",
+        "kind": "rail",
+        "distance": 103.0,
+        "travel_time": 1.7167,
+        "risk": 29.6555952,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LDX",
+        "j": "LLX",
+        "kind": "rail",
+        "distance": 103.0,
+        "travel_time": 2.06,
+        "risk": 35.675903999999996,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LDX",
+        "j": "LLX",
+        "kind": "rail",
+        "distance": 103.0,
+        "travel_time": 1.2875,
+        "risk": 22.297439999999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLX",
+        "j": "LDX",
+        "kind": "rail",
+        "distance": 103.0,
+        "travel_time": 1.7167,
+        "risk": 29.6555952,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLX",
+        "j": "LDX",
+        "kind": "rail",
+        "distance": 103.0,
+        "travel_time": 2.06,
+        "risk": 35.675903999999996,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLX",
+        "j": "LDX",
+        "kind": "rail",
+        "distance": 103.0,
+        "travel_time": 1.2875,
+        "risk": 22.297439999999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLX",
+        "j": "LTS",
+        "kind": "rail",
+        "distance": 130.0,
+        "travel_time": 2.1667,
+        "risk": 37.429392,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLX",
+        "j": "LTS",
+        "kind": "rail",
+        "distance": 130.0,
+        "travel_time": 2.6,
+        "risk": 45.027840000000005,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLX",
+        "j": "LTS",
+        "kind": "rail",
+        "distance": 130.0,
+        "travel_time": 1.625,
+        "risk": 28.142400000000002,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LTS",
+        "j": "LLX",
+        "kind": "rail",
+        "distance": 130.0,
+        "travel_time": 2.1667,
+        "risk": 37.429392,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LTS",
+        "j": "LLX",
+        "kind": "rail",
+        "distance": 130.0,
+        "travel_time": 2.6,
+        "risk": 45.027840000000005,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LTS",
+        "j": "LLX",
+        "kind": "rail",
+        "distance": 130.0,
+        "travel_time": 1.625,
+        "risk": 28.142400000000002,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LTS",
+        "j": "LBJ",
+        "kind": "rail",
+        "distance": 152.0,
+        "travel_time": 2.5333,
+        "risk": 43.7635968,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LTS",
+        "j": "LBJ",
+        "kind": "rail",
+        "distance": 152.0,
+        "travel_time": 3.04,
+        "risk": 52.647936,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LTS",
+        "j": "LBJ",
+        "kind": "rail",
+        "distance": 152.0,
+        "travel_time": 1.9,
+        "risk": 32.904959999999996,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LBJ",
+        "j": "LTS",
+        "kind": "rail",
+        "distance": 152.0,
+        "travel_time": 2.5333,
+        "risk": 43.7635968,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LBJ",
+        "j": "LTS",
+        "kind": "rail",
+        "distance": 152.0,
+        "travel_time": 3.04,
+        "risk": 52.647936,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LBJ",
+        "j": "LTS",
+        "kind": "rail",
+        "distance": 152.0,
+        "travel_time": 1.9,
+        "risk": 32.904959999999996,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LBJ",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 173.0,
+        "travel_time": 2.8833,
+        "risk": 49.8098832,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LBJ",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 173.0,
+        "travel_time": 3.46,
+        "risk": 59.92166400000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LBJ",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 173.0,
+        "travel_time": 2.1625,
+        "risk": 37.45104,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LBJ",
+        "kind": "rail",
+        "distance": 173.0,
+        "travel_time": 2.8833,
+        "risk": 49.8098832,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LBJ",
+        "kind": "rail",
+        "distance": 173.0,
+        "travel_time": 3.46,
+        "risk": 59.92166400000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LBJ",
+        "kind": "rail",
+        "distance": 173.0,
+        "travel_time": 2.1625,
+        "risk": 37.45104,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LSMX",
+        "kind": "rail",
+        "distance": 247.0,
+        "travel_time": 4.1167,
+        "risk": 71.1158448,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LSMX",
+        "kind": "rail",
+        "distance": 247.0,
+        "travel_time": 4.94,
+        "risk": 85.55289599999999,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LSMX",
+        "kind": "rail",
+        "distance": 247.0,
+        "travel_time": 3.0875,
+        "risk": 53.47056,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSMX",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 247.0,
+        "travel_time": 4.1167,
+        "risk": 71.1158448,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSMX",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 247.0,
+        "travel_time": 4.94,
+        "risk": 85.55289599999999,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSMX",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 247.0,
+        "travel_time": 3.0875,
+        "risk": 53.47056,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSMX",
+        "j": "LLYY",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 2.3333,
+        "risk": 40.308575999999995,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSMX",
+        "j": "LLYY",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 2.8,
+        "risk": 48.49152,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSMX",
+        "j": "LLYY",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 1.75,
+        "risk": 30.307199999999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLYY",
+        "j": "LSMX",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 2.3333,
+        "risk": 40.308575999999995,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLYY",
+        "j": "LSMX",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 2.8,
+        "risk": 48.49152,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLYY",
+        "j": "LSMX",
+        "kind": "rail",
+        "distance": 140.0,
+        "travel_time": 1.75,
+        "risk": 30.307199999999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLYY",
+        "j": "LZZ",
+        "kind": "rail",
+        "distance": 124.0,
+        "travel_time": 2.0667,
+        "risk": 35.7018816,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLYY",
+        "j": "LZZ",
+        "kind": "rail",
+        "distance": 124.0,
+        "travel_time": 2.48,
+        "risk": 42.949632,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLYY",
+        "j": "LZZ",
+        "kind": "rail",
+        "distance": 124.0,
+        "travel_time": 1.55,
+        "risk": 26.84352,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LZZ",
+        "j": "LLYY",
+        "kind": "rail",
+        "distance": 124.0,
+        "travel_time": 2.0667,
+        "risk": 35.7018816,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LZZ",
+        "j": "LLYY",
+        "kind": "rail",
+        "distance": 124.0,
+        "travel_time": 2.48,
+        "risk": 42.949632,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LZZ",
+        "j": "LLYY",
+        "kind": "rail",
+        "distance": 124.0,
+        "travel_time": 1.55,
+        "risk": 26.84352,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LZZ",
+        "j": "LKF",
+        "kind": "rail",
+        "distance": 72.0,
+        "travel_time": 1.2,
+        "risk": 20.7301248,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LZZ",
+        "j": "LKF",
+        "kind": "rail",
+        "distance": 72.0,
+        "travel_time": 1.44,
+        "risk": 24.938496,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LZZ",
+        "j": "LKF",
+        "kind": "rail",
+        "distance": 72.0,
+        "travel_time": 0.9,
+        "risk": 15.586559999999999,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LKF",
+        "j": "LZZ",
+        "kind": "rail",
+        "distance": 72.0,
+        "travel_time": 1.2,
+        "risk": 20.7301248,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LKF",
+        "j": "LZZ",
+        "kind": "rail",
+        "distance": 72.0,
+        "travel_time": 1.44,
+        "risk": 24.938496,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LKF",
+        "j": "LZZ",
+        "kind": "rail",
+        "distance": 72.0,
+        "travel_time": 0.9,
+        "risk": 15.586559999999999,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LKF",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 131.0,
+        "travel_time": 2.1833,
+        "risk": 37.7173104,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LKF",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 131.0,
+        "travel_time": 2.62,
+        "risk": 45.374208,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LKF",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 131.0,
+        "travel_time": 1.6375,
+        "risk": 28.35888,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LKF",
+        "kind": "rail",
+        "distance": 131.0,
+        "travel_time": 2.1833,
+        "risk": 37.7173104,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LKF",
+        "kind": "rail",
+        "distance": 131.0,
+        "travel_time": 2.62,
+        "risk": 45.374208,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LKF",
+        "kind": "rail",
+        "distance": 131.0,
+        "travel_time": 1.6375,
+        "risk": 28.35888,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 146.0,
+        "travel_time": 2.4333,
+        "risk": 42.0360864,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 146.0,
+        "travel_time": 2.92,
+        "risk": 50.569728000000005,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSQ_b",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 146.0,
+        "travel_time": 1.825,
+        "risk": 31.60608,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXZ",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 146.0,
+        "travel_time": 2.4333,
+        "risk": 42.0360864,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXZ",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 146.0,
+        "travel_time": 2.92,
+        "risk": 50.569728000000005,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXZ",
+        "j": "LSQ_a",
+        "kind": "rail",
+        "distance": 146.0,
+        "travel_time": 1.825,
+        "risk": 31.60608,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXZ",
+        "j": "LLYG",
+        "kind": "rail",
+        "distance": 223.0,
+        "travel_time": 3.7167,
+        "risk": 64.2058032,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXZ",
+        "j": "LLYG",
+        "kind": "rail",
+        "distance": 223.0,
+        "travel_time": 4.46,
+        "risk": 77.240064,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXZ",
+        "j": "LLYG",
+        "kind": "rail",
+        "distance": 223.0,
+        "travel_time": 2.7875,
+        "risk": 48.27504,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLYG",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 223.0,
+        "travel_time": 3.7167,
+        "risk": 64.2058032,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLYG",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 223.0,
+        "travel_time": 4.46,
+        "risk": 77.240064,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLYG",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 223.0,
+        "travel_time": 2.7875,
+        "risk": 48.27504,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LSL",
+        "kind": "rail",
+        "distance": 195.0,
+        "travel_time": 3.25,
+        "risk": 56.14408800000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LSL",
+        "kind": "rail",
+        "distance": 195.0,
+        "travel_time": 3.9,
+        "risk": 67.54176000000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSFZ_b",
+        "j": "LSL",
+        "kind": "rail",
+        "distance": 195.0,
+        "travel_time": 2.4375,
+        "risk": 42.21360000000001,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSL",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 195.0,
+        "travel_time": 3.25,
+        "risk": 56.14408800000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSL",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 195.0,
+        "travel_time": 3.9,
+        "risk": 67.54176000000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSL",
+        "j": "LSFZ_a",
+        "kind": "rail",
+        "distance": 195.0,
+        "travel_time": 2.4375,
+        "risk": 42.21360000000001,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSL",
+        "j": "LSN",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.5,
+        "risk": 25.912656000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSL",
+        "j": "LSN",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.8,
+        "risk": 31.17312,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSL",
+        "j": "LSN",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.125,
+        "risk": 19.4832,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSN",
+        "j": "LSL",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.5,
+        "risk": 25.912656000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSN",
+        "j": "LSL",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.8,
+        "risk": 31.17312,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSN",
+        "j": "LSL",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.125,
+        "risk": 19.4832,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSN",
+        "j": "LXX",
+        "kind": "rail",
+        "distance": 50.0,
+        "travel_time": 0.8333,
+        "risk": 14.39592,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSN",
+        "j": "LXX",
+        "kind": "rail",
+        "distance": 50.0,
+        "travel_time": 1.0,
+        "risk": 17.3184,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSN",
+        "j": "LXX",
+        "kind": "rail",
+        "distance": 50.0,
+        "travel_time": 0.625,
+        "risk": 10.824,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXX",
+        "j": "LSN",
+        "kind": "rail",
+        "distance": 50.0,
+        "travel_time": 0.8333,
+        "risk": 14.39592,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXX",
+        "j": "LSN",
+        "kind": "rail",
+        "distance": 50.0,
+        "travel_time": 1.0,
+        "risk": 17.3184,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXX",
+        "j": "LSN",
+        "kind": "rail",
+        "distance": 50.0,
+        "travel_time": 0.625,
+        "risk": 10.824,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXX",
+        "j": "LNY",
+        "kind": "rail",
+        "distance": 85.0,
+        "travel_time": 1.4167,
+        "risk": 24.473064000000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXX",
+        "j": "LNY",
+        "kind": "rail",
+        "distance": 85.0,
+        "travel_time": 1.7,
+        "risk": 29.441280000000006,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXX",
+        "j": "LNY",
+        "kind": "rail",
+        "distance": 85.0,
+        "travel_time": 1.0625,
+        "risk": 18.4008,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LNY",
+        "j": "LXX",
+        "kind": "rail",
+        "distance": 85.0,
+        "travel_time": 1.4167,
+        "risk": 24.473064000000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LNY",
+        "j": "LXX",
+        "kind": "rail",
+        "distance": 85.0,
+        "travel_time": 1.7,
+        "risk": 29.441280000000006,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LNY",
+        "j": "LXX",
+        "kind": "rail",
+        "distance": 85.0,
+        "travel_time": 1.0625,
+        "risk": 18.4008,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LNY",
+        "j": "LXY",
+        "kind": "rail",
+        "distance": 180.0,
+        "travel_time": 3.0,
+        "risk": 51.825312000000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LNY",
+        "j": "LXY",
+        "kind": "rail",
+        "distance": 180.0,
+        "travel_time": 3.6,
+        "risk": 62.34624,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LNY",
+        "j": "LXY",
+        "kind": "rail",
+        "distance": 180.0,
+        "travel_time": 2.25,
+        "risk": 38.9664,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXY",
+        "j": "LNY",
+        "kind": "rail",
+        "distance": 180.0,
+        "travel_time": 3.0,
+        "risk": 51.825312000000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXY",
+        "j": "LNY",
+        "kind": "rail",
+        "distance": 180.0,
+        "travel_time": 3.6,
+        "risk": 62.34624,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXY",
+        "j": "LNY",
+        "kind": "rail",
+        "distance": 180.0,
+        "travel_time": 2.25,
+        "risk": 38.9664,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXY",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 1.6667,
+        "risk": 28.79184,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXY",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 2.0,
+        "risk": 34.6368,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXY",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 1.25,
+        "risk": 21.648,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHC",
+        "j": "LXY",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 1.6667,
+        "risk": 28.79184,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHC",
+        "j": "LXY",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 2.0,
+        "risk": 34.6368,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHC",
+        "j": "LXY",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 1.25,
+        "risk": 21.648,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHC",
+        "j": "LYJ",
+        "kind": "rail",
+        "distance": 65.0,
+        "travel_time": 1.0833,
+        "risk": 18.714696,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHC",
+        "j": "LYJ",
+        "kind": "rail",
+        "distance": 65.0,
+        "travel_time": 1.3,
+        "risk": 22.513920000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHC",
+        "j": "LYJ",
+        "kind": "rail",
+        "distance": 65.0,
+        "travel_time": 0.8125,
+        "risk": 14.071200000000001,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LYJ",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 65.0,
+        "travel_time": 1.0833,
+        "risk": 18.714696,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LYJ",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 65.0,
+        "travel_time": 1.3,
+        "risk": 22.513920000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LYJ",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 65.0,
+        "travel_time": 0.8125,
+        "risk": 14.071200000000001,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LYJ",
+        "j": "LLA",
+        "kind": "rail",
+        "distance": 75.0,
+        "travel_time": 1.25,
+        "risk": 21.593880000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LYJ",
+        "j": "LLA",
+        "kind": "rail",
+        "distance": 75.0,
+        "travel_time": 1.5,
+        "risk": 25.9776,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LYJ",
+        "j": "LLA",
+        "kind": "rail",
+        "distance": 75.0,
+        "travel_time": 0.9375,
+        "risk": 16.235999999999997,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLA",
+        "j": "LYJ",
+        "kind": "rail",
+        "distance": 75.0,
+        "travel_time": 1.25,
+        "risk": 21.593880000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLA",
+        "j": "LYJ",
+        "kind": "rail",
+        "distance": 75.0,
+        "travel_time": 1.5,
+        "risk": 25.9776,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLA",
+        "j": "LYJ",
+        "kind": "rail",
+        "distance": 75.0,
+        "travel_time": 0.9375,
+        "risk": 16.235999999999997,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LLA",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.3333,
+        "risk": 23.033472000000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LLA",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.6,
+        "risk": 27.70944,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LLA",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.0,
+        "risk": 17.3184,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHF_b",
+        "j": "LLA",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.3333,
+        "risk": 23.033472000000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHF_b",
+        "j": "LLA",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.6,
+        "risk": 27.70944,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHF_b",
+        "j": "LLA",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.0,
+        "risk": 17.3184,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHF_b",
+        "j": "LQJ",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.3333,
+        "risk": 23.033472000000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHF_b",
+        "j": "LQJ",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.6,
+        "risk": 27.70944,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHF_b",
+        "j": "LQJ",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.0,
+        "risk": 17.3184,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LQJ",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.3333,
+        "risk": 23.033472000000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LQJ",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.6,
+        "risk": 27.70944,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LQJ",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 80.0,
+        "travel_time": 1.0,
+        "risk": 17.3184,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LQJ",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 75.69,
+        "travel_time": 1.2615,
+        "risk": 21.792543696,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LQJ",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 75.69,
+        "travel_time": 1.5138,
+        "risk": 26.216593919999998,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LQJ",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 75.69,
+        "travel_time": 0.9461,
+        "risk": 16.385371199999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LNJ",
+        "j": "LQJ",
+        "kind": "rail",
+        "distance": 75.69,
+        "travel_time": 1.2615,
+        "risk": 21.792543696,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LNJ",
+        "j": "LQJ",
+        "kind": "rail",
+        "distance": 75.69,
+        "travel_time": 1.5138,
+        "risk": 26.216593919999998,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LNJ",
+        "j": "LQJ",
+        "kind": "rail",
+        "distance": 75.69,
+        "travel_time": 0.9461,
+        "risk": 16.385371199999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXZ",
+        "j": "LBB",
+        "kind": "rail",
+        "distance": 178.0,
+        "travel_time": 2.9667,
+        "risk": 51.249475200000006,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXZ",
+        "j": "LBB",
+        "kind": "rail",
+        "distance": 178.0,
+        "travel_time": 3.56,
+        "risk": 61.65350400000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXZ",
+        "j": "LBB",
+        "kind": "rail",
+        "distance": 178.0,
+        "travel_time": 2.225,
+        "risk": 38.533440000000006,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LBB",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 178.0,
+        "travel_time": 2.9667,
+        "risk": 51.249475200000006,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LBB",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 178.0,
+        "travel_time": 3.56,
+        "risk": 61.65350400000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LBB",
+        "j": "LXZ",
+        "kind": "rail",
+        "distance": 178.0,
+        "travel_time": 2.225,
+        "risk": 38.533440000000006,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LBB",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 168.0,
+        "travel_time": 2.8,
+        "risk": 48.370291200000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LBB",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 168.0,
+        "travel_time": 3.36,
+        "risk": 58.18982400000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LBB",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 168.0,
+        "travel_time": 2.1,
+        "risk": 36.36864,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LNJ",
+        "j": "LBB",
+        "kind": "rail",
+        "distance": 168.0,
+        "travel_time": 2.8,
+        "risk": 48.370291200000004,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LNJ",
+        "j": "LBB",
+        "kind": "rail",
+        "distance": 168.0,
+        "travel_time": 3.36,
+        "risk": 58.18982400000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LNJ",
+        "j": "LBB",
+        "kind": "rail",
+        "distance": 168.0,
+        "travel_time": 2.1,
+        "risk": 36.36864,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LNJ",
+        "j": "LZJ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 1.0667,
+        "risk": 18.4267776,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LNJ",
+        "j": "LZJ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 1.28,
+        "risk": 22.167552,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LNJ",
+        "j": "LZJ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 0.8,
+        "risk": 13.85472,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LZJ",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 1.0667,
+        "risk": 18.4267776,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LZJ",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 1.28,
+        "risk": 22.167552,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LZJ",
+        "j": "LNJ",
+        "kind": "rail",
+        "distance": 64.0,
+        "travel_time": 0.8,
+        "risk": 13.85472,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LZJ",
+        "j": "LCZ",
+        "kind": "rail",
+        "distance": 71.0,
+        "travel_time": 1.1833,
+        "risk": 20.442206400000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LZJ",
+        "j": "LCZ",
+        "kind": "rail",
+        "distance": 71.0,
+        "travel_time": 1.42,
+        "risk": 24.592128000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LZJ",
+        "j": "LCZ",
+        "kind": "rail",
+        "distance": 71.0,
+        "travel_time": 0.8875,
+        "risk": 15.37008,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LCZ",
+        "j": "LZJ",
+        "kind": "rail",
+        "distance": 71.0,
+        "travel_time": 1.1833,
+        "risk": 20.442206400000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LCZ",
+        "j": "LZJ",
+        "kind": "rail",
+        "distance": 71.0,
+        "travel_time": 1.42,
+        "risk": 24.592128000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LCZ",
+        "j": "LZJ",
+        "kind": "rail",
+        "distance": 71.0,
+        "travel_time": 0.8875,
+        "risk": 15.37008,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LCZ",
+        "j": "LWX",
+        "kind": "rail",
+        "distance": 39.0,
+        "travel_time": 0.65,
+        "risk": 11.2288176,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LCZ",
+        "j": "LWX",
+        "kind": "rail",
+        "distance": 39.0,
+        "travel_time": 0.78,
+        "risk": 13.508351999999999,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LCZ",
+        "j": "LWX",
+        "kind": "rail",
+        "distance": 39.0,
+        "travel_time": 0.4875,
+        "risk": 8.44272,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWX",
+        "j": "LCZ",
+        "kind": "rail",
+        "distance": 39.0,
+        "travel_time": 0.65,
+        "risk": 11.2288176,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWX",
+        "j": "LCZ",
+        "kind": "rail",
+        "distance": 39.0,
+        "travel_time": 0.78,
+        "risk": 13.508351999999999,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWX",
+        "j": "LCZ",
+        "kind": "rail",
+        "distance": 39.0,
+        "travel_time": 0.4875,
+        "risk": 8.44272,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWX",
+        "j": "LSZ",
+        "kind": "rail",
+        "distance": 42.0,
+        "travel_time": 0.7,
+        "risk": 12.092572800000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWX",
+        "j": "LSZ",
+        "kind": "rail",
+        "distance": 42.0,
+        "travel_time": 0.84,
+        "risk": 14.547456000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWX",
+        "j": "LSZ",
+        "kind": "rail",
+        "distance": 42.0,
+        "travel_time": 0.525,
+        "risk": 9.09216,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSZ",
+        "j": "LWX",
+        "kind": "rail",
+        "distance": 42.0,
+        "travel_time": 0.7,
+        "risk": 12.092572800000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSZ",
+        "j": "LWX",
+        "kind": "rail",
+        "distance": 42.0,
+        "travel_time": 0.84,
+        "risk": 14.547456000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSZ",
+        "j": "LWX",
+        "kind": "rail",
+        "distance": 42.0,
+        "travel_time": 0.525,
+        "risk": 9.09216,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSZ",
+        "j": "LSH",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.45,
+        "risk": 25.048900800000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSZ",
+        "j": "LSH",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.74,
+        "risk": 30.134016000000003,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSZ",
+        "j": "LSH",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.0875,
+        "risk": 18.83376,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSH",
+        "j": "LSZ",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.45,
+        "risk": 25.048900800000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSH",
+        "j": "LSZ",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.74,
+        "risk": 30.134016000000003,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSH",
+        "j": "LSZ",
+        "kind": "rail",
+        "distance": 87.0,
+        "travel_time": 1.0875,
+        "risk": 18.83376,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSH",
+        "j": "LJX",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 1.6667,
+        "risk": 28.79184,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSH",
+        "j": "LJX",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 2.0,
+        "risk": 34.6368,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSH",
+        "j": "LJX",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 1.25,
+        "risk": 21.648,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LJX",
+        "j": "LSH",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 1.6667,
+        "risk": 28.79184,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LJX",
+        "j": "LSH",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 2.0,
+        "risk": 34.6368,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LJX",
+        "j": "LSH",
+        "kind": "rail",
+        "distance": 100.0,
+        "travel_time": 1.25,
+        "risk": 21.648,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LJX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.5,
+        "risk": 25.912656000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LJX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.8,
+        "risk": 31.17312,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LJX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.125,
+        "risk": 19.4832,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHZ",
+        "j": "LJX",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.5,
+        "risk": 25.912656000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHZ",
+        "j": "LJX",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.8,
+        "risk": 31.17312,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHZ",
+        "j": "LJX",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.125,
+        "risk": 19.4832,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHZ",
+        "j": "LSX",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.7167,
+        "risk": 12.380491200000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHZ",
+        "j": "LSX",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.86,
+        "risk": 14.893824000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHZ",
+        "j": "LSX",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.5375,
+        "risk": 9.30864,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.7167,
+        "risk": 12.380491200000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.86,
+        "risk": 14.893824000000002,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 43.0,
+        "travel_time": 0.5375,
+        "risk": 9.30864,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSX",
+        "j": "LYY",
+        "kind": "rail",
+        "distance": 57.0,
+        "travel_time": 0.95,
+        "risk": 16.411348800000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSX",
+        "j": "LYY",
+        "kind": "rail",
+        "distance": 57.0,
+        "travel_time": 1.14,
+        "risk": 19.742976000000006,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSX",
+        "j": "LYY",
+        "kind": "rail",
+        "distance": 57.0,
+        "travel_time": 0.7125,
+        "risk": 12.339360000000001,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LYY",
+        "j": "LSX",
+        "kind": "rail",
+        "distance": 57.0,
+        "travel_time": 0.95,
+        "risk": 16.411348800000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LYY",
+        "j": "LSX",
+        "kind": "rail",
+        "distance": 57.0,
+        "travel_time": 1.14,
+        "risk": 19.742976000000006,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LYY",
+        "j": "LSX",
+        "kind": "rail",
+        "distance": 57.0,
+        "travel_time": 0.7125,
+        "risk": 12.339360000000001,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LYY",
+        "j": "LNB",
+        "kind": "rail",
+        "distance": 48.0,
+        "travel_time": 0.8,
+        "risk": 13.820083200000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LYY",
+        "j": "LNB",
+        "kind": "rail",
+        "distance": 48.0,
+        "travel_time": 0.96,
+        "risk": 16.625664,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LYY",
+        "j": "LNB",
+        "kind": "rail",
+        "distance": 48.0,
+        "travel_time": 0.6,
+        "risk": 10.39104,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LNB",
+        "j": "LYY",
+        "kind": "rail",
+        "distance": 48.0,
+        "travel_time": 0.8,
+        "risk": 13.820083200000001,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LNB",
+        "j": "LYY",
+        "kind": "rail",
+        "distance": 48.0,
+        "travel_time": 0.96,
+        "risk": 16.625664,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LNB",
+        "j": "LYY",
+        "kind": "rail",
+        "distance": 48.0,
+        "travel_time": 0.6,
+        "risk": 10.39104,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHN",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.5,
+        "risk": 25.912656000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHN",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.8,
+        "risk": 31.17312,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHN",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.125,
+        "risk": 19.4832,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHF_b",
+        "j": "LHN",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.5,
+        "risk": 25.912656000000002,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHF_b",
+        "j": "LHN",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.8,
+        "risk": 31.17312,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHF_b",
+        "j": "LHN",
+        "kind": "rail",
+        "distance": 90.0,
+        "travel_time": 1.125,
+        "risk": 19.4832,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHF_b",
+        "j": "LWH_a",
+        "kind": "rail",
+        "distance": 124.7,
+        "travel_time": 2.0783,
+        "risk": 35.903424480000005,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHF_b",
+        "j": "LWH_a",
+        "kind": "rail",
+        "distance": 124.7,
+        "travel_time": 2.494,
+        "risk": 43.19208960000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHF_b",
+        "j": "LWH_a",
+        "kind": "rail",
+        "distance": 124.7,
+        "travel_time": 1.5588,
+        "risk": 26.995056,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWH_b",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 124.7,
+        "travel_time": 2.0783,
+        "risk": 35.903424480000005,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWH_b",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 124.7,
+        "travel_time": 2.494,
+        "risk": 43.19208960000001,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWH_b",
+        "j": "LHF_a",
+        "kind": "rail",
+        "distance": 124.7,
+        "travel_time": 1.5588,
+        "risk": 26.995056,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LFY_b",
+        "j": "LHN",
+        "kind": "rail",
+        "distance": 127.3,
+        "travel_time": 2.1217,
+        "risk": 36.65201232,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LFY_b",
+        "j": "LHN",
+        "kind": "rail",
+        "distance": 127.3,
+        "travel_time": 2.546,
+        "risk": 44.0926464,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LFY_b",
+        "j": "LHN",
+        "kind": "rail",
+        "distance": 127.3,
+        "travel_time": 1.5913,
+        "risk": 27.557903999999997,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHN",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 127.3,
+        "travel_time": 2.1217,
+        "risk": 36.65201232,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHN",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 127.3,
+        "travel_time": 2.546,
+        "risk": 44.0926464,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHN",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 127.3,
+        "travel_time": 1.5913,
+        "risk": 27.557903999999997,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LSQN",
+        "j": "LBZ",
+        "kind": "rail",
+        "distance": 74.0,
+        "travel_time": 1.2333,
+        "risk": 21.3059616,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LSQN",
+        "j": "LBZ",
+        "kind": "rail",
+        "distance": 74.0,
+        "travel_time": 1.48,
+        "risk": 25.631232,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LSQN",
+        "j": "LBZ",
+        "kind": "rail",
+        "distance": 74.0,
+        "travel_time": 0.925,
+        "risk": 16.01952,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LBZ",
+        "j": "LSQN",
+        "kind": "rail",
+        "distance": 74.0,
+        "travel_time": 1.2333,
+        "risk": 21.3059616,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LBZ",
+        "j": "LSQN",
+        "kind": "rail",
+        "distance": 74.0,
+        "travel_time": 1.48,
+        "risk": 25.631232,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LBZ",
+        "j": "LSQN",
+        "kind": "rail",
+        "distance": 74.0,
+        "travel_time": 0.925,
+        "risk": 16.01952,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LBZ",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 104.0,
+        "travel_time": 1.7333,
+        "risk": 29.943513600000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LBZ",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 104.0,
+        "travel_time": 2.08,
+        "risk": 36.022272,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LBZ",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 104.0,
+        "travel_time": 1.3,
+        "risk": 22.513920000000002,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LFY_b",
+        "j": "LBZ",
+        "kind": "rail",
+        "distance": 104.0,
+        "travel_time": 1.7333,
+        "risk": 29.943513600000003,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LFY_b",
+        "j": "LBZ",
+        "kind": "rail",
+        "distance": 104.0,
+        "travel_time": 2.08,
+        "risk": 36.022272,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LFY_b",
+        "j": "LBZ",
+        "kind": "rail",
+        "distance": 104.0,
+        "travel_time": 1.3,
+        "risk": 22.513920000000002,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LFY_b",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 116.0,
+        "travel_time": 1.9333,
+        "risk": 33.3985344,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LFY_b",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 116.0,
+        "travel_time": 2.32,
+        "risk": 40.178688,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LFY_b",
+        "j": "LHC",
+        "kind": "rail",
+        "distance": 116.0,
+        "travel_time": 1.45,
+        "risk": 25.11168,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHC",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 116.0,
+        "travel_time": 1.9333,
+        "risk": 33.3985344,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHC",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 116.0,
+        "travel_time": 2.32,
+        "risk": 40.178688,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHC",
+        "j": "LFY_a",
+        "kind": "rail",
+        "distance": 116.0,
+        "travel_time": 1.45,
+        "risk": 25.11168,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LWH_b",
+        "j": "LXC",
+        "kind": "rail",
+        "distance": 73.32,
+        "travel_time": 1.222,
+        "risk": 21.110177088,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LWH_b",
+        "j": "LXC",
+        "kind": "rail",
+        "distance": 73.32,
+        "travel_time": 1.4664,
+        "risk": 25.395701759999998,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LWH_b",
+        "j": "LXC",
+        "kind": "rail",
+        "distance": 73.32,
+        "travel_time": 0.9165,
+        "risk": 15.872313599999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXC",
+        "j": "LWH_a",
+        "kind": "rail",
+        "distance": 73.32,
+        "travel_time": 1.222,
+        "risk": 21.110177088,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXC",
+        "j": "LWH_a",
+        "kind": "rail",
+        "distance": 73.32,
+        "travel_time": 1.4664,
+        "risk": 25.395701759999998,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXC",
+        "j": "LWH_a",
+        "kind": "rail",
+        "distance": 73.32,
+        "travel_time": 0.9165,
+        "risk": 15.872313599999998,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LXC",
+        "j": "LCX",
+        "kind": "rail",
+        "distance": 122.0,
+        "travel_time": 2.0333,
+        "risk": 35.1260448,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LXC",
+        "j": "LCX",
+        "kind": "rail",
+        "distance": 122.0,
+        "travel_time": 2.44,
+        "risk": 42.256896000000005,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LXC",
+        "j": "LCX",
+        "kind": "rail",
+        "distance": 122.0,
+        "travel_time": 1.525,
+        "risk": 26.41056,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LCX",
+        "j": "LXC",
+        "kind": "rail",
+        "distance": 122.0,
+        "travel_time": 2.0333,
+        "risk": 35.1260448,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LCX",
+        "j": "LXC",
+        "kind": "rail",
+        "distance": 122.0,
+        "travel_time": 2.44,
+        "risk": 42.256896000000005,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LCX",
+        "j": "LXC",
+        "kind": "rail",
+        "distance": 122.0,
+        "travel_time": 1.525,
+        "risk": 26.41056,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LCX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 102.0,
+        "travel_time": 1.7,
+        "risk": 29.367676799999998,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LCX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 102.0,
+        "travel_time": 2.04,
+        "risk": 35.329536000000004,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LCX",
+        "j": "LHZ",
+        "kind": "rail",
+        "distance": 102.0,
+        "travel_time": 1.275,
+        "risk": 22.08096,
+        "cost": 0.0,
+        "service": 2
+      },
+      {
+        "i": "LHZ",
+        "j": "LCX",
+        "kind": "rail",
+        "distance": 102.0,
+        "travel_time": 1.7,
+        "risk": 29.367676799999998,
+        "cost": 0.0,
+        "service": 0
+      },
+      {
+        "i": "LHZ",
+        "j": "LCX",
+        "kind": "rail",
+        "distance": 102.0,
+        "travel_time": 2.04,
+        "risk": 35.329536000000004,
+        "cost": 0.0,
+        "service": 1
+      },
+      {
+        "i": "LHZ",
+        "j": "LCX",
+        "kind": "rail",
+        "distance": 102.0,
+        "travel_time": 1.275,
+        "risk": 22.08096,
+        "cost": 0.0,
+        "service": 2
+      }
+    ],
+    "yards": [
+      {
+        "name": "Y3",
+        "in_node": "Y3_in",
+        "out_node": "Y3_out",
+        "qualified": true,
+        "mu": 8.0,
+        "sigma": 4.0,
+        "unit_cost": 500.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.00042261,
+        "exposure": 62500.0
+      },
+      {
+        "name": "Y2",
+        "in_node": "Y2_in",
+        "out_node": "Y2_out",
+        "qualified": true,
+        "mu": 8.0,
+        "sigma": 4.0,
+        "unit_cost": 500.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.00042261,
+        "exposure": 62500.0
+      },
+      {
+        "name": "Y1",
+        "in_node": "Y1_in",
+        "out_node": "Y1_out",
+        "qualified": true,
+        "mu": 8.0,
+        "sigma": 4.0,
+        "unit_cost": 500.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.00042261,
+        "exposure": 62500.0
+      },
+      {
+        "name": "Y8",
+        "in_node": "Y8_in",
+        "out_node": "Y8_out",
+        "qualified": true,
+        "mu": 4.0,
+        "sigma": 4.0,
+        "unit_cost": 200.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.000211305,
+        "exposure": 62500.0
+      },
+      {
+        "name": "Y9",
+        "in_node": "Y9_in",
+        "out_node": "Y9_out",
+        "qualified": true,
+        "mu": 4.0,
+        "sigma": 4.0,
+        "unit_cost": 200.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.000211305,
+        "exposure": 62500.0
+      },
+      {
+        "name": "Y11",
+        "in_node": "Y11_in",
+        "out_node": "Y11_out",
+        "qualified": true,
+        "mu": 4.0,
+        "sigma": 4.0,
+        "unit_cost": 200.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.000211305,
+        "exposure": 62500.0
+      },
+      {
+        "name": "Y12",
+        "in_node": "Y12_in",
+        "out_node": "Y12_out",
+        "qualified": true,
+        "mu": 4.0,
+        "sigma": 4.0,
+        "unit_cost": 200.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.000211305,
+        "exposure": 62500.0
+      },
+      {
+        "name": "Y14",
+        "in_node": "Y14_in",
+        "out_node": "Y14_out",
+        "qualified": true,
+        "mu": 4.0,
+        "sigma": 4.0,
+        "unit_cost": 200.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.000211305,
+        "exposure": 62500.0
+      },
+      {
+        "name": "Y13",
+        "in_node": "Y13_in",
+        "out_node": "Y13_out",
+        "qualified": true,
+        "mu": 8.0,
+        "sigma": 4.0,
+        "unit_cost": 500.0,
+        "fixed_cost": 0.0,
+        "accident_prob": 0.00042261,
+        "exposure": 62500.0
+      }
+    ],
+    "counts": {
+      "num_nodes": 94,
+      "num_arcs": 448,
+      "num_yards": 9,
+      "num_client_nodes": 2,
+      "num_road_nodes": 0,
+      "num_yard_nodes": 18,
+      "num_rail_nodes": 74,
+      "num_road_arcs": 31,
+      "num_rail_arcs": 408,
+      "num_transfer_arcs": 9,
+      "total_rail_length_km": 3119.4
+    }
+  },
+  "service_types": [
+    {
+      "code": 0,
+      "name_cn": "集装箱班列",
+      "name_en": "Container block train",
+      "eta": 1.0,
+      "speed": 60.0,
+      "stop_hours": 0.0,
+      "risk_multiplier": 1.33
+    },
+    {
+      "code": 1,
+      "name_cn": "普快班列",
+      "name_en": "Ordinary express block train",
+      "eta": 0.83,
+      "speed": 50.0,
+      "stop_hours": 0.0,
+      "risk_multiplier": 1.6
+    },
+    {
+      "code": 2,
+      "name_cn": "快速班列",
+      "name_en": "Fast express block train",
+      "eta": 1.33,
+      "speed": 80.0,
+      "stop_hours": 0.0,
+      "risk_multiplier": 1.0
+    }
+  ]
+}

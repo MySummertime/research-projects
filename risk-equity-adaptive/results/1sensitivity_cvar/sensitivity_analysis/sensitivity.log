@@ -1,0 +1,67 @@
+2026-03-28 10:51:18 [INFO ] 日志系统已启动。(文件日志级别: INFO, 控制台日志级别: WARNING)
+2026-03-28 10:51:18 [INFO ] 日志将保存至: results\experiment_2026-03-28_10-50-46\sensitivity_analysis\sensitivity.log
+2026-03-28 10:51:18 [INFO ] >>> Starting Sensitivity Experiment: CVaR Confidence Level...
+2026-03-28 10:51:18 [INFO ]    Running for alpha = 0.9990
+2026-03-28 10:51:18 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:51:18 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:51:19 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:51:19 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:51:19 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:51:19 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:51:19 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:51:19 [INFO ]    Running for alpha = 0.9991
+2026-03-28 10:51:19 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:51:19 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:51:20 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:51:20 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:51:20 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:51:20 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:51:21 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:51:21 [INFO ]    Running for alpha = 0.9992
+2026-03-28 10:51:21 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:51:21 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:51:21 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:51:21 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:51:22 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:51:22 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:51:22 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:51:22 [INFO ]    Running for alpha = 0.9993
+2026-03-28 10:51:22 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:51:22 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:51:22 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:51:23 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:51:23 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:51:23 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:51:23 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:51:23 [INFO ]    Running for alpha = 0.9994
+2026-03-28 10:51:23 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:51:23 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:51:24 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:51:24 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:51:24 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:51:24 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:51:24 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:51:24 [INFO ]    Running for alpha = 0.9995
+2026-03-28 10:51:24 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:51:24 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:51:25 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:51:25 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:51:25 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:51:25 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:51:26 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:51:26 [INFO ]    Running for alpha = 0.9996
+2026-03-28 10:51:26 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:51:26 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:51:26 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:51:26 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:51:26 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:51:26 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:51:27 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:51:27 [INFO ] Sensitivity data saved to: results\experiment_2026-03-28_10-50-46\sensitivity_analysis\Sensitivity_Extreme_Aversion_Data.csv
+2026-03-28 10:51:33 [INFO ] ✅ Edge-aligned cost structure chart saved: Figure_Extreme_Cost_Structure
+2026-03-28 10:51:33 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:51:33 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:51:33 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:51:33 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:51:38 [INFO ] Dual line chart (Fixed) saved: Figure_Extreme_Cost_Risk_Trend
+2026-03-28 10:51:45 [INFO ] Pareto comparison saved: Figure_Extreme_Pareto_Shift

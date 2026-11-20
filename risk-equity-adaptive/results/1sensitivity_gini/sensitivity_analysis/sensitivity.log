@@ -1,0 +1,83 @@
+2026-03-28 10:47:12 [INFO ] 日志系统已启动。(文件日志级别: INFO, 控制台日志级别: WARNING)
+2026-03-28 10:47:12 [INFO ] 日志将保存至: results\experiment_2026-03-28_10-46-42\sensitivity_analysis\sensitivity.log
+2026-03-28 10:47:12 [INFO ] >>> Starting Sensitivity Experiment: Gini Epsilon (Equity Tolerance)...
+2026-03-28 10:47:12 [INFO ] --- Testing Gini Epsilon = 0.30 ---
+2026-03-28 10:47:12 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:12 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:13 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:13 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:13 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:13 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:13 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:13 [INFO ] --- Testing Gini Epsilon = 0.34 ---
+2026-03-28 10:47:13 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:13 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:13 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:14 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:14 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:14 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:14 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:14 [INFO ] --- Testing Gini Epsilon = 0.38 ---
+2026-03-28 10:47:14 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:14 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:14 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:15 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:15 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:15 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:15 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:15 [INFO ] --- Testing Gini Epsilon = 0.42 ---
+2026-03-28 10:47:15 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:15 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:16 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:16 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:16 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:16 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:16 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:16 [INFO ] --- Testing Gini Epsilon = 0.46 ---
+2026-03-28 10:47:16 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:16 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:17 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:17 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:17 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:17 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:17 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:17 [INFO ] --- Testing Gini Epsilon = 0.50 ---
+2026-03-28 10:47:17 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:17 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:18 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:18 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:18 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:18 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:18 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:18 [INFO ] --- Testing Gini Epsilon = 0.54 ---
+2026-03-28 10:47:18 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:18 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:19 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:19 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:19 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:19 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:19 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:19 [INFO ] --- Testing Gini Epsilon = 0.60 ---
+2026-03-28 10:47:19 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:19 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:20 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:20 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:20 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:20 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:20 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:20 [INFO ] --- Testing Gini Epsilon = 0.64 ---
+2026-03-28 10:47:20 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:47:20 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:47:21 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:47:21 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:47:21 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:47:21 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:47:21 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:47:21 [INFO ] Gini sensitivity data saved to: results\experiment_2026-03-28_10-46-42\sensitivity_analysis\Sensitivity_Gini_Epsilon_Data.csv
+2026-03-28 10:47:27 [INFO ] ✅ Edge-aligned cost structure chart saved: Figure_Gini_Cost_Structure
+2026-03-28 10:47:27 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:47:27 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:47:27 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:47:27 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:47:32 [INFO ] Dual line chart (Fixed) saved: Figure_Gini_Risk_Trend
+2026-03-28 10:47:38 [INFO ] Pareto comparison saved: Figure_Gini_Pareto_Shift

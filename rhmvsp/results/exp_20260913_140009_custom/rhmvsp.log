@@ -1,0 +1,151 @@
+[INFO] RHMVSP - Reliable Hazardous Materials Multi-modal VSP
+[INFO] Mode: solve | Solver: gurobi | Seed: 7
+[INFO] Config: alpha_R=0.900, alpha_T=0.80, T_max=168
+[INFO] ============================================================
+[INFO] Solving Instance: data_real_case/instance.json
+[INFO] ============================================================
+[INFO] Loaded instance: rhmvsp_real_case
+[INFO]   Nodes: 28, Arcs: 86, O-D pairs: 5, Hub fleet sizes: {'1': 50, '12': 50, '38': 50}
+[INFO]   Generated 10 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 10 columns
+[INFO]   RMP optimize: columns=10, active rail dispatches=10
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 75 columns
+[INFO]   RMP optimize: columns=75, active rail dispatches=25
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   CG iteration 3: solving RMP with 99 columns
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   CG iteration 3: heuristic pricing OD_1
+[INFO]   CG iteration 3: heuristic pricing OD_2
+[INFO]   CG iteration 3: heuristic pricing OD_3
+[INFO]   CG iteration 3: heuristic pricing OD_4
+[INFO]   CG iteration 3: heuristic pricing OD_5
+[INFO]   CG iteration 3: exact pricing OD_1
+[INFO]   CG iteration 3: exact pricing OD_2
+[INFO]   CG iteration 3: exact pricing OD_3
+[INFO]   CG iteration 3: exact pricing OD_4
+[INFO]   CG iteration 3: exact pricing OD_5
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   Reposition events: 12 total | empty_fee=¥144914.40
+[INFO]     OD_5 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]     OD_4 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,001,126.10, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+[INFO] ============================================================
+RHMVSP Solution Report
+============================================================
+Status: OPTIMAL
+Total CPU time: 2.81s (Wall: 2.94s)
+Algorithm wall time: 2.869347s
+Master time:         0.129545s
+Pricing time:        1.214705s
+Other time:          1.525097s
+Processed nodes:     1
+Root LP value:       4982542.642400
+Root pricing status: no_new_column
+Root bound usable:   True
+B&P iterations: 3
+Total columns generated: 99
+
+--- Cost Breakdown ---
+  Total cost:          ¥5,001,126.10
+  Transport cost:      ¥3,557,011.70
+  Transfer cost:       ¥   99,200.00
+  Reposition cost:     ¥  144,914.40
+  Unmet penalty:       ¥1,200,000.00
+  Penalty rate:        ¥  100,000.00/FEU
+
+--- Resource Budget & Infrastructure ---
+  Active transfer hubs: 8 [1, 2, 3, 12, 21, 29, 33, 38]
+
+--- Reliability & Fleet ---
+  Network risk reliability: 0.9250
+  Network time reliability: 0.9194
+  Network risk: 0.0750
+  Network time: 155.72 h
+  Max available vehicles: 150
+  Actual used vehicles: 112
+  Dispatched road trips: 124
+
+--- O-D Reliability Details ---
+  OD_1     | Joint reliability=0.9250 (Risk reliability: 0.9250, Time reliability: 0.9946) [Risk: 0.0750, Time: 147.22 h] | Batches=1 | Binding=risk | Deliver=40%
+  OD_2     | Joint reliability=0.9319 (Risk reliability: 0.9319, Time reliability: 0.9970) [Risk: 0.0681, Time: 145.84 h] | Batches=1 | Binding=risk | Deliver=100%
+  OD_3     | Joint reliability=0.9319 (Risk reliability: 0.9319, Time reliability: 1.0000) [Risk: 0.0681, Time: 131.30 h] | Batches=1 | Binding=risk | Deliver=100%
+  OD_4     | Joint reliability=0.9269 (Risk reliability: 0.9269, Time reliability: 0.9318) [Risk: 0.0731, Time: 151.79 h] | Batches=1 | Binding=risk | Deliver=100%
+  OD_5     | Joint reliability=0.9194 (Risk reliability: 0.9302, Time reliability: 0.9194) [Risk: 0.0698, Time: 155.72 h] | Batches=1 | Binding=time | Deliver=100%
+
+--- Dispatch Details ---
+  OD_1     | Demand:   20.0 FEU | Delivered:    8.0 FEU | Shortfall:  12.0 FEU
+  OD_2     | Demand:   10.0 FEU | Delivered:   10.0 FEU | Shortfall:   0.0 FEU
+  OD_3     | Demand:   12.0 FEU | Delivered:   12.0 FEU | Shortfall:   0.0 FEU
+  OD_4     | Demand:   18.0 FEU | Delivered:   18.0 FEU | Shortfall:   0.0 FEU
+  OD_5     | Demand:   14.0 FEU | Delivered:   14.0 FEU | Shortfall:   0.0 FEU
+
+--- Reposition Details ---
+  Total repositions: 12 | Cost: ¥144,914.40
+   Veh |       From |         To | Dep-Node | Arr-Node |             Time |     Dist |       Cost
+     2 |       OD_5 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+     3 |       OD_5 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+     5 |       OD_5 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+     6 |       OD_5 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+    13 |       OD_5 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+    14 |       OD_5 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+    17 |       OD_4 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+    20 |       OD_4 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+    25 |       OD_4 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+    26 |       OD_4 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+    28 |       OD_4 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+    32 |       OD_4 |       OD_3 |        1 |        9 | Day 1 10:00 to Day 1 22:26 (12.4h) |  670.9km | ¥  12076.2
+
+--- Active Transport Routes ---
+  OD_5 | 7->1 | Day 1 01:42 to Day 1 10:00 | 14 vehicle(s)
+  OD_3 | 9->1 | Day 1 22:26 to Day 2 10:00 | 12 vehicle(s)
+  OD_4 | 8->1 | Day 1 05:25 to Day 1 10:00 | 18 vehicle(s)
+  OD_1 | 6->1 | Day 1 07:07 to Day 2 02:00 | 8 vehicle(s)
+  OD_2 | 10->1 | Day 1 08:34 to Day 2 02:00 | 10 vehicle(s)
+  OD_1 | 12->13 | Day 7 07:16 to Day 7 10:20 | 8 vehicle(s)
+  OD_2 | 12->41 | Day 7 07:16 to Day 7 10:25 | 10 vehicle(s)
+  OD_3 | 12->47 | Day 7 07:16 to Day 7 09:44 | 12 vehicle(s)
+  OD_4 | 38->37 | Day 7 11:29 to Day 7 13:12 | 18 vehicle(s)
+  OD_5 | 38->42 | Day 7 11:29 to Day 7 13:25 | 14 vehicle(s)
+  OD_1 | 1->2->21->3->12 | Day 2 10:00 to Day 6 23:16 | 8 vehicle(s)
+  OD_2 | 1->2->21->3->12 | Day 2 10:00 to Day 6 23:16 | 10 vehicle(s)
+  OD_3 | 1->2->21->3->12 | Day 2 18:00 to Day 6 23:16 | 12 vehicle(s)
+  OD_4 | 1->2->29->33->38 | Day 1 18:00 to Day 7 03:29 | 18 vehicle(s)
+  OD_5 | 1->2->29->33->38 | Day 1 18:00 to Day 7 03:29 | 14 vehicle(s)
+         Unique vehicles used: 112 (route segments: 186)
+
+
+--- Rail Wagon Consolidation Summary ---
+  Hub_1 -> Hub_12        | Dep: Day 2 10:00    | Trucks: 18 -> Wagons:  1 (Load:  45.0%) | Included: OD_1, OD_1, OD_1, OD_1, OD_1, OD_1, OD_1, OD_1, OD_2, OD_2, OD_2, OD_2, OD_2, OD_2, OD_2, OD_2, OD_2, OD_2
+  Hub_1 -> Hub_12        | Dep: Day 2 18:00    | Trucks: 12 -> Wagons:  1 (Load:  30.0%) | Included: OD_3, OD_3, OD_3, OD_3, OD_3, OD_3, OD_3, OD_3, OD_3, OD_3, OD_3, OD_3
+  Hub_1 -> Hub_38        | Dep: Day 1 18:00    | Trucks: 32 -> Wagons:  1 (Load:  80.0%) | Included: OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_4, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5, OD_5
+
+============================================================
+[INFO] 
+Solution saved to: results\exp_20260913_140009_custom\solution.json
+[INFO] Summary CSV saved to: results\exp_20260913_140009_custom\summary.csv
+[INFO] Batch train-service CSV saved to: results\exp_20260913_140009_custom\batch_train_services.csv
+[INFO] Complete network topology plot saved to: results\exp_20260913_140009_custom\network.png (and .tiff)
+[INFO] High-resolution solution plot saved to: results\exp_20260913_140009_custom\solution_plot.png (and .tiff)
+[INFO] 
+Done.

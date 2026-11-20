@@ -1,0 +1,8 @@
+rhmvsp/results/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+risk-equity-adaptive/results/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+
+# Preserve the original bytes of research inputs and outputs.
+**/data/** -text
+**/config/** -text
+**/results/** -text
+**/config.json -text

@@ -1,0 +1,57 @@
+{
+  "experiment": {
+    "seed": 49,
+    "seeds": [
+      14,
+      44,
+      47,
+      74,
+      94
+    ],
+    "n_runs": 1,
+    "precompute_seed": 14,
+    "base_dir": "results",
+    "data_dir": "data",
+    "nodes_file": "nodes.json",
+    "arcs_file": "arcs.json",
+    "tasks_file": "tasks.json"
+  },
+  "algorithm": {
+    "population_size": 50,
+    "archive_size": 60,
+    "max_generations": 50,
+    "crossover_prob": 0.8,
+    "mutation_prob_path": 0.08,
+    "mix_ratio": 0.3
+  },
+  "risk_model_f1": {
+    "cvar_alpha": 0.9996,
+    "accident_lambda": 100,
+    "accident_gamma": 0.1,
+    "accident_q": 5.0,
+    "emergency_vehicle_speed": 45.0,
+    "emergency_setup_time": 0.05,
+    "emergency_a_multiplier": 1.0,
+    "emergency_b_multiplier": 1.0,
+    "emergency_c_multiplier": 1.0,
+    "tortuosity_factor": 1.3,
+    "risk_objective_scale": 1
+  },
+  "cost_model_f2": {
+    "unit_transport_cost": {
+      "road": 0.23,
+      "railway": 0.05
+    },
+    "unit_transshipment_cost": 3.090,
+    "transport_emission_factor": {
+      "road": 0.05771,
+      "railway": 0.00820
+    },
+    "transshipment_emission_factor": 0.128,
+    "max_delivery_time": 32.0,
+    "time_confidence_level": 0.9
+  },
+  "equity_config": {
+    "gini_epsilon": 0.6
+  }
+}

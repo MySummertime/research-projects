@@ -1,0 +1,51 @@
+2026-03-28 10:49:45 [INFO ] 日志系统已启动。(文件日志级别: INFO, 控制台日志级别: WARNING)
+2026-03-28 10:49:45 [INFO ] 日志将保存至: results\experiment_2026-03-28_10-49-14\sensitivity_analysis\sensitivity.log
+2026-03-28 10:49:45 [INFO ] >>> Starting Sensitivity Experiment: Time Confidence Level...
+2026-03-28 10:49:45 [INFO ] --- Testing Time Confidence Level alpha_t = 0.1 ---
+2026-03-28 10:49:45 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:49:45 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:49:45 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:49:45 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:49:45 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:49:45 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:49:46 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:49:46 [INFO ] --- Testing Time Confidence Level alpha_t = 0.3 ---
+2026-03-28 10:49:46 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:49:46 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:49:46 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:49:46 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:49:46 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:49:47 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:49:47 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:49:47 [INFO ] --- Testing Time Confidence Level alpha_t = 0.5 ---
+2026-03-28 10:49:47 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:49:47 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:49:47 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:49:47 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:49:47 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:49:48 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:49:48 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:49:48 [INFO ] --- Testing Time Confidence Level alpha_t = 0.7 ---
+2026-03-28 10:49:48 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:49:48 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:49:48 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:49:48 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:49:48 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:49:49 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:49:49 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:49:49 [INFO ] --- Testing Time Confidence Level alpha_t = 0.9 ---
+2026-03-28 10:49:49 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:49:49 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:49:49 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:49:49 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:49:50 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:49:50 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:49:50 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:49:50 [INFO ] Sensitivity data saved to: results\experiment_2026-03-28_10-49-14\sensitivity_analysis\Sensitivity_Time_Reliability_Data.csv
+2026-03-28 10:50:01 [INFO ] ✅ Edge-aligned cost structure chart saved: Figure_Time_Reliability_Structure
+2026-03-28 10:50:01 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:50:01 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:50:01 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:50:01 [INFO ] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-03-28 10:50:08 [INFO ] Dual line chart (Fixed) saved: Figure_Time_Risk_Trend
+2026-03-28 10:50:14 [INFO ] Pareto comparison saved: Figure_Time_Pareto_Shift

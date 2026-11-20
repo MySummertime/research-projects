@@ -1,0 +1,272 @@
+[
+  {
+    "node_id": "1",
+    "name_cn": "成都",
+    "name_en": "Chengdu",
+    "node_type": "hub",
+    "x": 104.07,
+    "y": 30.57,
+    "is_emergency_center": true,
+    "capacity": 5000,
+    "population_density": 0.015,
+    "accident_prob": 5e-6,
+    "fuzzy_transshipment_time": [
+      0.8,
+      1.0,
+      1.2,
+      1.5
+    ]
+  },
+  {
+    "node_id": "2",
+    "name_cn": "重庆",
+    "name_en": "Chongqing",
+    "node_type": "hub",
+    "x": 106.55,
+    "y": 29.56,
+    "is_emergency_center": true,
+    "capacity": 5000,
+    "population_density": 0.012,
+    "accident_prob": 6e-6,
+    "fuzzy_transshipment_time": [
+      1.0,
+      1.2,
+      1.5,
+      1.8
+    ]
+  },
+  {
+    "node_id": "3",
+    "name_cn": "昆明",
+    "name_en": "Kunming",
+    "node_type": "hub",
+    "x": 102.71,
+    "y": 25.05,
+    "is_emergency_center": true,
+    "capacity": 4500,
+    "population_density": 0.020,
+    "accident_prob": 4e-6,
+    "fuzzy_transshipment_time": [
+      0.9,
+      1.1,
+      1.3,
+      1.6
+    ]
+  },
+  {
+    "node_id": "4",
+    "name_cn": "贵阳",
+    "name_en": "Guiyang",
+    "node_type": "hub",
+    "x": 106.63,
+    "y": 26.65,
+    "is_emergency_center": true,
+    "capacity": 5500,
+    "population_density": 0.018,
+    "accident_prob": 5.5e-6,
+    "fuzzy_transshipment_time": [
+      0.8,
+      0.9,
+      1.1,
+      1.4
+    ]
+  },
+  {
+    "node_id": "5",
+    "name_cn": "南宁",
+    "name_en": "Nanning",
+    "node_type": "hub",
+    "x": 108.37,
+    "y": 22.82,
+    "is_emergency_center": true,
+    "capacity": 6000,
+    "population_density": 0.025,
+    "accident_prob": 7e-6,
+    "fuzzy_transshipment_time": [
+      1.1,
+      1.3,
+      1.5,
+      2.0
+    ]
+  },
+  {
+    "node_id": "6",
+    "name_cn": "绵阳",
+    "name_en": "Mianyang",
+    "node_type": "non-hub",
+    "x": 104.68,
+    "y": 31.47,
+    "is_emergency_center": false,
+    "capacity": 1000,
+    "population_density": 0.005,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "7",
+    "name_cn": "泸州",
+    "name_en": "Luzhou",
+    "node_type": "non-hub",
+    "x": 105.44,
+    "y": 28.87,
+    "is_emergency_center": true,
+    "capacity": 1000,
+    "population_density": 0.004,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "8",
+    "name_cn": "攀枝花",
+    "name_en": "Panzhihua",
+    "node_type": "non-hub",
+    "x": 101.73,
+    "y": 26.56,
+    "is_emergency_center": false,
+    "capacity": 1000,
+    "population_density": 0.006,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "9",
+    "name_cn": "遵义",
+    "name_en": "Zunyi",
+    "node_type": "non-hub",
+    "x": 107.03,
+    "y": 27.72,
+    "is_emergency_center": false,
+    "capacity": 1000,
+    "population_density": 0.003,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "10",
+    "name_cn": "铜仁",
+    "name_en": "Tongren",
+    "node_type": "non-hub",
+    "x": 109.19,
+    "y": 27.73,
+    "is_emergency_center": false,
+    "capacity": 1000,
+    "population_density": 0.005,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "11",
+    "name_cn": "普洱",
+    "name_en": "Puer",
+    "node_type": "non-hub",
+    "x": 100.97,
+    "y": 22.83,
+    "is_emergency_center": false,
+    "capacity": 1000,
+    "population_density": 0.007,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "12",
+    "name_cn": "临沧",
+    "name_en": "Lincang",
+    "node_type": "non-hub",
+    "x": 100.09,
+    "y": 23.88,
+    "is_emergency_center": false,
+    "capacity": 1000,
+    "population_density": 0.004,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "13",
+    "name_cn": "柳州",
+    "name_en": "Liuzhou",
+    "node_type": "non-hub",
+    "x": 109.43,
+    "y": 24.33,
+    "is_emergency_center": false,
+    "capacity": 1000,
+    "population_density": 0.005,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "14",
+    "name_cn": "桂林",
+    "name_en": "Guilin",
+    "node_type": "non-hub",
+    "x": 110.18,
+    "y": 25.24,
+    "is_emergency_center": false,
+    "capacity": 1000,
+    "population_density": 0.006,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "node_id": "15",
+    "name_cn": "钦州",
+    "name_en": "Qinzhou",
+    "node_type": "non-hub",
+    "x": 108.65,
+    "y": 21.98,
+    "is_emergency_center": true,
+    "capacity": 1000,
+    "population_density": 0.002,
+    "accident_prob": 1e-9,
+    "fuzzy_transshipment_time": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+]

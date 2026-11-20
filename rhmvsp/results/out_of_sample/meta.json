@@ -1,0 +1,33 @@
+{
+  "design": "fixed-plan common-scenario out-of-sample evaluation",
+  "n_scenarios": 200,
+  "scenario_seed": 7,
+  "param_grid": [
+    [
+      0.75,
+      0.89
+    ],
+    [
+      0.75,
+      0.91
+    ],
+    [
+      0.75,
+      0.93
+    ],
+    [
+      0.95,
+      0.89
+    ],
+    [
+      0.95,
+      0.91
+    ],
+    [
+      0.95,
+      0.93
+    ]
+  ],
+  "mw_is_common_baseline": true,
+  "instance": "data_real_case/instance.json"
+}

@@ -36,10 +36,20 @@ ENV/
 *.swo
 
 # Project Specific
-results/
 .DS_Store
 **/*.docx
 **/*.png
 **/*.tiff
 ai_scripts/
 **/*.zip
+
+# Track figures in research data, configuration, and results
+!**/results/**/*.png
+!**/results/**/*.tiff
+!**/results/**/*.svg
+!**/config/**/*.png
+!**/config/**/*.tiff
+!**/config/**/*.svg
+!**/data/**/*.png
+!**/data/**/*.tiff
+!**/data/**/*.svg

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "figure": 5,
+  "type": "TYPE A",
+  "visual_only": true,
+  "solver_rerun": false,
+  "frozen_counts": {
+    "rail_nodes": 65,
+    "rail_arcs": 136,
+    "yards": 18,
+    "od_pairs_drawn": 6
+  },
+  "od_ids": [
+    "OD1",
+    "OD2",
+    "OD3",
+    "OD4",
+    "OD5",
+    "OD6"
+  ],
+  "yard_tiers": {
+    "A": 12,
+    "B": 6
+  },
+  "class_c_resolution": "冻结数据无C类货场，未虚构；A类用正方形、B类用三角形",
+  "removed_legend_items": [
+    "客户点",
+    "代表路径"
+  ],
+  "removed_labels": [
+    "供应点",
+    "需求点"
+  ],
+  "map_parts_drawn": 25,
+  "endpoint_label_outside": [],
+  "endpoint_label_overlaps": [],
+  "axes_visible": false,
+  "road_style": "black quadratic curve, linewidth 0.36 pt (half of each 0.72 pt rail line)",
+  "rail_style": "dark parallel double line",
+  "local_insets": [],
+  "endpoint_labels": "all OD identifiers and city names placed on the main map with dashed leaders",
+  "figure_size_cm": [
+    17.2,
+    10.5
+  ],
+  "map_axes_aspect": "equidistant cylindrical projection corrected at 37-degree standard latitude; all vector layers redrawn; no raster stretching",
+  "standard_latitude_deg": 37.0,
+  "projection_aspect": 1.2521356581562257,
+  "province_boundaries": true,
+  "latin_digit_font": "Times New Roman bound directly from C:/Windows/Fonts/times.ttf for OD identifiers and A/B legend labels",
+  "legend_content_inside_frame": true,
+  "legend_frame_axes": [
+    0.055,
+    0.027,
+    0.53,
+    0.09
+  ]
+}

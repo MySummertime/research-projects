@@ -1,0 +1,777 @@
+
+[1/12] small_inst1 (α_T=0.5, α_max=0.015)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 0 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+  [No transport_routes — status=infeasible]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 0 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+  [No transport_routes — status=infeasible]
+  Solving with Benders Decomposition...
+[INFO]   Enumerating paths for OD 1 (origin=15, dest=5) ...
+[INFO]     Heuristic: 0 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 2 (origin=14, dest=17) ...
+[INFO]     Heuristic: 0 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 3 (origin=9, dest=11) ...
+[INFO]     Heuristic: 0 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 4 (origin=13, dest=12) ...
+[INFO]     Heuristic: 0 new columns
+[INFO]     Exact: 0 new columns
+[INFO]     Random pass 1/3: 0 new columns
+[INFO]     Random pass 2/3: 0 new columns
+[INFO]     Random pass 3/3: 0 new columns
+[INFO]   Enumerated 0 total columns (0.0s)
+[WARNING]   No columns enumerated — instance infeasible
+  BAP:     Time=0.0s  Iter=0  Cost=infeasible
+  BnC:     Time=0.0s  Iter=0  Cost=infeasible
+  BD:     Time=0.0s  Iter=0  Cost=infeasible
+  Gap(BAP-BnC): Time=-1.1%  Iter=N/A
+  Gap(BAP-BD):  Time=N/A  Iter=N/A
+
+[2/12] small_inst1 (α_T=0.5, α_max=0.03)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 1792 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,050,000.00, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+  [No transport_routes — status=optimal]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 1792 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,050,000.00, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+  [No transport_routes — status=optimal]
+  Solving with Benders Decomposition...
+[INFO]   Enumerating paths for OD 1 (origin=15, dest=5) ...
+[INFO]     Heuristic: 474 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 2 (origin=14, dest=17) ...
+[INFO]     Heuristic: 487 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 3 (origin=9, dest=11) ...
+[INFO]     Heuristic: 499 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 4 (origin=13, dest=12) ...
+[INFO]     Heuristic: 461 new columns
+[INFO]     Exact: 0 new columns
+[INFO]     Random pass 1/3: 0 new columns
+[INFO]     Random pass 2/3: 0 new columns
+[INFO]     Random pass 3/3: 0 new columns
+[INFO]   Enumerated 1921 total columns (2.2s)
+  BAP:     Time=1.2s  Iter=1  Cost=¥4,050,000
+  BnC:     Time=1.2s  Iter=1  Cost=¥4,050,000
+  BD:     Time=2.3s  Iter=0  Cost=¥4,050,000
+  Gap(BAP-BnC): Time=1.7%  Iter=0.0%
+  Gap(BAP-BD):  Time=-48.0%  Iter=N/A
+
+[3/12] small_inst1 (α_T=0.5, α_max=0.05)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 2024 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,050,000.00, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+  [No transport_routes — status=optimal]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 2024 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,050,000.00, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+  [No transport_routes — status=optimal]
+  Solving with Benders Decomposition...
+[INFO]   Enumerating paths for OD 1 (origin=15, dest=5) ...
+[INFO]     Heuristic: 462 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 2 (origin=14, dest=17) ...
+[INFO]     Heuristic: 386 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 3 (origin=9, dest=11) ...
+[INFO]     Heuristic: 417 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 4 (origin=13, dest=12) ...
+[INFO]     Heuristic: 417 new columns
+[INFO]     Exact: 0 new columns
+[INFO]     Random pass 1/3: 0 new columns
+[INFO]     Random pass 2/3: 0 new columns
+[INFO]     Random pass 3/3: 0 new columns
+[INFO]   Enumerated 1682 total columns (4.5s)
+  BAP:     Time=1.8s  Iter=1  Cost=¥4,050,000
+  BnC:     Time=1.9s  Iter=1  Cost=¥4,050,000
+  BD:     Time=4.6s  Iter=0  Cost=¥4,050,000
+  Gap(BAP-BnC): Time=-7.6%  Iter=0.0%
+  Gap(BAP-BD):  Time=-61.7%  Iter=N/A
+
+[4/12] small_inst1 (α_T=0.8, α_max=0.015)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 0 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+  [No transport_routes — status=infeasible]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 0 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+  [No transport_routes — status=infeasible]
+  Solving with Benders Decomposition...
+[INFO]   Enumerating paths for OD 1 (origin=15, dest=5) ...
+[INFO]     Heuristic: 0 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 2 (origin=14, dest=17) ...
+[INFO]     Heuristic: 0 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 3 (origin=9, dest=11) ...
+[INFO]     Heuristic: 0 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 4 (origin=13, dest=12) ...
+[INFO]     Heuristic: 0 new columns
+[INFO]     Exact: 0 new columns
+[INFO]     Random pass 1/3: 0 new columns
+[INFO]     Random pass 2/3: 0 new columns
+[INFO]     Random pass 3/3: 0 new columns
+[INFO]   Enumerated 0 total columns (0.0s)
+[WARNING]   No columns enumerated — instance infeasible
+  BAP:     Time=0.0s  Iter=0  Cost=infeasible
+  BnC:     Time=0.0s  Iter=0  Cost=infeasible
+  BD:     Time=0.0s  Iter=0  Cost=infeasible
+  Gap(BAP-BnC): Time=7.7%  Iter=N/A
+  Gap(BAP-BD):  Time=N/A  Iter=N/A
+
+[5/12] small_inst1 (α_T=0.8, α_max=0.03)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 1867 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,050,000.00, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+  [No transport_routes — status=optimal]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 1867 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,050,000.00, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+  [No transport_routes — status=optimal]
+  Solving with Benders Decomposition...
+[INFO]   Enumerating paths for OD 1 (origin=15, dest=5) ...
+[INFO]     Heuristic: 484 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 2 (origin=14, dest=17) ...
+[INFO]     Heuristic: 496 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 3 (origin=9, dest=11) ...
+[INFO]     Heuristic: 515 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 4 (origin=13, dest=12) ...
+[INFO]     Heuristic: 484 new columns
+[INFO]     Exact: 0 new columns
+[INFO]     Random pass 1/3: 0 new columns
+[INFO]     Random pass 2/3: 0 new columns
+[INFO]     Random pass 3/3: 0 new columns
+[INFO]   Enumerated 1979 total columns (2.3s)
+  BAP:     Time=1.0s  Iter=1  Cost=¥4,050,000
+  BnC:     Time=1.2s  Iter=1  Cost=¥4,050,000
+  BD:     Time=2.4s  Iter=0  Cost=¥4,050,000
+  Gap(BAP-BnC): Time=-10.0%  Iter=0.0%
+  Gap(BAP-BD):  Time=-56.1%  Iter=N/A
+
+[6/12] small_inst1 (α_T=0.8, α_max=0.05)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 2042 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,050,000.00, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+  [No transport_routes — status=optimal]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 2042 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,050,000.00, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+  [No transport_routes — status=optimal]
+  Solving with Benders Decomposition...
+[INFO]   Enumerating paths for OD 1 (origin=15, dest=5) ...
+[INFO]     Heuristic: 465 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 2 (origin=14, dest=17) ...
+[INFO]     Heuristic: 389 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 3 (origin=9, dest=11) ...
+[INFO]     Heuristic: 409 new columns
+[INFO]     Exact: 0 new columns
+[INFO]   Enumerating paths for OD 4 (origin=13, dest=12) ...
+[INFO]     Heuristic: 439 new columns
+[INFO]     Exact: 0 new columns
+[INFO]     Random pass 1/3: 0 new columns
+[INFO]     Random pass 2/3: 0 new columns
+[INFO]     Random pass 3/3: 0 new columns
+[INFO]   Enumerated 1702 total columns (4.4s)
+  BAP:     Time=1.6s  Iter=1  Cost=¥4,050,000
+  BnC:     Time=1.6s  Iter=1  Cost=¥4,050,000
+  BD:     Time=4.5s  Iter=0  Cost=¥4,050,000
+  Gap(BAP-BnC): Time=-0.8%  Iter=0.0%
+  Gap(BAP-BD):  Time=-65.2%  Iter=N/A
+
+[7/12] small_inst2 (α_T=0.5, α_max=0.015)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 3430 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Reposition events: 3 total | empty_fee=¥2903.72 | idle=¥166.64 | prep=¥0.00 | extra_penalty=¥0.00
+[INFO]     OD_9 → OD_2 (node 9→23): 1 times | avg empty=¥948.44, idle=¥0.00, unmet=¥0.00/ea
+[INFO]     OD_9 → OD_5 (node 22→5): 1 times | avg empty=¥759.32, idle=¥54.81, unmet=¥0.00/ea
+[INFO]     OD_6 → OD_3 (node 36→2): 1 times | avg empty=¥1195.96, idle=¥111.83, unmet=¥0.00/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,999,344.16, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+─────────────────────────────────────────────────────────
+─── OD Routing BAP small_inst2 (α_T=0.5, α_max=0.015) ───
+─────────────────────────────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: 23 → 9
+        Dep=15.9h  Arr=18.9h  Dur=3.0h  ¥26,502  Vehicles=[1, 2, 3]
+    #2: 9 → 46 → 18 → 33
+        Dep=35.1h  Arr=43.3h  Dur=8.2h  ¥26,502  Vehicles=[9, 10, 11]
+    #3: 9 → 7 → 9
+        Dep=19.9h  Arr=34.1h  Dur=14.2h  ¥26,502  Vehicles=[2000, 2001, 2002]
+
+  OD_3 (3 dispatch(es)):
+    #1: 50 → 34 → 6
+        Dep=4.0h  Arr=10.5h  Dur=6.5h  ¥24,426  Vehicles=[4]
+    #2: 2 → 14 → 48
+        Dep=43.6h  Arr=49.1h  Dur=5.5h  ¥24,426  Vehicles=[13]
+    #3: 6 → 2
+        Dep=11.5h  Arr=42.6h  Dur=31.1h  ¥24,426  Vehicles=[2003]
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 2
+        Dep=26.0h  Arr=28.1h  Dur=2.1h  ¥19,852  Vehicles=[5, 6]
+    #2: 5 → 28
+        Dep=41.4h  Arr=45.6h  Dur=4.1h  ¥19,852  Vehicles=[8, 12]
+    #3: 2 → 1 → 5
+        Dep=29.1h  Arr=40.4h  Dur=11.3h  ¥19,852  Vehicles=[2004, 2005]
+
+  OD_6 (3 dispatch(es)):
+    #1: 19 → 30 → 7
+        Dep=3.4h  Arr=10.5h  Dur=7.1h  ¥23,003  Vehicles=[7]
+    #2: 5 → 32 → 36
+        Dep=21.5h  Arr=26.2h  Dur=4.7h  ¥23,003  Vehicles=[13]
+    #3: 7 → 5
+        Dep=11.5h  Arr=20.5h  Dur=9.0h  ¥23,003  Vehicles=[2006]
+
+  OD_9 (3 dispatch(es)):
+    #1: 26 → 9
+        Dep=3.7h  Arr=6.8h  Dur=3.1h  ¥29,635  Vehicles=[1]
+    #2: 5 → 32 → 36 → 48 → 22
+        Dep=25.0h  Arr=35.4h  Dur=10.4h  ¥29,635  Vehicles=[8]
+    #3: 9 → 1 → 5
+        Dep=7.8h  Arr=24.0h  Dur=16.2h  ¥29,635  Vehicles=[2007]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 3430 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Reposition events: 3 total | empty_fee=¥2903.72 | idle=¥166.64 | prep=¥0.00 | extra_penalty=¥0.00
+[INFO]     OD_9 → OD_2 (node 9→23): 1 times | avg empty=¥948.44, idle=¥0.00, unmet=¥0.00/ea
+[INFO]     OD_9 → OD_5 (node 22→5): 1 times | avg empty=¥759.32, idle=¥54.81, unmet=¥0.00/ea
+[INFO]     OD_6 → OD_3 (node 36→2): 1 times | avg empty=¥1195.96, idle=¥111.83, unmet=¥0.00/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,999,344.16, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+─────────────────────────────────────────────────────────
+─── OD Routing BnC small_inst2 (α_T=0.5, α_max=0.015) ───
+─────────────────────────────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: 23 → 9
+        Dep=15.9h  Arr=18.9h  Dur=3.0h  ¥26,502  Vehicles=[1, 2, 3]
+    #2: 9 → 46 → 18 → 33
+        Dep=35.1h  Arr=43.3h  Dur=8.2h  ¥26,502  Vehicles=[9, 10, 11]
+    #3: 9 → 7 → 9
+        Dep=19.9h  Arr=34.1h  Dur=14.2h  ¥26,502  Vehicles=[2000, 2001, 2002]
+
+  OD_3 (3 dispatch(es)):
+    #1: 50 → 34 → 6
+        Dep=4.0h  Arr=10.5h  Dur=6.5h  ¥24,426  Vehicles=[4]
+    #2: 2 → 14 → 48
+        Dep=43.6h  Arr=49.1h  Dur=5.5h  ¥24,426  Vehicles=[13]
+    #3: 6 → 2
+        Dep=11.5h  Arr=42.6h  Dur=31.1h  ¥24,426  Vehicles=[2003]
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 2
+        Dep=26.0h  Arr=28.1h  Dur=2.1h  ¥19,852  Vehicles=[5, 6]
+    #2: 5 → 28
+        Dep=41.4h  Arr=45.6h  Dur=4.1h  ¥19,852  Vehicles=[8, 12]
+    #3: 2 → 1 → 5
+        Dep=29.1h  Arr=40.4h  Dur=11.3h  ¥19,852  Vehicles=[2004, 2005]
+
+  OD_6 (3 dispatch(es)):
+    #1: 19 → 30 → 7
+        Dep=3.4h  Arr=10.5h  Dur=7.1h  ¥23,003  Vehicles=[7]
+    #2: 5 → 32 → 36
+        Dep=21.5h  Arr=26.2h  Dur=4.7h  ¥23,003  Vehicles=[13]
+    #3: 7 → 5
+        Dep=11.5h  Arr=20.5h  Dur=9.0h  ¥23,003  Vehicles=[2006]
+
+  OD_9 (3 dispatch(es)):
+    #1: 26 → 9
+        Dep=3.7h  Arr=6.8h  Dur=3.1h  ¥29,635  Vehicles=[1]
+    #2: 5 → 32 → 36 → 48 → 22
+        Dep=25.0h  Arr=35.4h  Dur=10.4h  ¥29,635  Vehicles=[8]
+    #3: 9 → 1 → 5
+        Dep=7.8h  Arr=24.0h  Dur=16.2h  ¥29,635  Vehicles=[2007]
+  Skipping Benders Decomposition (small_inst1 only)...
+  BAP:     Time=16.2s  Iter=1  Cost=¥4,999,344
+  BnC:     Time=16.2s  Iter=1  Cost=¥4,999,344
+  BD:     Time=0.0s  Iter=0  Cost=skipped
+  Gap(BAP-BnC): Time=-0.0%  Iter=0.0%
+  Gap(BAP-BD):  Time=N/A  Iter=N/A
+
+[8/12] small_inst2 (α_T=0.5, α_max=0.03)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 5316 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,739,433.80, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────────────────────────────
+─── OD Routing BAP small_inst2 (α_T=0.5, α_max=0.03) ───
+────────────────────────────────────────────────────────
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 9
+        Dep=25.9h  Arr=27.8h  Dur=1.9h  ¥19,717  Vehicles=[1, 2]
+    #2: 5 → 28
+        Dep=41.7h  Arr=45.9h  Dur=4.1h  ¥19,717  Vehicles=[3, 4]
+    #3: 9 → 1 → 5
+        Dep=28.8h  Arr=40.7h  Dur=11.9h  ¥19,717  Vehicles=[2000, 2001]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 5316 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,739,433.80, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────────────────────────────
+─── OD Routing BnC small_inst2 (α_T=0.5, α_max=0.03) ───
+────────────────────────────────────────────────────────
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 9
+        Dep=25.9h  Arr=27.8h  Dur=1.9h  ¥19,717  Vehicles=[1, 2]
+    #2: 5 → 28
+        Dep=41.7h  Arr=45.9h  Dur=4.1h  ¥19,717  Vehicles=[3, 4]
+    #3: 9 → 1 → 5
+        Dep=28.8h  Arr=40.7h  Dur=11.9h  ¥19,717  Vehicles=[2000, 2001]
+  Skipping Benders Decomposition (small_inst1 only)...
+  BAP:     Time=58.9s  Iter=1  Cost=¥5,739,434
+  BnC:     Time=61.8s  Iter=1  Cost=¥5,739,434
+  BD:     Time=0.0s  Iter=0  Cost=skipped
+  Gap(BAP-BnC): Time=-4.7%  Iter=0.0%
+  Gap(BAP-BD):  Time=N/A  Iter=N/A
+
+[9/12] small_inst2 (α_T=0.5, α_max=0.05)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 5064 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,739,433.80, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────────────────────────────
+─── OD Routing BAP small_inst2 (α_T=0.5, α_max=0.05) ───
+────────────────────────────────────────────────────────
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 9
+        Dep=25.9h  Arr=27.8h  Dur=1.9h  ¥19,717  Vehicles=[1, 2]
+    #2: 5 → 28
+        Dep=41.7h  Arr=45.9h  Dur=4.1h  ¥19,717  Vehicles=[3, 4]
+    #3: 9 → 1 → 5
+        Dep=28.8h  Arr=40.7h  Dur=11.9h  ¥19,717  Vehicles=[2000, 2001]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 5064 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,739,433.80, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────────────────────────────
+─── OD Routing BnC small_inst2 (α_T=0.5, α_max=0.05) ───
+────────────────────────────────────────────────────────
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 9
+        Dep=25.9h  Arr=27.8h  Dur=1.9h  ¥19,717  Vehicles=[1, 2]
+    #2: 5 → 28
+        Dep=41.7h  Arr=45.9h  Dur=4.1h  ¥19,717  Vehicles=[3, 4]
+    #3: 9 → 1 → 5
+        Dep=28.8h  Arr=40.7h  Dur=11.9h  ¥19,717  Vehicles=[2000, 2001]
+  Skipping Benders Decomposition (small_inst1 only)...
+  BAP:     Time=87.1s  Iter=1  Cost=¥5,739,434
+  BnC:     Time=87.3s  Iter=1  Cost=¥5,739,434
+  BD:     Time=0.0s  Iter=0  Cost=skipped
+  Gap(BAP-BnC): Time=-0.3%  Iter=0.0%
+  Gap(BAP-BD):  Time=N/A  Iter=N/A
+
+[10/12] small_inst2 (α_T=0.8, α_max=0.015)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 3425 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Reposition events: 4 total | empty_fee=¥3946.92 | idle=¥249.47 | prep=¥0.00 | extra_penalty=¥0.00
+[INFO]     OD_9 → OD_2 (node 9→23): 1 times | avg empty=¥948.44, idle=¥0.00, unmet=¥0.00/ea
+[INFO]     OD_9 → OD_5 (node 22→5): 1 times | avg empty=¥759.32, idle=¥62.81, unmet=¥0.00/ea
+[INFO]     OD_2 → OD_5 (node 33→5): 1 times | avg empty=¥825.92, idle=¥96.42, unmet=¥0.00/ea
+[INFO]     OD_7 → OD_3 (node 35→2): 1 times | avg empty=¥1413.24, idle=¥90.23, unmet=¥0.00/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,477,999.79, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+─────────────────────────────────────────────────────────
+─── OD Routing BAP small_inst2 (α_T=0.8, α_max=0.015) ───
+─────────────────────────────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: 23 → 9
+        Dep=15.0h  Arr=18.9h  Dur=3.9h  ¥26,502  Vehicles=[1, 2, 3]
+    #2: 9 → 46 → 18 → 33
+        Dep=33.6h  Arr=44.2h  Dur=10.7h  ¥26,502  Vehicles=[13, 14, 15]
+    #3: 9 → 7 → 9
+        Dep=19.9h  Arr=32.6h  Dur=12.7h  ¥26,502  Vehicles=[2000, 2001, 2002]
+
+  OD_3 (3 dispatch(es)):
+    #1: 50 → 34 → 6
+        Dep=5.1h  Arr=13.5h  Dur=8.4h  ¥24,426  Vehicles=[4]
+    #2: 2 → 14 → 48
+        Dep=43.4h  Arr=50.5h  Dur=7.1h  ¥24,426  Vehicles=[16]
+    #3: 6 → 2
+        Dep=14.5h  Arr=42.4h  Dur=27.9h  ¥24,426  Vehicles=[2003]
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 2
+        Dep=25.4h  Arr=28.1h  Dur=2.7h  ¥19,852  Vehicles=[5, 6]
+    #2: 5 → 28
+        Dep=87.5h  Arr=92.8h  Dur=5.4h  ¥19,852  Vehicles=[12, 13]
+    #3: 2 → 1 → 5
+        Dep=29.1h  Arr=86.5h  Dur=57.4h  ¥19,852  Vehicles=[2004, 2005]
+
+  OD_7 (3 dispatch(es)):
+    #1: 39 → 6
+        Dep=2.1h  Arr=7.5h  Dur=5.4h  ¥20,107  Vehicles=[7, 8, 9, 10, 11]
+    #2: 2 → 21 → 35
+        Dep=15.3h  Arr=21.2h  Dur=5.9h  ¥20,107  Vehicles=[16, 17, 18, 19, 20]
+    #3: 6 → 2
+        Dep=8.5h  Arr=14.3h  Dur=5.8h  ¥20,107  Vehicles=[2006, 2007, 2008, 2009, 2010]
+
+  OD_9 (3 dispatch(es)):
+    #1: 26 → 9
+        Dep=2.7h  Arr=6.8h  Dur=4.1h  ¥29,635  Vehicles=[1]
+    #2: 5 → 32 → 36 → 48 → 22
+        Dep=23.9h  Arr=37.4h  Dur=13.5h  ¥29,635  Vehicles=[12]
+    #3: 9 → 1 → 5
+        Dep=7.8h  Arr=22.9h  Dur=15.1h  ¥29,635  Vehicles=[2011]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 3425 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Reposition events: 4 total | empty_fee=¥3946.92 | idle=¥249.47 | prep=¥0.00 | extra_penalty=¥0.00
+[INFO]     OD_9 → OD_2 (node 9→23): 1 times | avg empty=¥948.44, idle=¥0.00, unmet=¥0.00/ea
+[INFO]     OD_9 → OD_5 (node 22→5): 1 times | avg empty=¥759.32, idle=¥62.81, unmet=¥0.00/ea
+[INFO]     OD_2 → OD_5 (node 33→5): 1 times | avg empty=¥825.92, idle=¥96.42, unmet=¥0.00/ea
+[INFO]     OD_7 → OD_3 (node 35→2): 1 times | avg empty=¥1413.24, idle=¥90.23, unmet=¥0.00/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,477,999.79, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+─────────────────────────────────────────────────────────
+─── OD Routing BnC small_inst2 (α_T=0.8, α_max=0.015) ───
+─────────────────────────────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: 23 → 9
+        Dep=15.0h  Arr=18.9h  Dur=3.9h  ¥26,502  Vehicles=[1, 2, 3]
+    #2: 9 → 46 → 18 → 33
+        Dep=33.6h  Arr=44.2h  Dur=10.7h  ¥26,502  Vehicles=[13, 14, 15]
+    #3: 9 → 7 → 9
+        Dep=19.9h  Arr=32.6h  Dur=12.7h  ¥26,502  Vehicles=[2000, 2001, 2002]
+
+  OD_3 (3 dispatch(es)):
+    #1: 50 → 34 → 6
+        Dep=5.1h  Arr=13.5h  Dur=8.4h  ¥24,426  Vehicles=[4]
+    #2: 2 → 14 → 48
+        Dep=43.4h  Arr=50.5h  Dur=7.1h  ¥24,426  Vehicles=[16]
+    #3: 6 → 2
+        Dep=14.5h  Arr=42.4h  Dur=27.9h  ¥24,426  Vehicles=[2003]
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 2
+        Dep=25.4h  Arr=28.1h  Dur=2.7h  ¥19,852  Vehicles=[5, 6]
+    #2: 5 → 28
+        Dep=87.5h  Arr=92.8h  Dur=5.4h  ¥19,852  Vehicles=[12, 13]
+    #3: 2 → 1 → 5
+        Dep=29.1h  Arr=86.5h  Dur=57.4h  ¥19,852  Vehicles=[2004, 2005]
+
+  OD_7 (3 dispatch(es)):
+    #1: 39 → 6
+        Dep=2.1h  Arr=7.5h  Dur=5.4h  ¥20,107  Vehicles=[7, 8, 9, 10, 11]
+    #2: 2 → 21 → 35
+        Dep=15.3h  Arr=21.2h  Dur=5.9h  ¥20,107  Vehicles=[16, 17, 18, 19, 20]
+    #3: 6 → 2
+        Dep=8.5h  Arr=14.3h  Dur=5.8h  ¥20,107  Vehicles=[2006, 2007, 2008, 2009, 2010]
+
+  OD_9 (3 dispatch(es)):
+    #1: 26 → 9
+        Dep=2.7h  Arr=6.8h  Dur=4.1h  ¥29,635  Vehicles=[1]
+    #2: 5 → 32 → 36 → 48 → 22
+        Dep=23.9h  Arr=37.4h  Dur=13.5h  ¥29,635  Vehicles=[12]
+    #3: 9 → 1 → 5
+        Dep=7.8h  Arr=22.9h  Dur=15.1h  ¥29,635  Vehicles=[2011]
+  Skipping Benders Decomposition (small_inst1 only)...
+  BAP:     Time=23.4s  Iter=2  Cost=¥4,478,000
+  BnC:     Time=25.0s  Iter=2  Cost=¥4,478,000
+  BD:     Time=0.0s  Iter=0  Cost=skipped
+  Gap(BAP-BnC): Time=-6.7%  Iter=0.0%
+  Gap(BAP-BD):  Time=N/A  Iter=N/A
+
+[11/12] small_inst2 (α_T=0.8, α_max=0.03)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 5213 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Reposition events: 4 total | empty_fee=¥3053.20 | idle=¥166.23 | prep=¥0.00 | extra_penalty=¥0.00
+[INFO]     OD_9 → OD_2 (node 2→23): 1 times | avg empty=¥642.04, idle=¥0.00, unmet=¥0.00/ea
+[INFO]     OD_9 → OD_2 (node 22→5): 1 times | avg empty=¥759.32, idle=¥48.88, unmet=¥0.00/ea
+[INFO]     OD_2 → OD_5 (node 33→5): 2 times | avg empty=¥825.92, idle=¥58.68, unmet=¥0.00/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,431,109.33, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────────────────────────────
+─── OD Routing BAP small_inst2 (α_T=0.8, α_max=0.03) ───
+────────────────────────────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: 23 → 2
+        Dep=16.5h  Arr=19.1h  Dur=2.6h  ¥17,656  Vehicles=[1, 2, 3]
+    #2: 5 → 33
+        Dep=32.8h  Arr=36.2h  Dur=3.4h  ¥17,656  Vehicles=[12, 13, 14]
+    #3: 2 → 1 → 5
+        Dep=20.1h  Arr=31.8h  Dur=11.7h  ¥17,656  Vehicles=[2000, 2001, 2002]
+
+  OD_3 (3 dispatch(es)):
+    #1: 50 → 10
+        Dep=2.7h  Arr=7.5h  Dur=4.8h  ¥20,390  Vehicles=[6]
+    #2: 9 → 15 → 48
+        Dep=18.7h  Arr=24.3h  Dur=5.6h  ¥20,390  Vehicles=[20]
+    #3: 10 → 9
+        Dep=8.5h  Arr=17.7h  Dur=9.2h  ¥20,390  Vehicles=[2006]
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 9
+        Dep=25.4h  Arr=27.8h  Dur=2.4h  ¥19,717  Vehicles=[4, 5]
+    #2: 5 → 28
+        Dep=41.7h  Arr=47.0h  Dur=5.4h  ¥19,717  Vehicles=[12, 13]
+    #3: 9 → 1 → 5
+        Dep=28.8h  Arr=40.7h  Dur=11.8h  ¥19,717  Vehicles=[2003, 2004]
+
+  OD_7 (3 dispatch(es)):
+    #1: 39 → 6
+        Dep=2.1h  Arr=7.5h  Dur=5.4h  ¥19,399  Vehicles=[7, 8, 9, 10, 11]
+    #2: 9 → 35
+        Dep=17.0h  Arr=21.5h  Dur=4.5h  ¥19,399  Vehicles=[15, 16, 17, 18, 19]
+    #3: 6 → 9
+        Dep=8.5h  Arr=16.0h  Dur=7.5h  ¥19,399  Vehicles=[2007, 2008, 2009, 2010, 2011]
+
+  OD_9 (3 dispatch(es)):
+    #1: 26 → 2
+        Dep=3.8h  Arr=7.1h  Dur=3.3h  ¥18,100  Vehicles=[1]
+    #2: 5 → 22
+        Dep=20.9h  Arr=24.0h  Dur=3.1h  ¥18,100  Vehicles=[12]
+    #3: 2 → 1 → 5
+        Dep=8.1h  Arr=19.9h  Dur=11.8h  ¥18,100  Vehicles=[2005]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 5213 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Reposition events: 4 total | empty_fee=¥3053.20 | idle=¥166.23 | prep=¥0.00 | extra_penalty=¥0.00
+[INFO]     OD_9 → OD_2 (node 2→23): 1 times | avg empty=¥642.04, idle=¥0.00, unmet=¥0.00/ea
+[INFO]     OD_9 → OD_2 (node 22→5): 1 times | avg empty=¥759.32, idle=¥48.88, unmet=¥0.00/ea
+[INFO]     OD_2 → OD_5 (node 33→5): 2 times | avg empty=¥825.92, idle=¥58.68, unmet=¥0.00/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,431,109.33, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────────────────────────────
+─── OD Routing BnC small_inst2 (α_T=0.8, α_max=0.03) ───
+────────────────────────────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: 23 → 2
+        Dep=16.5h  Arr=19.1h  Dur=2.6h  ¥17,656  Vehicles=[1, 2, 3]
+    #2: 5 → 33
+        Dep=32.8h  Arr=36.2h  Dur=3.4h  ¥17,656  Vehicles=[12, 13, 14]
+    #3: 2 → 1 → 5
+        Dep=20.1h  Arr=31.8h  Dur=11.7h  ¥17,656  Vehicles=[2000, 2001, 2002]
+
+  OD_3 (3 dispatch(es)):
+    #1: 50 → 10
+        Dep=2.7h  Arr=7.5h  Dur=4.8h  ¥20,390  Vehicles=[6]
+    #2: 9 → 15 → 48
+        Dep=18.7h  Arr=24.3h  Dur=5.6h  ¥20,390  Vehicles=[20]
+    #3: 10 → 9
+        Dep=8.5h  Arr=17.7h  Dur=9.2h  ¥20,390  Vehicles=[2006]
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 9
+        Dep=25.4h  Arr=27.8h  Dur=2.4h  ¥19,717  Vehicles=[4, 5]
+    #2: 5 → 28
+        Dep=41.7h  Arr=47.0h  Dur=5.4h  ¥19,717  Vehicles=[12, 13]
+    #3: 9 → 1 → 5
+        Dep=28.8h  Arr=40.7h  Dur=11.8h  ¥19,717  Vehicles=[2003, 2004]
+
+  OD_7 (3 dispatch(es)):
+    #1: 39 → 6
+        Dep=2.1h  Arr=7.5h  Dur=5.4h  ¥19,399  Vehicles=[7, 8, 9, 10, 11]
+    #2: 9 → 35
+        Dep=17.0h  Arr=21.5h  Dur=4.5h  ¥19,399  Vehicles=[15, 16, 17, 18, 19]
+    #3: 6 → 9
+        Dep=8.5h  Arr=16.0h  Dur=7.5h  ¥19,399  Vehicles=[2007, 2008, 2009, 2010, 2011]
+
+  OD_9 (3 dispatch(es)):
+    #1: 26 → 2
+        Dep=3.8h  Arr=7.1h  Dur=3.3h  ¥18,100  Vehicles=[1]
+    #2: 5 → 22
+        Dep=20.9h  Arr=24.0h  Dur=3.1h  ¥18,100  Vehicles=[12]
+    #3: 2 → 1 → 5
+        Dep=8.1h  Arr=19.9h  Dur=11.8h  ¥18,100  Vehicles=[2005]
+  Skipping Benders Decomposition (small_inst1 only)...
+  BAP:     Time=84.5s  Iter=2  Cost=¥4,431,109
+  BnC:     Time=78.1s  Iter=2  Cost=¥4,431,109
+  BD:     Time=0.0s  Iter=0  Cost=skipped
+  Gap(BAP-BnC): Time=8.2%  Iter=0.0%
+  Gap(BAP-BD):  Time=N/A  Iter=N/A
+
+[12/12] small_inst2 (α_T=0.8, α_max=0.05)
+  Solving with BAP (stabilized)...
+[INFO]   Generated 5055 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Reposition events: 4 total | empty_fee=¥3053.20 | idle=¥166.23 | prep=¥0.00 | extra_penalty=¥0.00
+[INFO]     OD_9 → OD_2 (node 2→23): 1 times | avg empty=¥642.04, idle=¥0.00, unmet=¥0.00/ea
+[INFO]     OD_9 → OD_2 (node 22→5): 1 times | avg empty=¥759.32, idle=¥48.88, unmet=¥0.00/ea
+[INFO]     OD_2 → OD_5 (node 33→5): 2 times | avg empty=¥825.92, idle=¥58.68, unmet=¥0.00/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,431,106.93, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────────────────────────────
+─── OD Routing BAP small_inst2 (α_T=0.8, α_max=0.05) ───
+────────────────────────────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: 23 → 2
+        Dep=16.5h  Arr=19.1h  Dur=2.6h  ¥17,656  Vehicles=[1, 2, 3]
+    #2: 5 → 33
+        Dep=32.8h  Arr=36.2h  Dur=3.4h  ¥17,656  Vehicles=[12, 13, 14]
+    #3: 2 → 1 → 5
+        Dep=20.1h  Arr=31.8h  Dur=11.7h  ¥17,656  Vehicles=[2000, 2001, 2002]
+
+  OD_3 (3 dispatch(es)):
+    #1: 50 → 10
+        Dep=2.7h  Arr=7.5h  Dur=4.8h  ¥20,388  Vehicles=[6]
+    #2: 9 → 48
+        Dep=18.7h  Arr=24.3h  Dur=5.6h  ¥20,388  Vehicles=[20]
+    #3: 10 → 9
+        Dep=8.5h  Arr=17.7h  Dur=9.2h  ¥20,388  Vehicles=[2006]
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 9
+        Dep=25.4h  Arr=27.8h  Dur=2.4h  ¥19,717  Vehicles=[4, 5]
+    #2: 5 → 28
+        Dep=41.7h  Arr=47.0h  Dur=5.4h  ¥19,717  Vehicles=[12, 13]
+    #3: 9 → 1 → 5
+        Dep=28.8h  Arr=40.7h  Dur=11.8h  ¥19,717  Vehicles=[2003, 2004]
+
+  OD_7 (3 dispatch(es)):
+    #1: 39 → 6
+        Dep=2.1h  Arr=7.5h  Dur=5.4h  ¥19,399  Vehicles=[7, 8, 9, 10, 11]
+    #2: 9 → 35
+        Dep=17.0h  Arr=21.5h  Dur=4.5h  ¥19,399  Vehicles=[15, 16, 17, 18, 19]
+    #3: 6 → 9
+        Dep=8.5h  Arr=16.0h  Dur=7.5h  ¥19,399  Vehicles=[2007, 2008, 2009, 2010, 2011]
+
+  OD_9 (3 dispatch(es)):
+    #1: 26 → 2
+        Dep=3.8h  Arr=7.1h  Dur=3.3h  ¥18,100  Vehicles=[1]
+    #2: 5 → 22
+        Dep=20.9h  Arr=24.0h  Dur=3.1h  ¥18,100  Vehicles=[12]
+    #3: 2 → 1 → 5
+        Dep=8.1h  Arr=19.9h  Dur=11.8h  ¥18,100  Vehicles=[2005]
+  Solving with Branch-and-Cut...
+[INFO]   Generated 5055 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   Reposition events: 4 total | empty_fee=¥3053.20 | idle=¥166.23 | prep=¥0.00 | extra_penalty=¥0.00
+[INFO]     OD_9 → OD_2 (node 2→23): 1 times | avg empty=¥642.04, idle=¥0.00, unmet=¥0.00/ea
+[INFO]     OD_9 → OD_2 (node 22→5): 1 times | avg empty=¥759.32, idle=¥48.88, unmet=¥0.00/ea
+[INFO]     OD_2 → OD_5 (node 33→5): 2 times | avg empty=¥825.92, idle=¥58.68, unmet=¥0.00/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥4,431,106.93, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────────────────────────────
+─── OD Routing BnC small_inst2 (α_T=0.8, α_max=0.05) ───
+────────────────────────────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: 23 → 2
+        Dep=16.5h  Arr=19.1h  Dur=2.6h  ¥17,656  Vehicles=[1, 2, 3]
+    #2: 5 → 33
+        Dep=32.8h  Arr=36.2h  Dur=3.4h  ¥17,656  Vehicles=[12, 13, 14]
+    #3: 2 → 1 → 5
+        Dep=20.1h  Arr=31.8h  Dur=11.7h  ¥17,656  Vehicles=[2000, 2001, 2002]
+
+  OD_3 (3 dispatch(es)):
+    #1: 50 → 10
+        Dep=2.7h  Arr=7.5h  Dur=4.8h  ¥20,388  Vehicles=[6]
+    #2: 9 → 48
+        Dep=18.7h  Arr=24.3h  Dur=5.6h  ¥20,388  Vehicles=[20]
+    #3: 10 → 9
+        Dep=8.5h  Arr=17.7h  Dur=9.2h  ¥20,388  Vehicles=[2006]
+
+  OD_5 (3 dispatch(es)):
+    #1: 21 → 9
+        Dep=25.4h  Arr=27.8h  Dur=2.4h  ¥19,717  Vehicles=[4, 5]
+    #2: 5 → 28
+        Dep=41.7h  Arr=47.0h  Dur=5.4h  ¥19,717  Vehicles=[12, 13]
+    #3: 9 → 1 → 5
+        Dep=28.8h  Arr=40.7h  Dur=11.8h  ¥19,717  Vehicles=[2003, 2004]
+
+  OD_7 (3 dispatch(es)):
+    #1: 39 → 6
+        Dep=2.1h  Arr=7.5h  Dur=5.4h  ¥19,399  Vehicles=[7, 8, 9, 10, 11]
+    #2: 9 → 35
+        Dep=17.0h  Arr=21.5h  Dur=4.5h  ¥19,399  Vehicles=[15, 16, 17, 18, 19]
+    #3: 6 → 9
+        Dep=8.5h  Arr=16.0h  Dur=7.5h  ¥19,399  Vehicles=[2007, 2008, 2009, 2010, 2011]
+
+  OD_9 (3 dispatch(es)):
+    #1: 26 → 2
+        Dep=3.8h  Arr=7.1h  Dur=3.3h  ¥18,100  Vehicles=[1]
+    #2: 5 → 22
+        Dep=20.9h  Arr=24.0h  Dur=3.1h  ¥18,100  Vehicles=[12]
+    #3: 2 → 1 → 5
+        Dep=8.1h  Arr=19.9h  Dur=11.8h  ¥18,100  Vehicles=[2005]
+  Skipping Benders Decomposition (small_inst1 only)...
+  BAP:     Time=108.2s  Iter=2  Cost=¥4,431,107
+  BnC:     Time=109.0s  Iter=2  Cost=¥4,431,107
+  BD:     Time=0.0s  Iter=0  Cost=skipped
+  Gap(BAP-BnC): Time=-0.8%  Iter=0.0%
+  Gap(BAP-BD):  Time=N/A  Iter=N/A
+CSV saved → results\alg_perf_20260630_110038\algorithm_performance.csv
+
+Plot → results\alg_perf_20260630_110038/algorithm_performance.png/.tiff
+
+==========================================================================================
+ALGORITHM PERFORMANCE: BAP vs Branch-and-Cut vs Benders Decomposition
+Results: results\alg_perf_20260630_110038/
+==========================================================================================
+    Inst   α_T   α_max   BAP_T   BnC_T     BD_T  G_BnC%   G_BD%
+----------------------------------------------------------------------
+small_inst1   0.5   0.015    0.01    0.01     0.00    0.00     N/A
+small_inst1   0.5   0.030    1.17    1.15     2.26    0.10    0.00
+small_inst1   0.5   0.050    1.75    1.90     4.58    0.08    0.00
+small_inst1   0.8   0.015    0.01    0.01     0.00    0.00     N/A
+small_inst1   0.8   0.030    1.05    1.16     2.39    0.08    0.00
+small_inst1   0.8   0.050    1.55    1.56     4.47    0.08    0.00
+small_inst2   0.5   0.015   16.23   16.23     0.00    0.00    0.00
+small_inst2   0.5   0.030   58.87   61.80     0.00    0.00    0.00
+small_inst2   0.5   0.050   87.06   87.29     0.00    0.00    0.00
+small_inst2   0.8   0.015   23.36   25.03     0.00    0.00    0.00
+small_inst2   0.8   0.030   84.51   78.13     0.00    0.00    0.00
+small_inst2   0.8   0.050  108.16  108.99     0.00    0.00    0.00
+
+All optimal: 4/12
+Avg Time: BAP=31.98s  BnC=31.94s  BD=1.14s

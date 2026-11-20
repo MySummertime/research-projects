@@ -1,0 +1,48 @@
+2026-03-28 10:37:57 [INFO ] 日志系统已启动。(文件日志级别: INFO, 控制台日志级别: WARNING)
+2026-03-28 10:37:57 [INFO ] 日志将保存至: results\experiment_2026-03-28_10-37-57\experiment.log
+2026-03-28 10:37:57 [INFO ] Global Random Seed using configuration seed: 49
+2026-03-28 10:37:57 [INFO ] 正在从 JSON 文件构建网络...
+2026-03-28 10:37:57 [INFO ]   - 已加载节点: 15
+2026-03-28 10:37:57 [INFO ]   - 已加载弧段: 124
+2026-03-28 10:37:57 [INFO ]   - 已加载任务: 5
+2026-03-28 10:37:57 [INFO ] 网络构建完成。
+2026-03-28 10:37:57 [INFO ] === Network Summary ===
+2026-03-28 10:37:57 [INFO ] Nodes: 15 (Hubs: 5)
+2026-03-28 10:37:57 [INFO ] Arcs : 124 (Bidirectional logic applied)
+2026-03-28 10:37:57 [INFO ] Tasks: 5
+2026-03-28 10:37:57 [INFO ] =======================
+2026-03-28 10:37:57 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:37:57 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:37:57 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:37:57 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:37:57 [INFO ] 开始搜索 candidate paths（预排序+哈希去重）...
+2026-03-28 10:37:57 [INFO ] 搜索完成：共为 5 个任务找到 97 条异质路径。
+2026-03-28 10:37:57 [INFO ] Path Pre-computation Time: 0.2969s
+2026-03-28 10:38:27 [INFO ] Step 1: 正在求解 Proposed Model (动态响应感知)...
+2026-03-28 10:38:28 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:38:28 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:38:28 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:38:28 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:38:29 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:38:29 [INFO ] Step 2: 正在求解 Traditional Static Model (基于GIS人口常数)...
+2026-03-28 10:38:29 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:38:29 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:38:29 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:38:29 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:38:29 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:38:30 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:38:30 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:38:30 [INFO ] Step 3: 正在执行交叉回测：重新评估静态解在动态环境下的真实表现...
+2026-03-28 10:38:40 [INFO ] Comparison heatmap saved: heatmap_risk 🌡️
+2026-03-28 10:38:53 [INFO ] Comparison heatmap saved: heatmap_cost 🌡️
+2026-03-28 10:38:53 [INFO ] Detailed routing CSV saved: results\experiment_2026-03-28_10-37-57\value_analysis\detailed_routes.csv 📄
+2026-03-28 10:38:53 [INFO ] Task metrics CSV saved: results\experiment_2026-03-28_10-37-57\value_analysis\task_metrics_comparison.csv 📊
+2026-03-28 10:38:53 [INFO ] Generating multiple route maps for special solutions...
+2026-03-28 10:39:19 [INFO ] Route map saved: Figure_Routes__Min_Risk(I)
+2026-03-28 10:39:45 [INFO ] Route map saved: Figure_Routes__Knee(I)
+2026-03-28 10:40:12 [INFO ] Route map saved: Figure_Routes__Min_Cost(I)
+2026-03-28 10:40:41 [INFO ] Route map saved: Figure_Routes__Min_Risk(II)
+2026-03-28 10:41:07 [INFO ] Route map saved: Figure_Routes__Knee(II)
+2026-03-28 10:41:35 [INFO ] Route map saved: Figure_Routes__Min_Cost(II)
+2026-03-28 10:41:35 [INFO ] Multiple route maps generation completed. 🌟🚀
+2026-03-28 10:41:35 [INFO ] 价值分析全量实验完成！结果已存至: results\experiment_2026-03-28_10-37-57\value_analysis 🚀🌟

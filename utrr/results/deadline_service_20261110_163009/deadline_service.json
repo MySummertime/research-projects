@@ -1,0 +1,206 @@
+{
+  "rows": [
+    {
+      "label": "严格",
+      "scale": 1.0,
+      "deadline": 98.0,
+      "service_mix": {
+        "2": 0.5846483016849425,
+        "0": 0.4153516983150575
+      },
+      "front_size": 3,
+      "rail_distance": 3739.0,
+      "rail_cost": 164658.09000000003,
+      "cost": 230008.09
+    },
+    {
+      "label": "中等",
+      "scale": 1.2,
+      "deadline": 117.6,
+      "service_mix": {
+        "2": 0.43848622626370687,
+        "0": 0.31151377373629313,
+        "1": 0.25
+      },
+      "front_size": 4,
+      "rail_distance": 3739.0,
+      "rail_cost": 136666.2147,
+      "cost": 202016.21469999998
+    },
+    {
+      "label": "宽松",
+      "scale": 1.5,
+      "deadline": 147.0,
+      "service_mix": {
+        "2": 0.43848622626370687,
+        "0": 0.31151377373629313,
+        "1": 0.25
+      },
+      "front_size": 4,
+      "rail_distance": 3739.0,
+      "rail_cost": 136666.2147,
+      "cost": 202016.21469999998
+    }
+  ],
+  "service_points": [
+    {
+      "code": 2,
+      "label": "快速班列",
+      "cost": 284345.25969999994,
+      "equivalent_time": 73.24114719373114,
+      "dist": 3739.0
+    },
+    {
+      "code": 0,
+      "label": "集装箱班列",
+      "cost": 230008.09,
+      "equivalent_time": 88.82034719373114,
+      "dist": 3739.0
+    },
+    {
+      "code": 1,
+      "label": "普快班列",
+      "cost": 202016.21469999998,
+      "equivalent_time": 101.28364719373114,
+      "dist": 3739.0
+    }
+  ],
+  "deadline_sweep": [
+    {
+      "deadline": 78.4,
+      "cost": 284345.25969999994,
+      "label": "快速班列",
+      "service": 2,
+      "service_name": "快速班列",
+      "front_size": 1
+    },
+    {
+      "deadline": 83.30000000000001,
+      "cost": 284345.25969999994,
+      "label": "快速班列",
+      "service": 2,
+      "service_name": "快速班列",
+      "front_size": 1
+    },
+    {
+      "deadline": 88.2,
+      "cost": 273803.5437,
+      "label": "快速班列＋集装箱班列",
+      "service": 2,
+      "service_name": "快速班列",
+      "front_size": 2
+    },
+    {
+      "deadline": 93.10000000000001,
+      "cost": 230008.09,
+      "label": "集装箱班列",
+      "service": 0,
+      "service_name": "集装箱班列",
+      "front_size": 3
+    },
+    {
+      "deadline": 98.0,
+      "cost": 230008.09,
+      "label": "集装箱班列",
+      "service": 0,
+      "service_name": "集装箱班列",
+      "front_size": 3
+    },
+    {
+      "deadline": 102.9,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 107.80000000000001,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 112.70000000000002,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 117.60000000000002,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 122.5,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 127.4,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 132.3,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 137.20000000000002,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 142.10000000000002,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 147.0,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 151.9,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    },
+    {
+      "deadline": 156.8,
+      "cost": 202016.21469999998,
+      "label": "普快班列",
+      "service": 1,
+      "service_name": "普快班列",
+      "front_size": 4
+    }
+  ]
+}

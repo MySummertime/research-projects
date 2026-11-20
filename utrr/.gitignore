@@ -18,7 +18,6 @@ venv/
 *.swp
 
 # 项目产物
-results/
 **/*.png
 **/*.pdf
 **/*.svg
@@ -27,3 +26,14 @@ results/
 # utrr local-only
 .audit/
 .tmp*
+
+# Track figures in research data, configuration, and results
+!**/results/**/*.png
+!**/results/**/*.tiff
+!**/results/**/*.svg
+!**/config/**/*.png
+!**/config/**/*.tiff
+!**/config/**/*.svg
+!**/data/**/*.png
+!**/data/**/*.tiff
+!**/data/**/*.svg

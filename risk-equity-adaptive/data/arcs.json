@@ -1,0 +1,870 @@
+[
+  {
+    "start_node_id": "1",
+    "end_node_id": "2",
+    "mode": "railway",
+    "length": 600,
+    "capacity": 10000,
+    "population_density": 0.008,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      11.2,
+      12.0,
+      14.0
+    ]
+  },
+  {
+    "start_node_id": "1",
+    "end_node_id": "3",
+    "mode": "railway",
+    "length": 560,
+    "capacity": 10000,
+    "population_density": 0.007,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      10.4,
+      11.2,
+      13.2
+    ]
+  },
+  {
+    "start_node_id": "1",
+    "end_node_id": "4",
+    "mode": "railway",
+    "length": 800,
+    "capacity": 10000,
+    "population_density": 0.006,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      15.2,
+      16.0,
+      18.0
+    ]
+  },
+  {
+    "start_node_id": "1",
+    "end_node_id": "5",
+    "mode": "railway",
+    "length": 1000,
+    "capacity": 10000,
+    "population_density": 0.005,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      19.2,
+      20.0,
+      22.0
+    ]
+  },
+  {
+    "start_node_id": "2",
+    "end_node_id": "3",
+    "mode": "railway",
+    "length": 400,
+    "capacity": 10000,
+    "population_density": 0.009,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      7.2,
+      8.0,
+      9.6
+    ]
+  },
+  {
+    "start_node_id": "2",
+    "end_node_id": "4",
+    "mode": "railway",
+    "length": 520,
+    "capacity": 10000,
+    "population_density": 0.006,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      9.6,
+      10.4,
+      12.4
+    ]
+  },
+  {
+    "start_node_id": "2",
+    "end_node_id": "5",
+    "mode": "railway",
+    "length": 720,
+    "capacity": 10000,
+    "population_density": 0.008,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      13.6,
+      14.4,
+      16.4
+    ]
+  },
+  {
+    "start_node_id": "3",
+    "end_node_id": "4",
+    "mode": "railway",
+    "length": 440,
+    "capacity": 10000,
+    "population_density": 0.01,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      8.0,
+      8.8,
+      10.8
+    ]
+  },
+  {
+    "start_node_id": "3",
+    "end_node_id": "5",
+    "mode": "railway",
+    "length": 640,
+    "capacity": 10000,
+    "population_density": 0.011,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      12.0,
+      12.8,
+      15.2
+    ]
+  },
+  {
+    "start_node_id": "4",
+    "end_node_id": "5",
+    "mode": "railway",
+    "length": 480,
+    "capacity": 10000,
+    "population_density": 0.009,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      8.8,
+      9.6,
+      11.6
+    ]
+  },
+  {
+    "start_node_id": "6",
+    "end_node_id": "1",
+    "mode": "road",
+    "length": 200,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.2,
+      4.0,
+      4.8
+    ]
+  },
+  {
+    "start_node_id": "6",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 160,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      2.4,
+      3.2,
+      4.0
+    ]
+  },
+  {
+    "start_node_id": "6",
+    "end_node_id": "3",
+    "mode": "road",
+    "length": 240,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.0,
+      4.8,
+      5.6
+    ]
+  },
+  {
+    "start_node_id": "6",
+    "end_node_id": "4",
+    "mode": "road",
+    "length": 280,
+    "capacity": 3000,
+    "population_density": 0.01,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.8,
+      5.6,
+      6.4
+    ]
+  },
+  {
+    "start_node_id": "7",
+    "end_node_id": "1",
+    "mode": "road",
+    "length": 220,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.6,
+      4.4,
+      5.2
+    ]
+  },
+  {
+    "start_node_id": "7",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 180,
+    "capacity": 3000,
+    "population_density": 0.04,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      2.8,
+      3.6,
+      4.4
+    ]
+  },
+  {
+    "start_node_id": "7",
+    "end_node_id": "3",
+    "mode": "road",
+    "length": 280,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.8,
+      5.6,
+      6.4
+    ]
+  },
+  {
+    "start_node_id": "7",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 320,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      5.6,
+      6.4,
+      7.2
+    ]
+  },
+  {
+    "start_node_id": "8",
+    "end_node_id": "1",
+    "mode": "road",
+    "length": 240,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.0,
+      4.8,
+      6.0
+    ]
+  },
+  {
+    "start_node_id": "8",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 200,
+    "capacity": 3000,
+    "population_density": 0.05,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.2,
+      4.0,
+      4.8
+    ]
+  },
+  {
+    "start_node_id": "8",
+    "end_node_id": "4",
+    "mode": "road",
+    "length": 320,
+    "capacity": 3000,
+    "population_density": 0.04,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      5.6,
+      6.4,
+      7.6
+    ]
+  },
+  {
+    "start_node_id": "8",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 360,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      6.4,
+      7.2,
+      8.4
+    ]
+  },
+  {
+    "start_node_id": "9",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 260,
+    "capacity": 3000,
+    "population_density": 0.04,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.4,
+      5.2,
+      6.4
+    ]
+  },
+  {
+    "start_node_id": "9",
+    "end_node_id": "3",
+    "mode": "road",
+    "length": 140,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      2.0,
+      2.8,
+      3.6
+    ]
+  },
+  {
+    "start_node_id": "9",
+    "end_node_id": "4",
+    "mode": "road",
+    "length": 200,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.2,
+      4.0,
+      4.8
+    ]
+  },
+  {
+    "start_node_id": "9",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 340,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      6.0,
+      6.8,
+      8.0
+    ]
+  },
+  {
+    "start_node_id": "10",
+    "end_node_id": "1",
+    "mode": "road",
+    "length": 360,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      6.4,
+      7.2,
+      8.4
+    ]
+  },
+  {
+    "start_node_id": "10",
+    "end_node_id": "3",
+    "mode": "road",
+    "length": 200,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.2,
+      4.0,
+      4.8
+    ]
+  },
+  {
+    "start_node_id": "10",
+    "end_node_id": "4",
+    "mode": "road",
+    "length": 160,
+    "capacity": 3000,
+    "population_density": 0.05,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      2.4,
+      3.2,
+      4.0
+    ]
+  },
+  {
+    "start_node_id": "10",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 280,
+    "capacity": 3000,
+    "population_density": 0.04,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.8,
+      5.6,
+      6.4
+    ]
+  },
+  {
+    "start_node_id": "11",
+    "end_node_id": "1",
+    "mode": "road",
+    "length": 280,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.8,
+      5.6,
+      6.8
+    ]
+  },
+  {
+    "start_node_id": "11",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 320,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      5.6,
+      6.4,
+      7.6
+    ]
+  },
+  {
+    "start_node_id": "11",
+    "end_node_id": "4",
+    "mode": "road",
+    "length": 240,
+    "capacity": 3000,
+    "population_density": 0.06,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.0,
+      4.8,
+      6.0
+    ]
+  },
+  {
+    "start_node_id": "11",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 200,
+    "capacity": 3000,
+    "population_density": 0.05,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.2,
+      4.0,
+      4.8
+    ]
+  },
+  {
+    "start_node_id": "12",
+    "end_node_id": "1",
+    "mode": "road",
+    "length": 340,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      6.0,
+      6.8,
+      8.0
+    ]
+  },
+  {
+    "start_node_id": "12",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 220,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.6,
+      4.4,
+      5.2
+    ]
+  },
+  {
+    "start_node_id": "12",
+    "end_node_id": "3",
+    "mode": "road",
+    "length": 180,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      2.8,
+      3.6,
+      4.4
+    ]
+  },
+  {
+    "start_node_id": "12",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 300,
+    "capacity": 3000,
+    "population_density": 0.04,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      5.2,
+      6.0,
+      7.2
+    ]
+  },
+  {
+    "start_node_id": "13",
+    "end_node_id": "1",
+    "mode": "road",
+    "length": 200,
+    "capacity": 3000,
+    "population_density": 0.02,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.2,
+      4.0,
+      4.8
+    ]
+  },
+  {
+    "start_node_id": "13",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 240,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.0,
+      4.8,
+      5.6
+    ]
+  },
+  {
+    "start_node_id": "13",
+    "end_node_id": "4",
+    "mode": "road",
+    "length": 200,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.2,
+      4.0,
+      4.8
+    ]
+  },
+  {
+    "start_node_id": "13",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 260,
+    "capacity": 3000,
+    "population_density": 0.05,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.4,
+      5.2,
+      6.4
+    ]
+  },
+  {
+    "start_node_id": "14",
+    "end_node_id": "1",
+    "mode": "road",
+    "length": 260,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.4,
+      5.2,
+      6.4
+    ]
+  },
+  {
+    "start_node_id": "14",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 220,
+    "capacity": 3000,
+    "population_density": 0.05,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      3.6,
+      4.4,
+      5.2
+    ]
+  },
+  {
+    "start_node_id": "14",
+    "end_node_id": "3",
+    "mode": "road",
+    "length": 280,
+    "capacity": 3000,
+    "population_density": 0.04,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.8,
+      5.6,
+      6.4
+    ]
+  },
+  {
+    "start_node_id": "14",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 280,
+    "capacity": 3000,
+    "population_density": 0.06,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.8,
+      5.6,
+      6.8
+    ]
+  },
+  {
+    "start_node_id": "15",
+    "end_node_id": "2",
+    "mode": "road",
+    "length": 280,
+    "capacity": 3000,
+    "population_density": 0.04,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.8,
+      5.6,
+      6.8
+    ]
+  },
+  {
+    "start_node_id": "15",
+    "end_node_id": "3",
+    "mode": "road",
+    "length": 240,
+    "capacity": 3000,
+    "population_density": 0.06,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      4.0,
+      4.8,
+      6.0
+    ]
+  },
+  {
+    "start_node_id": "15",
+    "end_node_id": "4",
+    "mode": "road",
+    "length": 320,
+    "capacity": 3000,
+    "population_density": 0.05,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      5.6,
+      6.4,
+      7.6
+    ]
+  },
+  {
+    "start_node_id": "15",
+    "end_node_id": "5",
+    "mode": "road",
+    "length": 180,
+    "capacity": 3000,
+    "population_density": 0.07,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      2.8,
+      3.6,
+      4.4
+    ]
+  },
+  {
+    "start_node_id": "5",
+    "end_node_id": "3",
+    "mode": "road",
+    "length": 80,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      0.8,
+      1.2,
+      2.0
+    ]
+  },
+  {
+    "start_node_id": "5",
+    "end_node_id": "4",
+    "mode": "road",
+    "length": 100,
+    "capacity": 3000,
+    "population_density": 0.03,
+    "accident_prob_per_km": 1e-6,
+    "fuzzy_transport_time": [
+      1.2,
+      1.6,
+      2.4
+    ]
+  },
+  {
+    "start_node_id": "2",
+    "end_node_id": "1",
+    "mode": "railway",
+    "length": 600,
+    "capacity": 10000,
+    "population_density": 0.008,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      11.2,
+      12.0,
+      14.0
+    ]
+  },
+  {
+    "start_node_id": "3",
+    "end_node_id": "1",
+    "mode": "railway",
+    "length": 560,
+    "capacity": 10000,
+    "population_density": 0.007,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      10.4,
+      11.2,
+      13.2
+    ]
+  },
+  {
+    "start_node_id": "4",
+    "end_node_id": "1",
+    "mode": "railway",
+    "length": 800,
+    "capacity": 10000,
+    "population_density": 0.006,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      15.2,
+      16.0,
+      18.0
+    ]
+  },
+  {
+    "start_node_id": "5",
+    "end_node_id": "1",
+    "mode": "railway",
+    "length": 1000,
+    "capacity": 10000,
+    "population_density": 0.005,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      19.2,
+      20.0,
+      22.0
+    ]
+  },
+  {
+    "start_node_id": "3",
+    "end_node_id": "2",
+    "mode": "railway",
+    "length": 400,
+    "capacity": 10000,
+    "population_density": 0.009,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      7.2,
+      8.0,
+      9.6
+    ]
+  },
+  {
+    "start_node_id": "4",
+    "end_node_id": "2",
+    "mode": "railway",
+    "length": 520,
+    "capacity": 10000,
+    "population_density": 0.006,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      9.6,
+      10.4,
+      12.4
+    ]
+  },
+  {
+    "start_node_id": "5",
+    "end_node_id": "2",
+    "mode": "railway",
+    "length": 720,
+    "capacity": 10000,
+    "population_density": 0.008,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      13.6,
+      14.4,
+      16.4
+    ]
+  },
+  {
+    "start_node_id": "4",
+    "end_node_id": "3",
+    "mode": "railway",
+    "length": 440,
+    "capacity": 10000,
+    "population_density": 0.01,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      8.0,
+      8.8,
+      10.8
+    ]
+  },
+  {
+    "start_node_id": "5",
+    "end_node_id": "3",
+    "mode": "railway",
+    "length": 640,
+    "capacity": 10000,
+    "population_density": 0.011,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      12.0,
+      12.8,
+      15.2
+    ]
+  },
+  {
+    "start_node_id": "5",
+    "end_node_id": "4",
+    "mode": "railway",
+    "length": 480,
+    "capacity": 10000,
+    "population_density": 0.009,
+    "accident_prob_per_km": 5e-7,
+    "fuzzy_transport_time": [
+      8.8,
+      9.6,
+      11.6
+    ]
+  }
+]

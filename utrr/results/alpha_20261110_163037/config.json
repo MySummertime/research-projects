@@ -1,0 +1,269 @@
+{
+    "model_config": {
+        "instance_name": "utrr-case-v2",
+        "seed": 20261027,
+        "n_yards": 3,
+        "n_rail_layers": 6,
+        "n_rail_rows": 2,
+        "n_road_origin": 3,
+        "n_road_destination": 3,
+        "q": 12.0,
+        "alpha": 0.9,
+        "confidence_mode": "normal",
+        "deadline_hours": 98.0,
+        "hazmat_classes": [
+            {
+                "code": 3,
+                "name_cn": "第3类 易燃液体",
+                "name_en": "Class 3 flammable liquid",
+                "cost_factor": 1.5,
+                "risk_factor": 1.0
+            },
+            {
+                "code": 6,
+                "name_cn": "第6类 毒性物质",
+                "name_en": "Class 6 toxic substance",
+                "cost_factor": 2.0,
+                "risk_factor": 1.1
+            },
+            {
+                "code": 8,
+                "name_cn": "第8类 腐蚀性物质",
+                "name_en": "Class 8 corrosive substance",
+                "cost_factor": 1.5,
+                "risk_factor": 1.2
+            }
+        ],
+        "hazmat_class": 8,
+        "road_speed": 80.0,
+        "road_cost_fixed": 675.0,
+        "road_cost_per_km": 36.0,
+        "road_unit_acc_prob": 2.5e-07,
+        "rail_cost_fixed": 680.0,
+        "rail_cost_per_km": 2.754,
+        "rail_volume_tiers": [
+            [
+                10.0,
+                1.0,
+                1.0
+            ],
+            [
+                20.0,
+                1.05,
+                0.8
+            ],
+            [
+                40.0,
+                1.1,
+                0.7
+            ]
+        ],
+        "rail_unit_acc_prob": 1.1e-07,
+        "service_types": [
+            {
+                "code": 0,
+                "name_cn": "集装箱班列",
+                "name_en": "Container block train",
+                "eta": 1.0,
+                "speed": 60.0,
+                "stop_hours": 0.0,
+                "risk_multiplier": 1.33
+            },
+            {
+                "code": 1,
+                "name_cn": "普快班列",
+                "name_en": "Ordinary express block train",
+                "eta": 0.83,
+                "speed": 50.0,
+                "stop_hours": 0.0,
+                "risk_multiplier": 1.6
+            },
+            {
+                "code": 2,
+                "name_cn": "快速班列",
+                "name_en": "Fast express block train",
+                "eta": 1.33,
+                "speed": 80.0,
+                "stop_hours": 0.0,
+                "risk_multiplier": 1.0
+            }
+        ],
+        "service_selection": "segment",
+        "transfer_time": [
+            8.0,
+            4.0,
+            8.0
+        ],
+        "transfer_sigma": 4.0,
+        "transfer_cost_per_box": [
+            500.0,
+            200.0,
+            500.0
+        ],
+        "transfer_risk_factor": [
+            1.0,
+            0.5,
+            1.0
+        ],
+        "transfer_acc_prob": 0.00042261,
+        "pop_transport": 164000.0,
+        "pop_transfer": 62500.0,
+        "node_risk_theta": 0.005,
+        "node_risk_rho": 0.005,
+        "geometry_road_span": 70.0,
+        "geometry_yard_x": [
+            95.0,
+            155.0
+        ],
+        "geometry_rail_start_x": 200.0,
+        "geometry_rail_layer_gap": 170.0,
+        "geometry_rail_row_gap": 90.0,
+        "geometry_tail_road_length": 60.0,
+        "include_node_risk": true,
+        "bidirectional": true,
+        "enable_chance_pruning": true,
+        "enable_pruning": true,
+        "enable_dominance": true,
+        "max_labels_per_node": 20000,
+        "max_solutions": 5000,
+        "tolerance": 1e-09,
+        "alpha_grid": [
+            0.5,
+            0.7,
+            0.8,
+            0.85,
+            0.9,
+            0.95,
+            0.99
+        ],
+        "alpha_sweep": [
+            0.5,
+            0.995,
+            25
+        ],
+        "period_grid": [
+            0.0,
+            2.0,
+            4.0,
+            6.0,
+            8.0
+        ],
+        "node_risk_theta_grid": [
+            0.0,
+            0.005,
+            0.01
+        ],
+        "node_risk_rho_grid": [
+            0.0,
+            0.005,
+            0.01
+        ],
+        "demand_grid": [
+            5.0,
+            8.0,
+            10.0,
+            12.0,
+            18.0,
+            20.0,
+            22.0,
+            30.0,
+            38.0,
+            40.0
+        ],
+        "demand_override": null,
+        "deadline_scale_grid": [
+            1.0,
+            1.2,
+            1.5
+        ],
+        "deadline_sweep": [
+            0.8,
+            1.6,
+            17
+        ],
+        "scalability_sizes": [
+            [
+                4,
+                2,
+                3
+            ],
+            [
+                8,
+                2,
+                6
+            ],
+            [
+                12,
+                2,
+                9
+            ],
+            [
+                16,
+                3,
+                12
+            ]
+        ],
+        "scalability_full_enum_max_nodes": 52,
+        "sweep_weights": [
+            0.0,
+            0.05,
+            0.1,
+            0.2,
+            0.35,
+            0.5,
+            0.65,
+            0.8,
+            0.9,
+            0.95,
+            1.0
+        ],
+        "save_pdf": false,
+        "save_tiff": true,
+        "tiff_compression": "tiff_lzw",
+        "data_source": "real",
+        "instance_file": "",
+        "real_case_path": "C:\\Users\\franc\\Codelab\\research-diary\\projects\\utrr\\data\\real_case_xj_yrd\\network.json",
+        "real_case_od": 3,
+        "real_case_deadline_mode": "calibrated",
+        "real_case_min_deadline_hours": 12.0,
+        "real_rail_min_length": 0.0
+    },
+    "visual_config": {
+        "FONT_FAMILY_EN": "Times New Roman",
+        "FONT_FAMILY_CN": "FangSong",
+        "FONT_SIZE_TITLE": 9.0,
+        "FONT_SIZE_AXIS_LABEL": 8.5,
+        "FONT_SIZE_TICK": 7.5,
+        "FONT_SIZE_LEGEND": 7.5,
+        "FONT_SIZE_ANNOTATION": 7.0,
+        "FONT_SIZE_BASE": 8.0,
+        "FIG_WIDTH_CM_SINGLE": 7.0,
+        "FIG_WIDTH_CM_DOUBLE": 14.5,
+        "FIG_WIDTH_CM_FULL": 16.59,
+        "CM_PER_INCH": 2.54,
+        "FIG_ASPECT": 0.78,
+        "DPI": 1000,
+        "PAD_INCHES": 0.04,
+        "SPINE_LINE_WIDTH": 0.8,
+        "TICK_LENGTH": 2.5,
+        "TICK_WIDTH": 0.8,
+        "LINE_WIDTH": 1.2,
+        "LINE_WIDTH_AUX": 0.9,
+        "MARKER_SIZE": 4.0,
+        "GRID_LINE_STYLE": "--",
+        "GRID_ALPHA": 0.35,
+        "GRID_LINE_WIDTH": 0.5,
+        "NODE_SIZE_CLIENT": 55.0,
+        "NODE_SIZE_YARD": 42.0,
+        "NODE_SIZE_RAIL": 26.0,
+        "NODE_SIZE_ROAD": 18.0,
+        "NODE_LINE_WIDTH": 0.9,
+        "EDGE_WIDTH_ROAD": 0.9,
+        "EDGE_WIDTH_RAIL": 1.4,
+        "EDGE_ALPHA": 0.55,
+        "EDGE_ALPHA_HIGHLIGHT": 0.95,
+        "CAPTION_CN": "",
+        "CAPTION_EN": "",
+        "CAPTION_PAD": 0.02
+    }
+}

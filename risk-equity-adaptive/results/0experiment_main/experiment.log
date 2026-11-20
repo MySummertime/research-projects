@@ -1,0 +1,48 @@
+2026-03-28 10:05:56 [INFO ] 日志系统已启动。(文件日志级别: INFO, 控制台日志级别: WARNING)
+2026-03-28 10:05:56 [INFO ] 日志将保存至: results\experiment_2026-03-28_10-05-56\experiment.log
+2026-03-28 10:05:56 [INFO ] Global Random Seed using configuration seed: 49
+2026-03-28 10:05:56 [INFO ] 正在从 JSON 文件构建网络...
+2026-03-28 10:05:56 [INFO ]   - 已加载节点: 15
+2026-03-28 10:05:56 [INFO ]   - 已加载弧段: 124
+2026-03-28 10:05:56 [INFO ]   - 已加载任务: 5
+2026-03-28 10:05:56 [INFO ] 网络构建完成。
+2026-03-28 10:05:56 [INFO ] === Network Summary ===
+2026-03-28 10:05:56 [INFO ] Nodes: 15 (Hubs: 5)
+2026-03-28 10:05:56 [INFO ] Arcs : 124 (Bidirectional logic applied)
+2026-03-28 10:05:56 [INFO ] Tasks: 5
+2026-03-28 10:05:56 [INFO ] =======================
+2026-03-28 10:05:56 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:05:56 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:05:56 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-28 10:05:56 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-28 10:05:56 [INFO ] 开始搜索 candidate paths（预排序+哈希去重）...
+2026-03-28 10:05:56 [INFO ] 搜索完成：共为 5 个任务找到 97 条异质路径。
+2026-03-28 10:05:56 [INFO ] Path Pre-computation Time: 0.2812s
+2026-03-28 10:06:25 [INFO ] 🚀 Starting NSGA-II Optimization...
+2026-03-28 10:06:25 [INFO ] 代际收敛日志将保存至: results\experiment_2026-03-28_10-05-56\generations.csv
+2026-03-28 10:06:26 [INFO ] Gen 10: Archive Size 60
+2026-03-28 10:06:26 [INFO ] Gen 20: Archive Size 60
+2026-03-28 10:06:26 [INFO ] Gen 30: Archive Size 60
+2026-03-28 10:06:26 [INFO ] Gen 40: Archive Size 60
+2026-03-28 10:06:26 [INFO ] Gen 50: Archive Size 60
+2026-03-28 10:06:26 [INFO ] --- Generating Report & Charts ---
+2026-03-28 10:06:32 [INFO ] Pareto plot saved to: results\experiment_2026-03-28_10-05-56\pareto_frontier.png
+2026-03-28 10:06:32 [INFO ] Gini coefficient details successfully exported to: gini_coefficient_details.csv ⚖️
+2026-03-28 10:06:39 [INFO ] Gini Trade-off plot saved with Cost CMAP: gini_tradeoff 🌟
+2026-03-28 10:06:39 [INFO ] Generating detailed routing scheme to: results\experiment_2026-03-28_10-05-56\routing_scheme_details.csv
+2026-03-28 10:06:39 [INFO ] Successfully saved detailed routing scheme: routing_scheme_details.csv
+2026-03-28 10:06:39 [INFO ] Generating multiple route maps for special solutions...
+2026-03-28 10:07:02 [INFO ] Route map saved: route_Opinion_A(Min_Risk)
+2026-03-28 10:07:26 [INFO ] Route map saved: route_Opinion_B(Knee_Point)
+2026-03-28 10:07:50 [INFO ] Route map saved: route_Opinion_C(Min_Cost)
+2026-03-28 10:07:50 [INFO ] Multiple route maps generation completed. 🌟🚀
+2026-03-28 10:07:50 [INFO ] All results saved to: results\experiment_2026-03-28_10-05-56
+2026-03-28 10:07:50 [INFO ] ============================================
+2026-03-28 10:07:50 [INFO ] 实验总壁钟时间: 114.350 秒
+2026-03-28 10:07:50 [INFO ] 预计算candidate pool时间: 0.2812 秒
+2026-03-28 10:07:50 [INFO ] 算法纯CPU时间: 1.1094 秒
+2026-03-28 10:07:50 [INFO ] 算法壁钟时间: 1.117 秒（含IO、Gurobi回调等）
+2026-03-28 10:07:50 [INFO ] CPU利用率估算:  99.3%
+2026-03-28 10:07:50 [INFO ] I/O与系统开销占比: 0.7%
+2026-03-28 10:07:50 [INFO ] 所有结果已保存至: results\experiment_2026-03-28_10-05-56
+2026-03-28 10:07:50 [INFO ] ============================================

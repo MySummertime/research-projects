@@ -1,0 +1,4076 @@
+{
+  "experiment": "main",
+  "instance": "xj-yrd-OD4",
+  "data_source": "real",
+  "alpha": 0.9,
+  "confidence_mode": "normal",
+  "deadline_hours": 98.0,
+  "lambda_alpha": 1.2113933992163919,
+  "pareto_size": 3,
+  "full_front_size": 4,
+  "full_front": [
+    {
+      "service": 2,
+      "service_name": "快速班列",
+      "service_shares": {
+        "2": 1.0
+      },
+      "risk": 1513.3486200000002,
+      "cost": 284345.25969999994,
+      "t0": 47.550000000000004,
+      "mu": 16.0,
+      "sigma": 8.0,
+      "equivalent_time": 73.24114719373114,
+      "reliability": 0.9995947793461952,
+      "rail_distance": 3739.0,
+      "arc_risk": 841.39872,
+      "node_risk": 671.9499,
+      "node_risk_share": 0.44401527256819373,
+      "road_cost": 55350.0,
+      "rail_cost": 218995.25969999997,
+      "yard_cost": 10000.0,
+      "yards": [
+        "Y3",
+        "Y13"
+      ],
+      "transfers": 2,
+      "nodes": [
+        "o",
+        "Y3_in",
+        "Y3_out",
+        "LKT_b",
+        "LSW",
+        "LSHZ_a",
+        "LSHZ_b",
+        "LHTB",
+        "LCJ",
+        "LWLMQX_a",
+        "LWLMQX_b",
+        "LWLMQ",
+        "LWLMQN",
+        "LTLF",
+        "LSS",
+        "LHM",
+        "LLY",
+        "LYM",
+        "LJYG",
+        "LJQ",
+        "LQS",
+        "LZY",
+        "LSD",
+        "LJC",
+        "LWWN",
+        "LGL",
+        "LYD",
+        "LLZ_a",
+        "LLZ_b",
+        "LDX",
+        "LLX",
+        "LTS",
+        "LBJ",
+        "LSFZ_a",
+        "LSFZ_b",
+        "LSL",
+        "LSN",
+        "LXX",
+        "LNY",
+        "LXY",
+        "LHC",
+        "LYJ",
+        "LLA",
+        "LHF_a",
+        "Y13_in",
+        "Y13_out",
+        "d"
+      ],
+      "arcs": [
+        {
+          "i": "o",
+          "j": "Y3_in",
+          "kind": "road",
+          "service": null,
+          "distance": 45.0
+        },
+        {
+          "i": "Y3_in",
+          "j": "Y3_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y3_out",
+          "j": "LKT_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LKT_b",
+          "j": "LSW",
+          "kind": "rail",
+          "service": 2,
+          "distance": 62.0
+        },
+        {
+          "i": "LSW",
+          "j": "LSHZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 34.0
+        },
+        {
+          "i": "LSHZ_a",
+          "j": "LSHZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSHZ_b",
+          "j": "LHTB",
+          "kind": "rail",
+          "service": 2,
+          "distance": 67.0
+        },
+        {
+          "i": "LHTB",
+          "j": "LCJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 43.0
+        },
+        {
+          "i": "LCJ",
+          "j": "LWLMQX_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 23.0
+        },
+        {
+          "i": "LWLMQX_a",
+          "j": "LWLMQX_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LWLMQX_b",
+          "j": "LWLMQ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 12.0
+        },
+        {
+          "i": "LWLMQ",
+          "j": "LWLMQN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 10.0
+        },
+        {
+          "i": "LWLMQN",
+          "j": "LTLF",
+          "kind": "rail",
+          "service": 2,
+          "distance": 143.0
+        },
+        {
+          "i": "LTLF",
+          "j": "LSS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 140.0
+        },
+        {
+          "i": "LSS",
+          "j": "LHM",
+          "kind": "rail",
+          "service": 2,
+          "distance": 270.0
+        },
+        {
+          "i": "LHM",
+          "j": "LLY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 272.0
+        },
+        {
+          "i": "LLY",
+          "j": "LYM",
+          "kind": "rail",
+          "service": 2,
+          "distance": 165.0
+        },
+        {
+          "i": "LYM",
+          "j": "LJYG",
+          "kind": "rail",
+          "service": 2,
+          "distance": 132.0
+        },
+        {
+          "i": "LJYG",
+          "j": "LJQ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 22.0
+        },
+        {
+          "i": "LJQ",
+          "j": "LQS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 64.0
+        },
+        {
+          "i": "LQS",
+          "j": "LZY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 137.0
+        },
+        {
+          "i": "LZY",
+          "j": "LSD",
+          "kind": "rail",
+          "service": 2,
+          "distance": 53.0
+        },
+        {
+          "i": "LSD",
+          "j": "LJC",
+          "kind": "rail",
+          "service": 2,
+          "distance": 117.0
+        },
+        {
+          "i": "LJC",
+          "j": "LWWN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 87.0
+        },
+        {
+          "i": "LWWN",
+          "j": "LGL",
+          "kind": "rail",
+          "service": 2,
+          "distance": 46.0
+        },
+        {
+          "i": "LGL",
+          "j": "LYD",
+          "kind": "rail",
+          "service": 2,
+          "distance": 133.0
+        },
+        {
+          "i": "LYD",
+          "j": "LLZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 111.0
+        },
+        {
+          "i": "LLZ_a",
+          "j": "LLZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LLZ_b",
+          "j": "LDX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 118.0
+        },
+        {
+          "i": "LDX",
+          "j": "LLX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 103.0
+        },
+        {
+          "i": "LLX",
+          "j": "LTS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 130.0
+        },
+        {
+          "i": "LTS",
+          "j": "LBJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 152.0
+        },
+        {
+          "i": "LBJ",
+          "j": "LSFZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 173.0
+        },
+        {
+          "i": "LSFZ_a",
+          "j": "LSFZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSFZ_b",
+          "j": "LSL",
+          "kind": "rail",
+          "service": 2,
+          "distance": 195.0
+        },
+        {
+          "i": "LSL",
+          "j": "LSN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 90.0
+        },
+        {
+          "i": "LSN",
+          "j": "LXX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 50.0
+        },
+        {
+          "i": "LXX",
+          "j": "LNY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 85.0
+        },
+        {
+          "i": "LNY",
+          "j": "LXY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 180.0
+        },
+        {
+          "i": "LXY",
+          "j": "LHC",
+          "kind": "rail",
+          "service": 2,
+          "distance": 100.0
+        },
+        {
+          "i": "LHC",
+          "j": "LYJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 65.0
+        },
+        {
+          "i": "LYJ",
+          "j": "LLA",
+          "kind": "rail",
+          "service": 2,
+          "distance": 75.0
+        },
+        {
+          "i": "LLA",
+          "j": "LHF_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 80.0
+        },
+        {
+          "i": "LHF_a",
+          "j": "Y13_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_in",
+          "j": "Y13_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_out",
+          "j": "d",
+          "kind": "road",
+          "service": null,
+          "distance": 20.0
+        }
+      ]
+    },
+    {
+      "service": 2,
+      "service_name": "快速班列＋集装箱班列",
+      "service_shares": {
+        "2": 0.7539449050548275,
+        "0": 0.2460550949451725
+      },
+      "risk": 1743.889848,
+      "cost": 273803.5437,
+      "t0": 51.383300000000006,
+      "mu": 20.0,
+      "sigma": 12.0,
+      "equivalent_time": 85.92002079059671,
+      "reliability": 0.9824175088661058,
+      "rail_distance": 3739.0,
+      "arc_risk": 907.1220480000001,
+      "node_risk": 836.7678,
+      "node_risk_share": 0.4798283566818493,
+      "road_cost": 55350.0,
+      "rail_cost": 206453.54369999998,
+      "yard_cost": 12000.0,
+      "yards": [
+        "Y3",
+        "Y9",
+        "Y13"
+      ],
+      "transfers": 3,
+      "nodes": [
+        "o",
+        "Y3_in",
+        "Y3_out",
+        "LKT_b",
+        "LSW",
+        "LSHZ_a",
+        "LSHZ_b",
+        "LHTB",
+        "LCJ",
+        "LWLMQX_a",
+        "LWLMQX_b",
+        "LWLMQ",
+        "LWLMQN",
+        "LTLF",
+        "LSS",
+        "LHM",
+        "LLY",
+        "LYM",
+        "LJYG",
+        "LJQ",
+        "LQS",
+        "LZY",
+        "LSD",
+        "LJC",
+        "LWWN",
+        "LGL",
+        "LYD",
+        "LLZ_a",
+        "LLZ_b",
+        "LDX",
+        "LLX",
+        "LTS",
+        "LBJ",
+        "LSFZ_a",
+        "Y9_in",
+        "Y9_out",
+        "LSFZ_b",
+        "LSL",
+        "LSN",
+        "LXX",
+        "LNY",
+        "LXY",
+        "LHC",
+        "LYJ",
+        "LLA",
+        "LHF_a",
+        "Y13_in",
+        "Y13_out",
+        "d"
+      ],
+      "arcs": [
+        {
+          "i": "o",
+          "j": "Y3_in",
+          "kind": "road",
+          "service": null,
+          "distance": 45.0
+        },
+        {
+          "i": "Y3_in",
+          "j": "Y3_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y3_out",
+          "j": "LKT_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LKT_b",
+          "j": "LSW",
+          "kind": "rail",
+          "service": 2,
+          "distance": 62.0
+        },
+        {
+          "i": "LSW",
+          "j": "LSHZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 34.0
+        },
+        {
+          "i": "LSHZ_a",
+          "j": "LSHZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSHZ_b",
+          "j": "LHTB",
+          "kind": "rail",
+          "service": 2,
+          "distance": 67.0
+        },
+        {
+          "i": "LHTB",
+          "j": "LCJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 43.0
+        },
+        {
+          "i": "LCJ",
+          "j": "LWLMQX_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 23.0
+        },
+        {
+          "i": "LWLMQX_a",
+          "j": "LWLMQX_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LWLMQX_b",
+          "j": "LWLMQ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 12.0
+        },
+        {
+          "i": "LWLMQ",
+          "j": "LWLMQN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 10.0
+        },
+        {
+          "i": "LWLMQN",
+          "j": "LTLF",
+          "kind": "rail",
+          "service": 2,
+          "distance": 143.0
+        },
+        {
+          "i": "LTLF",
+          "j": "LSS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 140.0
+        },
+        {
+          "i": "LSS",
+          "j": "LHM",
+          "kind": "rail",
+          "service": 2,
+          "distance": 270.0
+        },
+        {
+          "i": "LHM",
+          "j": "LLY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 272.0
+        },
+        {
+          "i": "LLY",
+          "j": "LYM",
+          "kind": "rail",
+          "service": 2,
+          "distance": 165.0
+        },
+        {
+          "i": "LYM",
+          "j": "LJYG",
+          "kind": "rail",
+          "service": 2,
+          "distance": 132.0
+        },
+        {
+          "i": "LJYG",
+          "j": "LJQ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 22.0
+        },
+        {
+          "i": "LJQ",
+          "j": "LQS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 64.0
+        },
+        {
+          "i": "LQS",
+          "j": "LZY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 137.0
+        },
+        {
+          "i": "LZY",
+          "j": "LSD",
+          "kind": "rail",
+          "service": 2,
+          "distance": 53.0
+        },
+        {
+          "i": "LSD",
+          "j": "LJC",
+          "kind": "rail",
+          "service": 2,
+          "distance": 117.0
+        },
+        {
+          "i": "LJC",
+          "j": "LWWN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 87.0
+        },
+        {
+          "i": "LWWN",
+          "j": "LGL",
+          "kind": "rail",
+          "service": 2,
+          "distance": 46.0
+        },
+        {
+          "i": "LGL",
+          "j": "LYD",
+          "kind": "rail",
+          "service": 2,
+          "distance": 133.0
+        },
+        {
+          "i": "LYD",
+          "j": "LLZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 111.0
+        },
+        {
+          "i": "LLZ_a",
+          "j": "LLZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LLZ_b",
+          "j": "LDX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 118.0
+        },
+        {
+          "i": "LDX",
+          "j": "LLX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 103.0
+        },
+        {
+          "i": "LLX",
+          "j": "LTS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 130.0
+        },
+        {
+          "i": "LTS",
+          "j": "LBJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 152.0
+        },
+        {
+          "i": "LBJ",
+          "j": "LSFZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 173.0
+        },
+        {
+          "i": "LSFZ_a",
+          "j": "Y9_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y9_in",
+          "j": "Y9_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y9_out",
+          "j": "LSFZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSFZ_b",
+          "j": "LSL",
+          "kind": "rail",
+          "service": 0,
+          "distance": 195.0
+        },
+        {
+          "i": "LSL",
+          "j": "LSN",
+          "kind": "rail",
+          "service": 0,
+          "distance": 90.0
+        },
+        {
+          "i": "LSN",
+          "j": "LXX",
+          "kind": "rail",
+          "service": 0,
+          "distance": 50.0
+        },
+        {
+          "i": "LXX",
+          "j": "LNY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 85.0
+        },
+        {
+          "i": "LNY",
+          "j": "LXY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 180.0
+        },
+        {
+          "i": "LXY",
+          "j": "LHC",
+          "kind": "rail",
+          "service": 0,
+          "distance": 100.0
+        },
+        {
+          "i": "LHC",
+          "j": "LYJ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 65.0
+        },
+        {
+          "i": "LYJ",
+          "j": "LLA",
+          "kind": "rail",
+          "service": 0,
+          "distance": 75.0
+        },
+        {
+          "i": "LLA",
+          "j": "LHF_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 80.0
+        },
+        {
+          "i": "LHF_a",
+          "j": "Y13_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_in",
+          "j": "Y13_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_out",
+          "j": "d",
+          "kind": "road",
+          "service": null,
+          "distance": 20.0
+        }
+      ]
+    },
+    {
+      "service": 0,
+      "service_name": "集装箱班列",
+      "service_shares": {
+        "0": 1.0
+      },
+      "risk": 1780.4567975999998,
+      "cost": 230008.09,
+      "t0": 63.129200000000004,
+      "mu": 16.0,
+      "sigma": 8.0,
+      "equivalent_time": 88.82034719373114,
+      "reliability": 0.9863258640643872,
+      "rail_distance": 3739.0,
+      "arc_risk": 1108.5068975999998,
+      "node_risk": 671.9499,
+      "node_risk_share": 0.37740309167050134,
+      "road_cost": 55350.0,
+      "rail_cost": 164658.09000000003,
+      "yard_cost": 10000.0,
+      "yards": [
+        "Y3",
+        "Y13"
+      ],
+      "transfers": 2,
+      "nodes": [
+        "o",
+        "Y3_in",
+        "Y3_out",
+        "LKT_b",
+        "LSW",
+        "LSHZ_a",
+        "LSHZ_b",
+        "LHTB",
+        "LCJ",
+        "LWLMQX_a",
+        "LWLMQX_b",
+        "LWLMQ",
+        "LWLMQN",
+        "LTLF",
+        "LSS",
+        "LHM",
+        "LLY",
+        "LYM",
+        "LJYG",
+        "LJQ",
+        "LQS",
+        "LZY",
+        "LSD",
+        "LJC",
+        "LWWN",
+        "LGL",
+        "LYD",
+        "LLZ_a",
+        "LLZ_b",
+        "LDX",
+        "LLX",
+        "LTS",
+        "LBJ",
+        "LSFZ_a",
+        "LSFZ_b",
+        "LSL",
+        "LSN",
+        "LXX",
+        "LNY",
+        "LXY",
+        "LHC",
+        "LYJ",
+        "LLA",
+        "LHF_a",
+        "Y13_in",
+        "Y13_out",
+        "d"
+      ],
+      "arcs": [
+        {
+          "i": "o",
+          "j": "Y3_in",
+          "kind": "road",
+          "service": null,
+          "distance": 45.0
+        },
+        {
+          "i": "Y3_in",
+          "j": "Y3_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y3_out",
+          "j": "LKT_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LKT_b",
+          "j": "LSW",
+          "kind": "rail",
+          "service": 0,
+          "distance": 62.0
+        },
+        {
+          "i": "LSW",
+          "j": "LSHZ_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 34.0
+        },
+        {
+          "i": "LSHZ_a",
+          "j": "LSHZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSHZ_b",
+          "j": "LHTB",
+          "kind": "rail",
+          "service": 0,
+          "distance": 67.0
+        },
+        {
+          "i": "LHTB",
+          "j": "LCJ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 43.0
+        },
+        {
+          "i": "LCJ",
+          "j": "LWLMQX_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 23.0
+        },
+        {
+          "i": "LWLMQX_a",
+          "j": "LWLMQX_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LWLMQX_b",
+          "j": "LWLMQ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 12.0
+        },
+        {
+          "i": "LWLMQ",
+          "j": "LWLMQN",
+          "kind": "rail",
+          "service": 0,
+          "distance": 10.0
+        },
+        {
+          "i": "LWLMQN",
+          "j": "LTLF",
+          "kind": "rail",
+          "service": 0,
+          "distance": 143.0
+        },
+        {
+          "i": "LTLF",
+          "j": "LSS",
+          "kind": "rail",
+          "service": 0,
+          "distance": 140.0
+        },
+        {
+          "i": "LSS",
+          "j": "LHM",
+          "kind": "rail",
+          "service": 0,
+          "distance": 270.0
+        },
+        {
+          "i": "LHM",
+          "j": "LLY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 272.0
+        },
+        {
+          "i": "LLY",
+          "j": "LYM",
+          "kind": "rail",
+          "service": 0,
+          "distance": 165.0
+        },
+        {
+          "i": "LYM",
+          "j": "LJYG",
+          "kind": "rail",
+          "service": 0,
+          "distance": 132.0
+        },
+        {
+          "i": "LJYG",
+          "j": "LJQ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 22.0
+        },
+        {
+          "i": "LJQ",
+          "j": "LQS",
+          "kind": "rail",
+          "service": 0,
+          "distance": 64.0
+        },
+        {
+          "i": "LQS",
+          "j": "LZY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 137.0
+        },
+        {
+          "i": "LZY",
+          "j": "LSD",
+          "kind": "rail",
+          "service": 0,
+          "distance": 53.0
+        },
+        {
+          "i": "LSD",
+          "j": "LJC",
+          "kind": "rail",
+          "service": 0,
+          "distance": 117.0
+        },
+        {
+          "i": "LJC",
+          "j": "LWWN",
+          "kind": "rail",
+          "service": 0,
+          "distance": 87.0
+        },
+        {
+          "i": "LWWN",
+          "j": "LGL",
+          "kind": "rail",
+          "service": 0,
+          "distance": 46.0
+        },
+        {
+          "i": "LGL",
+          "j": "LYD",
+          "kind": "rail",
+          "service": 0,
+          "distance": 133.0
+        },
+        {
+          "i": "LYD",
+          "j": "LLZ_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 111.0
+        },
+        {
+          "i": "LLZ_a",
+          "j": "LLZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LLZ_b",
+          "j": "LDX",
+          "kind": "rail",
+          "service": 0,
+          "distance": 118.0
+        },
+        {
+          "i": "LDX",
+          "j": "LLX",
+          "kind": "rail",
+          "service": 0,
+          "distance": 103.0
+        },
+        {
+          "i": "LLX",
+          "j": "LTS",
+          "kind": "rail",
+          "service": 0,
+          "distance": 130.0
+        },
+        {
+          "i": "LTS",
+          "j": "LBJ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 152.0
+        },
+        {
+          "i": "LBJ",
+          "j": "LSFZ_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 173.0
+        },
+        {
+          "i": "LSFZ_a",
+          "j": "LSFZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSFZ_b",
+          "j": "LSL",
+          "kind": "rail",
+          "service": 0,
+          "distance": 195.0
+        },
+        {
+          "i": "LSL",
+          "j": "LSN",
+          "kind": "rail",
+          "service": 0,
+          "distance": 90.0
+        },
+        {
+          "i": "LSN",
+          "j": "LXX",
+          "kind": "rail",
+          "service": 0,
+          "distance": 50.0
+        },
+        {
+          "i": "LXX",
+          "j": "LNY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 85.0
+        },
+        {
+          "i": "LNY",
+          "j": "LXY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 180.0
+        },
+        {
+          "i": "LXY",
+          "j": "LHC",
+          "kind": "rail",
+          "service": 0,
+          "distance": 100.0
+        },
+        {
+          "i": "LHC",
+          "j": "LYJ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 65.0
+        },
+        {
+          "i": "LYJ",
+          "j": "LLA",
+          "kind": "rail",
+          "service": 0,
+          "distance": 75.0
+        },
+        {
+          "i": "LLA",
+          "j": "LHF_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 80.0
+        },
+        {
+          "i": "LHF_a",
+          "j": "Y13_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_in",
+          "j": "Y13_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_out",
+          "j": "d",
+          "kind": "road",
+          "service": null,
+          "distance": 20.0
+        }
+      ]
+    },
+    {
+      "service": 1,
+      "service_name": "普快班列",
+      "service_shares": {
+        "1": 1.0
+      },
+      "risk": 1998.9998519999997,
+      "cost": 202016.21469999998,
+      "t0": 75.5925,
+      "mu": 16.0,
+      "sigma": 8.0,
+      "equivalent_time": 101.28364719373114,
+      "reliability": 0.8104197534878053,
+      "rail_distance": 3739.0,
+      "arc_risk": 1327.0499519999998,
+      "node_risk": 671.9499,
+      "node_risk_share": 0.33614304639778436,
+      "road_cost": 55350.0,
+      "rail_cost": 136666.2147,
+      "yard_cost": 10000.0,
+      "yards": [
+        "Y3",
+        "Y13"
+      ],
+      "transfers": 2,
+      "nodes": [
+        "o",
+        "Y3_in",
+        "Y3_out",
+        "LKT_b",
+        "LSW",
+        "LSHZ_a",
+        "LSHZ_b",
+        "LHTB",
+        "LCJ",
+        "LWLMQX_a",
+        "LWLMQX_b",
+        "LWLMQ",
+        "LWLMQN",
+        "LTLF",
+        "LSS",
+        "LHM",
+        "LLY",
+        "LYM",
+        "LJYG",
+        "LJQ",
+        "LQS",
+        "LZY",
+        "LSD",
+        "LJC",
+        "LWWN",
+        "LGL",
+        "LYD",
+        "LLZ_a",
+        "LLZ_b",
+        "LDX",
+        "LLX",
+        "LTS",
+        "LBJ",
+        "LSFZ_a",
+        "LSFZ_b",
+        "LSL",
+        "LSN",
+        "LXX",
+        "LNY",
+        "LXY",
+        "LHC",
+        "LYJ",
+        "LLA",
+        "LHF_a",
+        "Y13_in",
+        "Y13_out",
+        "d"
+      ],
+      "arcs": [
+        {
+          "i": "o",
+          "j": "Y3_in",
+          "kind": "road",
+          "service": null,
+          "distance": 45.0
+        },
+        {
+          "i": "Y3_in",
+          "j": "Y3_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y3_out",
+          "j": "LKT_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LKT_b",
+          "j": "LSW",
+          "kind": "rail",
+          "service": 1,
+          "distance": 62.0
+        },
+        {
+          "i": "LSW",
+          "j": "LSHZ_a",
+          "kind": "rail",
+          "service": 1,
+          "distance": 34.0
+        },
+        {
+          "i": "LSHZ_a",
+          "j": "LSHZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSHZ_b",
+          "j": "LHTB",
+          "kind": "rail",
+          "service": 1,
+          "distance": 67.0
+        },
+        {
+          "i": "LHTB",
+          "j": "LCJ",
+          "kind": "rail",
+          "service": 1,
+          "distance": 43.0
+        },
+        {
+          "i": "LCJ",
+          "j": "LWLMQX_a",
+          "kind": "rail",
+          "service": 1,
+          "distance": 23.0
+        },
+        {
+          "i": "LWLMQX_a",
+          "j": "LWLMQX_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LWLMQX_b",
+          "j": "LWLMQ",
+          "kind": "rail",
+          "service": 1,
+          "distance": 12.0
+        },
+        {
+          "i": "LWLMQ",
+          "j": "LWLMQN",
+          "kind": "rail",
+          "service": 1,
+          "distance": 10.0
+        },
+        {
+          "i": "LWLMQN",
+          "j": "LTLF",
+          "kind": "rail",
+          "service": 1,
+          "distance": 143.0
+        },
+        {
+          "i": "LTLF",
+          "j": "LSS",
+          "kind": "rail",
+          "service": 1,
+          "distance": 140.0
+        },
+        {
+          "i": "LSS",
+          "j": "LHM",
+          "kind": "rail",
+          "service": 1,
+          "distance": 270.0
+        },
+        {
+          "i": "LHM",
+          "j": "LLY",
+          "kind": "rail",
+          "service": 1,
+          "distance": 272.0
+        },
+        {
+          "i": "LLY",
+          "j": "LYM",
+          "kind": "rail",
+          "service": 1,
+          "distance": 165.0
+        },
+        {
+          "i": "LYM",
+          "j": "LJYG",
+          "kind": "rail",
+          "service": 1,
+          "distance": 132.0
+        },
+        {
+          "i": "LJYG",
+          "j": "LJQ",
+          "kind": "rail",
+          "service": 1,
+          "distance": 22.0
+        },
+        {
+          "i": "LJQ",
+          "j": "LQS",
+          "kind": "rail",
+          "service": 1,
+          "distance": 64.0
+        },
+        {
+          "i": "LQS",
+          "j": "LZY",
+          "kind": "rail",
+          "service": 1,
+          "distance": 137.0
+        },
+        {
+          "i": "LZY",
+          "j": "LSD",
+          "kind": "rail",
+          "service": 1,
+          "distance": 53.0
+        },
+        {
+          "i": "LSD",
+          "j": "LJC",
+          "kind": "rail",
+          "service": 1,
+          "distance": 117.0
+        },
+        {
+          "i": "LJC",
+          "j": "LWWN",
+          "kind": "rail",
+          "service": 1,
+          "distance": 87.0
+        },
+        {
+          "i": "LWWN",
+          "j": "LGL",
+          "kind": "rail",
+          "service": 1,
+          "distance": 46.0
+        },
+        {
+          "i": "LGL",
+          "j": "LYD",
+          "kind": "rail",
+          "service": 1,
+          "distance": 133.0
+        },
+        {
+          "i": "LYD",
+          "j": "LLZ_a",
+          "kind": "rail",
+          "service": 1,
+          "distance": 111.0
+        },
+        {
+          "i": "LLZ_a",
+          "j": "LLZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LLZ_b",
+          "j": "LDX",
+          "kind": "rail",
+          "service": 1,
+          "distance": 118.0
+        },
+        {
+          "i": "LDX",
+          "j": "LLX",
+          "kind": "rail",
+          "service": 1,
+          "distance": 103.0
+        },
+        {
+          "i": "LLX",
+          "j": "LTS",
+          "kind": "rail",
+          "service": 1,
+          "distance": 130.0
+        },
+        {
+          "i": "LTS",
+          "j": "LBJ",
+          "kind": "rail",
+          "service": 1,
+          "distance": 152.0
+        },
+        {
+          "i": "LBJ",
+          "j": "LSFZ_a",
+          "kind": "rail",
+          "service": 1,
+          "distance": 173.0
+        },
+        {
+          "i": "LSFZ_a",
+          "j": "LSFZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSFZ_b",
+          "j": "LSL",
+          "kind": "rail",
+          "service": 1,
+          "distance": 195.0
+        },
+        {
+          "i": "LSL",
+          "j": "LSN",
+          "kind": "rail",
+          "service": 1,
+          "distance": 90.0
+        },
+        {
+          "i": "LSN",
+          "j": "LXX",
+          "kind": "rail",
+          "service": 1,
+          "distance": 50.0
+        },
+        {
+          "i": "LXX",
+          "j": "LNY",
+          "kind": "rail",
+          "service": 1,
+          "distance": 85.0
+        },
+        {
+          "i": "LNY",
+          "j": "LXY",
+          "kind": "rail",
+          "service": 1,
+          "distance": 180.0
+        },
+        {
+          "i": "LXY",
+          "j": "LHC",
+          "kind": "rail",
+          "service": 1,
+          "distance": 100.0
+        },
+        {
+          "i": "LHC",
+          "j": "LYJ",
+          "kind": "rail",
+          "service": 1,
+          "distance": 65.0
+        },
+        {
+          "i": "LYJ",
+          "j": "LLA",
+          "kind": "rail",
+          "service": 1,
+          "distance": 75.0
+        },
+        {
+          "i": "LLA",
+          "j": "LHF_a",
+          "kind": "rail",
+          "service": 1,
+          "distance": 80.0
+        },
+        {
+          "i": "LHF_a",
+          "j": "Y13_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_in",
+          "j": "Y13_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_out",
+          "j": "d",
+          "kind": "road",
+          "service": null,
+          "distance": 20.0
+        }
+      ]
+    }
+  ],
+  "pareto": [
+    {
+      "service": 2,
+      "service_name": "快速班列",
+      "service_shares": {
+        "2": 1.0
+      },
+      "risk": 1513.3486200000002,
+      "cost": 284345.25969999994,
+      "t0": 47.550000000000004,
+      "mu": 16.0,
+      "sigma": 8.0,
+      "equivalent_time": 73.24114719373114,
+      "reliability": 0.9995947793461952,
+      "rail_distance": 3739.0,
+      "arc_risk": 841.39872,
+      "node_risk": 671.9499,
+      "node_risk_share": 0.44401527256819373,
+      "road_cost": 55350.0,
+      "rail_cost": 218995.25969999997,
+      "yard_cost": 10000.0,
+      "yards": [
+        "Y3",
+        "Y13"
+      ],
+      "transfers": 2,
+      "nodes": [
+        "o",
+        "Y3_in",
+        "Y3_out",
+        "LKT_b",
+        "LSW",
+        "LSHZ_a",
+        "LSHZ_b",
+        "LHTB",
+        "LCJ",
+        "LWLMQX_a",
+        "LWLMQX_b",
+        "LWLMQ",
+        "LWLMQN",
+        "LTLF",
+        "LSS",
+        "LHM",
+        "LLY",
+        "LYM",
+        "LJYG",
+        "LJQ",
+        "LQS",
+        "LZY",
+        "LSD",
+        "LJC",
+        "LWWN",
+        "LGL",
+        "LYD",
+        "LLZ_a",
+        "LLZ_b",
+        "LDX",
+        "LLX",
+        "LTS",
+        "LBJ",
+        "LSFZ_a",
+        "LSFZ_b",
+        "LSL",
+        "LSN",
+        "LXX",
+        "LNY",
+        "LXY",
+        "LHC",
+        "LYJ",
+        "LLA",
+        "LHF_a",
+        "Y13_in",
+        "Y13_out",
+        "d"
+      ],
+      "arcs": [
+        {
+          "i": "o",
+          "j": "Y3_in",
+          "kind": "road",
+          "service": null,
+          "distance": 45.0
+        },
+        {
+          "i": "Y3_in",
+          "j": "Y3_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y3_out",
+          "j": "LKT_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LKT_b",
+          "j": "LSW",
+          "kind": "rail",
+          "service": 2,
+          "distance": 62.0
+        },
+        {
+          "i": "LSW",
+          "j": "LSHZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 34.0
+        },
+        {
+          "i": "LSHZ_a",
+          "j": "LSHZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSHZ_b",
+          "j": "LHTB",
+          "kind": "rail",
+          "service": 2,
+          "distance": 67.0
+        },
+        {
+          "i": "LHTB",
+          "j": "LCJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 43.0
+        },
+        {
+          "i": "LCJ",
+          "j": "LWLMQX_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 23.0
+        },
+        {
+          "i": "LWLMQX_a",
+          "j": "LWLMQX_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LWLMQX_b",
+          "j": "LWLMQ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 12.0
+        },
+        {
+          "i": "LWLMQ",
+          "j": "LWLMQN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 10.0
+        },
+        {
+          "i": "LWLMQN",
+          "j": "LTLF",
+          "kind": "rail",
+          "service": 2,
+          "distance": 143.0
+        },
+        {
+          "i": "LTLF",
+          "j": "LSS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 140.0
+        },
+        {
+          "i": "LSS",
+          "j": "LHM",
+          "kind": "rail",
+          "service": 2,
+          "distance": 270.0
+        },
+        {
+          "i": "LHM",
+          "j": "LLY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 272.0
+        },
+        {
+          "i": "LLY",
+          "j": "LYM",
+          "kind": "rail",
+          "service": 2,
+          "distance": 165.0
+        },
+        {
+          "i": "LYM",
+          "j": "LJYG",
+          "kind": "rail",
+          "service": 2,
+          "distance": 132.0
+        },
+        {
+          "i": "LJYG",
+          "j": "LJQ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 22.0
+        },
+        {
+          "i": "LJQ",
+          "j": "LQS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 64.0
+        },
+        {
+          "i": "LQS",
+          "j": "LZY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 137.0
+        },
+        {
+          "i": "LZY",
+          "j": "LSD",
+          "kind": "rail",
+          "service": 2,
+          "distance": 53.0
+        },
+        {
+          "i": "LSD",
+          "j": "LJC",
+          "kind": "rail",
+          "service": 2,
+          "distance": 117.0
+        },
+        {
+          "i": "LJC",
+          "j": "LWWN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 87.0
+        },
+        {
+          "i": "LWWN",
+          "j": "LGL",
+          "kind": "rail",
+          "service": 2,
+          "distance": 46.0
+        },
+        {
+          "i": "LGL",
+          "j": "LYD",
+          "kind": "rail",
+          "service": 2,
+          "distance": 133.0
+        },
+        {
+          "i": "LYD",
+          "j": "LLZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 111.0
+        },
+        {
+          "i": "LLZ_a",
+          "j": "LLZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LLZ_b",
+          "j": "LDX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 118.0
+        },
+        {
+          "i": "LDX",
+          "j": "LLX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 103.0
+        },
+        {
+          "i": "LLX",
+          "j": "LTS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 130.0
+        },
+        {
+          "i": "LTS",
+          "j": "LBJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 152.0
+        },
+        {
+          "i": "LBJ",
+          "j": "LSFZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 173.0
+        },
+        {
+          "i": "LSFZ_a",
+          "j": "LSFZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSFZ_b",
+          "j": "LSL",
+          "kind": "rail",
+          "service": 2,
+          "distance": 195.0
+        },
+        {
+          "i": "LSL",
+          "j": "LSN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 90.0
+        },
+        {
+          "i": "LSN",
+          "j": "LXX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 50.0
+        },
+        {
+          "i": "LXX",
+          "j": "LNY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 85.0
+        },
+        {
+          "i": "LNY",
+          "j": "LXY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 180.0
+        },
+        {
+          "i": "LXY",
+          "j": "LHC",
+          "kind": "rail",
+          "service": 2,
+          "distance": 100.0
+        },
+        {
+          "i": "LHC",
+          "j": "LYJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 65.0
+        },
+        {
+          "i": "LYJ",
+          "j": "LLA",
+          "kind": "rail",
+          "service": 2,
+          "distance": 75.0
+        },
+        {
+          "i": "LLA",
+          "j": "LHF_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 80.0
+        },
+        {
+          "i": "LHF_a",
+          "j": "Y13_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_in",
+          "j": "Y13_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_out",
+          "j": "d",
+          "kind": "road",
+          "service": null,
+          "distance": 20.0
+        }
+      ]
+    },
+    {
+      "service": 2,
+      "service_name": "快速班列＋集装箱班列",
+      "service_shares": {
+        "2": 0.7539449050548275,
+        "0": 0.2460550949451725
+      },
+      "risk": 1743.889848,
+      "cost": 273803.5437,
+      "t0": 51.383300000000006,
+      "mu": 20.0,
+      "sigma": 12.0,
+      "equivalent_time": 85.92002079059671,
+      "reliability": 0.9824175088661058,
+      "rail_distance": 3739.0,
+      "arc_risk": 907.1220480000001,
+      "node_risk": 836.7678,
+      "node_risk_share": 0.4798283566818493,
+      "road_cost": 55350.0,
+      "rail_cost": 206453.54369999998,
+      "yard_cost": 12000.0,
+      "yards": [
+        "Y3",
+        "Y9",
+        "Y13"
+      ],
+      "transfers": 3,
+      "nodes": [
+        "o",
+        "Y3_in",
+        "Y3_out",
+        "LKT_b",
+        "LSW",
+        "LSHZ_a",
+        "LSHZ_b",
+        "LHTB",
+        "LCJ",
+        "LWLMQX_a",
+        "LWLMQX_b",
+        "LWLMQ",
+        "LWLMQN",
+        "LTLF",
+        "LSS",
+        "LHM",
+        "LLY",
+        "LYM",
+        "LJYG",
+        "LJQ",
+        "LQS",
+        "LZY",
+        "LSD",
+        "LJC",
+        "LWWN",
+        "LGL",
+        "LYD",
+        "LLZ_a",
+        "LLZ_b",
+        "LDX",
+        "LLX",
+        "LTS",
+        "LBJ",
+        "LSFZ_a",
+        "Y9_in",
+        "Y9_out",
+        "LSFZ_b",
+        "LSL",
+        "LSN",
+        "LXX",
+        "LNY",
+        "LXY",
+        "LHC",
+        "LYJ",
+        "LLA",
+        "LHF_a",
+        "Y13_in",
+        "Y13_out",
+        "d"
+      ],
+      "arcs": [
+        {
+          "i": "o",
+          "j": "Y3_in",
+          "kind": "road",
+          "service": null,
+          "distance": 45.0
+        },
+        {
+          "i": "Y3_in",
+          "j": "Y3_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y3_out",
+          "j": "LKT_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LKT_b",
+          "j": "LSW",
+          "kind": "rail",
+          "service": 2,
+          "distance": 62.0
+        },
+        {
+          "i": "LSW",
+          "j": "LSHZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 34.0
+        },
+        {
+          "i": "LSHZ_a",
+          "j": "LSHZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSHZ_b",
+          "j": "LHTB",
+          "kind": "rail",
+          "service": 2,
+          "distance": 67.0
+        },
+        {
+          "i": "LHTB",
+          "j": "LCJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 43.0
+        },
+        {
+          "i": "LCJ",
+          "j": "LWLMQX_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 23.0
+        },
+        {
+          "i": "LWLMQX_a",
+          "j": "LWLMQX_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LWLMQX_b",
+          "j": "LWLMQ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 12.0
+        },
+        {
+          "i": "LWLMQ",
+          "j": "LWLMQN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 10.0
+        },
+        {
+          "i": "LWLMQN",
+          "j": "LTLF",
+          "kind": "rail",
+          "service": 2,
+          "distance": 143.0
+        },
+        {
+          "i": "LTLF",
+          "j": "LSS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 140.0
+        },
+        {
+          "i": "LSS",
+          "j": "LHM",
+          "kind": "rail",
+          "service": 2,
+          "distance": 270.0
+        },
+        {
+          "i": "LHM",
+          "j": "LLY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 272.0
+        },
+        {
+          "i": "LLY",
+          "j": "LYM",
+          "kind": "rail",
+          "service": 2,
+          "distance": 165.0
+        },
+        {
+          "i": "LYM",
+          "j": "LJYG",
+          "kind": "rail",
+          "service": 2,
+          "distance": 132.0
+        },
+        {
+          "i": "LJYG",
+          "j": "LJQ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 22.0
+        },
+        {
+          "i": "LJQ",
+          "j": "LQS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 64.0
+        },
+        {
+          "i": "LQS",
+          "j": "LZY",
+          "kind": "rail",
+          "service": 2,
+          "distance": 137.0
+        },
+        {
+          "i": "LZY",
+          "j": "LSD",
+          "kind": "rail",
+          "service": 2,
+          "distance": 53.0
+        },
+        {
+          "i": "LSD",
+          "j": "LJC",
+          "kind": "rail",
+          "service": 2,
+          "distance": 117.0
+        },
+        {
+          "i": "LJC",
+          "j": "LWWN",
+          "kind": "rail",
+          "service": 2,
+          "distance": 87.0
+        },
+        {
+          "i": "LWWN",
+          "j": "LGL",
+          "kind": "rail",
+          "service": 2,
+          "distance": 46.0
+        },
+        {
+          "i": "LGL",
+          "j": "LYD",
+          "kind": "rail",
+          "service": 2,
+          "distance": 133.0
+        },
+        {
+          "i": "LYD",
+          "j": "LLZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 111.0
+        },
+        {
+          "i": "LLZ_a",
+          "j": "LLZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LLZ_b",
+          "j": "LDX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 118.0
+        },
+        {
+          "i": "LDX",
+          "j": "LLX",
+          "kind": "rail",
+          "service": 2,
+          "distance": 103.0
+        },
+        {
+          "i": "LLX",
+          "j": "LTS",
+          "kind": "rail",
+          "service": 2,
+          "distance": 130.0
+        },
+        {
+          "i": "LTS",
+          "j": "LBJ",
+          "kind": "rail",
+          "service": 2,
+          "distance": 152.0
+        },
+        {
+          "i": "LBJ",
+          "j": "LSFZ_a",
+          "kind": "rail",
+          "service": 2,
+          "distance": 173.0
+        },
+        {
+          "i": "LSFZ_a",
+          "j": "Y9_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y9_in",
+          "j": "Y9_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y9_out",
+          "j": "LSFZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSFZ_b",
+          "j": "LSL",
+          "kind": "rail",
+          "service": 0,
+          "distance": 195.0
+        },
+        {
+          "i": "LSL",
+          "j": "LSN",
+          "kind": "rail",
+          "service": 0,
+          "distance": 90.0
+        },
+        {
+          "i": "LSN",
+          "j": "LXX",
+          "kind": "rail",
+          "service": 0,
+          "distance": 50.0
+        },
+        {
+          "i": "LXX",
+          "j": "LNY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 85.0
+        },
+        {
+          "i": "LNY",
+          "j": "LXY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 180.0
+        },
+        {
+          "i": "LXY",
+          "j": "LHC",
+          "kind": "rail",
+          "service": 0,
+          "distance": 100.0
+        },
+        {
+          "i": "LHC",
+          "j": "LYJ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 65.0
+        },
+        {
+          "i": "LYJ",
+          "j": "LLA",
+          "kind": "rail",
+          "service": 0,
+          "distance": 75.0
+        },
+        {
+          "i": "LLA",
+          "j": "LHF_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 80.0
+        },
+        {
+          "i": "LHF_a",
+          "j": "Y13_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_in",
+          "j": "Y13_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_out",
+          "j": "d",
+          "kind": "road",
+          "service": null,
+          "distance": 20.0
+        }
+      ]
+    },
+    {
+      "service": 0,
+      "service_name": "集装箱班列",
+      "service_shares": {
+        "0": 1.0
+      },
+      "risk": 1780.4567975999998,
+      "cost": 230008.09,
+      "t0": 63.129200000000004,
+      "mu": 16.0,
+      "sigma": 8.0,
+      "equivalent_time": 88.82034719373114,
+      "reliability": 0.9863258640643872,
+      "rail_distance": 3739.0,
+      "arc_risk": 1108.5068975999998,
+      "node_risk": 671.9499,
+      "node_risk_share": 0.37740309167050134,
+      "road_cost": 55350.0,
+      "rail_cost": 164658.09000000003,
+      "yard_cost": 10000.0,
+      "yards": [
+        "Y3",
+        "Y13"
+      ],
+      "transfers": 2,
+      "nodes": [
+        "o",
+        "Y3_in",
+        "Y3_out",
+        "LKT_b",
+        "LSW",
+        "LSHZ_a",
+        "LSHZ_b",
+        "LHTB",
+        "LCJ",
+        "LWLMQX_a",
+        "LWLMQX_b",
+        "LWLMQ",
+        "LWLMQN",
+        "LTLF",
+        "LSS",
+        "LHM",
+        "LLY",
+        "LYM",
+        "LJYG",
+        "LJQ",
+        "LQS",
+        "LZY",
+        "LSD",
+        "LJC",
+        "LWWN",
+        "LGL",
+        "LYD",
+        "LLZ_a",
+        "LLZ_b",
+        "LDX",
+        "LLX",
+        "LTS",
+        "LBJ",
+        "LSFZ_a",
+        "LSFZ_b",
+        "LSL",
+        "LSN",
+        "LXX",
+        "LNY",
+        "LXY",
+        "LHC",
+        "LYJ",
+        "LLA",
+        "LHF_a",
+        "Y13_in",
+        "Y13_out",
+        "d"
+      ],
+      "arcs": [
+        {
+          "i": "o",
+          "j": "Y3_in",
+          "kind": "road",
+          "service": null,
+          "distance": 45.0
+        },
+        {
+          "i": "Y3_in",
+          "j": "Y3_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y3_out",
+          "j": "LKT_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LKT_b",
+          "j": "LSW",
+          "kind": "rail",
+          "service": 0,
+          "distance": 62.0
+        },
+        {
+          "i": "LSW",
+          "j": "LSHZ_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 34.0
+        },
+        {
+          "i": "LSHZ_a",
+          "j": "LSHZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSHZ_b",
+          "j": "LHTB",
+          "kind": "rail",
+          "service": 0,
+          "distance": 67.0
+        },
+        {
+          "i": "LHTB",
+          "j": "LCJ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 43.0
+        },
+        {
+          "i": "LCJ",
+          "j": "LWLMQX_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 23.0
+        },
+        {
+          "i": "LWLMQX_a",
+          "j": "LWLMQX_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LWLMQX_b",
+          "j": "LWLMQ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 12.0
+        },
+        {
+          "i": "LWLMQ",
+          "j": "LWLMQN",
+          "kind": "rail",
+          "service": 0,
+          "distance": 10.0
+        },
+        {
+          "i": "LWLMQN",
+          "j": "LTLF",
+          "kind": "rail",
+          "service": 0,
+          "distance": 143.0
+        },
+        {
+          "i": "LTLF",
+          "j": "LSS",
+          "kind": "rail",
+          "service": 0,
+          "distance": 140.0
+        },
+        {
+          "i": "LSS",
+          "j": "LHM",
+          "kind": "rail",
+          "service": 0,
+          "distance": 270.0
+        },
+        {
+          "i": "LHM",
+          "j": "LLY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 272.0
+        },
+        {
+          "i": "LLY",
+          "j": "LYM",
+          "kind": "rail",
+          "service": 0,
+          "distance": 165.0
+        },
+        {
+          "i": "LYM",
+          "j": "LJYG",
+          "kind": "rail",
+          "service": 0,
+          "distance": 132.0
+        },
+        {
+          "i": "LJYG",
+          "j": "LJQ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 22.0
+        },
+        {
+          "i": "LJQ",
+          "j": "LQS",
+          "kind": "rail",
+          "service": 0,
+          "distance": 64.0
+        },
+        {
+          "i": "LQS",
+          "j": "LZY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 137.0
+        },
+        {
+          "i": "LZY",
+          "j": "LSD",
+          "kind": "rail",
+          "service": 0,
+          "distance": 53.0
+        },
+        {
+          "i": "LSD",
+          "j": "LJC",
+          "kind": "rail",
+          "service": 0,
+          "distance": 117.0
+        },
+        {
+          "i": "LJC",
+          "j": "LWWN",
+          "kind": "rail",
+          "service": 0,
+          "distance": 87.0
+        },
+        {
+          "i": "LWWN",
+          "j": "LGL",
+          "kind": "rail",
+          "service": 0,
+          "distance": 46.0
+        },
+        {
+          "i": "LGL",
+          "j": "LYD",
+          "kind": "rail",
+          "service": 0,
+          "distance": 133.0
+        },
+        {
+          "i": "LYD",
+          "j": "LLZ_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 111.0
+        },
+        {
+          "i": "LLZ_a",
+          "j": "LLZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LLZ_b",
+          "j": "LDX",
+          "kind": "rail",
+          "service": 0,
+          "distance": 118.0
+        },
+        {
+          "i": "LDX",
+          "j": "LLX",
+          "kind": "rail",
+          "service": 0,
+          "distance": 103.0
+        },
+        {
+          "i": "LLX",
+          "j": "LTS",
+          "kind": "rail",
+          "service": 0,
+          "distance": 130.0
+        },
+        {
+          "i": "LTS",
+          "j": "LBJ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 152.0
+        },
+        {
+          "i": "LBJ",
+          "j": "LSFZ_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 173.0
+        },
+        {
+          "i": "LSFZ_a",
+          "j": "LSFZ_b",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "LSFZ_b",
+          "j": "LSL",
+          "kind": "rail",
+          "service": 0,
+          "distance": 195.0
+        },
+        {
+          "i": "LSL",
+          "j": "LSN",
+          "kind": "rail",
+          "service": 0,
+          "distance": 90.0
+        },
+        {
+          "i": "LSN",
+          "j": "LXX",
+          "kind": "rail",
+          "service": 0,
+          "distance": 50.0
+        },
+        {
+          "i": "LXX",
+          "j": "LNY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 85.0
+        },
+        {
+          "i": "LNY",
+          "j": "LXY",
+          "kind": "rail",
+          "service": 0,
+          "distance": 180.0
+        },
+        {
+          "i": "LXY",
+          "j": "LHC",
+          "kind": "rail",
+          "service": 0,
+          "distance": 100.0
+        },
+        {
+          "i": "LHC",
+          "j": "LYJ",
+          "kind": "rail",
+          "service": 0,
+          "distance": 65.0
+        },
+        {
+          "i": "LYJ",
+          "j": "LLA",
+          "kind": "rail",
+          "service": 0,
+          "distance": 75.0
+        },
+        {
+          "i": "LLA",
+          "j": "LHF_a",
+          "kind": "rail",
+          "service": 0,
+          "distance": 80.0
+        },
+        {
+          "i": "LHF_a",
+          "j": "Y13_in",
+          "kind": "road",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_in",
+          "j": "Y13_out",
+          "kind": "transfer",
+          "service": null,
+          "distance": 0.0
+        },
+        {
+          "i": "Y13_out",
+          "j": "d",
+          "kind": "road",
+          "service": null,
+          "distance": 20.0
+        }
+      ]
+    }
+  ],
+  "schemes": {
+    "cost_min": {
+      "label_cn": "成本最小",
+      "label_en": "Cost minimum",
+      "representative": {
+        "service": 1,
+        "service_name": "普快班列",
+        "service_shares": {
+          "1": 1.0
+        },
+        "risk": 1998.9998519999997,
+        "cost": 202016.21469999998,
+        "t0": 75.5925,
+        "mu": 16.0,
+        "sigma": 8.0,
+        "equivalent_time": 101.28364719373114,
+        "reliability": 0.8104197534878053,
+        "rail_distance": 3739.0,
+        "arc_risk": 1327.0499519999998,
+        "node_risk": 671.9499,
+        "node_risk_share": 0.33614304639778436,
+        "road_cost": 55350.0,
+        "rail_cost": 136666.2147,
+        "yard_cost": 10000.0,
+        "yards": [
+          "Y3",
+          "Y13"
+        ],
+        "transfers": 2,
+        "nodes": [
+          "o",
+          "Y3_in",
+          "Y3_out",
+          "LKT_b",
+          "LSW",
+          "LSHZ_a",
+          "LSHZ_b",
+          "LHTB",
+          "LCJ",
+          "LWLMQX_a",
+          "LWLMQX_b",
+          "LWLMQ",
+          "LWLMQN",
+          "LTLF",
+          "LSS",
+          "LHM",
+          "LLY",
+          "LYM",
+          "LJYG",
+          "LJQ",
+          "LQS",
+          "LZY",
+          "LSD",
+          "LJC",
+          "LWWN",
+          "LGL",
+          "LYD",
+          "LLZ_a",
+          "LLZ_b",
+          "LDX",
+          "LLX",
+          "LTS",
+          "LBJ",
+          "LSFZ_a",
+          "LSFZ_b",
+          "LSL",
+          "LSN",
+          "LXX",
+          "LNY",
+          "LXY",
+          "LHC",
+          "LYJ",
+          "LLA",
+          "LHF_a",
+          "Y13_in",
+          "Y13_out",
+          "d"
+        ],
+        "arcs": [
+          {
+            "i": "o",
+            "j": "Y3_in",
+            "kind": "road",
+            "service": null,
+            "distance": 45.0
+          },
+          {
+            "i": "Y3_in",
+            "j": "Y3_out",
+            "kind": "transfer",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y3_out",
+            "j": "LKT_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LKT_b",
+            "j": "LSW",
+            "kind": "rail",
+            "service": 1,
+            "distance": 62.0
+          },
+          {
+            "i": "LSW",
+            "j": "LSHZ_a",
+            "kind": "rail",
+            "service": 1,
+            "distance": 34.0
+          },
+          {
+            "i": "LSHZ_a",
+            "j": "LSHZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LSHZ_b",
+            "j": "LHTB",
+            "kind": "rail",
+            "service": 1,
+            "distance": 67.0
+          },
+          {
+            "i": "LHTB",
+            "j": "LCJ",
+            "kind": "rail",
+            "service": 1,
+            "distance": 43.0
+          },
+          {
+            "i": "LCJ",
+            "j": "LWLMQX_a",
+            "kind": "rail",
+            "service": 1,
+            "distance": 23.0
+          },
+          {
+            "i": "LWLMQX_a",
+            "j": "LWLMQX_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LWLMQX_b",
+            "j": "LWLMQ",
+            "kind": "rail",
+            "service": 1,
+            "distance": 12.0
+          },
+          {
+            "i": "LWLMQ",
+            "j": "LWLMQN",
+            "kind": "rail",
+            "service": 1,
+            "distance": 10.0
+          },
+          {
+            "i": "LWLMQN",
+            "j": "LTLF",
+            "kind": "rail",
+            "service": 1,
+            "distance": 143.0
+          },
+          {
+            "i": "LTLF",
+            "j": "LSS",
+            "kind": "rail",
+            "service": 1,
+            "distance": 140.0
+          },
+          {
+            "i": "LSS",
+            "j": "LHM",
+            "kind": "rail",
+            "service": 1,
+            "distance": 270.0
+          },
+          {
+            "i": "LHM",
+            "j": "LLY",
+            "kind": "rail",
+            "service": 1,
+            "distance": 272.0
+          },
+          {
+            "i": "LLY",
+            "j": "LYM",
+            "kind": "rail",
+            "service": 1,
+            "distance": 165.0
+          },
+          {
+            "i": "LYM",
+            "j": "LJYG",
+            "kind": "rail",
+            "service": 1,
+            "distance": 132.0
+          },
+          {
+            "i": "LJYG",
+            "j": "LJQ",
+            "kind": "rail",
+            "service": 1,
+            "distance": 22.0
+          },
+          {
+            "i": "LJQ",
+            "j": "LQS",
+            "kind": "rail",
+            "service": 1,
+            "distance": 64.0
+          },
+          {
+            "i": "LQS",
+            "j": "LZY",
+            "kind": "rail",
+            "service": 1,
+            "distance": 137.0
+          },
+          {
+            "i": "LZY",
+            "j": "LSD",
+            "kind": "rail",
+            "service": 1,
+            "distance": 53.0
+          },
+          {
+            "i": "LSD",
+            "j": "LJC",
+            "kind": "rail",
+            "service": 1,
+            "distance": 117.0
+          },
+          {
+            "i": "LJC",
+            "j": "LWWN",
+            "kind": "rail",
+            "service": 1,
+            "distance": 87.0
+          },
+          {
+            "i": "LWWN",
+            "j": "LGL",
+            "kind": "rail",
+            "service": 1,
+            "distance": 46.0
+          },
+          {
+            "i": "LGL",
+            "j": "LYD",
+            "kind": "rail",
+            "service": 1,
+            "distance": 133.0
+          },
+          {
+            "i": "LYD",
+            "j": "LLZ_a",
+            "kind": "rail",
+            "service": 1,
+            "distance": 111.0
+          },
+          {
+            "i": "LLZ_a",
+            "j": "LLZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LLZ_b",
+            "j": "LDX",
+            "kind": "rail",
+            "service": 1,
+            "distance": 118.0
+          },
+          {
+            "i": "LDX",
+            "j": "LLX",
+            "kind": "rail",
+            "service": 1,
+            "distance": 103.0
+          },
+          {
+            "i": "LLX",
+            "j": "LTS",
+            "kind": "rail",
+            "service": 1,
+            "distance": 130.0
+          },
+          {
+            "i": "LTS",
+            "j": "LBJ",
+            "kind": "rail",
+            "service": 1,
+            "distance": 152.0
+          },
+          {
+            "i": "LBJ",
+            "j": "LSFZ_a",
+            "kind": "rail",
+            "service": 1,
+            "distance": 173.0
+          },
+          {
+            "i": "LSFZ_a",
+            "j": "LSFZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LSFZ_b",
+            "j": "LSL",
+            "kind": "rail",
+            "service": 1,
+            "distance": 195.0
+          },
+          {
+            "i": "LSL",
+            "j": "LSN",
+            "kind": "rail",
+            "service": 1,
+            "distance": 90.0
+          },
+          {
+            "i": "LSN",
+            "j": "LXX",
+            "kind": "rail",
+            "service": 1,
+            "distance": 50.0
+          },
+          {
+            "i": "LXX",
+            "j": "LNY",
+            "kind": "rail",
+            "service": 1,
+            "distance": 85.0
+          },
+          {
+            "i": "LNY",
+            "j": "LXY",
+            "kind": "rail",
+            "service": 1,
+            "distance": 180.0
+          },
+          {
+            "i": "LXY",
+            "j": "LHC",
+            "kind": "rail",
+            "service": 1,
+            "distance": 100.0
+          },
+          {
+            "i": "LHC",
+            "j": "LYJ",
+            "kind": "rail",
+            "service": 1,
+            "distance": 65.0
+          },
+          {
+            "i": "LYJ",
+            "j": "LLA",
+            "kind": "rail",
+            "service": 1,
+            "distance": 75.0
+          },
+          {
+            "i": "LLA",
+            "j": "LHF_a",
+            "kind": "rail",
+            "service": 1,
+            "distance": 80.0
+          },
+          {
+            "i": "LHF_a",
+            "j": "Y13_in",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y13_in",
+            "j": "Y13_out",
+            "kind": "transfer",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y13_out",
+            "j": "d",
+            "kind": "road",
+            "service": null,
+            "distance": 20.0
+          }
+        ]
+      },
+      "num_solutions": 1
+    },
+    "risk_min": {
+      "label_cn": "风险最小",
+      "label_en": "Risk minimum",
+      "representative": {
+        "service": 2,
+        "service_name": "快速班列",
+        "service_shares": {
+          "2": 1.0
+        },
+        "risk": 1513.3486200000002,
+        "cost": 284345.25969999994,
+        "t0": 47.550000000000004,
+        "mu": 16.0,
+        "sigma": 8.0,
+        "equivalent_time": 73.24114719373114,
+        "reliability": 0.9995947793461952,
+        "rail_distance": 3739.0,
+        "arc_risk": 841.39872,
+        "node_risk": 671.9499,
+        "node_risk_share": 0.44401527256819373,
+        "road_cost": 55350.0,
+        "rail_cost": 218995.25969999997,
+        "yard_cost": 10000.0,
+        "yards": [
+          "Y3",
+          "Y13"
+        ],
+        "transfers": 2,
+        "nodes": [
+          "o",
+          "Y3_in",
+          "Y3_out",
+          "LKT_b",
+          "LSW",
+          "LSHZ_a",
+          "LSHZ_b",
+          "LHTB",
+          "LCJ",
+          "LWLMQX_a",
+          "LWLMQX_b",
+          "LWLMQ",
+          "LWLMQN",
+          "LTLF",
+          "LSS",
+          "LHM",
+          "LLY",
+          "LYM",
+          "LJYG",
+          "LJQ",
+          "LQS",
+          "LZY",
+          "LSD",
+          "LJC",
+          "LWWN",
+          "LGL",
+          "LYD",
+          "LLZ_a",
+          "LLZ_b",
+          "LDX",
+          "LLX",
+          "LTS",
+          "LBJ",
+          "LSFZ_a",
+          "LSFZ_b",
+          "LSL",
+          "LSN",
+          "LXX",
+          "LNY",
+          "LXY",
+          "LHC",
+          "LYJ",
+          "LLA",
+          "LHF_a",
+          "Y13_in",
+          "Y13_out",
+          "d"
+        ],
+        "arcs": [
+          {
+            "i": "o",
+            "j": "Y3_in",
+            "kind": "road",
+            "service": null,
+            "distance": 45.0
+          },
+          {
+            "i": "Y3_in",
+            "j": "Y3_out",
+            "kind": "transfer",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y3_out",
+            "j": "LKT_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LKT_b",
+            "j": "LSW",
+            "kind": "rail",
+            "service": 2,
+            "distance": 62.0
+          },
+          {
+            "i": "LSW",
+            "j": "LSHZ_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 34.0
+          },
+          {
+            "i": "LSHZ_a",
+            "j": "LSHZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LSHZ_b",
+            "j": "LHTB",
+            "kind": "rail",
+            "service": 2,
+            "distance": 67.0
+          },
+          {
+            "i": "LHTB",
+            "j": "LCJ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 43.0
+          },
+          {
+            "i": "LCJ",
+            "j": "LWLMQX_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 23.0
+          },
+          {
+            "i": "LWLMQX_a",
+            "j": "LWLMQX_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LWLMQX_b",
+            "j": "LWLMQ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 12.0
+          },
+          {
+            "i": "LWLMQ",
+            "j": "LWLMQN",
+            "kind": "rail",
+            "service": 2,
+            "distance": 10.0
+          },
+          {
+            "i": "LWLMQN",
+            "j": "LTLF",
+            "kind": "rail",
+            "service": 2,
+            "distance": 143.0
+          },
+          {
+            "i": "LTLF",
+            "j": "LSS",
+            "kind": "rail",
+            "service": 2,
+            "distance": 140.0
+          },
+          {
+            "i": "LSS",
+            "j": "LHM",
+            "kind": "rail",
+            "service": 2,
+            "distance": 270.0
+          },
+          {
+            "i": "LHM",
+            "j": "LLY",
+            "kind": "rail",
+            "service": 2,
+            "distance": 272.0
+          },
+          {
+            "i": "LLY",
+            "j": "LYM",
+            "kind": "rail",
+            "service": 2,
+            "distance": 165.0
+          },
+          {
+            "i": "LYM",
+            "j": "LJYG",
+            "kind": "rail",
+            "service": 2,
+            "distance": 132.0
+          },
+          {
+            "i": "LJYG",
+            "j": "LJQ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 22.0
+          },
+          {
+            "i": "LJQ",
+            "j": "LQS",
+            "kind": "rail",
+            "service": 2,
+            "distance": 64.0
+          },
+          {
+            "i": "LQS",
+            "j": "LZY",
+            "kind": "rail",
+            "service": 2,
+            "distance": 137.0
+          },
+          {
+            "i": "LZY",
+            "j": "LSD",
+            "kind": "rail",
+            "service": 2,
+            "distance": 53.0
+          },
+          {
+            "i": "LSD",
+            "j": "LJC",
+            "kind": "rail",
+            "service": 2,
+            "distance": 117.0
+          },
+          {
+            "i": "LJC",
+            "j": "LWWN",
+            "kind": "rail",
+            "service": 2,
+            "distance": 87.0
+          },
+          {
+            "i": "LWWN",
+            "j": "LGL",
+            "kind": "rail",
+            "service": 2,
+            "distance": 46.0
+          },
+          {
+            "i": "LGL",
+            "j": "LYD",
+            "kind": "rail",
+            "service": 2,
+            "distance": 133.0
+          },
+          {
+            "i": "LYD",
+            "j": "LLZ_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 111.0
+          },
+          {
+            "i": "LLZ_a",
+            "j": "LLZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LLZ_b",
+            "j": "LDX",
+            "kind": "rail",
+            "service": 2,
+            "distance": 118.0
+          },
+          {
+            "i": "LDX",
+            "j": "LLX",
+            "kind": "rail",
+            "service": 2,
+            "distance": 103.0
+          },
+          {
+            "i": "LLX",
+            "j": "LTS",
+            "kind": "rail",
+            "service": 2,
+            "distance": 130.0
+          },
+          {
+            "i": "LTS",
+            "j": "LBJ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 152.0
+          },
+          {
+            "i": "LBJ",
+            "j": "LSFZ_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 173.0
+          },
+          {
+            "i": "LSFZ_a",
+            "j": "LSFZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LSFZ_b",
+            "j": "LSL",
+            "kind": "rail",
+            "service": 2,
+            "distance": 195.0
+          },
+          {
+            "i": "LSL",
+            "j": "LSN",
+            "kind": "rail",
+            "service": 2,
+            "distance": 90.0
+          },
+          {
+            "i": "LSN",
+            "j": "LXX",
+            "kind": "rail",
+            "service": 2,
+            "distance": 50.0
+          },
+          {
+            "i": "LXX",
+            "j": "LNY",
+            "kind": "rail",
+            "service": 2,
+            "distance": 85.0
+          },
+          {
+            "i": "LNY",
+            "j": "LXY",
+            "kind": "rail",
+            "service": 2,
+            "distance": 180.0
+          },
+          {
+            "i": "LXY",
+            "j": "LHC",
+            "kind": "rail",
+            "service": 2,
+            "distance": 100.0
+          },
+          {
+            "i": "LHC",
+            "j": "LYJ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 65.0
+          },
+          {
+            "i": "LYJ",
+            "j": "LLA",
+            "kind": "rail",
+            "service": 2,
+            "distance": 75.0
+          },
+          {
+            "i": "LLA",
+            "j": "LHF_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 80.0
+          },
+          {
+            "i": "LHF_a",
+            "j": "Y13_in",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y13_in",
+            "j": "Y13_out",
+            "kind": "transfer",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y13_out",
+            "j": "d",
+            "kind": "road",
+            "service": null,
+            "distance": 20.0
+          }
+        ]
+      },
+      "num_solutions": 1
+    },
+    "proposed": {
+      "label_cn": "本文机会约束",
+      "label_en": "Chance-constrained",
+      "representative": {
+        "service": 2,
+        "service_name": "快速班列＋集装箱班列",
+        "service_shares": {
+          "2": 0.7539449050548275,
+          "0": 0.2460550949451725
+        },
+        "risk": 1743.889848,
+        "cost": 273803.5437,
+        "t0": 51.383300000000006,
+        "mu": 20.0,
+        "sigma": 12.0,
+        "equivalent_time": 85.92002079059671,
+        "reliability": 0.9824175088661058,
+        "rail_distance": 3739.0,
+        "arc_risk": 907.1220480000001,
+        "node_risk": 836.7678,
+        "node_risk_share": 0.4798283566818493,
+        "road_cost": 55350.0,
+        "rail_cost": 206453.54369999998,
+        "yard_cost": 12000.0,
+        "yards": [
+          "Y3",
+          "Y9",
+          "Y13"
+        ],
+        "transfers": 3,
+        "nodes": [
+          "o",
+          "Y3_in",
+          "Y3_out",
+          "LKT_b",
+          "LSW",
+          "LSHZ_a",
+          "LSHZ_b",
+          "LHTB",
+          "LCJ",
+          "LWLMQX_a",
+          "LWLMQX_b",
+          "LWLMQ",
+          "LWLMQN",
+          "LTLF",
+          "LSS",
+          "LHM",
+          "LLY",
+          "LYM",
+          "LJYG",
+          "LJQ",
+          "LQS",
+          "LZY",
+          "LSD",
+          "LJC",
+          "LWWN",
+          "LGL",
+          "LYD",
+          "LLZ_a",
+          "LLZ_b",
+          "LDX",
+          "LLX",
+          "LTS",
+          "LBJ",
+          "LSFZ_a",
+          "Y9_in",
+          "Y9_out",
+          "LSFZ_b",
+          "LSL",
+          "LSN",
+          "LXX",
+          "LNY",
+          "LXY",
+          "LHC",
+          "LYJ",
+          "LLA",
+          "LHF_a",
+          "Y13_in",
+          "Y13_out",
+          "d"
+        ],
+        "arcs": [
+          {
+            "i": "o",
+            "j": "Y3_in",
+            "kind": "road",
+            "service": null,
+            "distance": 45.0
+          },
+          {
+            "i": "Y3_in",
+            "j": "Y3_out",
+            "kind": "transfer",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y3_out",
+            "j": "LKT_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LKT_b",
+            "j": "LSW",
+            "kind": "rail",
+            "service": 2,
+            "distance": 62.0
+          },
+          {
+            "i": "LSW",
+            "j": "LSHZ_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 34.0
+          },
+          {
+            "i": "LSHZ_a",
+            "j": "LSHZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LSHZ_b",
+            "j": "LHTB",
+            "kind": "rail",
+            "service": 2,
+            "distance": 67.0
+          },
+          {
+            "i": "LHTB",
+            "j": "LCJ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 43.0
+          },
+          {
+            "i": "LCJ",
+            "j": "LWLMQX_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 23.0
+          },
+          {
+            "i": "LWLMQX_a",
+            "j": "LWLMQX_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LWLMQX_b",
+            "j": "LWLMQ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 12.0
+          },
+          {
+            "i": "LWLMQ",
+            "j": "LWLMQN",
+            "kind": "rail",
+            "service": 2,
+            "distance": 10.0
+          },
+          {
+            "i": "LWLMQN",
+            "j": "LTLF",
+            "kind": "rail",
+            "service": 2,
+            "distance": 143.0
+          },
+          {
+            "i": "LTLF",
+            "j": "LSS",
+            "kind": "rail",
+            "service": 2,
+            "distance": 140.0
+          },
+          {
+            "i": "LSS",
+            "j": "LHM",
+            "kind": "rail",
+            "service": 2,
+            "distance": 270.0
+          },
+          {
+            "i": "LHM",
+            "j": "LLY",
+            "kind": "rail",
+            "service": 2,
+            "distance": 272.0
+          },
+          {
+            "i": "LLY",
+            "j": "LYM",
+            "kind": "rail",
+            "service": 2,
+            "distance": 165.0
+          },
+          {
+            "i": "LYM",
+            "j": "LJYG",
+            "kind": "rail",
+            "service": 2,
+            "distance": 132.0
+          },
+          {
+            "i": "LJYG",
+            "j": "LJQ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 22.0
+          },
+          {
+            "i": "LJQ",
+            "j": "LQS",
+            "kind": "rail",
+            "service": 2,
+            "distance": 64.0
+          },
+          {
+            "i": "LQS",
+            "j": "LZY",
+            "kind": "rail",
+            "service": 2,
+            "distance": 137.0
+          },
+          {
+            "i": "LZY",
+            "j": "LSD",
+            "kind": "rail",
+            "service": 2,
+            "distance": 53.0
+          },
+          {
+            "i": "LSD",
+            "j": "LJC",
+            "kind": "rail",
+            "service": 2,
+            "distance": 117.0
+          },
+          {
+            "i": "LJC",
+            "j": "LWWN",
+            "kind": "rail",
+            "service": 2,
+            "distance": 87.0
+          },
+          {
+            "i": "LWWN",
+            "j": "LGL",
+            "kind": "rail",
+            "service": 2,
+            "distance": 46.0
+          },
+          {
+            "i": "LGL",
+            "j": "LYD",
+            "kind": "rail",
+            "service": 2,
+            "distance": 133.0
+          },
+          {
+            "i": "LYD",
+            "j": "LLZ_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 111.0
+          },
+          {
+            "i": "LLZ_a",
+            "j": "LLZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LLZ_b",
+            "j": "LDX",
+            "kind": "rail",
+            "service": 2,
+            "distance": 118.0
+          },
+          {
+            "i": "LDX",
+            "j": "LLX",
+            "kind": "rail",
+            "service": 2,
+            "distance": 103.0
+          },
+          {
+            "i": "LLX",
+            "j": "LTS",
+            "kind": "rail",
+            "service": 2,
+            "distance": 130.0
+          },
+          {
+            "i": "LTS",
+            "j": "LBJ",
+            "kind": "rail",
+            "service": 2,
+            "distance": 152.0
+          },
+          {
+            "i": "LBJ",
+            "j": "LSFZ_a",
+            "kind": "rail",
+            "service": 2,
+            "distance": 173.0
+          },
+          {
+            "i": "LSFZ_a",
+            "j": "Y9_in",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y9_in",
+            "j": "Y9_out",
+            "kind": "transfer",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y9_out",
+            "j": "LSFZ_b",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "LSFZ_b",
+            "j": "LSL",
+            "kind": "rail",
+            "service": 0,
+            "distance": 195.0
+          },
+          {
+            "i": "LSL",
+            "j": "LSN",
+            "kind": "rail",
+            "service": 0,
+            "distance": 90.0
+          },
+          {
+            "i": "LSN",
+            "j": "LXX",
+            "kind": "rail",
+            "service": 0,
+            "distance": 50.0
+          },
+          {
+            "i": "LXX",
+            "j": "LNY",
+            "kind": "rail",
+            "service": 0,
+            "distance": 85.0
+          },
+          {
+            "i": "LNY",
+            "j": "LXY",
+            "kind": "rail",
+            "service": 0,
+            "distance": 180.0
+          },
+          {
+            "i": "LXY",
+            "j": "LHC",
+            "kind": "rail",
+            "service": 0,
+            "distance": 100.0
+          },
+          {
+            "i": "LHC",
+            "j": "LYJ",
+            "kind": "rail",
+            "service": 0,
+            "distance": 65.0
+          },
+          {
+            "i": "LYJ",
+            "j": "LLA",
+            "kind": "rail",
+            "service": 0,
+            "distance": 75.0
+          },
+          {
+            "i": "LLA",
+            "j": "LHF_a",
+            "kind": "rail",
+            "service": 0,
+            "distance": 80.0
+          },
+          {
+            "i": "LHF_a",
+            "j": "Y13_in",
+            "kind": "road",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y13_in",
+            "j": "Y13_out",
+            "kind": "transfer",
+            "service": null,
+            "distance": 0.0
+          },
+          {
+            "i": "Y13_out",
+            "j": "d",
+            "kind": "road",
+            "service": null,
+            "distance": 20.0
+          }
+        ]
+      },
+      "num_solutions": 3
+    }
+  }
+}

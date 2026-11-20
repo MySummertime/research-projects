@@ -1,0 +1,102 @@
+[
+  {
+    "theta": null,
+    "rho": null,
+    "cost_total": 1108.5068975999998,
+    "cost_share": 0.0,
+    "risk_total": 841.39872,
+    "risk_share": 0.0,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.0,
+    "rho": 0.0,
+    "cost_total": 1742.4218975999995,
+    "cost_share": 0.36381257654828053,
+    "risk_total": 1475.3137200000003,
+    "risk_share": 0.42968149174400677,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.0,
+    "rho": 0.005,
+    "cost_total": 1755.1001975999998,
+    "cost_share": 0.36840819736911873,
+    "risk_total": 1487.9920200000001,
+    "risk_share": 0.43454083846498043,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.0,
+    "rho": 0.01,
+    "cost_total": 1767.7784975999998,
+    "cost_share": 0.37293789968316227,
+    "risk_total": 1500.6703200000002,
+    "risk_share": 0.43931807753751,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.005,
+    "rho": 0.0,
+    "cost_total": 1767.7784975999998,
+    "cost_share": 0.37293789968316227,
+    "risk_total": 1500.6703200000002,
+    "risk_share": 0.43931807753751,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.005,
+    "rho": 0.005,
+    "cost_total": 1780.4567975999998,
+    "cost_share": 0.37740309167050134,
+    "risk_total": 1513.3486200000002,
+    "risk_share": 0.44401527256819373,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.005,
+    "rho": 0.01,
+    "cost_total": 1793.1350975999999,
+    "cost_share": 0.38180514168527097,
+    "risk_total": 1526.0269200000002,
+    "risk_share": 0.44863441858548603,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.01,
+    "rho": 0.0,
+    "cost_total": 1793.1350975999999,
+    "cost_share": 0.38180514168527097,
+    "risk_total": 1526.0269200000002,
+    "risk_share": 0.44863441858548603,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.01,
+    "rho": 0.005,
+    "cost_total": 1805.8133976,
+    "cost_share": 0.3861453796537057,
+    "risk_total": 1538.7052200000003,
+    "risk_share": 0.4531774448649755,
+    "service": "集装箱班列",
+    "transfers": 2
+  },
+  {
+    "theta": 0.01,
+    "rho": 0.01,
+    "cost_total": 1818.4916976,
+    "cost_share": 0.39042509841371303,
+    "risk_total": 1551.3835200000003,
+    "risk_share": 0.4576462176161314,
+    "service": "集装箱班列",
+    "transfers": 2
+  }
+]

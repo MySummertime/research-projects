@@ -1,0 +1,45 @@
+2026-03-23 17:18:47 [INFO ] 日志系统已启动。(文件日志级别: INFO, 控制台日志级别: WARNING)
+2026-03-23 17:18:47 [INFO ] 日志将保存至: results\experiment_2026-03-23_17-17-28\benchmark\benchmark.log
+2026-03-23 17:18:47 [INFO ] STARTING LARGE-SCALE BENCHMARK | Tasks: 5 | Runs: 1
+2026-03-23 17:18:47 [INFO ] 
+>>> Run 1/1 [Seed: 14]
+2026-03-23 17:18:47 [INFO ] 🐢 使用标准 PathFinder (单线程)
+2026-03-23 17:18:47 [INFO ] [RiskModel] 正在预计算非对称模糊应急响应时间...
+2026-03-23 17:18:47 [INFO ] [RiskModel] 独立左右边界模糊应急响应时间预计算完成！🎉 (δ_a=1.00, δ_c=1.00, Max Cap=12.0h)
+2026-03-23 17:18:47 [INFO ] 开始搜索 candidate paths（预排序+哈希去重）...
+2026-03-23 17:18:48 [INFO ] 搜索完成：共为 5 个任务找到 97 条异质路径。
+2026-03-23 17:18:48 [INFO ] Running NSGA-II (Imp) | Seed: 14 | Pop: 100 | Gen: 100
+2026-03-23 17:18:48 [INFO ] Gen 10: Archive Size 60
+2026-03-23 17:18:49 [INFO ] Gen 20: Archive Size 60
+2026-03-23 17:18:49 [INFO ] Gen 30: Archive Size 60
+2026-03-23 17:18:50 [INFO ] Gen 40: Archive Size 60
+2026-03-23 17:18:50 [INFO ] Gen 50: Archive Size 60
+2026-03-23 17:18:51 [INFO ] Gen 60: Archive Size 60
+2026-03-23 17:18:51 [INFO ] Gen 70: Archive Size 60
+2026-03-23 17:18:51 [INFO ] Gen 80: Archive Size 60
+2026-03-23 17:18:52 [INFO ] Gen 90: Archive Size 60
+2026-03-23 17:18:52 [INFO ] Gen 100: Archive Size 60
+2026-03-23 17:18:52 [INFO ] Running NSGA-II (1) | Seed: 14 | Pop: 100 | Gen: 100
+2026-03-23 17:18:52 [INFO ] 🧬 生成消融路径池: Level 1: Lowest Cost
+2026-03-23 17:18:52 [INFO ] --- Starting Baseline Solver: Pymoo NSGA-II (Strategy: None) ---
+2026-03-23 17:19:15 [INFO ] Pymoo NSGA-II finished. Found 26 solutions.
+2026-03-23 17:19:15 [INFO ] Running NSGA-II (2) | Seed: 14 | Pop: 100 | Gen: 100
+2026-03-23 17:19:15 [INFO ] 🧬 生成消融路径池: Level 2: Lowest Cost + Risk
+2026-03-23 17:19:15 [INFO ] --- Starting Baseline Solver: Pymoo NSGA-II (Strategy: None) ---
+2026-03-23 17:19:29 [INFO ] Pymoo NSGA-II finished. Found 26 solutions.
+2026-03-23 17:19:29 [INFO ] Running NSGA-II (3) | Seed: 14 | Pop: 100 | Gen: 100
+2026-03-23 17:19:29 [INFO ] 🧬 生成消融路径池: Level 3: Lowest Cost + Risk + Response
+2026-03-23 17:19:30 [INFO ] --- Starting Baseline Solver: Pymoo NSGA-II (Strategy: None) ---
+2026-03-23 17:19:42 [INFO ] Pymoo NSGA-II finished. Found 37 solutions.
+2026-03-23 17:19:42 [INFO ] Running SPEA2 | Seed: 14 | Pop: 100 | Gen: 100
+2026-03-23 17:19:42 [INFO ] --- Starting Baseline Solver: Pymoo SPEA2 (Strategy: None) ---
+2026-03-23 17:20:01 [INFO ] Pymoo SPEA2 finished. Found 23 solutions.
+2026-03-23 17:20:01 [INFO ] Running Exact: Gurobi (Full Pool)...
+2026-03-23 17:20:01 [INFO ] Gurobi: Pre-computing metrics for all candidate paths...
+2026-03-23 17:20:01 [INFO ] Gurobi: Starting Weighted Sum with 1000 points...
+2026-03-23 17:20:01 [INFO ] Set parameter LicenseID to value 2746377
+2026-03-23 17:20:03 [INFO ] Gurobi Weighted Sum found 1000 solutions.
+2026-03-23 17:20:03 [INFO ] 
+>>> Phase 1: Metric Calculation & CSV Export...
+2026-03-23 17:20:03 [INFO ] ✅ CSV results saved to results\experiment_2026-03-23_17-17-28\benchmark.
+2026-03-23 17:20:03 [INFO ] Ablation Benchmark Finished Successfully! 🏁💎

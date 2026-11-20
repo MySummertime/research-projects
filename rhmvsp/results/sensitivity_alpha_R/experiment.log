@@ -1,0 +1,662 @@
+[INFO] RHMVSP Sensitivity: alpha_R=0.890
+[INFO] Config: alpha_R=0.890, alpha_T=0.8, T_max=168
+[INFO] Time windows: original instance deadlines
+[INFO]   Generated 10 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 10 columns
+[INFO]   RMP optimize: columns=10, active rail dispatches=10
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 75 columns
+[INFO]   RMP optimize: columns=75, active rail dispatches=25
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   CG iteration 3: solving RMP with 99 columns
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   CG iteration 3: heuristic pricing OD_1
+[INFO]   CG iteration 3: heuristic pricing OD_2
+[INFO]   CG iteration 3: heuristic pricing OD_3
+[INFO]   CG iteration 3: heuristic pricing OD_4
+[INFO]   CG iteration 3: heuristic pricing OD_5
+[INFO]   CG iteration 3: exact pricing OD_1
+[INFO]   CG iteration 3: exact pricing OD_2
+[INFO]   CG iteration 3: exact pricing OD_3
+[INFO]   CG iteration 3: exact pricing OD_4
+[INFO]   CG iteration 3: exact pricing OD_5
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   Reposition events: 12 total | empty_fee=¥144914.40
+[INFO]     OD_5 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]     OD_4 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,001,120.70, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────
+─── OD Routing alpha_R=0.890 ───
+────────────────────────────────
+
+  OD_1 (3 dispatch(es)):
+    #1: Kashgar → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #2: Nanjing → Suzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+
+  OD_2 (3 dispatch(es)):
+    #1: Hotan → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #2: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+
+  OD_3 (3 dispatch(es)):
+    #1: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #2: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+
+  OD_4 (3 dispatch(es)):
+    #1: Korla → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #2: Guangzhou → Shenzhen
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+
+  OD_5 (3 dispatch(es)):
+    #1: Hami → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+    #2: Guangzhou → Huizhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+[INFO] Result: alpha_R=0.890: Cost=¥5,001,120.70, R_risk=0.9070, R_time=0.8442
+[INFO] RHMVSP Sensitivity: alpha_R=0.895
+[INFO] Config: alpha_R=0.895, alpha_T=0.8, T_max=168
+[INFO] Time windows: original instance deadlines
+[INFO]   Generated 10 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 10 columns
+[INFO]   RMP optimize: columns=10, active rail dispatches=10
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 75 columns
+[INFO]   RMP optimize: columns=75, active rail dispatches=25
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   CG iteration 3: solving RMP with 99 columns
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   CG iteration 3: heuristic pricing OD_1
+[INFO]   CG iteration 3: heuristic pricing OD_2
+[INFO]   CG iteration 3: heuristic pricing OD_3
+[INFO]   CG iteration 3: heuristic pricing OD_4
+[INFO]   CG iteration 3: heuristic pricing OD_5
+[INFO]   CG iteration 3: exact pricing OD_1
+[INFO]   CG iteration 3: exact pricing OD_2
+[INFO]   CG iteration 3: exact pricing OD_3
+[INFO]   CG iteration 3: exact pricing OD_4
+[INFO]   CG iteration 3: exact pricing OD_5
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   Reposition events: 12 total | empty_fee=¥144914.40
+[INFO]     OD_5 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]     OD_4 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,001,120.70, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────
+─── OD Routing alpha_R=0.895 ───
+────────────────────────────────
+
+  OD_1 (3 dispatch(es)):
+    #1: Kashgar → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #2: Nanjing → Suzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+
+  OD_2 (3 dispatch(es)):
+    #1: Hotan → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #2: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+
+  OD_3 (3 dispatch(es)):
+    #1: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #2: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+
+  OD_4 (3 dispatch(es)):
+    #1: Korla → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #2: Guangzhou → Shenzhen
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+
+  OD_5 (3 dispatch(es)):
+    #1: Hami → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+    #2: Guangzhou → Huizhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+[INFO] Result: alpha_R=0.895: Cost=¥5,001,120.70, R_risk=0.9070, R_time=0.8442
+[INFO] RHMVSP Sensitivity: alpha_R=0.900
+[INFO] Config: alpha_R=0.900, alpha_T=0.8, T_max=168
+[INFO] Time windows: original instance deadlines
+[INFO]   Generated 10 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 10 columns
+[INFO]   RMP optimize: columns=10, active rail dispatches=10
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 75 columns
+[INFO]   RMP optimize: columns=75, active rail dispatches=25
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   CG iteration 3: solving RMP with 99 columns
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   CG iteration 3: heuristic pricing OD_1
+[INFO]   CG iteration 3: heuristic pricing OD_2
+[INFO]   CG iteration 3: heuristic pricing OD_3
+[INFO]   CG iteration 3: heuristic pricing OD_4
+[INFO]   CG iteration 3: heuristic pricing OD_5
+[INFO]   CG iteration 3: exact pricing OD_1
+[INFO]   CG iteration 3: exact pricing OD_2
+[INFO]   CG iteration 3: exact pricing OD_3
+[INFO]   CG iteration 3: exact pricing OD_4
+[INFO]   CG iteration 3: exact pricing OD_5
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   Reposition events: 12 total | empty_fee=¥144914.40
+[INFO]     OD_5 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]     OD_4 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,001,120.70, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────
+─── OD Routing alpha_R=0.900 ───
+────────────────────────────────
+
+  OD_1 (3 dispatch(es)):
+    #1: Kashgar → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #2: Nanjing → Suzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+
+  OD_2 (3 dispatch(es)):
+    #1: Hotan → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #2: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+
+  OD_3 (3 dispatch(es)):
+    #1: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #2: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+
+  OD_4 (3 dispatch(es)):
+    #1: Korla → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #2: Guangzhou → Shenzhen
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+
+  OD_5 (3 dispatch(es)):
+    #1: Hami → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+    #2: Guangzhou → Huizhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+[INFO] Result: alpha_R=0.900: Cost=¥5,001,120.70, R_risk=0.9070, R_time=0.8442
+[INFO] RHMVSP Sensitivity: alpha_R=0.905
+[INFO] Config: alpha_R=0.905, alpha_T=0.8, T_max=168
+[INFO] Time windows: original instance deadlines
+[INFO]   Generated 10 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 10 columns
+[INFO]   RMP optimize: columns=10, active rail dispatches=10
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 75 columns
+[INFO]   RMP optimize: columns=75, active rail dispatches=25
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   CG iteration 3: solving RMP with 99 columns
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   CG iteration 3: heuristic pricing OD_1
+[INFO]   CG iteration 3: heuristic pricing OD_2
+[INFO]   CG iteration 3: heuristic pricing OD_3
+[INFO]   CG iteration 3: heuristic pricing OD_4
+[INFO]   CG iteration 3: heuristic pricing OD_5
+[INFO]   CG iteration 3: exact pricing OD_1
+[INFO]   CG iteration 3: exact pricing OD_2
+[INFO]   CG iteration 3: exact pricing OD_3
+[INFO]   CG iteration 3: exact pricing OD_4
+[INFO]   CG iteration 3: exact pricing OD_5
+[INFO]   RMP optimize: columns=99, active rail dispatches=32
+[INFO]   Reposition events: 12 total | empty_fee=¥144914.40
+[INFO]     OD_5 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]     OD_4 → OD_3 (node 1→9): 6 times | avg empty=¥12076.20/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,001,120.70, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────
+─── OD Routing alpha_R=0.905 ───
+────────────────────────────────
+
+  OD_1 (3 dispatch(es)):
+    #1: Kashgar → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #2: Nanjing → Suzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+
+  OD_2 (3 dispatch(es)):
+    #1: Hotan → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #2: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+
+  OD_3 (3 dispatch(es)):
+    #1: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #2: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+
+  OD_4 (3 dispatch(es)):
+    #1: Korla → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #2: Guangzhou → Shenzhen
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+
+  OD_5 (3 dispatch(es)):
+    #1: Hami → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+    #2: Guangzhou → Huizhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥36,501
+[INFO] Result: alpha_R=0.905: Cost=¥5,001,120.70, R_risk=0.9070, R_time=0.8442
+[INFO] RHMVSP Sensitivity: alpha_R=0.910
+[INFO] Config: alpha_R=0.910, alpha_T=0.8, T_max=168
+[INFO] Time windows: original instance deadlines
+[INFO]   Generated 8 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 8 columns
+[INFO]   RMP optimize: columns=8, active rail dispatches=10
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 35 columns
+[INFO]   RMP optimize: columns=35, active rail dispatches=20
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   CG iteration 3: solving RMP with 45 columns
+[INFO]   RMP optimize: columns=45, active rail dispatches=24
+[INFO]   CG iteration 3: heuristic pricing OD_1
+[INFO]   CG iteration 3: heuristic pricing OD_2
+[INFO]   CG iteration 3: heuristic pricing OD_3
+[INFO]   CG iteration 3: heuristic pricing OD_4
+[INFO]   CG iteration 3: heuristic pricing OD_5
+[INFO]   CG iteration 3: exact pricing OD_1
+[INFO]   CG iteration 3: exact pricing OD_2
+[INFO]   CG iteration 3: exact pricing OD_3
+[INFO]   CG iteration 3: exact pricing OD_4
+[INFO]   CG iteration 3: exact pricing OD_5
+[INFO]   RMP optimize: columns=45, active rail dispatches=24
+[INFO]   Reposition events: 10 total | empty_fee=¥120762.00
+[INFO]     OD_4 → OD_3 (node 1→9): 10 times | avg empty=¥12076.20/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,499,204.24, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────
+─── OD Routing alpha_R=0.910 ───
+────────────────────────────────
+
+  OD_1 (5 dispatch(es)):
+    #1: Kashgar → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #2: Nanjing → Suzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153  Vehicles=[51, 52]
+    #3: Nanjing → Suzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #4: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153  Vehicles=[2000, 2001]
+    #5: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+
+  OD_2 (5 dispatch(es)):
+    #1: Hotan → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #2: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #3: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594  Vehicles=[89, 90]
+    #4: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #5: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594  Vehicles=[2028, 2029]
+
+  OD_3 (6 dispatch(es)):
+    #1: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #2: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053  Vehicles=[49, 50]
+    #3: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #4: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053  Vehicles=[91, 92]
+    #5: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053  Vehicles=[2030, 2031]
+    #6: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+
+  OD_4 (3 dispatch(es)):
+    #1: Korla → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #2: Guangzhou → Shenzhen
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+[INFO] Result: alpha_R=0.910: Cost=¥5,499,204.24, R_risk=0.9301, R_time=0.8442
+[INFO] RHMVSP Sensitivity: alpha_R=0.920
+[INFO] Config: alpha_R=0.920, alpha_T=0.8, T_max=168
+[INFO] Time windows: original instance deadlines
+[INFO]   Generated 8 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 8 columns
+[INFO]   RMP optimize: columns=8, active rail dispatches=10
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 35 columns
+[INFO]   RMP optimize: columns=35, active rail dispatches=20
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   CG iteration 3: solving RMP with 45 columns
+[INFO]   RMP optimize: columns=45, active rail dispatches=24
+[INFO]   CG iteration 3: heuristic pricing OD_1
+[INFO]   CG iteration 3: heuristic pricing OD_2
+[INFO]   CG iteration 3: heuristic pricing OD_3
+[INFO]   CG iteration 3: heuristic pricing OD_4
+[INFO]   CG iteration 3: heuristic pricing OD_5
+[INFO]   CG iteration 3: exact pricing OD_1
+[INFO]   CG iteration 3: exact pricing OD_2
+[INFO]   CG iteration 3: exact pricing OD_3
+[INFO]   CG iteration 3: exact pricing OD_4
+[INFO]   CG iteration 3: exact pricing OD_5
+[INFO]   RMP optimize: columns=45, active rail dispatches=24
+[INFO]   Reposition events: 10 total | empty_fee=¥120762.00
+[INFO]     OD_4 → OD_3 (node 1→9): 10 times | avg empty=¥12076.20/ea
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥5,499,204.24, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────
+─── OD Routing alpha_R=0.920 ───
+────────────────────────────────
+
+  OD_1 (5 dispatch(es)):
+    #1: Kashgar → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #2: Nanjing → Suzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153  Vehicles=[51, 52]
+    #3: Nanjing → Suzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+    #4: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153  Vehicles=[2000, 2001]
+    #5: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥72,153
+
+  OD_2 (5 dispatch(es)):
+    #1: Hotan → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #2: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #3: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594  Vehicles=[89, 90]
+    #4: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #5: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594  Vehicles=[2028, 2029]
+
+  OD_3 (6 dispatch(es)):
+    #1: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #2: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053  Vehicles=[49, 50]
+    #3: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #4: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053  Vehicles=[91, 92]
+    #5: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053  Vehicles=[2030, 2031]
+    #6: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+
+  OD_4 (3 dispatch(es)):
+    #1: Korla → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #2: Guangzhou → Shenzhen
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+    #3: Urumqi → Lanzhou → Chengdu → Guiyang → Guangzhou
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥23,437
+[INFO] Result: alpha_R=0.920: Cost=¥5,499,204.24, R_risk=0.9301, R_time=0.8442
+[INFO] RHMVSP Sensitivity: alpha_R=0.930
+[INFO] Config: alpha_R=0.930, alpha_T=0.8, T_max=168
+[INFO] Time windows: original instance deadlines
+[INFO]   Generated 4 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 4 columns
+[INFO]   RMP optimize: columns=4, active rail dispatches=4
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 18 columns
+[INFO]   RMP optimize: columns=18, active rail dispatches=8
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   RMP optimize: columns=18, active rail dispatches=8
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥6,750,452.70, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────
+─── OD Routing alpha_R=0.930 ───
+────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: Hotan → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #2: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+
+  OD_3 (3 dispatch(es)):
+    #1: Aksu → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #2: Nanjing → Wuxi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥48,053
+[INFO] Result: alpha_R=0.930: Cost=¥6,750,452.70, R_risk=0.9301, R_time=0.9970
+[INFO] RHMVSP Sensitivity: alpha_R=0.935
+[INFO] Config: alpha_R=0.935, alpha_T=0.8, T_max=168
+[INFO] Time windows: original instance deadlines
+[INFO]   Generated 2 initial columns
+[INFO] Solving Node 0 (LB=-1000000000000.00, depth=0)
+[INFO]   CG iteration 1: solving RMP with 2 columns
+[INFO]   RMP optimize: columns=2, active rail dispatches=4
+[INFO]   CG iteration 1: heuristic pricing OD_1
+[INFO]   CG iteration 1: heuristic pricing OD_2
+[INFO]   CG iteration 1: heuristic pricing OD_3
+[INFO]   CG iteration 1: heuristic pricing OD_4
+[INFO]   CG iteration 1: heuristic pricing OD_5
+[INFO]   CG iteration 1: exact pricing OD_1
+[INFO]   CG iteration 1: exact pricing OD_2
+[INFO]   CG iteration 1: exact pricing OD_3
+[INFO]   CG iteration 1: exact pricing OD_4
+[INFO]   CG iteration 1: exact pricing OD_5
+[INFO]   CG iteration 2: solving RMP with 5 columns
+[INFO]   RMP optimize: columns=5, active rail dispatches=7
+[INFO]   CG iteration 2: heuristic pricing OD_1
+[INFO]   CG iteration 2: heuristic pricing OD_2
+[INFO]   CG iteration 2: heuristic pricing OD_3
+[INFO]   CG iteration 2: heuristic pricing OD_4
+[INFO]   CG iteration 2: heuristic pricing OD_5
+[INFO]   CG iteration 2: exact pricing OD_1
+[INFO]   CG iteration 2: exact pricing OD_2
+[INFO]   CG iteration 2: exact pricing OD_3
+[INFO]   CG iteration 2: exact pricing OD_4
+[INFO]   CG iteration 2: exact pricing OD_5
+[INFO]   RMP optimize: columns=5, active rail dispatches=7
+[INFO]   Integer solution found at Node 0 (Total Cost (c_total)=¥7,222,206.67, UB updated).
+[INFO]   Continuing search to prove optimality (or until time limit).
+
+────────────────────────────────
+─── OD Routing alpha_R=0.935 ───
+────────────────────────────────
+
+  OD_2 (3 dispatch(es)):
+    #1: Hotan → Urumqi
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #2: Nanjing → Nantong
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+    #3: Urumqi → Lanzhou → Xi'an → Zhengzhou → Nanjing
+        Dep=0.0h  Arr=0.0h  Dur=0.0h  ¥67,594
+[INFO] Result: alpha_R=0.935: Cost=¥7,222,206.67, R_risk=0.9461, R_time=0.8442
+Results saved to results\sensitivity_alpha_R_20260911_153226/
+Plot with: python sensitivity/plot_alpha_R.py --csv results\sensitivity_alpha_R_20260911_153226\summary_alpha_R.csv

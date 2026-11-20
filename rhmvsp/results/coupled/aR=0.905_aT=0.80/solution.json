@@ -1,0 +1,3823 @@
+{
+  "status": "optimal",
+  "total_cost": 5001120.70115,
+  "transport_cost": 3557006.3011499997,
+  "road_transport_cost": 2663483.04,
+  "rail_transport_cost": 893523.2611499999,
+  "transfer_cost": 99200.0,
+  "reposition_cost": 144914.4,
+  "reposition_events": [
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 2,
+      "from_od": "OD_5",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 3,
+      "from_od": "OD_5",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 5,
+      "from_od": "OD_5",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 6,
+      "from_od": "OD_5",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 13,
+      "from_od": "OD_5",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 14,
+      "from_od": "OD_5",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 17,
+      "from_od": "OD_4",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 20,
+      "from_od": "OD_4",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 25,
+      "from_od": "OD_4",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 26,
+      "from_od": "OD_4",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 28,
+      "from_od": "OD_4",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    },
+    {
+      "event_type": "inter_task_repositioning",
+      "vehicle": 32,
+      "from_od": "OD_4",
+      "to_od": "OD_3",
+      "from_node": 1,
+      "to_node": 9,
+      "from_arrival": 10.0,
+      "to_departure": 22.43120833333333,
+      "distance_km": 670.9,
+      "empty_fee": 12076.2
+    }
+  ],
+  "num_repositions": 12,
+  "unmet_penalty": 1200000.0,
+  "unmet_penalty_per_feu": 100000.0,
+  "penalty_cost": 1200000.0,
+  "active_hubs": [
+    1,
+    2,
+    3,
+    12,
+    21,
+    29,
+    33,
+    38
+  ],
+  "network_risk_reliability": 0.9070365500648444,
+  "network_time_reliability": 0.8442119534731629,
+  "network_risk": 0.0929634499351556,
+  "network_time": 155.21507083333333,
+  "od_reliability_details": {
+    "3": {
+      "od_joint_reliability": 0.9476966108737632,
+      "od_risk_reliability": 0.9476966108737632,
+      "od_time_reliability": 1.0,
+      "num_batches": 1,
+      "plan_risk_reliabilities": [
+        0.9476966108737632
+      ],
+      "plan_time_reliabilities": [
+        1.0
+      ],
+      "plan_risks": [
+        0.05230338912623678
+      ],
+      "plan_times": [
+        127.78529583333335
+      ],
+      "binding": "risk",
+      "od_risk": 0.05230338912623678,
+      "od_time": 127.78529583333335,
+      "delivery_ratio": 1.0
+    },
+    "4": {
+      "od_joint_reliability": 0.9070365500648444,
+      "od_risk_reliability": 0.9070365500648444,
+      "od_time_reliability": 1.0,
+      "num_batches": 1,
+      "plan_risk_reliabilities": [
+        0.9070365500648444
+      ],
+      "plan_time_reliabilities": [
+        1.0
+      ],
+      "plan_risks": [
+        0.0929634499351556
+      ],
+      "plan_times": [
+        131.71682083333334
+      ],
+      "binding": "risk",
+      "od_risk": 0.0929634499351556,
+      "od_time": 131.71682083333334,
+      "delivery_ratio": 1.0
+    },
+    "0": {
+      "od_joint_reliability": 0.8448504035022455,
+      "od_risk_reliability": 0.9373851414796754,
+      "od_time_reliability": 0.8448504035022455,
+      "num_batches": 1,
+      "plan_risk_reliabilities": [
+        0.9373851414796754
+      ],
+      "plan_time_reliabilities": [
+        0.8448504035022455
+      ],
+      "plan_risks": [
+        0.06261485852032456
+      ],
+      "plan_times": [
+        155.21507083333333
+      ],
+      "binding": "time",
+      "od_risk": 0.06261485852032456,
+      "od_time": 155.21507083333333,
+      "delivery_ratio": 0.4
+    },
+    "1": {
+      "od_joint_reliability": 0.8442119534731629,
+      "od_risk_reliability": 0.9461202644492361,
+      "od_time_reliability": 0.8442119534731629,
+      "num_batches": 1,
+      "plan_risk_reliabilities": [
+        0.9461202644492361
+      ],
+      "plan_time_reliabilities": [
+        0.8442119534731629
+      ],
+      "plan_risks": [
+        0.05387973555076386
+      ],
+      "plan_times": [
+        153.84324583333333
+      ],
+      "binding": "time",
+      "od_risk": 0.05387973555076386,
+      "od_time": 153.84324583333333,
+      "delivery_ratio": 1.0
+    },
+    "2": {
+      "od_joint_reliability": 0.862799604968204,
+      "od_risk_reliability": 0.9359667224415498,
+      "od_time_reliability": 0.862799604968204,
+      "num_batches": 1,
+      "plan_risk_reliabilities": [
+        0.9359667224415498
+      ],
+      "plan_time_reliabilities": [
+        0.862799604968204
+      ],
+      "plan_risks": [
+        0.06403327755845023
+      ],
+      "plan_times": [
+        139.29619166666666
+      ],
+      "binding": "time",
+      "od_risk": 0.06403327755845023,
+      "od_time": 139.29619166666666,
+      "delivery_ratio": 1.0
+    }
+  },
+  "max_vehicles": 150,
+  "num_vehicles_used": 112,
+  "total_dispatches": 124,
+  "transport_routes": [
+    {
+      "dispatch_id": 18,
+      "col_id": 8,
+      "od_idx": 4,
+      "od_pair": "OD_5",
+      "origin": 7,
+      "destination": 1,
+      "departure_time": 1.7012416666666663,
+      "arrival_time": 10.0,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 7,
+          "j": 1,
+          "mode": 1,
+          "alpha": 0.07655974747759499
+        }
+      ],
+      "cost": 36501.45,
+      "transport_cost": 34901.45,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "origin_hub": 1,
+      "province_hub_id": 1,
+      "task_type": "collection",
+      "num_vehicles": 14,
+      "vehicles": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "dispatch_id": 50,
+      "col_id": 17,
+      "od_idx": 2,
+      "od_pair": "OD_3",
+      "origin": 9,
+      "destination": 1,
+      "departure_time": 22.43120833333333,
+      "arrival_time": 34.0,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 9,
+          "j": 1,
+          "mode": 1,
+          "alpha": 0.0546283573777772
+        }
+      ],
+      "cost": 48053.3,
+      "transport_cost": 46453.3,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "origin_hub": 1,
+      "province_hub_id": 1,
+      "task_type": "collection",
+      "num_vehicles": 12,
+      "vehicles": [
+        2,
+        3,
+        5,
+        6,
+        13,
+        14,
+        17,
+        20,
+        25,
+        26,
+        28,
+        32
+      ]
+    },
+    {
+      "dispatch_id": 0,
+      "col_id": 6,
+      "od_idx": 3,
+      "od_pair": "OD_4",
+      "origin": 8,
+      "destination": 1,
+      "departure_time": 5.412904166666666,
+      "arrival_time": 10.0,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 8,
+          "j": 1,
+          "mode": 1,
+          "alpha": 0.036195213934769044
+        }
+      ],
+      "cost": 23436.949999999997,
+      "transport_cost": 21836.949999999997,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "origin_hub": 1,
+      "province_hub_id": 1,
+      "task_type": "collection",
+      "num_vehicles": 18,
+      "vehicles": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "dispatch_id": 32,
+      "col_id": 11,
+      "od_idx": 0,
+      "od_pair": "OD_1",
+      "origin": 6,
+      "destination": 1,
+      "departure_time": 7.120891666666665,
+      "arrival_time": 26.0,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 6,
+          "j": 1,
+          "mode": 1,
+          "alpha": 0.06929327338217582
+        }
+      ],
+      "cost": 72152.53,
+      "transport_cost": 70552.53,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "origin_hub": 1,
+      "province_hub_id": 1,
+      "task_type": "collection",
+      "num_vehicles": 8,
+      "vehicles": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "dispatch_id": 40,
+      "col_id": 14,
+      "od_idx": 1,
+      "od_pair": "OD_2",
+      "origin": 10,
+      "destination": 1,
+      "departure_time": 8.573479166666669,
+      "arrival_time": 26.0,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 10,
+          "j": 1,
+          "mode": 1,
+          "alpha": 0.03646549635052379
+        }
+      ],
+      "cost": 67593.78,
+      "transport_cost": 65993.78,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "origin_hub": 1,
+      "province_hub_id": 1,
+      "task_type": "collection",
+      "num_vehicles": 10,
+      "vehicles": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "dispatch_id": 0,
+      "col_id": 6,
+      "od_idx": 3,
+      "od_pair": "OD_4",
+      "origin": 38,
+      "destination": 37,
+      "departure_time": 131.49,
+      "arrival_time": 133.1982,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 38,
+          "j": 37,
+          "mode": 1,
+          "alpha": 0.07308096357648347
+        }
+      ],
+      "cost": 23436.949999999997,
+      "transport_cost": 21836.949999999997,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "destination_hub": 38,
+      "province_hub_id": 38,
+      "task_type": "distribution",
+      "num_vehicles": 18,
+      "vehicles": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ]
+    },
+    {
+      "dispatch_id": 18,
+      "col_id": 8,
+      "od_idx": 4,
+      "od_pair": "OD_5",
+      "origin": 38,
+      "destination": 42,
+      "departure_time": 131.49,
+      "arrival_time": 133.41806250000002,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 38,
+          "j": 42,
+          "mode": 1,
+          "alpha": 0.05169808169266939
+        }
+      ],
+      "cost": 36501.45,
+      "transport_cost": 34901.45,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "destination_hub": 38,
+      "province_hub_id": 38,
+      "task_type": "distribution",
+      "num_vehicles": 14,
+      "vehicles": [
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ]
+    },
+    {
+      "dispatch_id": 32,
+      "col_id": 11,
+      "od_idx": 0,
+      "od_pair": "OD_1",
+      "origin": 12,
+      "destination": 13,
+      "departure_time": 159.26,
+      "arrival_time": 162.3359625,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 12,
+          "j": 13,
+          "mode": 1,
+          "alpha": 0.03227722801294158
+        }
+      ],
+      "cost": 72152.53,
+      "transport_cost": 70552.53,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "destination_hub": 12,
+      "province_hub_id": 12,
+      "task_type": "distribution",
+      "num_vehicles": 8,
+      "vehicles": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90
+      ]
+    },
+    {
+      "dispatch_id": 40,
+      "col_id": 14,
+      "od_idx": 1,
+      "od_pair": "OD_2",
+      "origin": 12,
+      "destination": 41,
+      "departure_time": 159.26,
+      "arrival_time": 162.41672499999999,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 12,
+          "j": 41,
+          "mode": 1,
+          "alpha": 0.058946718050529465
+        }
+      ],
+      "cost": 67593.78,
+      "transport_cost": 65993.78,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "destination_hub": 12,
+      "province_hub_id": 12,
+      "task_type": "distribution",
+      "num_vehicles": 10,
+      "vehicles": [
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "dispatch_id": 50,
+      "col_id": 17,
+      "od_idx": 2,
+      "od_pair": "OD_3",
+      "origin": 12,
+      "destination": 47,
+      "departure_time": 159.26,
+      "arrival_time": 161.7274,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 12,
+          "j": 47,
+          "mode": 1,
+          "alpha": 0.05895522233201109
+        }
+      ],
+      "cost": 48053.3,
+      "transport_cost": 46453.3,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "destination_hub": 12,
+      "province_hub_id": 12,
+      "task_type": "distribution",
+      "num_vehicles": 12,
+      "vehicles": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ]
+    },
+    {
+      "dispatch_id": 0,
+      "col_id": 6,
+      "od_idx": 3,
+      "od_pair": "OD_4",
+      "origin": 1,
+      "destination": 38,
+      "departure_time": 18.0,
+      "arrival_time": 123.49000000000001,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 1,
+          "j": 2,
+          "mode": 2,
+          "alpha": 0.007982953963966921
+        },
+        {
+          "i": 2,
+          "j": 29,
+          "mode": 2,
+          "alpha": 0.0075073495452777856
+        },
+        {
+          "i": 29,
+          "j": 33,
+          "mode": 2,
+          "alpha": 0.011882051438637287
+        },
+        {
+          "i": 33,
+          "j": 38,
+          "mode": 2,
+          "alpha": 0.0056149695534659354
+        }
+      ],
+      "cost": 23436.949999999997,
+      "transport_cost": 21836.949999999997,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "rail_services": [
+        {
+          "train_id": 3,
+          "origin_hub": 1,
+          "destination_hub": 2,
+          "departure_time": 18.0,
+          "arrival_time": 52.51,
+          "dep_fmt": "Day 1 18:00",
+          "arr_fmt": "Day 3 04:30"
+        },
+        {
+          "train_id": 329,
+          "origin_hub": 2,
+          "destination_hub": 29,
+          "departure_time": 58.0,
+          "arrival_time": 72.22,
+          "dep_fmt": "Day 3 10:00",
+          "arr_fmt": "Day 4 00:13"
+        },
+        {
+          "train_id": 489,
+          "origin_hub": 29,
+          "destination_hub": 33,
+          "departure_time": 82.0,
+          "arrival_time": 94.05,
+          "dep_fmt": "Day 4 10:00",
+          "arr_fmt": "Day 4 22:03"
+        },
+        {
+          "train_id": 625,
+          "origin_hub": 33,
+          "destination_hub": 38,
+          "departure_time": 106.0,
+          "arrival_time": 123.49,
+          "dep_fmt": "Day 5 10:00",
+          "arr_fmt": "Day 6 03:30"
+        }
+      ],
+      "num_vehicles": 18,
+      "vehicles": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017
+      ]
+    },
+    {
+      "dispatch_id": 18,
+      "col_id": 8,
+      "od_idx": 4,
+      "od_pair": "OD_5",
+      "origin": 1,
+      "destination": 38,
+      "departure_time": 18.0,
+      "arrival_time": 123.49000000000001,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 1,
+          "j": 2,
+          "mode": 2,
+          "alpha": 0.007982953963966921
+        },
+        {
+          "i": 2,
+          "j": 29,
+          "mode": 2,
+          "alpha": 0.0075073495452777856
+        },
+        {
+          "i": 29,
+          "j": 33,
+          "mode": 2,
+          "alpha": 0.011882051438637287
+        },
+        {
+          "i": 33,
+          "j": 38,
+          "mode": 2,
+          "alpha": 0.0056149695534659354
+        }
+      ],
+      "cost": 36501.45,
+      "transport_cost": 34901.45,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "rail_services": [
+        {
+          "train_id": 3,
+          "origin_hub": 1,
+          "destination_hub": 2,
+          "departure_time": 18.0,
+          "arrival_time": 52.51,
+          "dep_fmt": "Day 1 18:00",
+          "arr_fmt": "Day 3 04:30"
+        },
+        {
+          "train_id": 329,
+          "origin_hub": 2,
+          "destination_hub": 29,
+          "departure_time": 58.0,
+          "arrival_time": 72.22,
+          "dep_fmt": "Day 3 10:00",
+          "arr_fmt": "Day 4 00:13"
+        },
+        {
+          "train_id": 489,
+          "origin_hub": 29,
+          "destination_hub": 33,
+          "departure_time": 82.0,
+          "arrival_time": 94.05,
+          "dep_fmt": "Day 4 10:00",
+          "arr_fmt": "Day 4 22:03"
+        },
+        {
+          "train_id": 625,
+          "origin_hub": 33,
+          "destination_hub": 38,
+          "departure_time": 106.0,
+          "arrival_time": 123.49,
+          "dep_fmt": "Day 5 10:00",
+          "arr_fmt": "Day 6 03:30"
+        }
+      ],
+      "num_vehicles": 14,
+      "vehicles": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026,
+        2027,
+        2028,
+        2029,
+        2030,
+        2031
+      ]
+    },
+    {
+      "dispatch_id": 32,
+      "col_id": 11,
+      "od_idx": 0,
+      "od_pair": "OD_1",
+      "origin": 1,
+      "destination": 12,
+      "departure_time": 34.0,
+      "arrival_time": 151.26,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 1,
+          "j": 2,
+          "mode": 2,
+          "alpha": 0.007982953963966921
+        },
+        {
+          "i": 2,
+          "j": 21,
+          "mode": 2,
+          "alpha": 0.010891589572495442
+        },
+        {
+          "i": 21,
+          "j": 3,
+          "mode": 2,
+          "alpha": 0.00952845509681357
+        },
+        {
+          "i": 3,
+          "j": 12,
+          "mode": 2,
+          "alpha": 0.010724635201308006
+        }
+      ],
+      "cost": 72152.53,
+      "transport_cost": 70552.53,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "rail_services": [
+        {
+          "train_id": 133,
+          "origin_hub": 1,
+          "destination_hub": 2,
+          "departure_time": 34.0,
+          "arrival_time": 68.51,
+          "dep_fmt": "Day 2 10:00",
+          "arr_fmt": "Day 3 20:30"
+        },
+        {
+          "train_id": 405,
+          "origin_hub": 2,
+          "destination_hub": 21,
+          "departure_time": 82.0,
+          "arrival_time": 94.11,
+          "dep_fmt": "Day 4 10:00",
+          "arr_fmt": "Day 4 22:07"
+        },
+        {
+          "train_id": 543,
+          "origin_hub": 21,
+          "destination_hub": 3,
+          "departure_time": 114.0,
+          "arrival_time": 124.72,
+          "dep_fmt": "Day 5 18:00",
+          "arr_fmt": "Day 6 04:43"
+        },
+        {
+          "train_id": 703,
+          "origin_hub": 3,
+          "destination_hub": 12,
+          "departure_time": 138.0,
+          "arrival_time": 151.26,
+          "dep_fmt": "Day 6 18:00",
+          "arr_fmt": "Day 7 07:16"
+        }
+      ],
+      "num_vehicles": 8,
+      "vehicles": [
+        2032,
+        2033,
+        2034,
+        2035,
+        2036,
+        2037,
+        2038,
+        2039
+      ]
+    },
+    {
+      "dispatch_id": 40,
+      "col_id": 14,
+      "od_idx": 1,
+      "od_pair": "OD_2",
+      "origin": 1,
+      "destination": 12,
+      "departure_time": 34.0,
+      "arrival_time": 151.26,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 1,
+          "j": 2,
+          "mode": 2,
+          "alpha": 0.007982953963966921
+        },
+        {
+          "i": 2,
+          "j": 21,
+          "mode": 2,
+          "alpha": 0.010891589572495442
+        },
+        {
+          "i": 21,
+          "j": 3,
+          "mode": 2,
+          "alpha": 0.00952845509681357
+        },
+        {
+          "i": 3,
+          "j": 12,
+          "mode": 2,
+          "alpha": 0.010724635201308006
+        }
+      ],
+      "cost": 67593.78,
+      "transport_cost": 65993.78,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "rail_services": [
+        {
+          "train_id": 133,
+          "origin_hub": 1,
+          "destination_hub": 2,
+          "departure_time": 34.0,
+          "arrival_time": 68.51,
+          "dep_fmt": "Day 2 10:00",
+          "arr_fmt": "Day 3 20:30"
+        },
+        {
+          "train_id": 405,
+          "origin_hub": 2,
+          "destination_hub": 21,
+          "departure_time": 82.0,
+          "arrival_time": 94.11,
+          "dep_fmt": "Day 4 10:00",
+          "arr_fmt": "Day 4 22:07"
+        },
+        {
+          "train_id": 543,
+          "origin_hub": 21,
+          "destination_hub": 3,
+          "departure_time": 114.0,
+          "arrival_time": 124.72,
+          "dep_fmt": "Day 5 18:00",
+          "arr_fmt": "Day 6 04:43"
+        },
+        {
+          "train_id": 703,
+          "origin_hub": 3,
+          "destination_hub": 12,
+          "departure_time": 138.0,
+          "arrival_time": 151.26,
+          "dep_fmt": "Day 6 18:00",
+          "arr_fmt": "Day 7 07:16"
+        }
+      ],
+      "num_vehicles": 10,
+      "vehicles": [
+        2040,
+        2041,
+        2042,
+        2043,
+        2044,
+        2045,
+        2046,
+        2047,
+        2048,
+        2049
+      ]
+    },
+    {
+      "dispatch_id": 50,
+      "col_id": 17,
+      "od_idx": 2,
+      "od_pair": "OD_3",
+      "origin": 1,
+      "destination": 12,
+      "departure_time": 42.0,
+      "arrival_time": 151.26,
+      "availability_time": 0.0,
+      "arcs": [
+        {
+          "i": 1,
+          "j": 2,
+          "mode": 2,
+          "alpha": 0.007982953963966921
+        },
+        {
+          "i": 2,
+          "j": 21,
+          "mode": 2,
+          "alpha": 0.010891589572495442
+        },
+        {
+          "i": 21,
+          "j": 3,
+          "mode": 2,
+          "alpha": 0.00952845509681357
+        },
+        {
+          "i": 3,
+          "j": 12,
+          "mode": 2,
+          "alpha": 0.010724635201308006
+        }
+      ],
+      "cost": 48053.3,
+      "transport_cost": 46453.3,
+      "transfer_cost": 1600.0,
+      "bottleneck_capacity": 1.0,
+      "rail_services": [
+        {
+          "train_id": 135,
+          "origin_hub": 1,
+          "destination_hub": 2,
+          "departure_time": 42.0,
+          "arrival_time": 76.51,
+          "dep_fmt": "Day 2 18:00",
+          "arr_fmt": "Day 4 04:30"
+        },
+        {
+          "train_id": 405,
+          "origin_hub": 2,
+          "destination_hub": 21,
+          "departure_time": 82.0,
+          "arrival_time": 94.11,
+          "dep_fmt": "Day 4 10:00",
+          "arr_fmt": "Day 4 22:07"
+        },
+        {
+          "train_id": 543,
+          "origin_hub": 21,
+          "destination_hub": 3,
+          "departure_time": 114.0,
+          "arrival_time": 124.72,
+          "dep_fmt": "Day 5 18:00",
+          "arr_fmt": "Day 6 04:43"
+        },
+        {
+          "train_id": 703,
+          "origin_hub": 3,
+          "destination_hub": 12,
+          "departure_time": 138.0,
+          "arrival_time": 151.26,
+          "dep_fmt": "Day 6 18:00",
+          "arr_fmt": "Day 7 07:16"
+        }
+      ],
+      "num_vehicles": 12,
+      "vehicles": [
+        2050,
+        2051,
+        2052,
+        2053,
+        2054,
+        2055,
+        2056,
+        2057,
+        2058,
+        2059,
+        2060,
+        2061
+      ]
+    }
+  ],
+  "s2_allocation_details": [
+    {
+      "od_idx": 0,
+      "od_pair": "OD_1",
+      "demand": 20.0,
+      "delivered": 8.0,
+      "shortfall": 12.0,
+      "required_dispatches": 20,
+      "scheduled_dispatches": 8,
+      "penalty_cost": 1200000.0
+    },
+    {
+      "od_idx": 1,
+      "od_pair": "OD_2",
+      "demand": 10.0,
+      "delivered": 10.0,
+      "shortfall": 0.0,
+      "required_dispatches": 10,
+      "scheduled_dispatches": 10,
+      "penalty_cost": 0.0
+    },
+    {
+      "od_idx": 2,
+      "od_pair": "OD_3",
+      "demand": 12.0,
+      "delivered": 12.0,
+      "shortfall": 0.0,
+      "required_dispatches": 12,
+      "scheduled_dispatches": 12,
+      "penalty_cost": 0.0
+    },
+    {
+      "od_idx": 3,
+      "od_pair": "OD_4",
+      "demand": 18.0,
+      "delivered": 18.0,
+      "shortfall": 0.0,
+      "required_dispatches": 18,
+      "scheduled_dispatches": 18,
+      "penalty_cost": 0.0
+    },
+    {
+      "od_idx": 4,
+      "od_pair": "OD_5",
+      "demand": 14.0,
+      "delivered": 14.0,
+      "shortfall": 0.0,
+      "required_dispatches": 14,
+      "scheduled_dispatches": 14,
+      "penalty_cost": 0.0
+    }
+  ],
+  "rail_consolidation_summary": [
+    {
+      "rail_section": "Hub_1 -> Hub_38",
+      "departure_time": 18.0,
+      "truck_dispatches": 32,
+      "rail_wagons": 1,
+      "load_factor_percent": 80.0,
+      "tasks_included": [
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_4",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5",
+        "OD_5"
+      ]
+    },
+    {
+      "rail_section": "Hub_1 -> Hub_12",
+      "departure_time": 34.0,
+      "truck_dispatches": 18,
+      "rail_wagons": 1,
+      "load_factor_percent": 45.0,
+      "tasks_included": [
+        "OD_1",
+        "OD_1",
+        "OD_1",
+        "OD_1",
+        "OD_1",
+        "OD_1",
+        "OD_1",
+        "OD_1",
+        "OD_2",
+        "OD_2",
+        "OD_2",
+        "OD_2",
+        "OD_2",
+        "OD_2",
+        "OD_2",
+        "OD_2",
+        "OD_2",
+        "OD_2"
+      ]
+    },
+    {
+      "rail_section": "Hub_1 -> Hub_12",
+      "departure_time": 42.0,
+      "truck_dispatches": 12,
+      "rail_wagons": 1,
+      "load_factor_percent": 30.0,
+      "tasks_included": [
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3",
+        "OD_3"
+      ]
+    }
+  ],
+  "batch_train_services": [
+    {
+      "od_id": 1,
+      "batch_id": 1,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 1,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 1,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 1,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 2,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 2,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 2,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 2,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 3,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 3,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 3,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 3,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 4,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 4,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 4,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 4,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 5,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 5,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 5,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 5,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 6,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 6,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 6,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 6,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 7,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 7,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 7,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 7,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 8,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 8,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 8,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 1,
+      "batch_id": 8,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 1,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 1,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 1,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 1,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 2,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 2,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 2,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 2,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 3,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 3,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 3,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 3,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 4,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 4,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 4,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 4,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 5,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 5,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 5,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 5,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 6,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 6,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 6,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 6,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 7,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 7,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 7,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 7,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 8,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 8,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 8,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 8,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 9,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 9,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 9,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 9,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 10,
+      "service_order": 1,
+      "train_id": 133,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "34.0",
+      "arrival_time_fmt": "68.51"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 10,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 10,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 2,
+      "batch_id": 10,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 1,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 1,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 1,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 1,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 2,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 2,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 2,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 2,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 3,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 3,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 3,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 3,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 4,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 4,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 4,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 4,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 5,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 5,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 5,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 5,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 6,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 6,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 6,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 6,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 7,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 7,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 7,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 7,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 8,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 8,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 8,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 8,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 9,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 9,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 9,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 9,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 10,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 10,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 10,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 10,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 11,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 11,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 11,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 11,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 12,
+      "service_order": 1,
+      "train_id": 135,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "42.0",
+      "arrival_time_fmt": "76.51"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 12,
+      "service_order": 2,
+      "train_id": 405,
+      "origin": 2,
+      "destination": 21,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.11"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 12,
+      "service_order": 3,
+      "train_id": 543,
+      "origin": 21,
+      "destination": 3,
+      "departure_time_fmt": "114.0",
+      "arrival_time_fmt": "124.72"
+    },
+    {
+      "od_id": 3,
+      "batch_id": 12,
+      "service_order": 4,
+      "train_id": 703,
+      "origin": 3,
+      "destination": 12,
+      "departure_time_fmt": "138.0",
+      "arrival_time_fmt": "151.26"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 1,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 1,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 1,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 1,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 2,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 2,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 2,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 2,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 3,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 3,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 3,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 3,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 4,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 4,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 4,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 4,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 5,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 5,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 5,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 5,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 6,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 6,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 6,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 6,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 7,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 7,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 7,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 7,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 8,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 8,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 8,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 8,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 9,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 9,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 9,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 9,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 10,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 10,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 10,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 10,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 11,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 11,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 11,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 11,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 12,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 12,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 12,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 12,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 13,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 13,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 13,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 13,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 14,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 14,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 14,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 14,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 15,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 15,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 15,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 15,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 16,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 16,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 16,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 16,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 17,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 17,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 17,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 17,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 18,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 18,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 18,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 4,
+      "batch_id": 18,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 1,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 1,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 1,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 1,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 2,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 2,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 2,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 2,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 3,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 3,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 3,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 3,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 4,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 4,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 4,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 4,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 5,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 5,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 5,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 5,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 6,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 6,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 6,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 6,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 7,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 7,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 7,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 7,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 8,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 8,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 8,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 8,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 9,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 9,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 9,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 9,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 10,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 10,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 10,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 10,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 11,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 11,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 11,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 11,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 12,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 12,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 12,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 12,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 13,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 13,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 13,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 13,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 14,
+      "service_order": 1,
+      "train_id": 3,
+      "origin": 1,
+      "destination": 2,
+      "departure_time_fmt": "18.0",
+      "arrival_time_fmt": "52.51"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 14,
+      "service_order": 2,
+      "train_id": 329,
+      "origin": 2,
+      "destination": 29,
+      "departure_time_fmt": "58.0",
+      "arrival_time_fmt": "72.22"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 14,
+      "service_order": 3,
+      "train_id": 489,
+      "origin": 29,
+      "destination": 33,
+      "departure_time_fmt": "82.0",
+      "arrival_time_fmt": "94.05"
+    },
+    {
+      "od_id": 5,
+      "batch_id": 14,
+      "service_order": 4,
+      "train_id": 625,
+      "origin": 33,
+      "destination": 38,
+      "departure_time_fmt": "106.0",
+      "arrival_time_fmt": "123.49"
+    }
+  ],
+  "iterations": 3,
+  "cg_history": [
+    [
+      1,
+      5027550.04464,
+      Infinity
+    ],
+    [
+      2,
+      4982537.2424,
+      Infinity
+    ],
+    [
+      3,
+      4982537.242400001,
+      Infinity
+    ]
+  ],
+  "total_columns": 99,
+  "gap_pct": 0.0,
+  "solve_wall_time": 0.5466258525848389,
+  "solve_cpu_time": 0.4375
+}

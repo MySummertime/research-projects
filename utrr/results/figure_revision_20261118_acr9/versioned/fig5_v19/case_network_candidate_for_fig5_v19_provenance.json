@@ -1,0 +1,25 @@
+{
+  "type": "TYPE A",
+  "network": {
+    "path": "C:\\Users\\franc\\Codelab\\research-diary\\projects\\utrr\\data\\real_case_xj_yrd\\network.json",
+    "sha256": "a994f08e01b80a72f6eee63856a37a3fc35ed6911e923870911d7da2345d8b9d"
+  },
+  "basemap": {
+    "path": "C:\\Users\\franc\\Codelab\\research-diary\\projects\\utrr\\results\\figure_revision_20261116_acr\\basemap\\ne_110m_admin_0_countries\\ne_110m_admin_0_countries.shp",
+    "sha256": "08e341606e8391e458c3f08deb312de664b56bfae376064c5aa0aee6681a5f55",
+    "source": "Natural Earth 1:110m Admin 0 Countries v5.1.1"
+  },
+  "admin1": {
+    "path": "C:\\Users\\franc\\Codelab\\research-diary\\projects\\utrr\\results\\figure_revision_20261117_acr2\\basemap_admin1\\ne_10m_admin_1_states_provinces.shp",
+    "sha256": "c6f5c8b4b1320d9417033762419c6df1eb423989cd880fba78ea0b1e3522cbe4",
+    "source": "Natural Earth 1:10m Admin 1 States and Provinces"
+  },
+  "outputs": {
+    "case_network_candidate_for_fig5_v19.png": "c4b4797a772d769ac8924fac4817c6d269eaf1f34ff6801fafc6092b4dadcf3d",
+    "case_network_candidate_for_fig5_v19.tiff": "ff09e8435c28375ea491eb78e9a420f798db68f8d2fa1d73ab10589852acd71b",
+    "case_network_candidate_for_fig5_v19_on_white.png": "c3c3b5aa11a1bb2a7800c601c331b1510647723fb52895f299dcc5aaf218eee9",
+    "case_network_candidate_for_fig5_v19_selfcheck.json": "34d5273de93967d8e9433db8aca597062c8a965a698632ea7aeea8a8e10f6bbd"
+  },
+  "coordinates_modified": false,
+  "nodes_or_arcs_modified": false
+}
