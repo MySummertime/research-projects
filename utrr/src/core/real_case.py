@@ -1,6 +1,6 @@
 """真实路网 JSON → 四层网络的适配器。
 
-数据契约（本项目自有格式，由 data/real_case_xj_yrd/build_network.py 生成）：
+数据契约（本项目自有格式，由 data/real_case/build_network.py 生成）：
 
 	payload = {
 	  "name": "...", "version": "xj-yrd-v2", "coordinate_system": "lonlat",

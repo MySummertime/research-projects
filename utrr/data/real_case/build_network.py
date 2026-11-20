@@ -1,4 +1,4 @@
-﻿"""生成"新疆—长三角"危险货物公铁联运算例的路网文件 network.json。
+"""生成"新疆—长三角"危险货物公铁联运算例的路网文件 network.json。
 
 数据来源与可信度（论文 4.1 的三档口径）：
 	A 级（公开里程表）：兰新线兰州—乌鲁木齐南 1 892 km（逐站里程）；陇海线
@@ -18,7 +18,7 @@
 货场名与所在车站一致，具体办理站（编组站、货场、港区）另由 facility 字段注明，
 避免出现"货场名与车站名不符"的指代歧义。
 
-用法：python data/real_case_xj_yrd/build_network.py
+用法：python data/real_case/build_network.py
 """
 
 from __future__ import annotations

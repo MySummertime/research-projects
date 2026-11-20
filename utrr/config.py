@@ -32,8 +32,8 @@ INSTANCE_PATH = os.path.join(DATA_DIR, "case", "instance.json")  # 可选的外�
 DATA_SOURCE_REAL = "real"  # 真实路网（由 src/core/real_case.py 转换为四层网络）
 DATA_SOURCE_SYNTHETIC = "synthetic"  # 合成算例（src/core/instance_generator.py）
 
-# 真实路网 JSON：新疆—长三角算例（data/real_case_xj_yrd/build_network.py 生成）
-REAL_CASE_PATH = os.path.join(DATA_DIR, "real_case_xj_yrd", "network.json")
+# 真实路网 JSON：新疆—长三角算例（data/real_case/build_network.py 生成）
+REAL_CASE_PATH = os.path.join(DATA_DIR, "real_case", "network.json")
 
 
 # 置信水平模式下正态不确定变量的可靠度分位系数 λ_α

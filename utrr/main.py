@@ -175,7 +175,7 @@ def run_main(config: UTRRConfig, instance, output_dir: str, logger) -> dict:
 def run_multi_od(config: UTRRConfig, output_dir: str, logger) -> dict:
 	"""遍历算例中的全部 OD 对，输出多 OD 汇总表（表 3）。
 
-	每个 OD 对承担一项论证任务（见 data/real_case_xj_yrd/build_network.py），
+	每个 OD 对承担一项论证任务（见 data/real_case/build_network.py），
 	此处只做同一算法口径下的横向比较，用于说明模型在不同品类、不同需求、
 	不同通道结构下的适用性。
 	"""

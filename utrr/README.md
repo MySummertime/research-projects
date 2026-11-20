@@ -48,7 +48,7 @@ utrr/
 │   ├── runner.py               # 共享工具与实验注册表
 │   └── _cli.py                 # 统一命令行
 ├── data/
-│   └── real_case_xj_yrd/       # 新疆→长三角真实路网：build_network.py + network.json
+│   └── real_case/       # 新疆→长三角真实路网：build_network.py + network.json
 └── results/
     ├── all_20261031_151709/        # 表6—表9（α/σ/节点风险/时限）与主实验原始数据
     ├── main_20261031_155438/       # 三方案主实验（表3/表4/表5，图5/图6）
@@ -71,7 +71,7 @@ utrr/
 
 ## 数据源与口径
 
-默认读取真实路网 JSON（`data/real_case_xj_yrd/network.json`，xj-yrd-v2），由 `src/core/real_case.py` 转换为四层网络：
+默认读取真实路网 JSON（`data/real_case/network.json`，xj-yrd-v2），由 `src/core/real_case.py` 转换为四层网络：
 
 - **OD 与需求**：6 个 OD 对，需求 6～24 个 **40 ft 箱**（OD1 至 OD6 依次 24、12、16、10、8、6 箱）。计费按元/箱口径，与黄丽霞 2017 的 95306 运价一致；TEU 只在必要处括注（1 箱 = 2 TEU）。
 - **铁路层**：65 个真实车站、136 条有向弧（68 段双向），含兰新/北疆/乌鲁木齐枢纽联络线/南疆（吐库二线）/陇海/宁西/京沪/沪杭/萧甬/淮南/阜淮/京九/皖赣/宣杭/商丘枢纽联络线 15 条真实线路，单方向合计 7238.01 km。逐线里程与公开值对齐（兰新 1892、北疆 241、陇海 1759、宁西 1075.69、京沪 649 等），`build_network.py` 的 `LINE_META` 逐线断言。宁芜线因扩能改造未完工
